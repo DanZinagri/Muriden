@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
+    <defName>Muriden_NobleSpear</defName>
+    <label>Muriden Noble Spear</label>
+    <description>A long polearm tipped with a sharp point for stabbing opponents, empowering them to strike from much further away.</description>
+    <possessionCount>1</possessionCount>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponMelee/Muriden_NobleSpear</texPath>
+	  <maskPath>Things/Item/Equipment/WeaponMelee/Muriden_NobleSpear_m</maskPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <shaderType>CutoutComplex</shaderType>
+	  <drawSize>1.5</drawSize>
+    </graphicData>
+    <uiIconScale>1</uiIconScale>
+    <techLevel>Medieval</techLevel>
+    <tradeability>Sellable</tradeability>
+    <weaponTags>
+      <li>MedievalMeleeDecent</li>
+	  <li>MuridenMelee</li>
+    </weaponTags>
+    <costStuffCount>75</costStuffCount>
+	<costList>
+		<Gold>2</Gold>
+        <WoodLog>1</WoodLog>
+	</costList>
+    <thingSetMakerTags>
+      <li>RewardStandardQualitySuper</li>
+      <li>RewardSpecial</li>
+    </thingSetMakerTags>
+    <statBases>
+        <MarketValue>3800</MarketValue>
+        <WorkToMake>15000</WorkToMake>
+        <Mass>6.9</Mass>
+        <VEF_MeleeWeaponRange>2.84</VEF_MeleeWeaponRange>
+    </statBases>
+	<equippedStatOffsets>
+      <SocialImpact>0.10</SocialImpact>
+      <NegotiationAbility>0.10</NegotiationAbility>
+      <MoveSpeed>-0.15</MoveSpeed>
+    </equippedStatOffsets>
+    <relicChance>2</relicChance>
+    <stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories>
+    <tools>
+      <li>
+        <label>shaft</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>12</power>
+        <cooldownTime>3.9</cooldownTime>
+        <armorPenetration>0.2</armorPenetration>
+      </li>
+      <li>
+        <label>shaft</label>
+        <capacities>
+          <li>Poke</li>
+        </capacities>
+        <power>14</power>
+        <cooldownTime>4.2</cooldownTime>
+        <armorPenetration>0.2</armorPenetration>
+      </li>
+      <li>
+        <label>point</label>
+        <capacities>
+          <li>Stab</li>
+        </capacities>
+        <power>26</power>
+        <armorPenetration>0.65</armorPenetration>
+        <cooldownTime>4.2</cooldownTime>
+      </li>
+    </tools>
+    <recipeMaker>
+      <researchPrerequisite>LongBlades</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>10</Crafting>
+      </skillRequirements>
+      <displayPriority>332</displayPriority>
+    </recipeMaker>
+    <modExtensions>
+      <li Class="VEF.Things.ThingDefExtension">
+        <usableWithShields>false</usableWithShields>
+      </li>
+    </modExtensions>
+    <comps Inherit="False">
+        <li Class="MuridenLibraries.CompProperties_AbilitiesWeapon">
+            <abilityDef>
+                <li>DivingCharge</li>            
+            </abilityDef>
+        </li>
+        <li Class="CompProperties_Forbiddable"/>
+        <li Class="CompProperties_Styleable"/>
+        <li Class="CompProperties_Biocodable"/>
+        <li>
+            <compClass>CompQuality</compClass>
+        </li>
+        <li>
+			<compClass>CompEquippable</compClass>
+		</li>
+        <li Class="CompProperties_Art">
+            <nameMaker>NamerArtWeaponGun</nameMaker>
+            <descriptionMaker>ArtDescription_WeaponMelee</descriptionMaker>
+            <minQualityForArtistic>Excellent</minQualityForArtistic>
+        </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
+    <defName>Muradin_NobleLongsword</defName>
+    <label>muriden noble longsword</label>
+    <description>An ornate longsword designed for use by Muriden nobles.</description>
+    <possessionCount>1</possessionCount>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponMelee/Muradin_NobleLongsword</texPath>
+	  <maskPath>Things/Item/Equipment/WeaponMelee/Muradin_NobleLongsword_m</maskPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <shaderType>CutoutComplex</shaderType>
+	  <drawSize>1</drawSize>
+    </graphicData>
+    <uiIconScale>1</uiIconScale>
+    <techLevel>Medieval</techLevel>
+    <tradeability>Sellable</tradeability>
+    <costStuffCount>75</costStuffCount>
+	<costList>
+		<Gold>2</Gold>
+	</costList>
+    <thingSetMakerTags>
+      <li>RewardStandardQualitySuper</li>
+      <li>RewardSpecial</li>
+    </thingSetMakerTags>
+    <weaponTags>
+      <li>MedievalMeleeDecent</li>
+	  <li>MuridenMelee</li>
+    </weaponTags>
+    <statBases>
+        <MarketValue>3500</MarketValue>
+        <WorkToMake>15000</WorkToMake>
+        <Mass>4.3</Mass>
+    </statBases>
+	<equippedStatOffsets>
+      <SocialImpact>0.10</SocialImpact>
+      <NegotiationAbility>0.10</NegotiationAbility>
+    </equippedStatOffsets>
+    <relicChance>2</relicChance>
+    <equippedAngleOffset>-25</equippedAngleOffset>
+    <stuffCategories>
+      <li>Metallic</li>
+      <li>Woody</li>
+    </stuffCategories>
+    <tools>
+      <li>
+        <label>handle</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2.1</cooldownTime>
+        <armorPenetration>0.15</armorPenetration>
+      </li>
+      <li>
+        <label>point</label>
+        <capacities>
+          <li>Stab</li>
+        </capacities>
+        <power>18</power>
+        <cooldownTime>1.9</cooldownTime>
+        <armorPenetration>0.28</armorPenetration>
+      </li>
+      <li>
+        <label>edge</label>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>18</power>
+        <cooldownTime>1.9</cooldownTime>
+        <armorPenetration>0.28</armorPenetration>
+      </li>
+    </tools>
+    <recipeMaker>
+      <researchPrerequisite>LongBlades</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>6</Crafting>
+      </skillRequirements>
+      <displayPriority>411</displayPriority>
+    </recipeMaker>
+    <modExtensions>
+      <li Class="VEF.Things.ThingDefExtension">
+        <usableWithShields>true</usableWithShields>
+      </li>
+    </modExtensions>
+    <comps Inherit="False">
+        <li Class="MuridenLibraries.CompProperties_AbilitiesWeapon">
+            <abilityDef>
+                <li>MuridenSlice</li>            
+            </abilityDef>
+        </li>
+        <li Class="CompProperties_Forbiddable"/>
+        <li Class="CompProperties_Styleable"/>
+        <li Class="CompProperties_Biocodable"/>
+        <li>
+            <compClass>CompQuality</compClass>
+        </li>
+        <li>
+			<compClass>CompEquippable</compClass>
+		</li>
+        <li Class="CompProperties_Art">
+            <nameMaker>NamerArtWeaponGun</nameMaker>
+            <descriptionMaker>ArtDescription_WeaponMelee</descriptionMaker>
+            <minQualityForArtistic>Excellent</minQualityForArtistic>
+        </li>
+    </comps>
+  </ThingDef>
+  
+  <ThingDef ParentName="BaseBullet">
+    <defName>Muriden_GunLanceShot</defName>
+    <label>gunlance shot</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Shotgun</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <shaderType>TransparentPostLight</shaderType>
+	  <drawSize>(1.5, 1.5)</drawSize>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>10</damageAmountBase>
+      <armorPenetrationBase>0.35</armorPenetrationBase>
+	  <stoppingPower>3</stoppingPower>
+      <speed>70</speed>
+    </projectile>
+  </ThingDef>
+  
+  <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
+    <defName>Muriden_GunLance</defName>
+    <label>muriden gunlance</label>
+    <description>A strange weapon combining a lance with a barrel allowing for melee and short range shelling.</description>
+	<smeltable>false</smeltable>
+    <relicChance>3</relicChance>
+    <techLevel>Medieval</techLevel>
+    <tradeability>Sellable</tradeability>
+    <costStuffCount>150</costStuffCount>
+    <costList>
+		<Gold>3</Gold>
+	</costList>
+	<statBases>
+	    <MarketValue>7500</MarketValue>
+	    <Mass>12</Mass>
+		<WorkToMake>15000</WorkToMake>
+        <VEF_MeleeWeaponRange>2.14</VEF_MeleeWeaponRange>
+	</statBases>
+    <equippedAngleOffset>5</equippedAngleOffset>
+    <stuffCategories>
+        <li>Metallic</li>
+    </stuffCategories>
+    <weaponClasses>
+        <li>Melee</li>
+        <li>MeleePiercer</li>
+    </weaponClasses>	
+	<graphicData>
+        <texPath>Things/Item/Equipment/WeaponMelee/Muradin_NobleGunlance</texPath>
+        <maskPath>Things/Item/Equipment/WeaponMelee/Muradin_NobleGunlance_m</maskPath>
+        <graphicClass>Graphic_Single</graphicClass>
+        <shaderType>CutoutComplex</shaderType>
+        <drawSize>1.5</drawSize>
+    </graphicData>
+	<equippedStatOffsets>
+        <MoveSpeed>-1.5</MoveSpeed>
+        <MeleeHitChance>-3.0</MeleeHitChance>
+        <MeleeDodgeChance>-0.1</MeleeDodgeChance>
+    </equippedStatOffsets>
+    <thingSetMakerTags>
+      <li>RewardStandardQualitySuper</li>
+      <li>RewardSpecial</li>
+    </thingSetMakerTags>
+    <recipeMaker>
+        <researchPrerequisite>Gunsmithing</researchPrerequisite>
+        <researchPrerequisite>LongBlades</researchPrerequisite>
+        <skillRequirements>
+            <Crafting>8</Crafting>
+        </skillRequirements>
+        <displayPriority>411</displayPriority>
+    </recipeMaker> 
+    <tools>
+      <li>
+        <label>handle</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>4</cooldownTime>
+      </li>
+      <li>
+        <label>point</label>
+        <capacities>
+          <li>Stab</li>
+        </capacities>
+        <power>22</power>
+        <cooldownTime>3.2</cooldownTime>
+        <armorPenetration>0.35</armorPenetration>
+      </li>
+	  <li>
+        <label>edge</label>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>20</power>
+        <cooldownTime>3.8</cooldownTime>
+        <armorPenetration>0.28</armorPenetration>
+      </li>
+    </tools>
+	<verbs>
+		<li>
+			<verbClass>Verb_Shoot</verbClass>
+			<hasStandardCommand>true</hasStandardCommand>
+			<onlyManualCast>True</onlyManualCast>
+			<defaultProjectile>Muriden_GunLanceShot</defaultProjectile>
+			<accuracyTouch>0.95</accuracyTouch>
+			<accuracyShort>0.80</accuracyShort>
+			<accuracyMedium>0.65</accuracyMedium>
+			<accuracyLong>0.45</accuracyLong>
+			<warmupTime>1.5</warmupTime>
+			<range>15.8</range>
+            <soundCast>Shot_Shotgun</soundCast>
+            <soundCastTail>GunTail_Heavy</soundCastTail>
+			<muzzleFlashScale>9</muzzleFlashScale>
+			<label>gunlance shot</label>
+		</li>
+	</verbs>
+	<modExtensions>
+        <li Class="VEF.Things.ThingDefExtension">
+            <usableWithShields>true</usableWithShields>
+        </li>
+		<li Class="BrawlerFriendly.DefModExtension_BrawlerFriendly"	MayRequire="cat.monopack" />
+	</modExtensions>
+	<comps Inherit="True">
+        <li Class="MVCF.Comps.CompProperties_VerbProps">
+          <compClass>MVCF.Comps.Comp_VerbProps</compClass>
+            <verbProps>
+                <li>
+                  <label>gunlance shot</label>
+                    <comps>
+                        <li Class="MVCF.VerbComps.VerbCompProperties_Cooldown">
+                            <compClass>MVCF.VerbComps.VerbComp_Cooldown</compClass>
+                            <cooldownTime>4</cooldownTime>
+                        </li>
+                    </comps>
+                    <canBeToggled>false</canBeToggled>
+                </li>
+            </verbProps>
+        </li>
+	</comps>
+    <comps Inherit="False">
+        <li Class="CompProperties_Forbiddable"/>
+        <li Class="CompProperties_Styleable"/>
+        <li Class="CompProperties_Biocodable"/>
+        <li>
+            <compClass>CompQuality</compClass>
+        </li>
+        <li>
+			<compClass>CompEquippable</compClass>
+		</li>
+        <li Class="CompProperties_Art">
+            <nameMaker>NamerArtWeaponGun</nameMaker>
+            <descriptionMaker>ArtDescription_WeaponGun</descriptionMaker>
+            <minQualityForArtistic>Excellent</minQualityForArtistic>
+        </li>
+    </comps>
+  </ThingDef>
+</Defs>

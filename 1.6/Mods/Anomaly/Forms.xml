@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+ <CreepJoinerFormKindDef Abstract="True" Name="MuridenBaseCreepJoinerKind" ParentName="MuridenBasePawnKind">
+    <canBeScattered>false</canBeScattered>
+    <apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+    <humanPregnancyChance>0</humanPregnancyChance>
+    <invNutrition>10</invNutrition>
+    <studiableAsPrisoner>true</studiableAsPrisoner>
+    <acceptArrestChanceFactor>0.8</acceptArrestChanceFactor>
+    <basePrisonBreakMtbDays>30</basePrisonBreakMtbDays>
+    <showInDebugSpawner>false</showInDebugSpawner>
+    <apparelIgnoreSeasons>false</apparelIgnoreSeasons>
+    <isFighter>false</isFighter>
+    <generateInitialNonFamilyRelations>false</generateInitialNonFamilyRelations>
+    <fixedChildBackstories>
+      <li>UnknownChildhood</li>
+    </fixedChildBackstories>
+    <fixedAdultBackstories>
+      <li>UnknownAdulthood</li>
+    </fixedAdultBackstories>
+  </CreepJoinerFormKindDef>
+
+
+  <CreepJoinerFormKindDef ParentName="MuridenBaseCreepJoinerKind">
+    <defName>muriden_Gaurdener</defName>
+    <label>gaurdener</label>
+    <weight>1</weight>
+    <letterLabel>A stunningly good-looking stranger.</letterLabel>
+    <letterPrompt>A stunningly good-looking gaurdener stretches {PAWN_possessive} legs. {PAWN_pronoun} seems very tired.\n\n{PAWN_pronoun} asks to stay in your colony for a while - at least until {PAWN_pronoun} has recovered {PAWN_possessive} strength.</letterPrompt>
+    <fixedInventory>
+      <Muradin_NobleLongsword>
+        <stuff>Steel</stuff>
+        <quality>Good</quality>
+      </Muradin_NobleLongsword>
+    </fixedInventory>
+    <apparelMoney>
+			 <min>220</min>
+			 <max>420</max>
+		</apparelMoney>
+    <apparelTags>
+		<li>Neolithic</li>        <!-- Core fallback -->
+		<li>MedievalMilitary</li>
+		<li>IndustrialBasic</li>
+	</apparelTags>
+    <forcedTraits>
+      <Beauty>2</Beauty>
+    </forcedTraits>
+     <requires>
+      <li>Joybringer</li>
+      <li>PerfectHuman</li>
+    </requires>
+  </CreepJoinerFormKindDef>
+
+
+  <CreepJoinerFormKindDef ParentName="MuridenBaseCreepJoinerKind">
+    <defName>muriden_LabEscapee</defName>
+    <label>lab escapee</label>
+    <weight>1</weight>
+    <letterLabel>A mangled figure is approaching the colony.</letterLabel>
+    <letterPrompt>A test subject stands before you, speaking in a trembling voice. {PAWN_pronoun} say they barely escaped from a horrific laboratory and, while searching for a place to seek help, came across the colony.</letterPrompt>
+    <minGenerationAge>18</minGenerationAge>
+    <maxGenerationAge>70</maxGenerationAge>
+    <techHediffsChance>0.8</techHediffsChance>
+		<techHediffsTags>
+			<li>Advanced</li>
+		</techHediffsTags>
+    <missingParts>
+      <li>
+        <bodyPart>Arm</bodyPart>
+        <chance>0.8</chance>
+      </li>
+    </missingParts>
+    <existingDamage>
+      <li>
+        <damage>SurgicalCut</damage>
+        <chance>0.5</chance>
+        <groups>
+          <li>Arms</li>
+        </groups>
+      </li>
+      <li>
+        <damage>SurgicalCut</damage>
+        <chance>0.5</chance>
+        <groups>
+          <li>Legs</li>
+        </groups>
+      </li>
+    </existingDamage>
+    <weaponTags>
+			<li>NeolithicMeleeBasic</li>
+			<li>SimpleGun</li>
+		</weaponTags>
+    <apparelMoney>
+			 <min>220</min>
+			 <max>420</max>
+		</apparelMoney>
+        <weaponMoney>
+      <min>900</min>
+      <max>1000</max>
+    </weaponMoney>
+    <apparelTags>
+		<li>Neolithic</li>        <!-- Core fallback -->
+		<li>MedievalMilitary</li>
+		<li>IndustrialBasic</li>
+	</apparelTags>
+    <apparelAllowHeadgearChance>0.0</apparelAllowHeadgearChance>
+    <excludes>
+      <li>Joybringer</li>
+    </excludes>
+  </CreepJoinerFormKindDef>
+
+<CreepJoinerFormKindDef ParentName="MuridenBaseCreepJoinerKind">
+    <defName>muriden_LoneGenius</defName>
+    <label>lone genius</label>
+    <weight>1</weight>
+    <letterLabel>A lone figure is approaching the colony.</letterLabel>
+    <letterPrompt>The strange figure keeps muttering about some scientific breakthrough. All {PAWN_pronoun} needs is a laboratory. If you let {PAWN_objective} stay, {PAWN_pronoun} will share {PAWN_possessive} vast knowledge with you. It's hard to tell whether {PAWN_pronoun}'s insane or a genius - or both.</letterPrompt>
+    <skills>
+      <li>
+        <skill>Intellectual</skill>
+        <range>13~18</range>
+      </li>
+    </skills>
+    <apparelMoney>
+			 <min>220</min>
+			 <max>420</max>
+		</apparelMoney>
+    <apparelTags>
+		<li>Neolithic</li>        <!-- Core fallback -->
+		<li>MedievalMilitary</li>
+		<li>IndustrialBasic</li>
+	</apparelTags>
+    <forcedTraits>
+      <TooSmart/>
+      <Abrasive/>
+    </forcedTraits>
+    <requires>
+      <li>UnnaturalHealing</li>
+      <li>Alchemist</li>
+      <li>Occultist</li>
+    </requires>
+  </CreepJoinerFormKindDef>
+
+</Defs>

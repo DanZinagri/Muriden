@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <ThingDef ParentName="BaseBullet">
+		<defName>MuridenBayonetRifle_Bullet</defName>
+		<label>Muriden Bayonet Rifle Bullet</label>
+		<projectile>
+			<damageDef>Bullet</damageDef>
+			<damageAmountBase>10</damageAmountBase>
+			<speed>60</speed>
+		</projectile>
+		<graphicData>
+			<texPath>Things/Projectile/Bullet_big</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+	</ThingDef>
+    
+	<ThingDef ParentName="BaseHumanMakeableGun">
+		<defName>MuridenBayonetRifle</defName>
+		<label>Muriden Bayonet Rifle</label>
+		<description>A rifle that uses a lever located around the trigger guard area to load fresh cartridges. Whilst not as powerful as other rifles, this gun allows for rapid reload.\n\nUsed widely around the western worlds for the ability to be shot single-handedly on the horseback.</description>
+		<graphicData>
+			<texPath>Things/Item/Equipment/WeaponRanged/MuridenBayonetRifle</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>Interact_Rifle</soundInteract>
+        <tradeability>Sellable</tradeability>
+        <techLevel>Industrial</techLevel>
+		<statBases>
+			<WorkToMake>10000</WorkToMake>
+			<Mass>2.8</Mass>
+			<AccuracyTouch>0.74</AccuracyTouch>
+			<AccuracyShort>0.69</AccuracyShort>
+			<AccuracyMedium>0.59</AccuracyMedium>
+			<AccuracyLong>0.59</AccuracyLong>
+			<RangedWeapon_Cooldown>0.4</RangedWeapon_Cooldown>
+		</statBases>
+		<costList>
+			<Steel>60</Steel>
+			<ComponentIndustrial>3</ComponentIndustrial>
+		</costList>
+		<recipeMaker>
+			<recipeUsers>
+				<li>TableMachining</li>
+			</recipeUsers>
+			<researchPrerequisite>Gunsmithing</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>5</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>MuridenBayonetRifle_Bullet</defaultProjectile>
+				<warmupTime>1</warmupTime>
+				<range>25.9</range>
+				<soundCast>Shot_BoltActionRifle</soundCast>
+				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<muzzleFlashScale>9</muzzleFlashScale>
+			</li>
+		</verbs>
+		<weaponTags>
+			<li>Gun</li>
+		</weaponTags>
+		<tools>
+			<li>
+				<label>stock</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>11</power>
+				<cooldownTime>2.4</cooldownTime>
+			</li>
+			<li>
+				<label>barrel</label>
+				<capacities>
+					<li>Stab</li>
+					<li>Poke</li>
+				</capacities>
+				<power>15</power>
+				<cooldownTime>2</cooldownTime>
+                <armorPenetration>0.35</armorPenetration>
+			</li>
+		</tools>
+        <comps Inherit="False">
+            <li Class="MuridenLibraries.CompProperties_AbilitiesWeapon">
+                <abilityDef>
+                    <li>MuridenCharge</li>            
+                </abilityDef>
+            </li>
+            <li Class="CompProperties_Forbiddable"/>
+            <li Class="CompProperties_Styleable"/>
+            <li Class="CompProperties_Biocodable"/>
+            <li>
+                <compClass>CompQuality</compClass>
+            </li>
+            <li>
+                <compClass>CompEquippable</compClass>
+            </li>
+            <li Class="CompProperties_Art">
+                <nameMaker>NamerArtWeaponGun</nameMaker>
+                <descriptionMaker>ArtDescription_WeaponGun</descriptionMaker>
+                <minQualityForArtistic>Excellent</minQualityForArtistic>
+            </li>
+        </comps>
+	</ThingDef>
+</Defs>

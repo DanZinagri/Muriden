@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <ThingDef Name="Muriden_BaseShield" ParentName="BaseMeleeWeapon_Blunt_Quality" Abstract="True">
+        <techLevel>Medieval</techLevel>
+        <thingCategories Inherit="False">
+            <li>VFEC_Shields</li>
+        </thingCategories>
+		<thingClass>VEF.Apparels.Apparel_Shield</thingClass>
+		<apparel>
+			<defaultOutfitTags>
+				<li>Soldier</li>
+			</defaultOutfitTags>
+			<bodyPartGroups>
+				<li>LeftHand</li>
+			</bodyPartGroups>
+			<layers>
+				<li>VFEC_OuterShell</li>
+			</layers>
+		<countsAsClothingForNudity>false</countsAsClothingForNudity>
+		<canBeDesiredForIdeo>false</canBeDesiredForIdeo>
+		</apparel>
+        <equippedAngleOffset>-30</equippedAngleOffset>
+        <tools>
+            <li>
+                <label>base</label>
+                <capacities>
+                    <li>Poke</li>
+                </capacities>
+                <power>9</power>
+                <cooldownTime>2</cooldownTime>
+            </li>
+            <li>
+                <label>centre</label>
+                <labelUsedInLogging>false</labelUsedInLogging>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>9</power>
+                <cooldownTime>2</cooldownTime>
+            </li>
+        </tools>
+    </ThingDef>
+
+    <ThingDef ParentName="Muriden_BaseShield">
+        <defName>Muriden_HeavyShield</defName>
+        <label>muriden heavy shield</label>
+        <description>A heavy medium-sized steel shield. Offers a significant amount of protection against melee and ranged attacks.</description>
+        <graphicData>
+            <texPath>Things/Item/Equipment/Shield/HeavyShield/MuridenHeavyShield</texPath>
+			<!-- <maskPath>Things/Item/Equipment/Shield/HeavyShield/HeavyShield_m</maskPath> -->
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>0.75</drawSize>
+			<shaderType>CutoutComplex</shaderType>
+        </graphicData>
+		<uiIconScale>1</uiIconScale>
+        <costStuffCount>150</costStuffCount>
+		<stuffCategories>
+		  <li>Metallic</li>
+		</stuffCategories>
+		<thingSetMakerTags>
+		  <li>RewardStandardQualitySuper</li>
+		</thingSetMakerTags>
+        <statBases>
+            <MaxHitPoints>180</MaxHitPoints>
+            <Flammability>0.3</Flammability>
+            <ArmorRating_Sharp>0.85</ArmorRating_Sharp>
+            <ArmorRating_Blunt>0.68</ArmorRating_Blunt>
+            <ArmorRating_Heat>0.91</ArmorRating_Heat>
+            <WorkToMake>9000</WorkToMake>
+            <Mass>6</Mass>
+        </statBases>
+		<equippedStatOffsets>
+			<MeleeDodgeChance>-0.2</MeleeDodgeChance>
+			<MeleeHitChance>-0.2</MeleeHitChance>
+			<MoveSpeed>-0.5</MoveSpeed>
+		</equippedStatOffsets>
+		<recipeMaker>
+			<unfinishedThingDef>UnfinishedMetallicTechArmor</unfinishedThingDef>
+			<researchPrerequisite>PlateArmor</researchPrerequisite>
+            <recipeUsers>
+                <li>ElectricSmithy</li>
+                <li>FueledSmithy</li>
+            </recipeUsers>
+			<skillRequirements>
+				<Crafting>10</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+        <comps>
+            <li Class="VEF.Apparels.CompProperties_Shield">
+                <shieldTags>
+                    <li>MedievalDecent</li>
+					<li>MuridenShield</li>
+                </shieldTags>
+                <useDeflectMetalEffect>true</useDeflectMetalEffect>
+                <coveredBodyPartGroups>
+                    <li>Torso</li>
+                    <li>Arms</li>
+                    <li>Hands</li>
+                </coveredBodyPartGroups>
+                <offHandGraphicData>
+                    <texPath>Things/Item/Equipment/Shield/HeavyShield/MuridenHeavyShield</texPath>
+                    <graphicClass>Graphic_Multi</graphicClass>
+                    <shaderType>CutoutComplex</shaderType>
+                    <drawSize>1</drawSize>
+                </offHandGraphicData>
+                <offHandHoldOffset>
+                    <northDefault>
+                        <offset>(0.18, 0, 0.2)</offset>
+                        <behind>true</behind>
+                    </northDefault>
+                    <east>
+                        <offset>(-0.05, 0, 0.2)</offset>
+                        <behind>true</behind>
+                    </east>
+                    <south>
+                        <offset>(0.18, 0, 0.2)</offset>
+						<behind>false</behind>
+                    </south>
+                    <west>
+                        <offset>(0.05, -5, 0.2)</offset>
+						<behind>false</behind>
+                    </west>
+                </offHandHoldOffset>
+            </li>
+        </comps>
+		<colorGenerator Class="ColorGenerator_StandardApparel" /> 
+    </ThingDef>
+
+</Defs>

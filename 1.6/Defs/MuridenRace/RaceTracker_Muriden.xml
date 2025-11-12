@@ -1,0 +1,32 @@
+<Defs>
+  <!-- not really needed this is more for future options -->
+  <HediffDef ParentName="BS_DefaultRaceTracker">
+    <defName>Muriden_Race_Tracker</defName>
+    <description>Rodent-like humanoid</description>
+    <label>muriden</label>
+    <stages Inherit="False">
+      <li>
+        <statFactors>
+          <MaxNutrition>1.25</MaxNutrition>
+          <EatingSpeed>1.25</EatingSpeed>
+        </statFactors>
+        <statOffsets>
+          <MoveSpeed>0.1</MoveSpeed>
+        </statOffsets>
+      </li>
+    </stages>
+    <comps>
+      <li Class="BigAndSmall.CompProperties_Race">
+        <canSwapAwayFrom>true</canSwapAwayFrom>
+      </li>
+    </comps>
+    <modExtensions>
+      <li Class="BigAndSmall.PawnExtension">
+        <traitIcon>UI/Icons/Xenotypes/Muriden_Icon</traitIcon>
+        <romanceTags>
+          <Humanlike>1.0</Humanlike>
+        </romanceTags>
+      </li> 
+    </modExtensions>
+  </HediffDef>
+</Defs>

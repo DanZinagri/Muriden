@@ -1,0 +1,5 @@
+C:\Users\DanZinagri\Documents\RimWorldModding\Assemblies\MuradenLibraries.dll
+C:\Users\DanZinagri\Documents\RimWorldModding\MuradenLibraries\MuradenLibraries\obj\Debug\MuradenLibraries.csproj.AssemblyReference.cache
+C:\Users\DanZinagri\Documents\RimWorldModding\MuradenLibraries\MuradenLibraries\obj\Debug\MuradenLibraries.csproj.CoreCompileInputs.cache
+C:\Users\DanZinagri\Documents\RimWorldModding\MuradenLibraries\Assemblies\MuradenLibraries.dll
+C:\Users\DanZinagri\Documents\RimWorldModding\MuradenLibraries\MuradenLibraries\obj\Debug\MuradenLibraries.dll

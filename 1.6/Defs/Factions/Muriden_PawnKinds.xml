@@ -1,0 +1,530 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs> 
+	<PawnKindDef Name="MuridenBasePawnKind" Abstract="True">
+		<combatPower>20</combatPower>
+		<canBeSapper>true</canBeSapper>
+		<race>Human</race>
+        <fixedGender>Female</fixedGender>
+		<minGenerationAge>13</minGenerationAge>
+		<maxGenerationAge>35</maxGenerationAge>
+		<defaultFactionType>Muridenia</defaultFactionType>
+		<invNutrition>2</invNutrition>
+		<apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+		<backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
+		<initialResistanceRange>0~10</initialResistanceRange>
+		<initialWillRange>5~10</initialWillRange>
+	</PawnKindDef>	
+	
+	<PawnKindDef ParentName="MuridenBasePawnKind">
+		<defName>MuridenColonist</defName>
+		<label>muriden colonist</label>	
+		<apparelMoney>
+			 <min>220</min>
+			 <max>420</max>
+		</apparelMoney>
+        <apparelTags>
+		  <li>Neolithic</li>        <!-- Core fallback -->
+		  <li>MedievalMilitary</li>
+		  <li>IndustrialBasic</li>
+		</apparelTags>
+		<apparelAllowHeadgearChance>0.0</apparelAllowHeadgearChance>
+		<apparelColor>(254,254,254)</apparelColor>
+	</PawnKindDef>
+	
+	
+	<PawnKindDef ParentName="MuridenBasePawnKind">
+		<defName>MuridenNoble</defName>
+		<label>muriden noble</label>
+		<combatPower>35</combatPower>
+		<isFighter>false</isFighter>
+		<factionLeader>true</factionLeader>
+		<itemQuality>Good</itemQuality>
+		<apparelMoney>
+			<min>800</min>
+			<max>3500</max>
+		</apparelMoney>
+        <apparelTags>
+		  <li>Neolithic</li>        <!-- Core fallback -->
+		  <li>MedievalMilitary</li>
+		  <li>IndustrialBasic</li>
+		</apparelTags>
+		<apparelAllowHeadgearChance>0.3</apparelAllowHeadgearChance>
+		<inventoryOptions>
+			<skipChance>0.5</skipChance>
+			<subOptionsChooseOne>
+				<li>
+					<choiceChance>95</choiceChance>
+					<thingDef>Silver</thingDef>
+					<countRange>
+						<min>500</min>
+						<max>800</max>
+					</countRange>
+				</li>
+				<li>
+					<choiceChance>5</choiceChance>
+					<thingDef>Silver</thingDef>
+					<countRange>
+						<min>1000</min>
+						<max>3500</max>
+					</countRange>
+				</li>
+			</subOptionsChooseOne>
+		</inventoryOptions>
+		<trader>true</trader>
+	</PawnKindDef>
+	
+	
+	<PawnKindDef ParentName="MuridenBasePawnKind">
+		<defName>MuridenServant</defName>
+		<label>muriden servant</label>
+		<apparelMoney>
+			<min>560</min>
+			<max>2400</max>
+		</apparelMoney>
+        <apparelTags>
+		  <li>Neolithic</li>        <!-- Core fallback -->
+		  <li>MedievalMilitary</li>
+		  <li>IndustrialBasic</li>
+		</apparelTags>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="MuridenBasePawnKind">
+		<defName>MuridenPriest</defName>
+		<label>muriden Priest</label>
+		<isFighter>false</isFighter>
+		<combatPower>25</combatPower>
+		<factionLeader>true</factionLeader>
+		<minGenerationAge>21</minGenerationAge>
+		<apparelMoney>
+			<min>800</min>
+			<max>3000</max>
+		</apparelMoney>
+        <apparelTags>
+		  <li>Neolithic</li>        <!-- Core fallback -->
+		  <li>MedievalMilitary</li>
+		  <li>IndustrialBasic</li>
+		</apparelTags>
+	</PawnKindDef>
+
+
+
+	<PawnKindDef Name="MuridenCombatantBase" ParentName="MuridenBasePawnKind" Abstract="true">
+		<isFighter>true</isFighter>	
+	</PawnKindDef>	
+	
+	<PawnKindDef ParentName="MuridenCombatantBase">
+		<defName>MuridenMerchant</defName>
+		<label>muriden Merchant</label>
+		<combatPower>45</combatPower>
+		<isFighter>true</isFighter>
+		<apparelMoney>
+			<min>800</min>
+			<max>2000</max>
+		</apparelMoney>
+        <apparelTags>
+		  <li>Neolithic</li>        <!-- Core fallback -->
+		  <li>MedievalMilitary</li>
+		  <li>IndustrialBasic</li>
+		</apparelTags>
+		<weaponMoney>
+			<min>3000</min>
+			<max>3500</max>
+		</weaponMoney>
+		<weaponTags>
+		  <li>Medieval</li>
+		</weaponTags>
+		<trader>true</trader>
+	</PawnKindDef>	
+
+	<PawnKindDef ParentName="MuridenCombatantBase">
+		<defName>MuridenCombatant</defName>
+		<label>muriden combatant</label>
+		<combatPower>60</combatPower>
+		<isFighter>true</isFighter>
+		<gearHealthRange>
+			<min>0.3</min>
+			<max>0.9</max>
+		</gearHealthRange>
+		<apparelMoney>
+			<min>800</min>
+			<max>2000</max>
+		</apparelMoney>
+        <apparelTags>
+		  <li>Neolithic</li>        <!-- Core fallback -->
+		  <li>MedievalMilitary</li>
+		  <li>IndustrialBasic</li>
+		</apparelTags>
+		<weaponMoney>
+			<min>1200</min>
+			<max>2000</max>
+		</weaponMoney>
+		<weaponTags>
+		  <li>Medieval</li>
+		</weaponTags>
+		<apparelAllowHeadgearChance>0.1</apparelAllowHeadgearChance>
+	</PawnKindDef>	
+	
+	<PawnKindDef ParentName="MuridenCombatantBase">
+		<defName>MuridenVanguard</defName>
+		<label>muriden vanguard</label>
+		<combatPower>70</combatPower>
+		<isFighter>true</isFighter>
+		<minGenerationAge>21</minGenerationAge>
+		<gearHealthRange>
+			<min>0.4</min>
+			<max>1</max>
+		</gearHealthRange>
+		<apparelMoney>
+			<min>1500</min>
+			<max>2000</max>
+		</apparelMoney>
+        <apparelTags>
+		  <li>Neolithic</li>        <!-- Core fallback -->
+		  <li>MedievalMilitary</li>
+		  <li>IndustrialBasic</li>
+		</apparelTags>
+		<weaponMoney>
+			<min>2000</min>
+			<max>3500</max>
+		</weaponMoney>
+		<weaponTags>
+		  <li>Medieval</li>
+		</weaponTags>
+		<apparelAllowHeadgearChance>0.5</apparelAllowHeadgearChance>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="MuridenCombatantBase">
+		<defName>MuridenDefender</defName>
+		<label>muriden defender</label>
+		<combatPower>85</combatPower>
+		<isFighter>true</isFighter>
+		<minGenerationAge>21</minGenerationAge>
+		<gearHealthRange>
+			<min>0.6</min>
+			<max>1</max>
+		</gearHealthRange>
+		<apparelMoney>
+			<min>6500</min>
+			<max>8000</max>
+		</apparelMoney>
+        <apparelTags>
+		  <li>Neolithic</li>        <!-- Core fallback -->
+		  <li>MedievalMilitary</li>
+		  <li>IndustrialBasic</li>
+		</apparelTags>
+		<weaponMoney>
+			<min>2000</min>
+			<max>3500</max>
+		</weaponMoney>
+		<weaponTags>
+		  <li>Medieval</li>
+		</weaponTags>
+		<apparelAllowHeadgearChance>100</apparelAllowHeadgearChance>				
+		<skills>
+			<li>
+				<skill>Melee</skill>
+				<range>8~12</range>
+			</li>
+		</skills>
+	</PawnKindDef>	
+
+	<PawnKindDef ParentName="MuridenCombatantBase">
+		<defName>MuridenSoldier</defName>
+		<label>muriden soldier</label>
+		<combatPower>90</combatPower>
+		<isFighter>true</isFighter>
+		<itemQuality>Good</itemQuality>
+		<gearHealthRange>
+			<min>0.7</min>
+			<max>1.2</max>
+		</gearHealthRange>
+		<apparelMoney>
+			<min>1000</min>
+			<max>2500</max>
+		</apparelMoney>
+        <apparelTags>
+		  <li>Neolithic</li>        <!-- Core fallback -->
+		  <li>MedievalMilitary</li>
+		  <li>IndustrialBasic</li>
+		</apparelTags>
+		<weaponMoney>
+			<min>500</min>
+			<max>2000</max>
+		</weaponMoney>
+		<weaponTags>
+		  <li>Medieval</li>
+		</weaponTags>
+		<apparelAllowHeadgearChance>0.8</apparelAllowHeadgearChance>
+		<skills>
+			<li>
+				<skill>Shooting</skill>
+				<range>8~13</range>
+			</li>
+			<li>
+				<skill>Melee</skill>
+				<range>6~10</range>
+			</li>
+		</skills>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="MuridenCombatantBase">
+		<defName>MuridenEliteGuardener</defName>
+		<label>muriden elite guardener</label>
+		<combatPower>90</combatPower>
+		<isFighter>true</isFighter>
+		<itemQuality>Good</itemQuality>
+		<minGenerationAge>26</minGenerationAge>
+		<apparelMoney>
+			<min>3500</min>
+			<max>4500</max>
+		</apparelMoney>
+        <apparelTags>
+		  <li>Neolithic</li>        <!-- Core fallback -->
+		  <li>MedievalMilitary</li>
+		  <li>IndustrialBasic</li>
+		</apparelTags>
+		<gearHealthRange>
+			<min>0.7</min>
+			<max>1.2</max>
+		</gearHealthRange>
+		<weaponMoney>
+			<min>3000</min>
+			<max>5000</max>
+		</weaponMoney>
+		<weaponTags>
+		  <li>Medieval</li>
+		</weaponTags>
+		<apparelAllowHeadgearChance>0.0</apparelAllowHeadgearChance>		
+		<inventoryOptions>
+			<subOptionsChooseOne>
+				<li>
+					<thingDef>MedicineHerbal</thingDef>
+					<skipChance>0.85</skipChance>
+					<countRange>
+						<min>1</min>
+						<max>5</max>
+					</countRange>
+				</li>
+			</subOptionsChooseOne>
+		</inventoryOptions>				
+		<skills>
+			<li>
+				<skill>Shooting</skill>
+				<range>6~12</range>
+			</li>	
+			<li>
+				<skill>Melee</skill>
+				<range>6~12</range>
+			</li>
+		</skills>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="MuridenCombatantBase">
+		<defName>MuridenKnight</defName>
+		<label>muriden knight</label>
+		<combatPower>100</combatPower>
+		<isFighter>true</isFighter>
+		<itemQuality>Good</itemQuality>
+		<minGenerationAge>24</minGenerationAge>
+		<gearHealthRange>
+			<min>0.7</min>
+			<max>2</max>
+		</gearHealthRange>
+		<apparelMoney>
+			<min>6500</min>
+			<max>8000</max>
+		</apparelMoney>
+        <apparelTags>
+		  <li>Neolithic</li>        <!-- Core fallback -->
+		  <li>MedievalMilitary</li>
+		  <li>IndustrialBasic</li>
+		</apparelTags>
+		<weaponMoney>
+			<min>2000</min>
+			<max>3500</max>
+		</weaponMoney>
+		<weaponTags>
+		  <li>Medieval</li>
+		</weaponTags>
+		<apparelAllowHeadgearChance>100</apparelAllowHeadgearChance>
+		<skills>
+			<li>
+				<skill>Melee</skill>
+				<range>8~13</range>
+			</li>
+		</skills>		
+	</PawnKindDef>
+	
+	<PawnKindDef ParentName="MuridenCombatantBase">
+		<defName>MuridenEliteDefender</defName>
+		<label>muriden elite defender</label>
+		<combatPower>180</combatPower>
+		<isFighter>true</isFighter>
+		<itemQuality>Good</itemQuality>
+		<minGenerationAge>27</minGenerationAge>
+		<gearHealthRange>
+			<min>0.7</min>
+			<max>2</max>
+		</gearHealthRange>
+		<apparelMoney>
+			<min>6500</min>
+			<max>8000</max>
+		</apparelMoney>
+        <apparelTags>
+		  <li>Neolithic</li>        <!-- Core fallback -->
+		  <li>MedievalMilitary</li>
+		  <li>IndustrialBasic</li>
+		</apparelTags>
+		<weaponMoney>
+			<min>500</min>
+			<max>3000</max>
+		</weaponMoney>
+		<weaponTags>
+		  <li>Medieval</li>
+		</weaponTags>
+		<apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>		
+		<skills>
+			<li>
+				<skill>Melee</skill>
+				<range>10~13</range>
+			</li>
+		</skills>
+	</PawnKindDef>
+	
+	<PawnKindDef ParentName="MuridenCombatantBase">
+		<defName>MuridenKnightCommander</defName>
+		<label>muriden knight commander</label>
+		<combatPower>200</combatPower>
+		<isFighter>true</isFighter>
+		<factionLeader>true</factionLeader>
+		<itemQuality>Excellent</itemQuality>
+		<minGenerationAge>21</minGenerationAge>
+		<gearHealthRange>
+			<min>1</min>
+			<max>3</max>
+		</gearHealthRange>
+		<apparelMoney>
+			<min>6500</min>
+			<max>8000</max>
+		</apparelMoney>
+        <apparelTags>
+		  <li>Neolithic</li>        <!-- Core fallback -->
+		  <li>MedievalMilitary</li>
+		  <li>IndustrialBasic</li>
+		</apparelTags>
+		<weaponMoney>
+			<min>2000</min>
+			<max>4500</max>
+		</weaponMoney>
+		<weaponTags>
+		  <li>Medieval</li>
+		</weaponTags>
+		<apparelAllowHeadgearChance>0.5</apparelAllowHeadgearChance>
+		<apparelColor>(254,254,254)</apparelColor>
+		<skills>
+			<li>
+				<skill>Melee</skill>
+				<range>12~16</range>
+			</li>
+		</skills>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="MuridenCombatantBase">
+		<defName>MuridenEliteSoldier</defName>
+		<label>muriden elite soldier</label>
+		<combatPower>100</combatPower>
+		<isFighter>true</isFighter>
+		<itemQuality>Excellent</itemQuality>
+		<destroyGearOnDrop>true</destroyGearOnDrop>
+		<gearHealthRange>
+			<min>0.8</min>
+			<max>1.5</max>
+		</gearHealthRange>
+		<apparelMoney>
+			<min>4500</min>
+			<max>8500</max>
+		</apparelMoney>
+        <apparelTags>
+		  <li>Neolithic</li>        <!-- Core fallback -->
+		  <li>MedievalMilitary</li>
+		  <li>IndustrialBasic</li>
+		</apparelTags>
+		<weaponMoney>
+			<min>3500</min>
+			<max>5000</max>
+		</weaponMoney>
+		<weaponTags>
+		  <li>Medieval</li>
+		</weaponTags>
+		<apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
+		<skills>
+			<li>
+				<skill>Shooting</skill>
+				<range>10~15</range>
+			</li>
+			<li>
+				<skill>Melee</skill>
+				<range>8~10</range>
+			</li>
+		</skills>
+	</PawnKindDef>
+	
+	<PawnKindDef ParentName="MuridenCombatantBase">
+		<defName>MuridenMercenaryLight</defName>
+		<label>muriden Mercenary</label>
+		<combatPower>35</combatPower>
+		<isFighter>false</isFighter>
+		<apparelMoney>
+			<min>800</min>
+			<max>1500</max>
+		</apparelMoney>
+		<apparelTags>
+		  <li>Neolithic</li>        <!-- Core fallback -->
+		  <li>MedievalMilitary</li>
+		  <li>IndustrialBasic</li>
+		</apparelTags>
+		<weaponMoney>
+			<min>1500</min>
+			<max>3000</max>
+		</weaponMoney>
+		<weaponTags>
+		  <li>Medieval</li>
+		</weaponTags>
+	</PawnKindDef>
+	
+	<PawnKindDef ParentName="MuridenCombatantBase">
+		<defName>MuridenMercenary</defName>
+		<label>muriden mercenary</label>
+		<minGenerationAge>30</minGenerationAge>
+		<combatPower>45</combatPower>
+		<isFighter>false</isFighter>
+		<techHediffsChance>0.1</techHediffsChance>
+		<gearHealthRange>
+			<min>0.3</min>
+			<max>0.6</max>
+		</gearHealthRange>
+		<techHediffsTags>
+			<li>Advanced</li>
+		</techHediffsTags>
+		<techHediffsMoney>
+			<min>3000</min>
+			<max>5000</max>
+		</techHediffsMoney>
+		<apparelMoney>
+			<min>800</min>
+			<max>8000</max>
+		</apparelMoney>
+		<apparelTags>
+		  <li>Neolithic</li>        <!-- Core fallback -->
+		  <li>MedievalMilitary</li>
+		  <li>IndustrialBasic</li>
+		</apparelTags>
+		<weaponMoney>
+			<min>1500</min>
+			<max>3500</max>
+		</weaponMoney>
+		<weaponTags>
+		  <li>Medieval</li>
+		</weaponTags>
+	</PawnKindDef>
+</Defs>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<XenotypeDef>
+		<defName>Muriden</defName>
+		<label>muriden</label>
+		<description>A small but hardy mouse-like people.</description>
+		<descriptionShort>A small but hardy mouse-like people.</descriptionShort>
+		<iconPath>UI/Icons/Xenotypes/Muriden_Icon</iconPath>
+		<inheritable>true</inheritable>
+		<genes>
+			<li>BS_SmallFrame</li>
+			<li>Small</li>
+			<li>BS_FastAging</li>
+			<li>MoveSpeed_Quick</li>
+			<li>BS_TinyTough</li>
+			<li>Body_FemaleOnly</li>
+			<li>BS_BirthLitter</li>
+			<li>Ears_Muriden</li>
+			<li>Tail_Muriden</li>
+			<li>Body_Thin</li>
+			<li>BS_GeneStabilizing_Moderate</li>
+		    <li>Muriden_Resolve</li>
+            <li>Muriden_courage</li>
+            <li>AptitudePoor_Cooking</li>
+            <li MayRequire="redmattis.bettergeneinheritance">BGI_PrimaryGenes</li>
+		</genes>
+	</XenotypeDef>
+	
+	<XenotypeDef>
+		<defName>Sciurus</defName>
+		<label>sciurus</label>
+		<description>A small but speedy squirrel-like people.</description>
+		<descriptionShort>A small but speedy squirrel-like people.</descriptionShort>
+		<iconPath>UI/Icons/Xenotypes/Sciurus_Icon</iconPath>
+		<inheritable>true</inheritable>
+		<genes>
+			<li>BS_SmallFrame</li>
+			<li>Small</li>
+			<li>BS_FastAging</li>
+			<li>MoveSpeed_Quick</li>
+			<li>BS_TinyTough</li>
+			<li>Body_FemaleOnly</li>
+			<li>BS_BirthLitter</li>
+			<li>Ears_Sciurus</li>
+			<li>Tail_Sciurus</li>
+			<li>Body_Thin</li>
+			<li>BS_GeneStabilizing_Moderate</li>
+		    <li>Sciurus_Alacrity</li>
+            <li>Sciurus_sprint</li>
+            <li>AptitudeTerrible_Intellectual</li>
+            <li MayRequire="redmattis.bettergeneinheritance">BGI_PrimaryGenes</li>
+		</genes>
+	</XenotypeDef>
+	
+	<XenotypeDef>
+		<defName>Castoran</defName>
+		<label>castoran</label>
+		<description>A small but industrius beaver-like people.</description>
+		<descriptionShort>A small but industrius beaver-like people.</descriptionShort>
+		<iconPath>UI/Icons/Xenotypes/Castoran_icon</iconPath>
+		<inheritable>true</inheritable>
+		<genes>
+			<li>DwarfFrame</li>
+			<li>BS_ToughSkin</li>
+			<li>BS_FastAging</li>
+			<li>PsychicAbility_Dull</li>
+			<li>MinTemp_SmallDecrease</li>
+			<li>MaxTemp_SmallDecrease</li>
+            <li>Robust</li>
+			<li>Body_FemaleOnly</li>
+			<li>BS_BirthLitter</li>
+			<li>Ears_Muriden</li>
+			<li>Body_Standard</li>
+			<li>BS_GeneStabilizing_Moderate</li>
+			<li>Tail_Castoran</li>
+			<li>AptitudeRemarkable_Construction</li>
+			<li>AptitudeStrong_Plants</li>
+			<li>AptitudePoor_Animals</li>
+			<li>AptitudeTerrible_Intellectual</li>
+		    <li>Castoran_Ingenuity</li>
+            <li>Castoran_slap</li>
+            <li MayRequire="redmattis.bettergeneinheritance">BGI_PrimaryGenes</li>
+		</genes>
+	</XenotypeDef>
+    
+    <XenotypeDef>
+		<defName>Choerites</defName>
+		<label>choerites</label>
+		<description>A large and calm subtype of the Muriden sharing charactaristics of the Capybara.</description>
+		<descriptionShort>A Capybara-like people.</descriptionShort>
+		<iconPath>UI/Icons/Xenotypes/Choerites_icon</iconPath>
+		<inheritable>true</inheritable>
+		<genes>
+			<li>BS_NaturalArmor</li>
+			<li>BS_FastAging</li>
+			<li>PsychicAbility_Deaf</li>
+			<li>MoveSpeed_Quick</li>
+			<li>WebbedPhalanges</li>
+			<li>Aggression_DeadCalm</li>
+			<li>Sleepy</li>
+			<li>Body_FemaleOnly</li>
+			<li>BS_BirthTwins</li>
+			<li>Ears_Muriden</li>
+			<li>Body_Standard</li>
+			<li>BS_GeneStabilizing_Great</li>
+			<li>Unstoppable</li>
+			<li>VRE_DodgeDisabled</li>
+			<li>AptitudeTerrible_Shooting</li>
+			<li>AptitudePoor_Melee</li>
+			<li>AptitudeStrong_Social</li>
+			<li>AptitudeStrong_Intellectual</li>
+		    <li>Choerites_Calm</li>
+            <li>Choerites_leap</li>
+            <li MayRequire="redmattis.bettergeneinheritance">BGI_PrimaryGenes</li>
+		</genes>
+	</XenotypeDef>
+</Defs>

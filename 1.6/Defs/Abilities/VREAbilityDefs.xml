@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>      
+    <VEF.Abilities.AbilityDef>
+        <defName>MuridenSlice</defName>
+        <label>self explosion</label>
+        <description>Expels pressurized, flammable gas from the caster which immediately ignites. High chance of igniting those in the blast site, but does little damage without harming the caster.</description>
+        <iconPath>UI/Icons/Genes/Muriden_Icon</iconPath>
+        <abilityClass>VEF.Abilities.Ability_Explode</abilityClass>
+        <castTime>10</castTime>
+        <radius>4.9</radius>
+        <radiusStatFactors>
+            <MeleeHitChance>2.54</MeleeHitChance>
+        </radiusStatFactors>
+        <cooldownTime>12000</cooldownTime>
+        <targetMode>Self</targetMode>
+        <!-- <castSound>VPE_SelfExplosion_Cast</castSound> -->
+        <castFleck>PsycastPsychicEffect</castFleck>
+        <modExtensions>
+          <li Class="VEF.Abilities.AbilityExtension_Explosion">
+            <explosionRadius>14.9</explosionRadius>
+            <onCaster>true</onCaster>
+            <explosionDamageDef>Cut</explosionDamageDef>
+            <explosionSound>Pawn_Melee_MechanoidSlash_HitPawn</explosionSound>
+            <chanceToStartFire>0</chanceToStartFire>
+            <explosionDamageAmount>20</explosionDamageAmount>
+            <damageFalloff>True</damageFalloff>
+            <casterImmune>True</casterImmune>
+          </li>
+        </modExtensions>
+    </VEF.Abilities.AbilityDef>
+  
+   <!-- Ability for the Bayonet on the gun -->
+   <VEF.Abilities.AbilityDef>
+        <defName>MuridenCharge</defName>
+        <label>Bayonet Charge</label>
+        <description>Teleports to the target and executes a melee strike, weakened or augmented by the caster’s melee skill. If the target is killed, teleports to the next closest enemy at no cost and attacks again, until there is nothing left to kill.</description>
+        <iconPath>UI/Icons/Genes/Muriden_Icon</iconPath>
+        <abilityClass>MuridenLibraries.BayonetCharge</abilityClass>
+        <castTime>30</castTime>
+        <range>10.5</range>
+        <targetMode>Pawn</targetMode>
+        <needsTicking>true</needsTicking>
+        <minRange>2</minRange>
+        <cooldownTime>600</cooldownTime>
+    </VEF.Abilities.AbilityDef>
+    
+    <!-- Ability for a dragoon jump -->
+    <ThingDef ParentName="PawnFlyerBase">
+        <defName>Muriden_JumpingPawn</defName>
+        <thingClass>MuridenLibraries.MuridenJumpingPawn</thingClass>
+        <pawnFlyer>
+            <flightDurationMin>0.1</flightDurationMin>
+            <flightSpeed>20</flightSpeed>
+        </pawnFlyer>
+    </ThingDef>
+    
+    <VEF.Abilities.AbilityDef>
+        <defName>DivingCharge</defName>
+        <label>Diving Charge</label>
+        <description>Drastically augments the caster’s legs to leap high into the air and dealing a diving strike to a target. Scales with melee skill.</description>
+        <iconPath>UI/Icons/Genes/Muriden_Icon</iconPath>
+        <abilityClass>MuridenLibraries.DivingCharge</abilityClass>
+        <castTime>3</castTime>
+        <targetMode>Pawn</targetMode>
+        <range>6.5</range>
+        <needsTicking>true</needsTicking>
+        <rangeStatFactors>
+          <MeleeHitChance>2.54</MeleeHitChance>
+        </rangeStatFactors>
+        <minRange>2</minRange>
+        <cooldownTime>1800</cooldownTime>
+    </VEF.Abilities.AbilityDef>
+
+</Defs>

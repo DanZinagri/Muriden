@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <!--Muriden ears and tail -->
+	<GeneDef ParentName="GeneEarsBase">
+		<defName>Ears_Muriden</defName>
+		<label>muriden ears</label>
+		<description>Carriers of this gene will grow mouse-like ears.</description>
+		<iconPath>UI/Icons/Genes/Gene_EarMuriden</iconPath>
+		<capMods>
+		  <li>
+			<capacity>Hearing</capacity>
+			<postFactor>1.05</postFactor>
+		  </li>
+		</capMods>
+		<renderNodeProperties Inherit="False">
+			<li>
+				<nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+				<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+				<texPath>Things/Pawn/Humanlike/HeadAttachments/MuridenEars/MuridenEars</texPath>
+				<useSkinShader>false</useSkinShader>
+				<colorType>Hair</colorType>
+				<drawData>
+					<scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+					<defaultData>
+						<layer>70</layer>
+					</defaultData>
+				</drawData>
+				<parentTagDef>Head</parentTagDef>
+			</li>
+            <li>
+				<nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+				<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+				<texPath>Things/Pawn/Humanlike/HeadAttachments/MuridenEars/MuridenEars_inner</texPath>
+				<useSkinShader>true</useSkinShader>
+				<colorType>Skin</colorType>
+				<drawData>
+					<scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+					<defaultData>
+						<layer>71</layer>
+					</defaultData>
+				</drawData>
+				<parentTagDef>Head</parentTagDef>
+			</li>
+		</renderNodeProperties>
+		<biostatCpx>1</biostatCpx>
+	</GeneDef>
+	<GeneDef ParentName="GeneTailBase">
+		<defName>Tail_Muriden</defName>
+		<label>muriden tail</label>
+		<description>Carriers of this gene grow a mouse-like tail that helps them with movement slightly.</description>
+		<iconPath>UI/Icons/Genes/Gene_TailMuriden</iconPath>
+		<iconColor>(0.75, 0.75, 0.75)</iconColor>
+		<displayOrderInCategory>1000.1</displayOrderInCategory>
+		<statOffsets>
+			<MoveSpeed>0.05</MoveSpeed>
+		</statOffsets>
+		<biostatCpx>1</biostatCpx>
+		<renderNodeProperties>
+            <li Class="BigAndSmall.PawnRenderingProps_Ultimate">
+                <nodeClass>BigAndSmall.PawnRenderNode_Ultimate</nodeClass>
+                <!-- <workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass> -->
+                <parentTagDef>Body</parentTagDef>
+                <rotDrawMode>Fresh, Rotting</rotDrawMode>
+                <colorType>Hair</colorType>
+                <shader>Cutout</shader>
+                <conditionalGraphics>
+                <texturePaths><li>Things/Pawn/Humanlike/BodyAttachments/MuridenTails/MuridenTails</li></texturePaths>
+                <colorA>
+                <replaceFlagsAndInactive><TailedColorA/></replaceFlagsAndInactive>
+                <hairColor>true</hairColor>
+                </colorA>
+                <colorB>
+                <replaceFlagsAndInactive><TailedColorB/></replaceFlagsAndInactive>
+                <hairColor>true</hairColor>
+                <brightness>1.2</brightness>
+                <saturation>0.8</saturation>
+                </colorB>
+                <alts>
+                    <li>
+                        <!-- Poor cat lost its tail. -->
+                        <triggerBodyPart>
+                        <li>
+                            <bodyPartDef>Tail</bodyPartDef>
+                            <partMissing>true</partMissing>
+                        </li>
+                        </triggerBodyPart>
+                        <texturePaths><default>BS_Blank</default></texturePaths>
+                    </li>
+                </alts>
+                </conditionalGraphics>
+                <drawData>
+					<scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+					<defaultData>
+						<layer>-2</layer>
+					</defaultData>
+					<dataNorth>
+						<offset>(0, 0.2, -0.25)</offset>
+						<layer>90</layer>
+					</dataNorth>
+					<dataSouth>
+						<offset>(0.15, -0.1, -0.25)</offset>
+					</dataSouth>
+					<dataEast>
+						<offset>(-0.58, -0.1, -0.15)</offset>
+					</dataEast>
+					<dataWest>
+						<offset>(0.58, -0.1, -0.15)</offset>
+					</dataWest>
+				</drawData>
+            </li>
+		</renderNodeProperties>
+	</GeneDef>
+	
+	<!-- Sciurus ears and tail -->
+	<GeneDef ParentName="GeneEarsBase">
+		<defName>Ears_Sciurus</defName>
+		<label>sciurus ears</label>
+		<description>Carriers of this gene will grow squirrel-like ears.</description>
+		<iconPath>UI/Icons/Genes/Gene_EarMuriden</iconPath>
+		<capMods>
+		  <li>
+			<capacity>Hearing</capacity>
+			<postFactor>1.05</postFactor>
+		  </li>
+		</capMods>
+		<renderNodeProperties Inherit="False">
+			<li>
+				<nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+				<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+				<texPath>Things/Pawn/Humanlike/HeadAttachments/SciurusEars/SciurusEars</texPath>
+				<useSkinShader>false</useSkinShader>
+				<colorType>Hair</colorType>
+				<drawData>
+					<scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+					<defaultData>
+						<layer>70</layer>
+					</defaultData>
+				</drawData>
+				<parentTagDef>Head</parentTagDef>
+			</li>
+		</renderNodeProperties>
+		<biostatCpx>1</biostatCpx>
+	</GeneDef>
+	<GeneDef ParentName="GeneTailBase">
+		<defName>Tail_Sciurus</defName>
+		<label>sciurus tail</label>
+		<description>Carriers of this gene grow a squirrel-like tail that helps them with movement slightly.</description>
+		<iconPath>UI/Icons/Genes/Gene_TailMuriden</iconPath>
+		<iconColor>(0.75, 0.75, 0.75)</iconColor>
+		<displayOrderInCategory>1000.1</displayOrderInCategory>
+		<statOffsets>
+			<MoveSpeed>0.05</MoveSpeed>
+			<MeleeDodgeChance>1.05</MeleeDodgeChance>
+		</statOffsets>
+		<biostatCpx>1</biostatCpx>
+		<renderNodeProperties>
+            <li Class="BigAndSmall.PawnRenderingProps_Ultimate">
+                <nodeClass>BigAndSmall.PawnRenderNode_Ultimate</nodeClass>
+                <!-- <workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass> -->
+                <parentTagDef>Body</parentTagDef>
+                <rotDrawMode>Fresh, Rotting</rotDrawMode>
+                <colorType>Hair</colorType>
+                <shader>Cutout</shader>
+                <conditionalGraphics>
+                <texturePaths><li>Things/Pawn/Humanlike/BodyAttachments/SciurusTails/SciurusTails</li></texturePaths>
+                <colorA>
+                <replaceFlagsAndInactive><TailedColorA/></replaceFlagsAndInactive>
+                <hairColor>true</hairColor>
+                </colorA>
+                <colorB>
+                <replaceFlagsAndInactive><TailedColorB/></replaceFlagsAndInactive>
+                <hairColor>true</hairColor>
+                <brightness>1.2</brightness>
+                <saturation>0.8</saturation>
+                </colorB>
+                <alts>
+                    <li>
+                        <!-- Poor cat lost its tail. -->
+                        <triggerBodyPart>
+                        <li>
+                            <bodyPartDef>Tail</bodyPartDef>
+                            <partMissing>true</partMissing>
+                        </li>
+                        </triggerBodyPart>
+                        <texturePaths><default>BS_Blank</default></texturePaths>
+                    </li>
+                </alts>
+                </conditionalGraphics>
+                <drawData>
+					<scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+					<defaultData>
+						<layer>-2</layer>
+					</defaultData>
+					<dataNorth>
+						<offset>(-0.10, 0.2, -0.25)</offset>
+						<layer>90</layer>
+					</dataNorth>
+					<dataSouth>
+						<offset>(0.10, -0.1, -0.20)</offset>
+					</dataSouth>
+					<dataEast>
+						<offset>(-0.5, -0.1, -0.10)</offset>
+					</dataEast>
+					<dataWest>
+						<offset>(0.5, -0.1, -0.10)</offset>
+					</dataWest>
+				</drawData>
+            </li>
+		</renderNodeProperties>
+	</GeneDef>
+	
+	<!-- Castoran tail -->
+	<GeneDef ParentName="GeneTailBase">
+		<defName>Tail_Castoran</defName>
+		<label>castoran tail</label>
+		<description>Carriers of this gene grow a beaver-like tail that assists with building.</description>
+		<iconPath>UI/Icons/Genes/Gene_TailMuriden</iconPath>
+		<iconColor>(0.75, 0.75, 0.75)</iconColor>
+		<displayOrderInCategory>1000.1</displayOrderInCategory>
+		<statOffsets>
+			<ConstructionSpeed>1.15</ConstructionSpeed>
+		    <CarryingCapacity>1.25</CarryingCapacity>
+		</statOffsets>
+		<biostatCpx>1</biostatCpx>
+		<renderNodeProperties>
+            <li Class="BigAndSmall.PawnRenderingProps_Ultimate">
+                <nodeClass>BigAndSmall.PawnRenderNode_Ultimate</nodeClass>
+                <!-- <workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass> -->
+                <parentTagDef>Body</parentTagDef>
+                <rotDrawMode>Fresh, Rotting</rotDrawMode>
+                <colorType>Hair</colorType>
+                <shader>Cutout</shader>
+                <conditionalGraphics>
+                <texturePaths><li>Things/Pawn/Humanlike/BodyAttachments/CastoranTails/CastoranTails</li></texturePaths>
+                <colorA>
+                <replaceFlagsAndInactive><TailedColorA/></replaceFlagsAndInactive>
+                <hairColor>true</hairColor>
+                </colorA>
+                <colorB>
+                <replaceFlagsAndInactive><TailedColorB/></replaceFlagsAndInactive>
+                <hairColor>true</hairColor>
+                <brightness>1.2</brightness>
+                <saturation>0.8</saturation>
+                </colorB>
+                <alts>
+                    <li>
+                        <!-- Poor cat lost its tail. -->
+                        <triggerBodyPart>
+                        <li>
+                            <bodyPartDef>Tail</bodyPartDef>
+                            <partMissing>true</partMissing>
+                        </li>
+                        </triggerBodyPart>
+                        <texturePaths><default>BS_Blank</default></texturePaths>
+                    </li>
+                </alts>
+                </conditionalGraphics>
+                <drawData>
+					<scaleOffsetByBodySize>true</scaleOffsetByBodySize>
+					<defaultData>
+						<layer>-2</layer>
+					</defaultData>
+					<dataNorth>
+						<offset>(0.02, 0.2, -0.4)</offset>
+						<layer>90</layer>
+					</dataNorth>
+					<dataSouth>
+						<offset>(0.45, -0.1, 0.35)</offset>
+					</dataSouth>
+					<dataEast>
+						<offset>(-0.7, -0.1, -0.25)</offset>
+					</dataEast>
+					<dataWest>
+						<offset>(0.7, -0.1, -0.25)</offset>
+					</dataWest>
+				</drawData>
+            </li>
+		</renderNodeProperties>
+	</GeneDef>
+</Defs>

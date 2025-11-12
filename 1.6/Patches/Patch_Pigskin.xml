@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+                <li>Vanilla Races Expanded - Pigskin</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/XenotypeDef[defName="Muriden" or defName="Sciurus" or defName="Castoran" or defName="Choerites"]/genes/li[text()="BS_FastAging"]</xpath>
+                    <value>
+                        <li>VRE_FastAging</li>
+                    </value>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+</Patch>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>	
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/XenotypeDef[defName="Dirtmole"]/genes</xpath>
+		<value>			
+			<li>BS_SmallFrame</li>
+			<li>Small</li>
+			<li>BS_FastAging</li>
+			<li>BS_TinyTough</li>
+			<li>Body_FemaleOnly</li>
+			<li>BS_BirthLitter</li>
+			<li>Ears_Muriden</li>
+			<li>Tail_Muriden</li>
+			<li>Body_Thin</li>	
+			<li>Dirtmole_Resilience</li>
+            <li MayRequire="redmattis.bettergeneinheritance">BGI_PrimaryGenes</li>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationRemove">
+		<success>Always</success>
+		<xpath>/Defs/XenotypeDef[defName="Dirtmole"]/genes/li[text()="Skin_LightGray"]</xpath>
+	</Operation>
+	<Operation Class="PatchOperationRemove">
+		<success>Always</success>
+		<xpath>/Defs/XenotypeDef[defName="Dirtmole"]/genes/li[text()="Eyes_Gray"]</xpath>
+	</Operation>
+</Patch>

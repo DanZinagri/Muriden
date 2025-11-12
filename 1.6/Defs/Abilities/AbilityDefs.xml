@@ -1,0 +1,191 @@
+<Defs>
+    <AbilityDef ParentName="AbilityTouchBase">
+        <defName>CastoranTailSlapStun</defName>
+        <label>Tail Slap</label>
+        <description>Stun your foes with a point-blank paralyzing glare that leaves them paralyzed in place for a long time.</description>
+        <iconPath>UI/Icons/Genes/Castoran_icon</iconPath>
+        <!-- <cooldownTicksRange>4000</cooldownTicksRange> -->
+        <cooldownTicksRange>2400</cooldownTicksRange>
+        <aiCanUse>true</aiCanUse>
+        <displayOrder>101</displayOrder>
+        <verbProperties>
+          <verbClass>Verb_CastAbilityTouch</verbClass>
+          <drawAimPie>true</drawAimPie>
+          <range>-1</range>
+          <warmupTime>0.5</warmupTime>
+          <targetParams>
+            <canTargetSelf>false</canTargetSelf>
+            <canTargetBuildings>false</canTargetBuildings>
+            <canTargetMechs>true</canTargetMechs>
+            <canTargetBloodfeeders>true</canTargetBloodfeeders>
+          </targetParams>
+        </verbProperties>
+        <comps>
+          <li Class="BigAndSmall.CompProperties_MeleeAttackAbility">
+            <!--How large the target can be compared to the lamia. 0.80 means max 80% of body size-->
+            <damageDef>Stun</damageDef>
+            <damageAmount>10</damageAmount>
+            <asExplosion>false</asExplosion>
+          </li>
+        </comps>
+    </AbilityDef>
+
+    <AbilityDef>
+        <defName>ChoeritesButtslam</defName>
+        <label>Buttslam</label>
+        <description>Jump at location causing a mild shockwave, scales with body size.</description>
+        <iconPath>UI/Icons/Genes/Choerites_icon</iconPath>
+        <displayOrder>100</displayOrder>
+        <hostile>true</hostile>
+        <cooldownTicksRange>1800</cooldownTicksRange>
+        <jobDef>CastJump</jobDef>
+        <verbProperties>
+          <verbClass>Verb_CastAbilityJump</verbClass>
+          <label>Oh lawd</label>
+          <range>5.8</range>
+          <warmupTime>0.5</warmupTime>
+          <soundCast>Longjump_Jump</soundCast>
+          <soundLanding>Longjump_Land</soundLanding>
+          <requireLineOfSight>true</requireLineOfSight>
+          <targetParams>
+            <mustBeSelectable>true</mustBeSelectable>
+            <canTargetLocations>true</canTargetLocations>
+            <canTargetSelf>false</canTargetSelf>
+            <canTargetBuildings>false</canTargetBuildings>
+            <canTargetMechs>true</canTargetMechs>
+            <canTargetBloodfeeders>true</canTargetBloodfeeders>
+          </targetParams>
+        </verbProperties>
+        <aiCanUse>true</aiCanUse>
+        <ai_IsOffensive>true</ai_IsOffensive>
+        <comps>
+          <li Class="MuridenLibraries.CompProperties_ExplodeOnLanding">
+            <radius>2</radius>
+            <damageDef>Blunt</damageDef>
+            <damageAmount>18</damageAmount>
+            <casterImmune>true</casterImmune>
+            <damageFalloff>true</damageFalloff>
+            <radiusOnPawnSize>true</radiusOnPawnSize>
+            <damageOnPawnSize>true</damageOnPawnSize>
+            <sound>Pawn_Melee_MechanoidSlash_HitPawn</sound>
+          </li>
+        </comps>
+      </AbilityDef>
+    
+    <!-- Ability for last-stand style buff -->
+    <AbilityDef>
+        <defName>MuridenCourage</defName>
+        <label>Muriden Courage</label>
+        <description>Empowering themselves to make their final valiant stand, pushing themsleves to their limits.</description>
+        <iconPath>UI/Icons/Genes/Muriden_Icon</iconPath>
+        <warmupSound>PsycastCastLoop</warmupSound>
+        <cooldownTicksRange>720000</cooldownTicksRange>
+        <hostile>false</hostile>
+        <groupAbility>true</groupAbility>
+        <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <aiCanUse>true</aiCanUse>
+        <ai_IsOffensive>true</ai_IsOffensive>
+        <targetRequired>false</targetRequired>
+        <statBases>
+            <Ability_Duration>600</Ability_Duration>
+        </statBases>
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+            <drawAimPie>false</drawAimPie>
+            <requireLineOfSight>false</requireLineOfSight>
+            <nonInterruptingSelfCast>true</nonInterruptingSelfCast>
+            <soundCast>EnergyShield_Reset</soundCast>
+            <targetable>false</targetable>
+            <targetParams>
+                <canTargetSelf>true</canTargetSelf>
+            </targetParams>
+            <violent>false</violent>
+            <warmupTime>3</warmupTime>
+        </verbProperties>
+        <comps>
+          <li Class="CompProperties_AbilityGiveHediff">
+            <compClass>CompAbilityEffect_GiveHediff</compClass>
+            <hediffDef>MuridenCourageHD</hediffDef>
+            <onlyApplyToSelf>True</onlyApplyToSelf>
+            <replaceExisting>true</replaceExisting>
+          </li>
+        </comps>
+    </AbilityDef>
+  
+    <AbilityDef>
+        <defName>Disable_MuridenCourage</defName>
+        <label>End Muriden Courage</label>
+        <description>Ends the Courage state.</description>
+        <iconPath>UI/Icons/Genes/Muriden_Icon</iconPath>
+        <cooldownTicksRange>60</cooldownTicksRange>
+        <hostile>false</hostile>
+        <groupAbility>true</groupAbility>
+        <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+        <aiCanUse>false</aiCanUse>
+        <ai_IsOffensive>false</ai_IsOffensive>
+        <targetRequired>false</targetRequired>
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+            <drawAimPie>false</drawAimPie>
+            <requireLineOfSight>false</requireLineOfSight>
+            <nonInterruptingSelfCast>true</nonInterruptingSelfCast>
+            <targetable>false</targetable>
+            <targetParams>
+                <canTargetSelf>true</canTargetSelf>
+            </targetParams>
+            <violent>false</violent>
+        </verbProperties>
+        <comps>
+            <li Class="CompProperties_AbilityRemoveHediff">
+                <compClass>CompAbilityEffect_RemoveHediff</compClass>
+                <hediffDef>MuridenCourageHD</hediffDef>
+                <applyToSelf>true</applyToSelf>
+            </li>
+        </comps>
+    </AbilityDef>
+    
+    
+    <!--Squirrelspeed dash -->
+    <AbilityDef>
+        <defName>SciurusSprint</defName>
+        <label>Sciurus Sprint</label>
+        <description>An insane boost in speed and agility for a short while.</description>
+        <iconPath>UI/Icons/Genes/Muriden_Icon</iconPath>
+        <warmupSound>PsycastCastLoop</warmupSound>
+        <cooldownTicksRange>720000</cooldownTicksRange>
+        <hostile>false</hostile>
+        <groupAbility>true</groupAbility>
+        <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+        <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+        <aiCanUse>true</aiCanUse>
+        <ai_IsOffensive>true</ai_IsOffensive>
+        <targetRequired>false</targetRequired>
+        <statBases>
+            <Ability_Duration>60</Ability_Duration>
+        </statBases>
+        <verbProperties>
+            <verbClass>Verb_CastAbility</verbClass>
+            <drawAimPie>false</drawAimPie>
+            <requireLineOfSight>false</requireLineOfSight>
+            <nonInterruptingSelfCast>true</nonInterruptingSelfCast>
+            <soundCast>EnergyShield_Reset</soundCast>
+            <targetable>false</targetable>
+            <targetParams>
+                <canTargetSelf>true</canTargetSelf>
+            </targetParams>
+            <violent>false</violent>
+            <warmupTime>3</warmupTime>
+        </verbProperties>
+        <comps>
+          <li Class="CompProperties_AbilityGiveHediff">
+            <compClass>CompAbilityEffect_GiveHediff</compClass>
+            <hediffDef>SciurusSprintHD</hediffDef>
+            <onlyApplyToSelf>True</onlyApplyToSelf>
+            <replaceExisting>true</replaceExisting>
+          </li>
+        </comps>
+    </AbilityDef>
+</Defs>

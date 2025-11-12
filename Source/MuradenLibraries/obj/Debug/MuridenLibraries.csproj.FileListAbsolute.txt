@@ -1,0 +1,8 @@
+C:\Users\DanZinagri\Documents\RimWorldModding\MuradenLibraries\Assemblies\MuridenLibraries.dll
+C:\Users\DanZinagri\Documents\RimWorldModding\MuradenLibraries\MuradenLibraries\obj\Debug\MuridenLibraries.csproj.AssemblyReference.cache
+C:\Users\DanZinagri\Documents\RimWorldModding\MuradenLibraries\MuradenLibraries\obj\Debug\MuridenLibraries.csproj.CoreCompileInputs.cache
+C:\Users\DanZinagri\Documents\RimWorldModding\MuradenLibraries\MuradenLibraries\obj\Debug\MuridenLibraries.dll
+E:\SteamLibrary\steamapps\common\RimWorld\Mods\Muriden\Source\MuradenLibraries\obj\Debug\MuridenLibraries.csproj.AssemblyReference.cache
+E:\SteamLibrary\steamapps\common\RimWorld\Mods\Muriden\Source\MuradenLibraries\obj\Debug\MuridenLibraries.csproj.CoreCompileInputs.cache
+E:\SteamLibrary\steamapps\common\RimWorld\Mods\Muriden\Source\MuradenLibraries\obj\Debug\MuridenLibraries.dll
+E:\SteamLibrary\steamapps\common\RimWorld\Mods\Muriden\Source\CompiledAssemblies\MuridenLibraries.dll

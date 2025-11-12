@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<GeneDef>
+		<defName>Muriden_Resolve</defName>
+		<label>muriden resolve</label>
+		<description>Carriers of this gene have improved dodge and work speed.</description>
+		<biostatCpx>1</biostatCpx>
+		<biostatMet>-2</biostatMet>
+		<displayCategory>Miscellaneous</displayCategory>
+		<statFactors>
+			<MeleeDodgeChance>1.2</MeleeDodgeChance>
+			<WorkSpeedGlobal>1.1</WorkSpeedGlobal>
+		</statFactors>
+		<iconPath>UI/Icons/Genes/Muriden_Icon</iconPath>
+		<displayOrderInCategory>103</displayOrderInCategory>
+        <modExtensions>
+            <li Class="BigAndSmall.PawnExtension">
+                <canWalkOnCreep>true</canWalkOnCreep>
+                <renderCacheOff>true</renderCacheOff>
+                <thingDefSwap>Muriden_Race</thingDefSwap>
+            </li>
+        </modExtensions>
+	</GeneDef>
+	
+	<GeneDef>
+		<defName>Dirtmole_Resilience</defName>
+		<label>dirtmole resilience</label>
+		<description>Carriers of this gene have carrying capacity and hearing</description>
+		<biostatCpx>1</biostatCpx>
+		<biostatMet>-2</biostatMet>
+		<displayCategory>Miscellaneous</displayCategory>
+		<statFactors>
+			<MiningYield>1.2</MiningYield>
+		</statFactors>
+        <statOffsets>
+            <CarryingCapacity>1.2</CarryingCapacity>
+        </statOffsets>
+		<capMods>
+		  <li>
+			<capacity>Hearing</capacity>
+			<postFactor>1.15</postFactor>
+		  </li>
+		</capMods>
+		<iconPath>UI/Icons/Genes/Muriden_Icon</iconPath>
+		<displayOrderInCategory>103</displayOrderInCategory>
+        <modExtensions>
+            <li Class="BigAndSmall.PawnExtension">
+                <canWalkOnCreep>true</canWalkOnCreep>
+                <renderCacheOff>true</renderCacheOff>
+                <thingDefSwap>Muriden_Race</thingDefSwap>
+            </li>
+        </modExtensions>
+	</GeneDef>
+	
+	<GeneDef>
+		<defName>Sciurus_Alacrity</defName>
+		<label>sciurus alacrity</label>
+		<description>Carriers of this gene have improved accuracy and speed but are more delicate</description>
+		<biostatCpx>1</biostatCpx>
+		<biostatMet>-3</biostatMet>
+		<displayCategory>Miscellaneous</displayCategory>
+		<statFactors>
+			<MeleeDodgeChance>1.05</MeleeDodgeChance>
+			<WorkSpeedGlobal>1.05</WorkSpeedGlobal>
+			<MoveSpeed>1.15</MoveSpeed>
+			<VEF_RangeAttackSpeedFactor>1.05</VEF_RangeAttackSpeedFactor>
+			<VEF_MeleeAttackSpeedFactor>1.05</VEF_MeleeAttackSpeedFactor>
+			<IncomingDamageFactor>1.10</IncomingDamageFactor>
+		</statFactors>
+		<exclusionTags>
+			<li>RangedAttackSpeed</li>
+			<li>MeleeAttackSpeed</li>
+		</exclusionTags>
+		<iconPath>UI/Icons/Genes/Sciurus_Icon</iconPath>
+		<displayOrderInCategory>103</displayOrderInCategory>
+        <modExtensions>
+            <li Class="BigAndSmall.PawnExtension">
+                <canWalkOnCreep>true</canWalkOnCreep>
+                <renderCacheOff>true</renderCacheOff>
+                <thingDefSwap>Muriden_Race</thingDefSwap>
+            </li>
+        </modExtensions>
+	</GeneDef>
+	
+	<GeneDef>
+		<defName>Castoran_Ingenuity</defName>
+		<label>castoran ingenuity</label>
+		<description>Carriers of this gene have improved construction speed and plant harvest yields</description>
+		<biostatCpx>1</biostatCpx>
+		<biostatMet>-2</biostatMet>
+		<displayCategory>Miscellaneous</displayCategory>
+		<statFactors>
+			<ConstructionSpeed>1.15</ConstructionSpeed>
+			<PlantHarvestYield>1.2</PlantHarvestYield>
+		</statFactors>
+		<iconPath>UI/Icons/Genes/Castoran_icon</iconPath>
+		<displayOrderInCategory>103</displayOrderInCategory>
+        <modExtensions>
+            <li Class="BigAndSmall.PawnExtension">
+                <canWalkOnCreep>true</canWalkOnCreep>
+                <renderCacheOff>true</renderCacheOff>
+                <thingDefSwap>Muriden_Race</thingDefSwap>
+            </li>
+        </modExtensions>
+	</GeneDef>
+    
+    <GeneDef>
+		<defName>Choerites_Calm</defName>
+		<label>choerites calm</label>
+		<description>Unharmed, Unbothered, Doin their thing.</description>
+		<biostatCpx>1</biostatCpx>
+		<biostatMet>-1</biostatMet>
+		<displayCategory>Miscellaneous</displayCategory>
+        <statOffsets>
+            <PainShockThreshold>0.1</PainShockThreshold>
+            <MentalBreakThreshold>-0.1</MentalBreakThreshold>
+        </statOffsets>
+		<iconPath>UI/Icons/Genes/Choerites_icon</iconPath>
+		<displayOrderInCategory>103</displayOrderInCategory>
+        <modExtensions>
+            <li Class="BigAndSmall.PawnExtension">
+                <canWalkOnCreep>true</canWalkOnCreep>
+                <renderCacheOff>true</renderCacheOff>
+                <thingDefSwap>Muriden_Race</thingDefSwap>
+            </li>
+        </modExtensions>
+	</GeneDef>
+</Defs>

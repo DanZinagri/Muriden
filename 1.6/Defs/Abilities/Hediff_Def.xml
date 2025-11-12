@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>   
+	<HediffDef>
+		<defName>MuridenCourageHD</defName>
+		<label>muriden courage</label>
+		<description>Enhance one's courageness and resilience, albeit at the expense of exhaustion.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<everCurableByItem>false</everCurableByItem>
+		<stages>
+			<li>
+				<painFactor>0</painFactor>
+                <hungerRateFactor>5</hungerRateFactor>
+				<statOffsets>
+				  <MentalBreakThreshold>-0.30</MentalBreakThreshold>
+				</statOffsets>
+				<capMods>
+				  <li>
+					<capacity>Consciousness</capacity>
+					<offset>0.10</offset>
+				  </li>
+				  <li>
+					<capacity>Moving</capacity>
+					<offset>0.20</offset>
+				  </li>
+				</capMods>
+				<statFactors>
+                    <VEF_MeleeAttackSpeedFactor>1.10</VEF_MeleeAttackSpeedFactor>
+					<RestFallRateFactor>5</RestFallRateFactor>
+                    <MeleeDodgeChance>1.2</MeleeDodgeChance>
+				</statFactors>
+			</li>
+		</stages>
+		<abilities>
+			<li>Disable_MuridenCourage</li>
+		</abilities>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<showRemainingTime>true</showRemainingTime>
+			</li>
+			<li Class="HediffCompProperties_DisappearsOnDeath" />
+		</comps>
+	</HediffDef>
+    
+    <HediffDef>
+		<defName>SciurusSprintHD</defName>
+		<label>Sciurus Sprint</label>
+		<description>Pushing the limits of speed and agility for a short while.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<everCurableByItem>false</everCurableByItem>
+		<stages>
+			<li>
+                <hungerRateFactor>10</hungerRateFactor>
+				<capMods>
+				  <li>
+					<capacity>Moving</capacity>
+					<offset>0.10</offset>
+				  </li>
+				</capMods>
+				<statFactors>
+                    <VEF_MeleeAttackSpeedFactor>1.2</VEF_MeleeAttackSpeedFactor>
+					<RestFallRateFactor>10</RestFallRateFactor>
+                    <MeleeDodgeChance>1.4</MeleeDodgeChance>
+                    <MoveSpeed>4</MoveSpeed>
+				</statFactors>
+			</li>
+		</stages>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<showRemainingTime>true</showRemainingTime>
+			</li>
+			<li Class="HediffCompProperties_DisappearsOnDeath" />
+		</comps>
+	</HediffDef>
+</Defs>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<GeneDef>
+		<defName>Muriden_courage</defName>
+		<label>muriden courage</label>
+		<description>Muriden are known for sudden and great acts of heroism.</description>
+		<biostatCpx>1</biostatCpx>
+		<biostatMet>-2</biostatMet>
+		<displayCategory>Ability</displayCategory>
+		<iconPath>UI/Icons/Genes/Muriden_Icon</iconPath>
+		<displayOrderInCategory>103</displayOrderInCategory>
+        <abilities>
+          <li>MuridenCourage</li>
+        </abilities>
+	</GeneDef>
+	
+	<GeneDef>
+		<defName>Sciurus_sprint</defName>
+		<label>sciurus sprint</label>
+		<description>Sciurus can tap into great bursts of speed.</description>
+		<biostatCpx>1</biostatCpx>
+		<biostatMet>-2</biostatMet>
+		<displayCategory>Ability</displayCategory>
+		<iconPath>UI/Icons/Genes/Sciurus_Icon</iconPath>
+		<displayOrderInCategory>103</displayOrderInCategory>
+        <abilities>
+          <li>SciurusSprint</li>
+        </abilities>
+	</GeneDef>
+	
+	<GeneDef>
+		<defName>Castoran_slap</defName>
+		<label>castoran slap</label>
+		<description>Castoran can utilize their tail offensively.</description>
+		<biostatCpx>1</biostatCpx>
+		<biostatMet>-2</biostatMet>
+		<displayCategory>Ability</displayCategory>
+		<iconPath>UI/Icons/Genes/Castoran_icon</iconPath>
+		<displayOrderInCategory>103</displayOrderInCategory>
+        <abilities>
+          <li>CastoranTailSlapStun</li>
+        </abilities>
+	</GeneDef>
+    
+    <GeneDef>
+		<defName>Choerites_leap</defName>
+		<label>choerites leap</label>
+		<description>Choerites know how to throw their weight around</description>
+		<biostatCpx>1</biostatCpx>
+		<biostatMet>-2</biostatMet>
+		<displayCategory>Ability</displayCategory>
+		<iconPath>UI/Icons/Genes/Choerites_icon</iconPath>
+		<displayOrderInCategory>103</displayOrderInCategory>
+        <abilities>
+          <li>ChoeritesButtslam</li>
+        </abilities>
+	</GeneDef>
+</Defs>

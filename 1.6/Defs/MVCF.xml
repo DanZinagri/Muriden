@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <MVCF.ModDef>
+	<defName>MuridenWeaponVerbs</defName>
+	<label>enable features</label>
+	<description>Enables MVCF features.</description>
+	<ActivateFeatures>
+	  <li>ExtraEquipmentVerbs</li>
+      <li>IntegratedToggle</li>
+	  <li>VerbComps</li>
+	</ActivateFeatures>
+  </MVCF.ModDef>
+</Defs>

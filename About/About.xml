@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<name>Muriden - Rodent Xenotype Project</name>
+	<author>DanZinagri</author>
+	<supportedVersions>
+		<li>1.6</li>
+	</supportedVersions>
+	<packageId>DanZinagri.Muriden</packageId>
+    <modVersion>0.4.0</modVersion>
+	<description>
+	Muriden - From Muris (Latin for Mouse).
+	
+	I like the ratkin mods and the themes it adds, but i've been a bit burned by how hefty HAR and the various race mods can get on a heavily modded setup. While i've seen a attempt or two at a general biotech conversion they felt a little base-level and many didn't recapture theire smaller size. Thus i wanted to make a mod to not only add in a similar type, but also tie it in with the big and small framework. As such i hope to make a ground-up rework of the "ratkin" theme and even add my own spin to it.
+	
+	What is added:
+	Muriden - Effectively the baseliner of this ratkin-esk race.
+	Sciurus - A fast but fragile squirrel subtype (name continuiing with the latin theme).
+	Dirtmole - Patched to be a subtype of Muriden, gaining more of the traits of the Muriden while still retaining the benefits of the dirtmole. (didn't change the name to try and limit compatability issues).
+	A Medieval-Tier faction called the Muriden Kingdom (currently able to spawn Muriden and Dirtmoles)
+	
+	Future Plans:
+	New equipment
+	Hostile faction
+	New Xenotypes
+	Equipment for higher tech levels
+	VFE Medieval and Medieval Overhaul integration
+	special Muriden Warcaskets
+	
+	I'm learning modding this stuff as I go so for now this mod will be mostly XML changes, but maybe someday i'll actually read up on the C# modding side if i run into something i can't achieve with XML changes.
+	
+	I will continue to try and make improvements on the textures as well.
+	</description>
+	<loadAfter>
+		<li>Ludeon.RimWorld</li>
+		<li>Ludeon.RimWorld.Biotech</li>
+		<li>oskarpotocki.vanillafactionsexpanded.core</li>
+		<li>redmattis.betterprerequisites</li>
+		<li>redmattis.bigsmall.core</li>
+	</loadAfter>
+</ModMetaData>
