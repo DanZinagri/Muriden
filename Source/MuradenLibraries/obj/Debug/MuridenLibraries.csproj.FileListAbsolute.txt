@@ -6,3 +6,4 @@ E:\SteamLibrary\steamapps\common\RimWorld\Mods\Muriden\Source\MuradenLibraries\o
 E:\SteamLibrary\steamapps\common\RimWorld\Mods\Muriden\Source\MuradenLibraries\obj\Debug\MuridenLibraries.csproj.CoreCompileInputs.cache
 E:\SteamLibrary\steamapps\common\RimWorld\Mods\Muriden\Source\MuradenLibraries\obj\Debug\MuridenLibraries.dll
 E:\SteamLibrary\steamapps\common\RimWorld\Mods\Muriden\Source\CompiledAssemblies\MuridenLibraries.dll
+E:\SteamLibrary\steamapps\common\RimWorld\Mods\Muriden\1.6\Assemblies\MuridenLibraries.dll

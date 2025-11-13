@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+    <MuridenTitle>Muriden</MuridenTitle>
+    <Muriden.dirtmolePatch>Enabled Dirtmole Patch</Muriden.dirtmolePatch>
+    <Muriden.dirtmolePatch.Desc>If enabled, dirtmoles are patched to fit the Muriden aesthetic. (Requires Restart)</Muriden.dirtmolePatch.Desc>
+</LanguageData>
