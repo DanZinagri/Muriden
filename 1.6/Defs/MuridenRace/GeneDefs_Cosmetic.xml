@@ -277,4 +277,24 @@
             </li>
 		</renderNodeProperties>
 	</GeneDef>
+    
+    <GeneDef ParentName="GeneNoseBase">
+		<defName>Muriden_FeralNose</defName>
+		<label>feral nose</label>
+		<description>Carriers of this gene have animal-like noses.</description>
+		<iconPath>UI/Icons/Genes/Muriden_Icon</iconPath>
+		<biostatCpx>1</biostatCpx>
+		<displayCategory>Miscellaneous</displayCategory>
+		<displayOrderInCategory>410.1</displayOrderInCategory>
+	</GeneDef>
+    <FacialAnimation.HeadTypeDef MayRequire="nals.facialanimation">
+        <defName>MuridenFeralNose</defName>
+        <texPath>Things/Pawn/Humanlike/HeadAttachments/MuridenFeralNose</texPath>
+        <probability>1</probability>
+        <shader>Map/CutoutSkin</shader>
+        <shaderColorOverride>Map/CutoutSkinOverride</shaderColorOverride>
+        <targetGeneDefs>
+            <li>Muriden_FeralNose</li>
+        </targetGeneDefs>
+    </FacialAnimation.HeadTypeDef>
 </Defs>

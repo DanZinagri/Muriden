@@ -114,4 +114,39 @@
             <li MayRequire="redmattis.bettergeneinheritance">BGI_PrimaryGenes</li>
 		</genes>
 	</XenotypeDef>
+    
+    <XenotypeDef>
+		<defName>FeralMuriden</defName>
+		<label>feral muriden</label>
+		<description>A feral version of the muriden with more animalistic features</description>
+		<descriptionShort>A feral version of the muriden.</descriptionShort>
+		<iconPath>UI/Icons/Xenotypes/Muriden_Icon</iconPath>
+		<inheritable>true</inheritable>
+		<genes>
+			<li>BS_SmallFrame</li>
+            <li>Small</li>
+            <li>Muriden_Bite</li>
+            <li>Muriden_Claws</li>
+            <li>BS_FastAging</li>
+            <li>Muriden_courage</li>
+            <li>MoveSpeed_Quick</li>
+            <li>Aggression_Aggressive</li>
+            <li>MeleeDamage_Strong</li>
+            <li>BS_TinyTough</li>
+            <li>Body_FemaleOnly</li>
+            <li>BS_BirthLitter</li>
+            <li>Ears_Muriden</li>
+            <li>Body_Thin</li>
+            <li>Muriden_Resolve</li>
+            <li>BS_GeneStabilizing_Moderate</li>
+            <li>Furskin</li>
+            <li>Muriden_FeralNose</li>
+            <li>Tail_Muriden</li>
+            <li>AptitudeStrong_Melee</li>
+            <li>AptitudePoor_Cooking</li>
+            <li>AptitudeTerrible_Artistic</li>
+            <li>AptitudePoor_Intellectual</li>
+            <li MayRequire="redmattis.bettergeneinheritance">BGI_PrimaryGenes</li>
+		</genes>
+	</XenotypeDef>
 </Defs>

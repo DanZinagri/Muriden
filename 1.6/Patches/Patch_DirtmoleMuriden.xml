@@ -1,38 +1,37 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
-
     <!-- This wrapper checks the C# setting before applying anything -->
-    <Operation Class="MuridenLibraries.PatchOperationEnabled">
-        <operations>
+    <Operation Class="MuridenLibraries.PatchOp_dirtmolePatch">
+        <match Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/XenotypeDef[defName="Dirtmole"]/genes</xpath>
+                    <value>
+                        <li>BS_SmallFrame</li>
+                        <li>Small</li>
+                        <li>BS_FastAging</li>
+                        <li>BS_TinyTough</li>
+                        <li>Body_FemaleOnly</li>
+                        <li>BS_BirthLitter</li>
+                        <li>Ears_Muriden</li>
+                        <li>Tail_Muriden</li>
+                        <li>Body_Thin</li>
+                        <li>Dirtmole_Resilience</li>
+                        <li MayRequire="redmattis.bettergeneinheritance">BGI_PrimaryGenes</li>
+                    </value>
+                </li>
 
-            <li Class="PatchOperationAdd">
-                <xpath>/Defs/XenotypeDef[defName="Dirtmole"]/genes</xpath>
-                <value>
-                    <li>BS_SmallFrame</li>
-                    <li>Small</li>
-                    <li>BS_FastAging</li>
-                    <li>BS_TinyTough</li>
-                    <li>Body_FemaleOnly</li>
-                    <li>BS_BirthLitter</li>
-                    <li>Ears_Muriden</li>
-                    <li>Tail_Muriden</li>
-                    <li>Body_Thin</li>
-                    <li>Dirtmole_Resilience</li>
-                    <li MayRequire="redmattis.bettergeneinheritance">BGI_PrimaryGenes</li>
-                </value>
-            </li>
+                <li Class="PatchOperationRemove">
+                    <success>Always</success>
+                    <xpath>/Defs/XenotypeDef[defName="Dirtmole"]/genes/li[text()="Skin_LightGray"]</xpath>
+                </li>
 
-            <li Class="PatchOperationRemove">
-                <success>Always</success>
-                <xpath>/Defs/XenotypeDef[defName="Dirtmole"]/genes/li[text()="Skin_LightGray"]</xpath>
-            </li>
-
-            <li Class="PatchOperationRemove">
-                <success>Always</success>
-                <xpath>/Defs/XenotypeDef[defName="Dirtmole"]/genes/li[text()="Eyes_Gray"]</xpath>
-            </li>
-
-        </operations>
+                <li Class="PatchOperationRemove">
+                    <success>Always</success>
+                    <xpath>/Defs/XenotypeDef[defName="Dirtmole"]/genes/li[text()="Eyes_Gray"]</xpath>
+                </li>
+            </operations>
+        </match>
     </Operation>
 
 </Patch>

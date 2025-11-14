@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Patch>
+    <Operation Class="MuridenLibraries.PatchOp_factionPatch">
+        <match Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationFindMod">
+                    <mods>
+                        <li>Royalty</li>
+                    </mods>
+                    <match Class="PatchOperationSequence">
+                        <operations>
+                            <li Class="PatchOperationConditional">
+                                <xpath>/Defs/FactionDef[defName="Empire"]/xenotypeSet</xpath>
+                                <nomatch Class="PatchOperationAdd">
+                                    <xpath>/Defs/FactionDef[defName="Empire"]</xpath>
+                                    <value>
+                                        <xenotypeSet />
+                                    </value>
+                                </nomatch>
+                            </li>
+                            <li Class="PatchOperationConditional">
+                                <xpath>/Defs/FactionDef[defName="Empire"]/xenotypeSet/xenotypeChances</xpath>
+                                <nomatch Class="PatchOperationAdd">
+                                    <xpath>/Defs/FactionDef[defName="Empire"]/xenotypeSet</xpath>
+                                    <value>
+                                        <xenotypeChances />
+                                    </value>
+                                </nomatch>
+                            </li>
+                            <li Class="PatchOperationAdd">
+                                <xpath>/Defs/FactionDef[defName="Empire"]/xenotypeSet/xenotypeChances</xpath>
+                                <value>
+                                    <Muriden>0.05</Muriden>
+                                </value>
+                            </li>
+                        </operations>
+                    </match>
+                </li>
+                
+                <li Class="PatchOperationFindMod">
+                    <mods>
+                        <li>Vanilla Factions Expanded - Empire</li>
+                    </mods>
+
+                    <match Class="PatchOperationSequence">
+                        <operations>
+                            <li Class="PatchOperationConditional">
+                                <xpath>/Defs/FactionDef[defName="VFEE_Deserters"]/xenotypeSet</xpath>
+                                <nomatch Class="PatchOperationAdd">
+                                    <xpath>/Defs/FactionDef[defName="VFEE_Deserters"]</xpath>
+                                    <value>
+                                        <xenotypeSet />
+                                    </value>
+                                </nomatch>
+                            </li>
+                            <li Class="PatchOperationConditional">
+                                <xpath>/Defs/FactionDef[defName="VFEE_Deserters"]/xenotypeSet/xenotypeChances</xpath>
+                                <nomatch Class="PatchOperationAdd">
+                                    <xpath>/Defs/FactionDef[defName="VFEE_Deserters"]/xenotypeSet</xpath>
+                                    <value>
+                                        <xenotypeChances />
+                                    </value>
+                                </nomatch>
+                            </li>
+                            <li Class="PatchOperationAdd">
+                                <xpath>/Defs/FactionDef[defName="VFEE_Deserters"]/xenotypeSet/xenotypeChances</xpath>
+                                <value>
+                                    <Muriden>0.05</Muriden>
+                                </value>
+                            </li>
+                        </operations>
+                    </match>
+                </li>
+                
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/FactionDef[defName="OutlanderRough"]/xenotypeSet</xpath>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>/Defs/FactionDef[defName="OutlanderRough"]</xpath>
+                        <value>
+                            <xenotypeSet />
+                        </value>
+                    </nomatch>
+                </li>
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/FactionDef[defName="OutlanderRough"]/xenotypeSet/xenotypeChances</xpath>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>/Defs/FactionDef[defName="OutlanderRough"]/xenotypeSet</xpath>
+                        <value>
+                            <xenotypeChances />
+                        </value>
+                    </nomatch>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/FactionDef[defName="OutlanderRough"]/xenotypeSet/xenotypeChances</xpath>
+                    <value>
+                        <Muriden>0.05</Muriden>
+                        <Sciurus>0.05</Sciurus>
+                        <Castoran>0.01</Castoran>
+                        <Choerites>0.01</Choerites>
+                        <Dirtmole>0.01</Dirtmole>
+                    </value>
+                </li>
+                
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/FactionDef[defName="OutlanderCivil"]/xenotypeSet</xpath>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>/Defs/FactionDef[defName="OutlanderCivil"]</xpath>
+                        <value>
+                            <xenotypeSet />
+                        </value>
+                    </nomatch>
+                </li>
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/FactionDef[defName="OutlanderCivil"]/xenotypeSet/xenotypeChances</xpath>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>/Defs/FactionDef[defName="OutlanderCivil"]/xenotypeSet</xpath>
+                        <value>
+                            <xenotypeChances />
+                        </value>
+                    </nomatch>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/FactionDef[defName="OutlanderCivil"]/xenotypeSet/xenotypeChances</xpath>
+                    <value>
+                        <Muriden>0.05</Muriden>
+                        <Sciurus>0.05</Sciurus>
+                        <Castoran>0.01</Castoran>
+                        <Choerites>0.01</Choerites>
+                    </value>
+                </li>
+                
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/FactionDef[defName="TribeSavage"]/xenotypeSet</xpath>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>/Defs/FactionDef[defName="TribeSavage"]</xpath>
+                        <value>
+                            <xenotypeSet />
+                        </value>
+                    </nomatch>
+                </li>
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/FactionDef[defName="TribeSavage"]/xenotypeSet/xenotypeChances</xpath>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>/Defs/FactionDef[defName="TribeSavage"]/xenotypeSet</xpath>
+                        <value>
+                            <xenotypeChances />
+                        </value>
+                    </nomatch>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/FactionDef[defName="TribeSavage"]/xenotypeSet/xenotypeChances</xpath>
+                    <value>
+                        <Muriden>0.05</Muriden>
+                        <Sciurus>0.05</Sciurus>
+                        <Castoran>0.01</Castoran>
+                        <Choerites>0.01</Choerites>
+                    </value>
+                </li>
+                
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/FactionDef[defName="TribeCivil"]/xenotypeSet</xpath>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>/Defs/FactionDef[defName="TribeCivil"]</xpath>
+                        <value>
+                            <xenotypeSet />
+                        </value>
+                    </nomatch>
+                </li>
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/FactionDef[defName="TribeCivil"]/xenotypeSet/xenotypeChances</xpath>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>/Defs/FactionDef[defName="TribeCivil"]/xenotypeSet</xpath>
+                        <value>
+                            <xenotypeChances />
+                        </value>
+                    </nomatch>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/FactionDef[defName="TribeCivil"]/xenotypeSet/xenotypeChances</xpath>
+                    <value>
+                        <Muriden>0.05</Muriden>
+                        <Sciurus>0.05</Sciurus>
+                        <Castoran>0.01</Castoran>
+                        <Choerites>0.01</Choerites>
+                    </value>
+                </li>
+                
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/FactionDef[defName="TribeRough"]/xenotypeSet</xpath>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>/Defs/FactionDef[defName="TribeRough"]</xpath>
+                        <value>
+                            <xenotypeSet />
+                        </value>
+                    </nomatch>
+                </li>
+                <li Class="PatchOperationConditional">
+                    <xpath>/Defs/FactionDef[defName="TribeRough"]/xenotypeSet/xenotypeChances</xpath>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>/Defs/FactionDef[defName="TribeRough"]/xenotypeSet</xpath>
+                        <value>
+                            <xenotypeChances />
+                        </value>
+                    </nomatch>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>/Defs/FactionDef[defName="TribeRough"]/xenotypeSet/xenotypeChances</xpath>
+                    <value>
+                        <Muriden>0.05</Muriden>
+                        <Sciurus>0.05</Sciurus>
+                        <Castoran>0.01</Castoran>
+                        <Choerites>0.01</Choerites>
+                    </value>
+                </li>
+                <li Class="PatchOperationConditional">
+                    <!-- <success>Always</success> -->
+                    <xpath>/Defs/PawnKindDef[defName="WildMan"]/xenotypeSet</xpath>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>/Defs/PawnKindDef[defName="WildMan"]</xpath>
+                        <value>
+                            <xenotypeSet Inherit="True">
+                                <xenotypeChances>
+                                    <FeralMuriden>0.2</FeralMuriden>
+                                </xenotypeChances>
+                            </xenotypeSet>
+                        </value>
+                    </nomatch>
+                    <match Class="PatchOperationAdd">
+                        <xpath>/Defs/PawnKindDef[defName="WildMan"]/xenotypeSet/xenotypeChances</xpath>
+                        <value>
+                            <FeralMuriden>0.2</FeralMuriden>
+                        </value>
+                    </match>
+                </li>
+            </operations>
+        </match>
+    </Operation>
+</Patch>

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <GeneDef>
+		<defName>Muriden_Claws</defName>
+		<label>claws</label>
+		<description>Carriers of this gene possess dangerous claws.</description>
+		<iconPath>GeneIcons/BS_Claws</iconPath>
+		<displayOrderInCategory>775</displayOrderInCategory>
+		<biostatCpx>1</biostatCpx>
+		<biostatMet>-1</biostatMet>
+		
+		<displayCategory>BS_InnateAttacks</displayCategory>
+		<selectionWeight>0.5</selectionWeight>
+		<modExtensions>
+			<li Class="BigAndSmall.PawnExtension">
+				<applyPartHediff>
+					<li>
+						<hediff>Muriden_Claws</hediff>
+						<bodyparts>
+							<!--So it can add up to 6 sets of talons.-->
+							<li>Hand</li>
+							<li>Hand</li>
+							<li>Hand</li>
+							<li>Hand</li>
+							<li>Hand</li>
+							<li>Hand</li>
+						</bodyparts>
+					</li>
+				</applyPartHediff>
+			</li>
+			
+		</modExtensions>
+	</GeneDef>
+    
+    <HediffDef>
+		<defName>Muriden_Claws</defName>
+		<label>muriden claws</label>
+		<description>Long brutal claws. Fairly effective against armor.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<isBad>false</isBad>
+        <stages>
+          <li>
+            <statOffsets>
+              <SM_UnarmedAttackSpeed>0.05</SM_UnarmedAttackSpeed>
+            </statOffsets>
+            <partEfficiencyOffset>-0.1</partEfficiencyOffset>
+          </li>
+        </stages>
+		<comps>
+			<li Class="HediffCompProperties_VerbGiver">
+				<tools>
+					<li>
+						<label>talons</label>
+						<capacities>
+							<li>Cut</li>
+						</capacities>
+						<power>11</power>
+                        <chanceFactor>2</chanceFactor>
+						<cooldownTime>2.0</cooldownTime>
+                        <armorPenetration>0.2</armorPenetration>
+					</li>
+				</tools>
+			</li>
+		</comps>
+		<addedPartProps>
+			<betterThanNatural>false</betterThanNatural>
+		</addedPartProps>
+	</HediffDef>
+    
+    <GeneDef>
+		<defName>Muriden_Bite</defName>
+		<label>bite</label>
+		<description>Will attack as a feral beast, biting with surprising penetrating ability.</description>
+		<iconPath>GeneIcons/BS_FeedingFrenzy</iconPath>
+		<displayOrderInCategory>775</displayOrderInCategory>
+		<biostatCpx>1</biostatCpx>
+		<biostatMet>-1</biostatMet>
+		
+		<displayCategory>BS_InnateAttacks</displayCategory>
+		<selectionWeight>0.5</selectionWeight>
+		<statFactors>
+      <EatingSpeed>4</EatingSpeed>
+    </statFactors>
+		<modExtensions>
+			<li Class="BigAndSmall.PawnExtension">
+				<applyPartHediff>
+					<li>
+						<hediff>Muriden_Bite</hediff>
+						<bodyparts>
+							<li>Jaw</li>
+						</bodyparts>
+					</li>
+				</applyPartHediff>
+			</li>
+			
+		</modExtensions>
+	</GeneDef>
+    
+    <HediffDef>
+		<defName>Muriden_Bite</defName>
+		<label>muriden bite</label>
+		<description>Will attack as a feral beast, biting with surprising penetrating ability.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<isBad>false</isBad>
+        <stages>
+          <li>
+            <statOffsets>
+              <SM_UnarmedAttackSpeed>0.05</SM_UnarmedAttackSpeed>
+            </statOffsets>
+          </li>
+        </stages>
+		<comps>
+			<li Class="HediffCompProperties_VerbGiver">
+				<tools>
+					<li>
+						<label>bite</label>
+                        <capacities>
+                            <li>Bite</li>
+                        </capacities>
+                        <power>15</power>
+                        <chanceFactor>5</chanceFactor>
+						<cooldownTime>2.8</cooldownTime>
+                        <armorPenetration>0.14</armorPenetration>
+					</li>
+				</tools>
+			</li>
+		</comps>
+		<addedPartProps>
+			<betterThanNatural>false</betterThanNatural>
+		</addedPartProps>
+	</HediffDef>
+</Defs>

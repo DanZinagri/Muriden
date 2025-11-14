@@ -1,33 +1,32 @@
 ﻿using System.Collections.Generic;
+using System.Text.RegularExpressions;
 using System.Xml;
 using Verse;
 
 namespace MuridenLibraries
 {
-    public class PatchOperationEnabled : PatchOperation
+    public abstract class PatchOperationEnabled : PatchOperation
     {
-        // All child operations inside this wrapper
-        public List<PatchOperation> operations;
-
+        protected readonly PatchOperation match;
+        protected readonly PatchOperation nomatch;
+        abstract protected bool ShouldApply();
         protected override bool ApplyWorker(XmlDocument xml)
         {
-            // The variable you already have in settings
-            if (!MuridenMod.Settings.dirtmolePatch)
+            if (ShouldApply())
             {
-                // Skip all operations when disabled
-                return true;
+                if (match != null)
+                {
+                    return match.Apply(xml);
+                }
             }
-
-            bool result = true;
-
-            // Execute inner operations normally
-            foreach (PatchOperation op in operations)
+            else if (nomatch != null)
             {
-                if (!op.Apply(xml))
-                    result = false;
+                return nomatch.Apply(xml);
             }
-
-            return result;
+            return true;
         }
     }
+
+    public class PatchOp_dirtmolePatch : PatchOperationEnabled { protected override bool ShouldApply() => MuridenMod.Settings.dirtmolePatch; }
+    public class PatchOp_factionPatch : PatchOperationEnabled { protected override bool ShouldApply() => MuridenMod.Settings.factionPatch; }
 }

@@ -39,6 +39,7 @@ public class MuridenMod : Mod
         Listing_Standard listing = new();
         listing.Begin(inRect);
         listing.CheckboxLabeled("Muriden.dirtmolePatch".Translate(), ref Settings.dirtmolePatch, "Muriden.dirtmolePatch.Desc".Translate());
+        listing.CheckboxLabeled("Muriden.factionPatch".Translate(), ref Settings.factionPatch, "Muriden.factionPatch.Desc".Translate());
         listing.End();
     }
 }
@@ -46,10 +47,12 @@ public class MuridenMod : Mod
 public class MuridenSettings : ModSettings
 {
     public bool dirtmolePatch = true;
+    public bool factionPatch = true;
 
     public override void ExposeData()
     {
         base.ExposeData();
         Scribe_Values.Look(ref dirtmolePatch, nameof(dirtmolePatch), true);
+        Scribe_Values.Look(ref factionPatch, nameof(factionPatch), true);
     }
 }
