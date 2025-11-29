@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <BackstoryDef>
+    <defName>MuridenBackstoryAdultMonk</defName>
+    <title>Muriden Monk</title>
+    <titleShort>Monk</titleShort>
+    <baseDesc>[PAWN_nameDef] is an acolyte of the church. [PAWN_pronoun] spent much time in a monestary both training and learning ways of healing.</baseDesc>
+    <bodyTypeMale>Thin</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>MuridenBackstory</li>
+    </spawnCategories>
+    <skillGains>
+      <Medicine>4</Medicine>
+      <Melee>4</Melee>
+      <Social>-2</Social>
+      <Shooting>-2</Shooting>
+    </skillGains>
+  </BackstoryDef>
+</Defs>

@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <!-- Under construction <ThingDef Name="Muriden_KnuckleOff" ParentName="BaseMeleeWeapon_Blunt_Quality" Abstract="True">
+        <thingCategories Inherit="False">
+            <li>VFEC_Shields</li>
+        </thingCategories>
+		<thingClass>VEF.Apparels.Apparel_Shield</thingClass>
+		<apparel>
+			<defaultOutfitTags>
+				<li>Soldier</li>
+			</defaultOutfitTags>
+			<bodyPartGroups>
+				<li>LeftHand</li>
+			</bodyPartGroups>
+			<layers>
+				<li>VFEC_OuterShell</li>
+			</layers>
+		<countsAsClothingForNudity>false</countsAsClothingForNudity>
+		<canBeDesiredForIdeo>false</canBeDesiredForIdeo>
+		</apparel>
+    </ThingDef>
+    
+    <ThingDef ParentName="BaseMeleeWeapon_Blunt_Quality">
+        <defName>Muriden_Knucklewrap</defName>
+        <label>muriden knucklewrap</label>
+        <description>A very simplistic knucklewrap. It barely protects, but it is easy to craft and replace.</description>
+        <possessionCount>1</possessionCount>
+        <graphicData>
+          <texPath>Things/Item/Equipment/Knucklewrap/Knucklewrap</texPath>
+          <graphicClass>Graphic_Single</graphicClass>
+          <shaderType>CutoutComplex</shaderType>
+          <drawSize>1</drawSize>
+        </graphicData>
+        <uiIconScale>1</uiIconScale>
+        <costStuffCount>1</costStuffCount>
+        <techLevel>Neolithic</techLevel>
+        <tradeability>Sellable</tradeability>
+        <weaponTags>
+          <li>Neolithic</li>
+          <li>MuridenMelee</li>
+        </weaponTags>
+        <thingSetMakerTags>
+          <li>RewardStandardQualitySuper</li>
+        </thingSetMakerTags>
+        <statBases>
+            <MaxHitPoints>30</MaxHitPoints>
+            <Flammability>0.8</Flammability>
+            <ArmorRating_Sharp>0.01</ArmorRating_Sharp>
+            <ArmorRating_Blunt>0.01</ArmorRating_Blunt>
+            <ArmorRating_Heat>0.01</ArmorRating_Heat>
+            <WorkToMake>2</WorkToMake>
+            <Mass>0.1</Mass>
+            <MarketValue>1</MarketValue>
+        </statBases>
+        <stuffCategories>
+            <li>Fabric</li>
+            <li>Leathery</li>
+		</stuffCategories>
+        <tools>
+          <li>
+            <label>Knucklewrap</label>
+            <capacities>
+              <li>Blunt</li>
+            </capacities>
+            <power>8.4</power>
+            <cooldownTime>2</cooldownTime>
+            <armorPenetration>0.1</armorPenetration>
+            <surpriseAttack>
+              <extraMeleeDamages>
+                <li>
+                  <def>Stun</def>
+                  <amount>14</amount>
+                </li>
+              </extraMeleeDamages>
+            </surpriseAttack>
+          </li>
+        </tools>
+        <recipeMaker>
+          <skillRequirements>
+            <Crafting>0</Crafting>
+          </skillRequirements>
+          <displayPriority>332</displayPriority>
+        </recipeMaker>
+        <modExtensions>
+          <li Class="VEF.Things.ThingDefExtension">
+            <usableWithShields>true</usableWithShields>
+          </li>
+        </modExtensions>
+        <comps Inherit="False">
+            <li Class="MuridenLibraries.CompProperties_WeaponDraw">
+              <weaponGraphicData>
+                <texPath>Things/Item/Equipment/Knucklewrap/Knucklewrap</texPath>
+                <graphicClass>Graphic_Multi</graphicClass>
+                <shaderType>CutoutComplex</shaderType>
+                <drawSize>0.55</drawSize>
+              </weaponGraphicData>
+              <holdOffset>
+                <northDefault>
+                  <offset>(0,0,0.25)</offset>
+                  <behind>true</behind>
+                  <flip>false</flip>
+                </northDefault>
+                <east>
+                  <offset>(0.20,0,0.25)</offset>
+                  <behind>false</behind>
+                  <flip>false</flip>
+                </east>
+                <south>
+                  <offset>(-0.30,0,0.25)</offset>
+                  <behind>false</behind>
+                  <flip>false</flip>
+                </south>
+                <west>
+                  <offset>(-0.20,0,0.25)</offset>
+                  <behind>false</behind>
+                  <flip>false</flip>
+                </west>
+              </holdOffset>
+            </li>
+            <li Class="CompProperties_Forbiddable"/>
+            <li Class="CompProperties_Styleable"/>
+            <li Class="CompProperties_Biocodable"/>
+            <li>
+                <compClass>CompQuality</compClass>
+            </li>
+            <li>
+                <compClass>CompEquippable</compClass>
+            </li>
+            <li Class="CompProperties_Art">
+                <nameMaker>NamerArtWeaponGun</nameMaker>
+                <descriptionMaker>ArtDescription_WeaponMelee</descriptionMaker>
+                <minQualityForArtistic>Excellent</minQualityForArtistic>
+            </li>
+        </comps>
+    </ThingDef>
+    
+    <ThingDef ParentName="Muriden_KnuckleOff">
+        <defName>Muriden_Knucklewrap_Off</defName>
+        <label>muriden knucklewrap offhand</label>
+        <description>A very simplistic knucklewrap. It barely protects, but it is easy to craft and replace.</description>
+        <graphicData>
+            <texPath>Things/Item/Equipment/Knucklewrap/Knucklewrap</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>1</drawSize>
+			<shaderType>CutoutComplex</shaderType>
+        </graphicData>
+		<uiIconScale>1</uiIconScale>
+        <costStuffCount>1</costStuffCount>
+        <techLevel>Neolithic</techLevel>
+        <tradeability>Sellable</tradeability>
+		<thingSetMakerTags>
+		  <li>RewardStandardQualitySuper</li>
+		</thingSetMakerTags>
+        <statBases>
+            <MaxHitPoints>30</MaxHitPoints>
+            <Flammability>0.8</Flammability>
+            <ArmorRating_Sharp>0.01</ArmorRating_Sharp>
+            <ArmorRating_Blunt>0.01</ArmorRating_Blunt>
+            <ArmorRating_Heat>0.01</ArmorRating_Heat>
+            <WorkToMake>2</WorkToMake>
+            <Mass>0.1</Mass>
+            <MarketValue>1</MarketValue>
+        </statBases>
+        <stuffCategories>
+            <li>Fabric</li>
+            <li>Leathery</li>
+		</stuffCategories>
+        <tools>
+          <li>
+            <label>Knucklewrap</label>
+            <capacities>
+              <li>Blunt</li>
+            </capacities>
+            <power>8.4</power>
+            <cooldownTime>2</cooldownTime>
+            <armorPenetration>0.1</armorPenetration>
+            <surpriseAttack>
+              <extraMeleeDamages>
+                <li>
+                  <def>Stun</def>
+                  <amount>14</amount>
+                </li>
+              </extraMeleeDamages>
+            </surpriseAttack>
+          </li>
+        </tools>
+		<recipeMaker>
+          <skillRequirements>
+            <Crafting>0</Crafting>
+          </skillRequirements>
+          <displayPriority>332</displayPriority>
+        </recipeMaker>
+        <comps>
+            <li Class="VEF.Apparels.CompProperties_Shield">
+                <shieldTags>
+                    <li>Neolithic</li>
+					<li>MuridenKnuckle</li>
+                </shieldTags>
+                <useDeflectMetalEffect>true</useDeflectMetalEffect>
+                <coveredBodyPartGroups>
+                    <li>Hands</li>
+                </coveredBodyPartGroups>
+                <offHandGraphicData>
+                    <texPath>Things/Item/Equipment/Knucklewrap/Knucklewrap</texPath>
+                    <graphicClass>Graphic_Multi</graphicClass>
+                    <shaderType>CutoutComplex</shaderType>
+                    <drawSize>0.55</drawSize>
+                </offHandGraphicData>
+                <offHandHoldOffset>
+                    <northDefault>
+                        <offset>(0.18, 0, 0.2)</offset>
+                        <behind>true</behind>
+                        <flip>true</flip>
+                    </northDefault>
+                    <east>
+                        <offset>(-0.05, 0, 0.2)</offset>
+                        <behind>true</behind>
+                        <flip>true</flip>
+                    </east>
+                    <south>
+                        <offset>(0.18, 0, 0.2)</offset>
+						<behind>false</behind>
+                        <flip>true</flip>
+                    </south>
+                    <west>
+                        <offset>(0.05, -5, 0.2)</offset>
+						<behind>false</behind>
+                        <flip>true</flip>
+                    </west>
+                </offHandHoldOffset>
+            </li>
+            <li Class="CompProperties_Forbiddable"/>
+            <li Class="CompProperties_Styleable"/>
+            <li Class="CompProperties_Biocodable"/>
+            <li>
+                <compClass>CompQuality</compClass>
+            </li>
+            <li>
+                <compClass>CompEquippable</compClass>
+            </li>
+            <li Class="CompProperties_Art">
+                <nameMaker>NamerArtWeaponGun</nameMaker>
+                <descriptionMaker>ArtDescription_WeaponMelee</descriptionMaker>
+                <minQualityForArtistic>Excellent</minQualityForArtistic>
+            </li>
+        </comps>
+		<colorGenerator Class="ColorGenerator_StandardApparel" /> 
+    </ThingDef>  -->
+</Defs>

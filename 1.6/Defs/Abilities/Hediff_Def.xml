@@ -24,7 +24,7 @@
 				  </li>
 				</capMods>
 				<statFactors>
-                    <VEF_MeleeAttackSpeedFactor>1.10</VEF_MeleeAttackSpeedFactor>
+                    <MeleeCooldownFactor>1.10</MeleeCooldownFactor>
 					<RestFallRateFactor>5</RestFallRateFactor>
                     <MeleeDodgeChance>1.2</MeleeDodgeChance>
 				</statFactors>
@@ -57,7 +57,7 @@
 				  </li>
 				</capMods>
 				<statFactors>
-                    <VEF_MeleeAttackSpeedFactor>1.2</VEF_MeleeAttackSpeedFactor>
+                    <MeleeCooldownFactor>1.2</MeleeCooldownFactor>
 					<RestFallRateFactor>10</RestFallRateFactor>
                     <MeleeDodgeChance>1.4</MeleeDodgeChance>
                     <MoveSpeed>4</MoveSpeed>

@@ -72,10 +72,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CompWeaponDraw.cs" />
     <Compile Include="DivingCharge.cs" />
     <Compile Include="BayonetCharge.cs" />
     <Compile Include="ExplodeOnLanding.cs" />
     <Compile Include="HarmonyPatches\HarmonyInit.cs" />
+    <Compile Include="HarmonyPatches\Patch_DrawEquipmentAiming_WeaponDraw.cs" />
     <Compile Include="HarmonyPatches\VerbProperties_AdjustedMeleeDamageAmount_Patch.cs" />
     <Compile Include="MuridenJumpingPawn.cs" />
     <Compile Include="MuridenMod.cs" />

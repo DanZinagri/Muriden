@@ -1,7 +1,7 @@
 ﻿using MuridenLibraries;
 using Verse;
 
-namespace VanillaPsycastsExpanded.HarmonyPatches;
+namespace MuridenLibraries.HarmonyPatches;
 
 [StaticConstructorOnStartup]
 public static class HarmonyInit

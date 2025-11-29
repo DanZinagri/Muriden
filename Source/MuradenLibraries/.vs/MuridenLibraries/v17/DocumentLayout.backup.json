@@ -3,31 +3,40 @@
   "WorkspaceRootPath": "E:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\Muriden\\Source\\MuradenLibraries\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8722564C-CA62-4722-B0E4-4F7A3069BDB9}|MuridenLibraries.csproj|e:\\steamlibrary\\steamapps\\common\\rimworld\\mods\\muriden\\source\\muradenlibraries\\patchoperationenabled.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8722564C-CA62-4722-B0E4-4F7A3069BDB9}|MuridenLibraries.csproj|solutionrelative:patchoperationenabled.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8722564C-CA62-4722-B0E4-4F7A3069BDB9}|MuridenLibraries.csproj|e:\\steamlibrary\\steamapps\\common\\rimworld\\mods\\muriden\\source\\muradenlibraries\\harmonypatches\\patch_drawequipmentaiming_weapondraw.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8722564C-CA62-4722-B0E4-4F7A3069BDB9}|MuridenLibraries.csproj|solutionrelative:harmonypatches\\patch_drawequipmentaiming_weapondraw.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8722564C-CA62-4722-B0E4-4F7A3069BDB9}|MuridenLibraries.csproj|e:\\steamlibrary\\steamapps\\common\\rimworld\\mods\\muriden\\source\\muradenlibraries\\muridenmod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8722564C-CA62-4722-B0E4-4F7A3069BDB9}|MuridenLibraries.csproj|e:\\steamlibrary\\steamapps\\common\\rimworld\\mods\\muriden\\source\\muradenlibraries\\compweapondraw.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8722564C-CA62-4722-B0E4-4F7A3069BDB9}|MuridenLibraries.csproj|solutionrelative:compweapondraw.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8722564C-CA62-4722-B0E4-4F7A3069BDB9}|MuridenLibraries.csproj|e:\\steamlibrary\\steamapps\\common\\rimworld\\mods\\muriden\\source\\muradenlibraries\\harmonypatches\\harmonyinit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8722564C-CA62-4722-B0E4-4F7A3069BDB9}|MuridenLibraries.csproj|solutionrelative:harmonypatches\\harmonyinit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8722564C-CA62-4722-B0E4-4F7A3069BDB9}|MuridenLibraries.csproj|E:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\Muriden\\Source\\MuradenLibraries\\muridenmod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8722564C-CA62-4722-B0E4-4F7A3069BDB9}|MuridenLibraries.csproj|solutionrelative:muridenmod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|MuridenLibraries||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8722564C-CA62-4722-B0E4-4F7A3069BDB9}|MuridenLibraries.csproj|E:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\Muriden\\Source\\MuradenLibraries\\explodeonlanding.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8722564C-CA62-4722-B0E4-4F7A3069BDB9}|MuridenLibraries.csproj|solutionrelative:explodeonlanding.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8722564C-CA62-4722-B0E4-4F7A3069BDB9}|MuridenLibraries.csproj|E:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\Muriden\\Source\\MuradenLibraries\\weaponabilities.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8722564C-CA62-4722-B0E4-4F7A3069BDB9}|MuridenLibraries.csproj|solutionrelative:weaponabilities.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8722564C-CA62-4722-B0E4-4F7A3069BDB9}|MuradenLibraries.csproj|E:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\Muriden\\Source\\MuradenLibraries\\harmonypatches\\verbproperties_adjustedmeleedamageamount_patch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8722564C-CA62-4722-B0E4-4F7A3069BDB9}|MuradenLibraries.csproj|solutionrelative:harmonypatches\\verbproperties_adjustedmeleedamageamount_patch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8722564C-CA62-4722-B0E4-4F7A3069BDB9}|MuridenLibraries.csproj|E:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\Muriden\\Source\\MuradenLibraries\\muridenjumpingpawn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8722564C-CA62-4722-B0E4-4F7A3069BDB9}|MuridenLibraries.csproj|solutionrelative:muridenjumpingpawn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{8722564C-CA62-4722-B0E4-4F7A3069BDB9}|MuridenLibraries.csproj|E:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\Muriden\\Source\\MuradenLibraries\\patchoperationenabled.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8722564C-CA62-4722-B0E4-4F7A3069BDB9}|MuridenLibraries.csproj|solutionrelative:patchoperationenabled.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{8722564C-CA62-4722-B0E4-4F7A3069BDB9}|MuridenLibraries.csproj|E:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\Muriden\\Source\\MuradenLibraries\\ml_defof.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8722564C-CA62-4722-B0E4-4F7A3069BDB9}|MuridenLibraries.csproj|solutionrelative:ml_defof.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8722564C-CA62-4722-B0E4-4F7A3069BDB9}|MuridenLibraries.csproj|E:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\Muriden\\Source\\MuradenLibraries\\explodeonlanding.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8722564C-CA62-4722-B0E4-4F7A3069BDB9}|MuridenLibraries.csproj|solutionrelative:explodeonlanding.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8722564C-CA62-4722-B0E4-4F7A3069BDB9}|MuridenLibraries.csproj|E:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\Muriden\\Source\\MuradenLibraries\\divingcharge.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -40,13 +49,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{8722564C-CA62-4722-B0E4-4F7A3069BDB9}|MuridenLibraries.csproj|E:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\Muriden\\Source\\MuradenLibraries\\bayonetcharge.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8722564C-CA62-4722-B0E4-4F7A3069BDB9}|MuridenLibraries.csproj|solutionrelative:bayonetcharge.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8722564C-CA62-4722-B0E4-4F7A3069BDB9}|MuradenLibraries.csproj|E:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\Muriden\\Source\\MuradenLibraries\\harmonypatches\\verbproperties_adjustedmeleedamageamount_patch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8722564C-CA62-4722-B0E4-4F7A3069BDB9}|MuradenLibraries.csproj|solutionrelative:harmonypatches\\verbproperties_adjustedmeleedamageamount_patch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8722564C-CA62-4722-B0E4-4F7A3069BDB9}|MuridenLibraries.csproj|e:\\steamlibrary\\steamapps\\common\\rimworld\\mods\\muriden\\source\\muradenlibraries\\||{B270807C-D8C6-49EB-8EBE-8E8D566637A1}|a54ad834-9219-4aa6-b589-607af21c3e26"
     }
   ],
   "DocumentGroupContainers": [
@@ -61,64 +63,41 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "PatchOperationEnabled.cs",
-              "DocumentMoniker": "E:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\Muriden\\Source\\MuradenLibraries\\PatchOperationEnabled.cs",
-              "RelativeDocumentMoniker": "PatchOperationEnabled.cs",
-              "ToolTip": "E:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\Muriden\\Source\\MuradenLibraries\\PatchOperationEnabled.cs",
-              "RelativeToolTip": "PatchOperationEnabled.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAlAAAAAAAAAA==",
+              "Title": "Patch_DrawEquipmentAiming_WeaponDraw.cs",
+              "DocumentMoniker": "E:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\Muriden\\Source\\MuradenLibraries\\HarmonyPatches\\Patch_DrawEquipmentAiming_WeaponDraw.cs",
+              "RelativeDocumentMoniker": "HarmonyPatches\\Patch_DrawEquipmentAiming_WeaponDraw.cs",
+              "ToolTip": "E:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\Muriden\\Source\\MuradenLibraries\\HarmonyPatches\\Patch_DrawEquipmentAiming_WeaponDraw.cs",
+              "RelativeToolTip": "HarmonyPatches\\Patch_DrawEquipmentAiming_WeaponDraw.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-13T20:29:44.103Z",
+              "WhenOpened": "2025-11-16T04:36:20.608Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "MuridenMod.cs",
-              "DocumentMoniker": "E:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\Muriden\\Source\\MuradenLibraries\\MuridenMod.cs",
-              "RelativeDocumentMoniker": "MuridenMod.cs",
-              "ToolTip": "E:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\Muriden\\Source\\MuradenLibraries\\MuridenMod.cs",
-              "RelativeToolTip": "MuridenMod.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAgwDEAAAAcAAAAAAAAAA==",
+              "Title": "CompWeaponDraw.cs",
+              "DocumentMoniker": "E:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\Muriden\\Source\\MuradenLibraries\\CompWeaponDraw.cs",
+              "RelativeDocumentMoniker": "CompWeaponDraw.cs",
+              "ToolTip": "E:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\Muriden\\Source\\MuradenLibraries\\CompWeaponDraw.cs",
+              "RelativeToolTip": "CompWeaponDraw.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-13T19:41:42.547Z",
+              "WhenOpened": "2025-11-16T04:34:43.036Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "MuridenLibraries",
-              "DocumentMoniker": "E:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\Muriden\\Source\\MuradenLibraries\\MuridenLibraries.csproj",
-              "RelativeDocumentMoniker": "MuridenLibraries.csproj",
-              "ToolTip": "E:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\Muriden\\Source\\MuradenLibraries\\MuridenLibraries.csproj",
-              "RelativeToolTip": "MuridenLibraries.csproj",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-11-12T14:05:37.522Z",
+              "Title": "HarmonyInit.cs",
+              "DocumentMoniker": "E:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\Muriden\\Source\\MuradenLibraries\\HarmonyPatches\\HarmonyInit.cs",
+              "RelativeDocumentMoniker": "HarmonyPatches\\HarmonyInit.cs",
+              "ToolTip": "E:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\Muriden\\Source\\MuradenLibraries\\HarmonyPatches\\HarmonyInit.cs",
+              "RelativeToolTip": "HarmonyPatches\\HarmonyInit.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-16T03:38:55.964Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ExplodeOnLanding.cs",
-              "DocumentMoniker": "E:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\Muriden\\Source\\MuradenLibraries\\ExplodeOnLanding.cs",
-              "RelativeDocumentMoniker": "ExplodeOnLanding.cs",
-              "ToolTip": "E:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\Muriden\\Source\\MuradenLibraries\\ExplodeOnLanding.cs",
-              "RelativeToolTip": "ExplodeOnLanding.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAQwC4AAABBAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-12T04:38:46.926Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ML_DefOf.cs",
-              "DocumentMoniker": "E:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\Muriden\\Source\\MuradenLibraries\\ML_DefOf.cs",
-              "RelativeDocumentMoniker": "ML_DefOf.cs",
-              "ToolTip": "E:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\Muriden\\Source\\MuradenLibraries\\ML_DefOf.cs",
-              "RelativeToolTip": "ML_DefOf.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-12T03:33:21.169Z"
             },
             {
               "$type": "Document",
@@ -128,37 +107,14 @@
               "RelativeDocumentMoniker": "MuridenJumpingPawn.cs",
               "ToolTip": "E:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\Muriden\\Source\\MuradenLibraries\\MuridenJumpingPawn.cs",
               "RelativeToolTip": "MuridenJumpingPawn.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAaAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACsAAABNAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-08T04:56:53.027Z"
+              "WhenOpened": "2025-11-08T04:56:53.027Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "DivingCharge.cs",
-              "DocumentMoniker": "E:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\Muriden\\Source\\MuradenLibraries\\DivingCharge.cs",
-              "RelativeDocumentMoniker": "DivingCharge.cs",
-              "ToolTip": "E:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\Muriden\\Source\\MuradenLibraries\\DivingCharge.cs",
-              "RelativeToolTip": "DivingCharge.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAqwCkAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-08T04:00:11.687Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "WeaponAbilities.cs",
-              "DocumentMoniker": "E:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\Muriden\\Source\\MuradenLibraries\\WeaponAbilities.cs",
-              "RelativeDocumentMoniker": "WeaponAbilities.cs",
-              "ToolTip": "E:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\Muriden\\Source\\MuradenLibraries\\WeaponAbilities.cs",
-              "RelativeToolTip": "WeaponAbilities.cs",
-              "ViewState": "AgIAAGYAAAAAAAAAAAAmwI4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-06T19:05:23.719Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
               "Title": "ML_DefOf.cs",
               "DocumentMoniker": "E:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\Muriden\\Source\\MuradenLibraries\\ML_DefOf.cs",
               "RelativeDocumentMoniker": "ML_DefOf.cs",
@@ -166,11 +122,24 @@
               "RelativeToolTip": "ML_DefOf.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-06T15:04:51.778Z"
+              "WhenOpened": "2025-11-12T03:33:21.169Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 3,
+              "Title": "MuridenMod.cs",
+              "DocumentMoniker": "E:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\Muriden\\Source\\MuradenLibraries\\MuridenMod.cs",
+              "RelativeDocumentMoniker": "MuridenMod.cs",
+              "ToolTip": "E:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\Muriden\\Source\\MuradenLibraries\\MuridenMod.cs",
+              "RelativeToolTip": "MuridenMod.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T19:41:42.547Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "VerbProperties_AdjustedMeleeDamageAmount_Patch.cs",
               "DocumentMoniker": "E:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\Muriden\\Source\\MuradenLibraries\\HarmonyPatches\\VerbProperties_AdjustedMeleeDamageAmount_Patch.cs",
               "RelativeDocumentMoniker": "HarmonyPatches\\VerbProperties_AdjustedMeleeDamageAmount_Patch.cs",
@@ -182,7 +151,56 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "PatchOperationEnabled.cs",
+              "DocumentMoniker": "E:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\Muriden\\Source\\MuradenLibraries\\PatchOperationEnabled.cs",
+              "RelativeDocumentMoniker": "PatchOperationEnabled.cs",
+              "ToolTip": "E:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\Muriden\\Source\\MuradenLibraries\\PatchOperationEnabled.cs",
+              "RelativeToolTip": "PatchOperationEnabled.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T20:29:44.103Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ExplodeOnLanding.cs",
+              "DocumentMoniker": "E:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\Muriden\\Source\\MuradenLibraries\\ExplodeOnLanding.cs",
+              "RelativeDocumentMoniker": "ExplodeOnLanding.cs",
+              "ToolTip": "E:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\Muriden\\Source\\MuradenLibraries\\ExplodeOnLanding.cs",
+              "RelativeToolTip": "ExplodeOnLanding.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAQwC4AAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-12T04:38:46.926Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 9,
+              "Title": "DivingCharge.cs",
+              "DocumentMoniker": "E:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\Muriden\\Source\\MuradenLibraries\\DivingCharge.cs",
+              "RelativeDocumentMoniker": "DivingCharge.cs",
+              "ToolTip": "E:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\Muriden\\Source\\MuradenLibraries\\DivingCharge.cs",
+              "RelativeToolTip": "DivingCharge.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAqwCkAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-08T04:00:11.687Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ML_DefOf.cs",
+              "DocumentMoniker": "E:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\Muriden\\Source\\MuradenLibraries\\ML_DefOf.cs",
+              "RelativeDocumentMoniker": "ML_DefOf.cs",
+              "ToolTip": "E:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\Muriden\\Source\\MuradenLibraries\\ML_DefOf.cs",
+              "RelativeToolTip": "ML_DefOf.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-06T15:04:51.778Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "BayonetCharge.cs",
               "DocumentMoniker": "E:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\Muriden\\Source\\MuradenLibraries\\BayonetCharge.cs",
               "RelativeDocumentMoniker": "BayonetCharge.cs",

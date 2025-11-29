@@ -63,8 +63,8 @@
 			<MeleeDodgeChance>1.05</MeleeDodgeChance>
 			<WorkSpeedGlobal>1.05</WorkSpeedGlobal>
 			<MoveSpeed>1.15</MoveSpeed>
-			<VEF_RangeAttackSpeedFactor>1.05</VEF_RangeAttackSpeedFactor>
-			<VEF_MeleeAttackSpeedFactor>1.05</VEF_MeleeAttackSpeedFactor>
+			<RangedCooldownFactor>1.05</RangedCooldownFactor>
+			<MeleeCooldownFactor>1.05</MeleeCooldownFactor>
 			<IncomingDamageFactor>1.10</IncomingDamageFactor>
 		</statFactors>
 		<exclusionTags>
