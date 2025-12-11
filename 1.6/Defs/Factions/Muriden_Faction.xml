@@ -126,10 +126,15 @@
 					<MuridenMerchant>15</MuridenMerchant>
 					<MuridenNoble>8</MuridenNoble>
 				</traders>
+                <carriers>
+                  <Muffalo>6</Muffalo>
+                  <Dromedary>6</Dromedary>
+                  <Alpaca>2</Alpaca>
+                </carriers>
 				<guards>
 					<MuridenCombatant>10</MuridenCombatant>
-					<MuridenMercenaryLight>15</MuridenMercenaryLight>
-					<MuridenSoldier>20</MuridenSoldier>
+					<MuridenMercenaryLight>5</MuridenMercenaryLight>
+					<MuridenSoldier>10</MuridenSoldier>
 					<MuridenEliteGuardener>10</MuridenEliteGuardener>
 					<MuridenDefender>10</MuridenDefender>
 				</guards>

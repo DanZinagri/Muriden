@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <PawnKindDef ParentName="MuridenBasePawnKind">
+    <defName>MuridenRaceColonist</defName>
+    <label>Muriden Colonist</label>
+    <race>Human</race>
+    <defaultFactionType>PlayerColony</defaultFactionType>
+    <chemicalAddictionChance>0.05</chemicalAddictionChance>
+    <apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+    <apparelTags>
+      <li>Neolithic</li>
+	  <li>MedievalMilitary</li>
+      <li>IndustrialBasic</li>
+    </apparelTags>
+    <initialWillRange>0.8~1.0</initialWillRange>
+    <initialResistanceRange>12~15</initialResistanceRange>
+    <apparelMoney>200~400</apparelMoney>
+    <backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
+    <techHediffsChance>0</techHediffsChance>
+    <combatPower>25</combatPower>
+    <backstoryCategories>
+      <li>MuridenBackstory</li>
+    </backstoryCategories>
+    <fixedGender>Female</fixedGender>
+    <xenotypeSet Inherit="False">
+        <xenotypeChances>
+            <Muriden>0.35</Muriden>
+            <Dirtmole>0.15</Dirtmole>
+            <Sciurus>0.25</Sciurus>
+            <Castoran>0.15</Castoran>
+            <Choerites>0.10</Choerites>
+        </xenotypeChances>
+    </xenotypeSet>
+  </PawnKindDef>
+</Defs>
