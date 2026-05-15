@@ -46,8 +46,8 @@ public class MuridenMod : Mod
 
 public class MuridenSettings : ModSettings
 {
-    public bool dirtmolePatch = true;
-    public bool factionPatch = true;
+    public bool dirtmolePatch = false;
+    public bool factionPatch = false;
 
     public override void ExposeData()
     {

@@ -14,7 +14,6 @@
 			<li>MoveSpeed_Quick</li>
 			<li>BS_TinyTough</li>
 			<li>Body_FemaleOnly</li>
-			<li>BS_BirthLitter</li>
 			<li>Ears_Muriden</li>
 			<li>Tail_Muriden</li>
 			<li>Body_Thin</li>
@@ -40,7 +39,6 @@
 			<li>MoveSpeed_Quick</li>
 			<li>BS_TinyTough</li>
 			<li>Body_FemaleOnly</li>
-			<li>BS_BirthLitter</li>
 			<li>Ears_Sciurus</li>
 			<li>Tail_Sciurus</li>
 			<li>Body_Thin</li>
@@ -68,7 +66,6 @@
 			<li>MaxTemp_SmallDecrease</li>
             <li>Robust</li>
 			<li>Body_FemaleOnly</li>
-			<li>BS_BirthLitter</li>
 			<li>Ears_Muriden</li>
 			<li>Body_Standard</li>
 			<li>BS_GeneStabilizing_Moderate</li>
@@ -99,12 +96,10 @@
 			<li>Aggression_DeadCalm</li>
 			<li>Sleepy</li>
 			<li>Body_FemaleOnly</li>
-			<li>BS_BirthTwins</li>
 			<li>Ears_Muriden</li>
 			<li>Body_Standard</li>
 			<li>BS_GeneStabilizing_Great</li>
 			<li>Unstoppable</li>
-			<li>VRE_DodgeDisabled</li>
 			<li>AptitudeTerrible_Shooting</li>
 			<li>AptitudePoor_Melee</li>
 			<li>AptitudeStrong_Social</li>
@@ -134,7 +129,6 @@
             <li>MeleeDamage_Strong</li>
             <li>BS_TinyTough</li>
             <li>Body_FemaleOnly</li>
-            <li>BS_BirthLitter</li>
             <li>Ears_Muriden</li>
             <li>Body_Thin</li>
             <li>Muriden_Resolve</li>

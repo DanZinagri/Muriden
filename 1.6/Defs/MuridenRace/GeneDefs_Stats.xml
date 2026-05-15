@@ -5,7 +5,7 @@
 		<label>muriden resolve</label>
 		<description>Carriers of this gene have improved dodge and work speed.</description>
 		<biostatCpx>1</biostatCpx>
-		<biostatMet>-2</biostatMet>
+		<biostatMet>-1</biostatMet>
 		<displayCategory>Miscellaneous</displayCategory>
 		<statFactors>
 			<MeleeDodgeChance>1.2</MeleeDodgeChance>
@@ -27,7 +27,7 @@
 		<label>dirtmole resilience</label>
 		<description>Carriers of this gene have carrying capacity and hearing</description>
 		<biostatCpx>1</biostatCpx>
-		<biostatMet>-2</biostatMet>
+		<biostatMet>-1</biostatMet>
 		<displayCategory>Miscellaneous</displayCategory>
 		<statFactors>
 			<MiningYield>1.2</MiningYield>
@@ -57,7 +57,7 @@
 		<label>sciurus alacrity</label>
 		<description>Carriers of this gene have improved accuracy and speed but are more delicate</description>
 		<biostatCpx>1</biostatCpx>
-		<biostatMet>-3</biostatMet>
+		<biostatMet>-2</biostatMet>
 		<displayCategory>Miscellaneous</displayCategory>
 		<statFactors>
 			<MeleeDodgeChance>1.05</MeleeDodgeChance>
@@ -87,7 +87,7 @@
 		<label>castoran ingenuity</label>
 		<description>Carriers of this gene have improved construction speed and plant harvest yields</description>
 		<biostatCpx>1</biostatCpx>
-		<biostatMet>-2</biostatMet>
+		<biostatMet>-1</biostatMet>
 		<displayCategory>Miscellaneous</displayCategory>
 		<statFactors>
 			<ConstructionSpeed>1.15</ConstructionSpeed>
@@ -109,7 +109,7 @@
 		<label>choerites calm</label>
 		<description>Unharmed, Unbothered, Doin their thing.</description>
 		<biostatCpx>1</biostatCpx>
-		<biostatMet>-1</biostatMet>
+		<biostatMet>0</biostatMet>
 		<displayCategory>Miscellaneous</displayCategory>
         <statOffsets>
             <PainShockThreshold>0.1</PainShockThreshold>
