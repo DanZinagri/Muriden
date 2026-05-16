@@ -33,7 +33,7 @@
 			<MiningYield>1.2</MiningYield>
 		</statFactors>
         <statOffsets>
-            <CarryingCapacity>1.2</CarryingCapacity>
+            <CarryingCapacity>5</CarryingCapacity>
         </statOffsets>
 		<capMods>
 		  <li>

@@ -219,7 +219,7 @@
 		<displayOrderInCategory>1000.1</displayOrderInCategory>
 		<statOffsets>
 			<ConstructionSpeed>1.15</ConstructionSpeed>
-		    <CarryingCapacity>1.25</CarryingCapacity>
+		    <CarryingCapacity>10</CarryingCapacity>
 		</statOffsets>
 		<biostatCpx>1</biostatCpx>
 		<renderNodeProperties>
