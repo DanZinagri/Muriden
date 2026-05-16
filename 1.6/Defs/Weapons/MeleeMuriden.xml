@@ -14,7 +14,6 @@
     </graphicData>
     <uiIconScale>1</uiIconScale>
     <techLevel>Medieval</techLevel>
-    <tradeability>Sellable</tradeability>
     <weaponTags>
       <li>MedievalMeleeDecent</li>
 	  <li>MuridenMelee</li>
@@ -121,7 +120,6 @@
     </graphicData>
     <uiIconScale>1</uiIconScale>
     <techLevel>Medieval</techLevel>
-    <tradeability>Sellable</tradeability>
     <costStuffCount>75</costStuffCount>
 	<costList>
 		<Gold>2</Gold>
@@ -238,7 +236,6 @@
 	<smeltable>false</smeltable>
     <relicChance>3</relicChance>
     <techLevel>Medieval</techLevel>
-    <tradeability>Sellable</tradeability>
     <costStuffCount>150</costStuffCount>
     <costList>
 		<Gold>3</Gold>
