@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<TraderKindDef>
+		<defName>Muriden_Caravan_Medieval_BulkGoodsMerchant</defName>
+		<label>bulk goods merchant</label>
+		<commonality>3</commonality>
+		<stockGenerators>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>Silver</thingDef>
+				<countRange>750~1200</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>Kibble</thingDef>
+				<countRange>150~450</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>WoodLog</thingDef>
+				<countRange>100~450</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>Cloth</thingDef>
+				<countRange>100~400</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>MedicineHerbal</thingDef>
+				<countRange>0~24</countRange>
+			</li>
+			<li Class="StockGenerator_Animals">
+				<maxWildness>0.70</maxWildness>
+				<tradeTagsSell>
+					<li>AnimalFarm</li>
+				</tradeTagsSell>
+				<tradeTagsBuy>
+					<li>AnimalExotic</li>
+				</tradeTagsBuy>
+				<kindCountRange>2~6</kindCountRange>
+				<countRange>4~8</countRange>
+			</li>
+			<li Class="StockGenerator_Category">
+				<categoryDef>Drugs</categoryDef>
+			</li>
+			<li Class="StockGenerator_Category">
+				<categoryDef>Textiles</categoryDef>
+			</li>
+			<li Class="StockGenerator_BuyTradeTag"><tag>Art</tag></li>
+			
+			<!-- Buying -->
+			<li Class="StockGenerator_BuyExpensiveSimple"/>
+		</stockGenerators>
+	</TraderKindDef>
+
+	<TraderKindDef>
+		<defName>Muriden_Caravan_Medieval_Armorsmith</defName>
+		<label>armorsmith</label>
+		<commonality>2</commonality>
+		<stockGenerators>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>Silver</thingDef>
+				<countRange>750~1200</countRange>
+			</li>
+
+			<!-- Apparel -->
+			<li Class="StockGenerator_MarketValue">
+				<tradeTag>BasicClothing</tradeTag>
+				<maxTechLevelGenerate>Medieval</maxTechLevelGenerate>
+				<countRange>7~7</countRange>
+			</li>
+			<li Class="StockGenerator_MarketValue">
+				<tradeTag>Clothing</tradeTag>
+				<maxTechLevelGenerate>Medieval</maxTechLevelGenerate>
+				<countRange>3~3</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>Muriden_HeavyShield</thingDef>
+				<countRange>1~2</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>Muriden_TyrantCrown</thingDef>
+				<countRange>1~2</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>Muriden_DragonSlayerArmor</thingDef>
+				<countRange>1~2</countRange>
+			</li>
+
+			<!-- Apparel -->
+			<li Class="StockGenerator_MarketValue">
+				<tradeTag>Armor</tradeTag>
+				<countRange>5~5</countRange>
+			</li>
+			<li Class="StockGenerator_BuyTradeTag"><tag>Art</tag></li>
+		</stockGenerators>
+	</TraderKindDef>
+
+	<TraderKindDef>
+		<defName>Muriden_Caravan_Medieval_Weaponsmith</defName>
+		<label>weaponsmith</label>
+		<commonality>2</commonality>
+		<stockGenerators>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>Silver</thingDef>
+				<countRange>750~1200</countRange>
+			</li>
+			<!-- Weapons -->
+			<li Class="StockGenerator_MarketValue">
+				<maxTechLevelGenerate>Medieval</maxTechLevelGenerate>
+				<tradeTag>WeaponRanged</tradeTag>
+				<countRange>-1~2</countRange>
+			</li>
+			
+			<li Class="StockGenerator_Category">
+				<maxTechLevelGenerate>Medieval</maxTechLevelGenerate>
+				<categoryDef>WeaponsMelee</categoryDef>
+				<thingDefCountRange>4~4</thingDefCountRange>
+				<countRange>2~3</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>MedicineHerbal</thingDef>
+				<countRange>10~40</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>Muriden_NobleSpear</thingDef>
+				<countRange>1~2</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>Muradin_NobleLongsword</thingDef>
+				<countRange>1~2</countRange>
+			</li>
+			<li Class="StockGenerator_SingleDef">
+				<thingDef>Muriden_GunLance</thingDef>
+				<countRange>1~2</countRange>
+			</li>
+			<li Class="StockGenerator_Animals">
+				<tradeTagsSell>
+					<li>AnimalFighter</li>
+				</tradeTagsSell>
+				<tradeTagsBuy>
+					<li>AnimalExotic</li>
+				</tradeTagsBuy>
+				<kindCountRange>1~2</kindCountRange>
+				<countRange>1~2</countRange>
+			</li>
+			<li Class="StockGenerator_BuyTradeTag"><tag>Art</tag></li>
+			<li Class="StockGenerator_Category">
+				<categoryDef>Drugs</categoryDef>
+			</li>
+		</stockGenerators>
+	</TraderKindDef>
+
+</Defs>

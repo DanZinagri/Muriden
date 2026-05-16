@@ -20,15 +20,16 @@
 			<li>Offworld</li>
 		</backstoryCategories>
 		<caravanTraderKinds>
-			<li>Caravan_Outlander_BulkGoods</li>
-		    <li>Caravan_Outlander_CombatSupplier</li>
-		    <li>Caravan_Outlander_Exotic</li>
+			<li>Muriden_Caravan_Medieval_BulkGoodsMerchant</li>
+		    <li>Muriden_Caravan_Medieval_Armorsmith</li>
+		    <li>Muriden_Caravan_Medieval_Weaponsmith</li>
+			<li>Muriden_Caravan_Medieval_Weaponsmith</li>
 		</caravanTraderKinds>
 		<visitorTraderKinds>
-			<li>Visitor_Outlander_Standard</li>
+			<li>Muriden_Visitor_Medieval_Standard</li>
 		</visitorTraderKinds>
 		<baseTraderKinds>
-			<li>Base_Outlander_Standard</li>
+			<li>Muriden_Base_Medieval_Standard</li>
 		</baseTraderKinds>
 		<allowedArrivalTemperatureRange>-40~45</allowedArrivalTemperatureRange>
 		<disallowedMemes>
@@ -38,13 +39,13 @@
 		</disallowedMemes>
 		<structureMemeWeights>
 			<Structure_TheistEmbodied MayRequire="Ludeon.RimWorld.Ideology">1</Structure_TheistEmbodied>
-			<Structure_TheistAbstract MayRequire="Ludeon.RimWorld.Ideology">2</Structure_TheistAbstract>
+			<Structure_TheistAbstract MayRequire="Ludeon.RimWorld.Ideology">1</Structure_TheistAbstract>
 			<Structure_Ideological MayRequire="Ludeon.RimWorld.Ideology">1</Structure_Ideological>
-			<Structure_Archist MayRequire="Ludeon.RimWorld.Ideology">1</Structure_Archist>
-			<Structure_OriginChristian MayRequire="Ludeon.RimWorld.Ideology">1</Structure_OriginChristian>
-			<Structure_OriginIslamic MayRequire="Ludeon.RimWorld.Ideology">1</Structure_OriginIslamic>
-			<Structure_OriginHindu MayRequire="Ludeon.RimWorld.Ideology">1</Structure_OriginHindu>
-			<Structure_OriginBuddhist MayRequire="Ludeon.RimWorld.Ideology">1</Structure_OriginBuddhist>
+			<Structure_Archist MayRequire="Ludeon.RimWorld.Ideology">0</Structure_Archist>
+			<Structure_OriginChristian MayRequire="Ludeon.RimWorld.Ideology">2</Structure_OriginChristian>
+			<Structure_OriginIslamic MayRequire="Ludeon.RimWorld.Ideology">0</Structure_OriginIslamic>
+			<Structure_OriginHindu MayRequire="Ludeon.RimWorld.Ideology">0</Structure_OriginHindu>
+			<Structure_OriginBuddhist MayRequire="Ludeon.RimWorld.Ideology">0</Structure_OriginBuddhist>
 		</structureMemeWeights>
 		<maxPawnCostPerTotalPointsCurve>
 			<points>
