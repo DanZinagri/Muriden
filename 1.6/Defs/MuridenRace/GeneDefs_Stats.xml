@@ -4,8 +4,8 @@
 		<defName>Muriden_Resolve</defName>
 		<label>muriden resolve</label>
 		<description>Carriers of this gene have improved dodge and work speed.</description>
-		<biostatCpx>1</biostatCpx>
-		<biostatMet>-1</biostatMet>
+		<biostatCpx>2</biostatCpx>
+		<biostatMet>-2</biostatMet>
 		<displayCategory>Miscellaneous</displayCategory>
 		<statFactors>
 			<MeleeDodgeChance>1.2</MeleeDodgeChance>
@@ -20,6 +20,12 @@
                 <thingDefSwap>Muriden_Race</thingDefSwap>
             </li>
         </modExtensions>
+		<abilities>
+			<li>MuridenCourage</li>
+		</abilities>
+		<exclusionTags>
+			<li>ML_Stats</li>
+		</exclusionTags>
 	</GeneDef>
 	
 	<GeneDef>
@@ -50,13 +56,16 @@
                 <thingDefSwap>Muriden_Race</thingDefSwap>
             </li>
         </modExtensions>
+		<exclusionTags>
+			<li>ML_Stats</li>
+		</exclusionTags>
 	</GeneDef>
 	
 	<GeneDef>
 		<defName>Sciurus_Alacrity</defName>
 		<label>sciurus alacrity</label>
 		<description>Carriers of this gene have improved accuracy and speed but are more delicate</description>
-		<biostatCpx>1</biostatCpx>
+		<biostatCpx>2</biostatCpx>
 		<biostatMet>-2</biostatMet>
 		<displayCategory>Miscellaneous</displayCategory>
 		<statFactors>
@@ -67,10 +76,6 @@
 			<MeleeCooldownFactor>1.05</MeleeCooldownFactor>
 			<IncomingDamageFactor>1.10</IncomingDamageFactor>
 		</statFactors>
-		<exclusionTags>
-			<li>RangedAttackSpeed</li>
-			<li>MeleeAttackSpeed</li>
-		</exclusionTags>
 		<iconPath>UI/Icons/Genes/Sciurus_Icon</iconPath>
 		<displayOrderInCategory>103</displayOrderInCategory>
         <modExtensions>
@@ -80,14 +85,22 @@
                 <thingDefSwap>Muriden_Race</thingDefSwap>
             </li>
         </modExtensions>
+		<abilities>
+			<li>SciurusSprint</li>
+		</abilities>
+		<exclusionTags>
+			<li>ML_Stats</li>
+			<li>RangedAttackSpeed</li>
+			<li>MeleeAttackSpeed</li>
+		</exclusionTags>
 	</GeneDef>
 	
 	<GeneDef>
 		<defName>Castoran_Ingenuity</defName>
 		<label>castoran ingenuity</label>
 		<description>Carriers of this gene have improved construction speed and plant harvest yields</description>
-		<biostatCpx>1</biostatCpx>
-		<biostatMet>-1</biostatMet>
+		<biostatCpx>2</biostatCpx>
+		<biostatMet>-2</biostatMet>
 		<displayCategory>Miscellaneous</displayCategory>
 		<statFactors>
 			<ConstructionSpeed>1.15</ConstructionSpeed>
@@ -102,27 +115,104 @@
                 <thingDefSwap>Muriden_Race</thingDefSwap>
             </li>
         </modExtensions>
+		<abilities>
+			<li>CastoranTailSlapStun</li>
+		</abilities>
+		<exclusionTags>
+			<li>ML_Stats</li>
+		</exclusionTags>
 	</GeneDef>
-    
-    <GeneDef>
+
+	<GeneDef>
 		<defName>Choerites_Calm</defName>
 		<label>choerites calm</label>
 		<description>Unharmed, Unbothered, Doin their thing.</description>
-		<biostatCpx>1</biostatCpx>
-		<biostatMet>0</biostatMet>
+		<biostatCpx>2</biostatCpx>
+		<biostatMet>-1</biostatMet>
 		<displayCategory>Miscellaneous</displayCategory>
-        <statOffsets>
-            <PainShockThreshold>0.1</PainShockThreshold>
-            <MentalBreakThreshold>-0.1</MentalBreakThreshold>
-        </statOffsets>
+		<statOffsets>
+			<PainShockThreshold>0.1</PainShockThreshold>
+		<MentalBreakThreshold>-0.1</MentalBreakThreshold>
+		</statOffsets>
 		<iconPath>UI/Icons/Genes/Choerites_icon</iconPath>
 		<displayOrderInCategory>103</displayOrderInCategory>
-        <modExtensions>
-            <li Class="BigAndSmall.PawnExtension">
-                <canWalkOnCreep>true</canWalkOnCreep>
-                <renderCacheOff>true</renderCacheOff>
-                <thingDefSwap>Muriden_Race</thingDefSwap>
-            </li>
-        </modExtensions>
+		<modExtensions>
+			<li Class="BigAndSmall.PawnExtension">
+				<canWalkOnCreep>true</canWalkOnCreep>
+				<renderCacheOff>true</renderCacheOff>
+				<thingDefSwap>Muriden_Race</thingDefSwap>
+			</li>
+		</modExtensions>
+		<abilities>
+			<li>ChoeritesButtslam</li>
+		</abilities>
+		<exclusionTags>
+			<li>ML_Stats</li>
+		</exclusionTags>
 	</GeneDef>
+
+
+
+	<GeneDef>
+		<defName>FeralMuriden_Resolve</defName>
+		<label>feral muriden resolve</label>
+		<description>Carriers of this gene have improved dodge and work speed.</description>
+		<biostatCpx>2</biostatCpx>
+		<biostatMet>-2</biostatMet>
+		<displayCategory>Miscellaneous</displayCategory>
+		<statFactors>
+			<MeleeDodgeChance>1.25</MeleeDodgeChance>
+			<MeleeCooldownFactor>1.05</MeleeCooldownFactor>
+			<WorkSpeedGlobal>0.95</WorkSpeedGlobal>
+			<MoveSpeed>1.10</MoveSpeed>
+		</statFactors>
+		<iconPath>UI/Icons/Genes/Muriden_Icon</iconPath>
+		<displayOrderInCategory>103</displayOrderInCategory>
+		<modExtensions>
+			<li Class="BigAndSmall.PawnExtension">
+				<canWalkOnCreep>true</canWalkOnCreep>
+				<renderCacheOff>true</renderCacheOff>
+				<thingDefSwap>Muriden_Race</thingDefSwap>
+			</li>
+		</modExtensions>
+		<abilities>
+			<li>MuridenCourage</li>
+		</abilities>
+		<exclusionTags>
+			<li>ML_Stats</li>
+		</exclusionTags>
+	</GeneDef>
+
+	<GeneDef>
+		<defName>Artigasen_Might</defName>
+		<label>Artigasen Might</label>
+		<description>Atavism of a prehistoric Capybara</description>
+		<biostatCpx>2</biostatCpx>
+		<biostatMet>-1</biostatMet>
+		<displayCategory>Miscellaneous</displayCategory>
+		<statOffsets>
+			<PainShockThreshold>0.15</PainShockThreshold>
+			<MentalBreakThreshold>-0.05</MentalBreakThreshold>
+			<MoveSpeed>0.95</MoveSpeed>
+		</statOffsets>
+		<statOffsets>
+			<CarryingCapacity>100</CarryingCapacity>
+		</statOffsets>
+		<iconPath>UI/Icons/Genes/Choerites_icon</iconPath>
+		<displayOrderInCategory>103</displayOrderInCategory>
+		<modExtensions>
+			<li Class="BigAndSmall.PawnExtension">
+				<canWalkOnCreep>true</canWalkOnCreep>
+				<renderCacheOff>true</renderCacheOff>
+				<thingDefSwap>Muriden_Race</thingDefSwap>
+			</li>
+		</modExtensions>
+		<abilities>
+			<li>ChoeritesButtslam</li>
+		</abilities>
+		<exclusionTags>
+			<li>ML_Stats</li>
+		</exclusionTags>
+	</GeneDef>
+
 </Defs>

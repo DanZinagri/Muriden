@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <LetterDef ParentName="PositiveEvent">
+        <defName>ML_GeneticAtavism</defName>
+        <letterClass>MuridenLibraries.ChoiceLetter_GeneticAtavism</letterClass>
+    </LetterDef>
+</Defs>

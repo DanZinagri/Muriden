@@ -72,13 +72,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CompWeaponDraw.cs" />
     <Compile Include="DivingCharge.cs" />
     <Compile Include="BayonetCharge.cs" />
     <Compile Include="ExplodeOnLanding.cs" />
     <Compile Include="HarmonyPatches\HarmonyInit.cs" />
-    <Compile Include="HarmonyPatches\Patch_DrawEquipmentAiming_WeaponDraw.cs" />
     <Compile Include="HarmonyPatches\VerbProperties_AdjustedMeleeDamageAmount_Patch.cs" />
+    <Compile Include="MuridenAtavism\AtavismUtils.cs" />
+    <Compile Include="MuridenAtavism\ChoiceLetter_GeneticAtavism.cs" />
+    <Compile Include="MuridenAtavism\Patch_PawnGenerator_GeneratePawn.cs" />
+    <Compile Include="MuridenAtavism\Patch_PregnancyUtility_ApplyBirthOutcome.cs" />
+    <Compile Include="MuridenAtavism\Patch_PregnancyUtility_TryGetInheritedXenotype.cs" />
     <Compile Include="MuridenJumpingPawn.cs" />
     <Compile Include="MuridenMod.cs" />
     <Compile Include="PatchOperationEnabled.cs" />
