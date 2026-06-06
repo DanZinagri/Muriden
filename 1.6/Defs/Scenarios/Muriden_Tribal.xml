@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ScenarioDef ParentName="ScenarioBase" MayRequire="oskarpotocki.vfe.tribals">
+    <defName>Muriden_Scenario_FeralWildMen</defName>
+    <label>Muriden Wild Men</label>
+    <description>Your small group of Muriden born with an atavism, reverted to a more prehistoric state. Havine formed a group they have rediscovered fire, a stepping stone towards forming a true tribe and restore their place in civilization.</description>
+    <scenario>
+      <summary>A group of wild muriden trying to form a tribe. A VFE - Tribal styled scenario.</summary>
+		<playerFaction>
+			<def>PlayerFaction</def>
+			<factionDef>VFET_WildMen</factionDef>
+		</playerFaction>
+		<parts>
+            <li Class="ScenPart_ConfigPage_ConfigureStartingPawns_Xenotypes">
+                <def>ConfigPage_ConfigureStartingPawns</def>
+                <pawnChoiceCount>5</pawnChoiceCount>
+                <xenotypeCounts>
+                    <li>
+                        <xenotype>FeralMuriden</xenotype>
+                        <count>3</count>
+                        <description>FeralMuriden</description>
+                        <requiredAtStart>true</requiredAtStart>
+                        <!--<allowedDevelopmentalStages>Adult, Child</allowedDevelopmentalStages>-->
+                    </li>
+                    <li>
+                        <xenotype>Artigasen</xenotype>
+                        <count>1</count>
+                        <description>Artigasen</description>
+                        <requiredAtStart>true</requiredAtStart>
+                    </li>
+                </xenotypeCounts>
+            </li>
+			<li Class="ScenPart_PlayerPawnsArriveMethod">
+				<def>PlayerPawnsArriveMethod</def>
+                <method>Standing</method>
+                <visible>false</visible>
+			</li>
+			<li Class="ScenPart_StartingThing_Defined">
+				<def>StartingThing_Defined</def>
+				<thingDef>VFET_Stake</thingDef>
+				<quality>Good</quality>
+			</li>
+			<li Class="ScenPart_ScatterThingsNearPlayerStart">
+				<def>ScatterThingsNearPlayerStart</def>
+				<thingDef>WoodLog</thingDef>
+				<count>220</count>
+				<allowRoofed>True</allowRoofed>
+			</li>
+			<li Class="ScenPart_GameStartDialog">
+				<def>GameStartDialog</def>
+				<text>Having lived in a more feral, wild state; your group of uncivilized Muriden have begun to reattain the spark of a more civlized time, banding together into the begginings of a tribe. Maybe with your combined might you may survive. </text>
+				<closeSound>VFET_GameStartSting_WildMen</closeSound>
+			</li>
+		</parts>
+    </scenario>
+  </ScenarioDef>
+  <ScenarioDef ParentName="ScenarioBase" MayRequire="oskarpotocki.vfe.tribals">
+      <defName>Muriden_Scenario_WildMen</defName>
+      <label>Muriden Wild Men</label>
+      <description>Your are a rare group of muriden who had re-evolved from feral atavism parents now seeking to rebuild yourself into a more civilized sate.</description>
+      <scenario>
+          <summary>A group of muriden trying to form a tribe (non-feral). A VFE - Tribal styled scenario.</summary>
+          <playerFaction>
+              <def>PlayerFaction</def>
+              <factionDef>VFET_WildMen</factionDef>
+              </playerFaction>
+              <parts>
+                  <li Class="ScenPart_ConfigPage_ConfigureStartingPawns_Xenotypes">
+                      <def>ConfigPage_ConfigureStartingPawns</def>
+                      <pawnChoiceCount>5</pawnChoiceCount>
+                      <xenotypeCounts>
+                          <li>
+                              <xenotype>Muriden</xenotype>
+                              <count>3</count>
+                              <description>Muriden</description>
+                              <requiredAtStart>true</requiredAtStart>
+                              <!--<allowedDevelopmentalStages>Adult, Child</allowedDevelopmentalStages>-->
+                          </li>
+                          <li>
+                              <xenotype>Sciurus</xenotype>
+                              <count>1</count>
+                              <description>Sciurus</description>
+                              <requiredAtStart>true</requiredAtStart>
+                          </li>
+                      </xenotypeCounts>
+                  </li>
+                  <li Class="ScenPart_PlayerPawnsArriveMethod">
+                      <def>PlayerPawnsArriveMethod</def>
+                      <method>Standing</method>
+                      <visible>false</visible>
+                      </li>
+                      <li Class="ScenPart_StartingThing_Defined">
+                          <def>StartingThing_Defined</def>
+                          <thingDef>VFET_Stake</thingDef>
+                          <quality>Good</quality>
+                          </li>
+                          <li Class="ScenPart_ScatterThingsNearPlayerStart">
+                              <def>ScatterThingsNearPlayerStart</def>
+                              <thingDef>WoodLog</thingDef>
+                              <count>220</count>
+                              <allowRoofed>True</allowRoofed>
+                              </li>
+                              <li Class="ScenPart_GameStartDialog">
+                                  <def>GameStartDialog</def>
+                                  <text>You are a group of muriden born of feral atavism parents, re-attaining your more evolved state; now outcasts among your your more feral bretheren you've banded together to rebuild into a more civilized state.</text>
+                                  <closeSound>VFET_GameStartSting_WildMen</closeSound>
+                                  </li>
+                                  </parts>
+                              </scenario>
+                          </ScenarioDef>
+</Defs>

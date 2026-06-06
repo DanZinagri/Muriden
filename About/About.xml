@@ -6,7 +6,7 @@
 		<li>1.6</li>
 	</supportedVersions>
 	<packageId>DanZinagri.Muriden</packageId>
-    <modVersion>0.4.5</modVersion>
+    <modVersion>0.4.6</modVersion>
 	<description>
 	Muriden - From Muris (Latin for Mouse).
 	
@@ -36,5 +36,6 @@
 		<li>oskarpotocki.vanillafactionsexpanded.core</li>
 		<li>redmattis.betterprerequisites</li>
 		<li>redmattis.bigsmall.core</li>
+		<li>oskarpotocki.vfe.tribals</li>
 	</loadAfter>
 </ModMetaData>

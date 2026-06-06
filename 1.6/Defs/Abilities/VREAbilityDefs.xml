@@ -2,8 +2,8 @@
 <Defs>      
     <VEF.Abilities.AbilityDef>
         <defName>MuridenSlice</defName>
-        <label>self explosion</label>
-        <description>Expels pressurized, flammable gas from the caster which immediately ignites. High chance of igniting those in the blast site, but does little damage without harming the caster.</description>
+        <label>Muriden Slice</label>
+        <description>Does a wide set of slices at impossible speed, unable to be seen by the naked eye. Hits friend and foe alike.</description>
         <iconPath>UI/Icons/Genes/Muriden_Icon</iconPath>
         <abilityClass>VEF.Abilities.Ability_Explode</abilityClass>
         <castTime>10</castTime>

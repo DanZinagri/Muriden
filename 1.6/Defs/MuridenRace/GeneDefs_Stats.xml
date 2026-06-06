@@ -158,7 +158,7 @@
 		<label>feral muriden resolve</label>
 		<description>Carriers of this gene have improved dodge and work speed.</description>
 		<biostatCpx>2</biostatCpx>
-		<biostatMet>-2</biostatMet>
+		<biostatMet>-1</biostatMet>
 		<displayCategory>Miscellaneous</displayCategory>
 		<statFactors>
 			<MeleeDodgeChance>1.25</MeleeDodgeChance>
@@ -188,7 +188,7 @@
 		<label>Artigasen Might</label>
 		<description>Atavism of a prehistoric Capybara</description>
 		<biostatCpx>2</biostatCpx>
-		<biostatMet>-1</biostatMet>
+		<biostatMet>0</biostatMet>
 		<displayCategory>Miscellaneous</displayCategory>
 		<statOffsets>
 			<PainShockThreshold>0.15</PainShockThreshold>
@@ -196,7 +196,7 @@
 			<MoveSpeed>0.95</MoveSpeed>
 		</statOffsets>
 		<statOffsets>
-			<CarryingCapacity>100</CarryingCapacity>
+			<CarryingCapacity>150</CarryingCapacity>
 		</statOffsets>
 		<iconPath>UI/Icons/Genes/Choerites_icon</iconPath>
 		<displayOrderInCategory>103</displayOrderInCategory>
