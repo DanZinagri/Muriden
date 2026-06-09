@@ -10,7 +10,7 @@ using Verse;
 
 namespace MuridenLibraries
 {
-    //The purpose of this patch is to save the current birthing mother if she has the genetic purity gene
+    //The purpose of this patch is to save the current birthing mother if she has the right gene
     //The field will be used to determine in the other patch if the baby has a mother with this specific gene or not
     //The reason is because the mother pawn is not a present parameter/field in the other method
     [HarmonyPatch(typeof(PregnancyUtility), "ApplyBirthOutcome")]
@@ -22,7 +22,7 @@ namespace MuridenLibraries
         public static void Prefix(Pawn geneticMother)
         {
             if (geneticMother == null) return;
-            if (AtavismUtils.HasActiveGene(geneticMother, ML_DefOf.Muriden_Resolve) || AtavismUtils.HasActiveGene(geneticMother, ML_DefOf.Choerites_Calm))
+            if (AtavismUtils.HasActiveGene(geneticMother, ML_DefOf.Muriden_Resolve) || AtavismUtils.HasActiveGene(geneticMother, ML_DefOf.Choerites_Calm) || AtavismUtils.HasActiveGene(geneticMother, ML_DefOf.FeralMuriden_Resolve) || AtavismUtils.HasActiveGene(geneticMother, ML_DefOf.Artigasen_Might))
             {
                 mother = geneticMother;
             }
