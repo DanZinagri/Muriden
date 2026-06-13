@@ -84,6 +84,45 @@ namespace MuridenLibraries
                 {
                     Atavism = true;
                 }
+            }else if(AtavismUtils.isSciurus(mother))
+            {
+                XenotypeDef xenotypeA = ML_DefOf.Sciurus;
+                if (AtavismUtils.isSciurus(mother))
+                {
+                    isBabyAtavism = false;
+                }
+
+                List<GeneDef> babyInheritedGenes = request.ForcedEndogenes;
+                List<GeneDef> babyCosmeticGenes = AtavismUtils.ClearNonCosmeticGeneBaby(babyInheritedGenes);
+                request.ForcedEndogenes.Clear();
+                request.ForcedEndogenes = babyCosmeticGenes;
+
+                request.ForcedXenotype = xenotypeA;//isBabyAtavism ? xenotypeB : xenotypeA;
+
+                if (isBabyAtavism)
+                {
+                    Atavism = true;
+                }
+            }
+            else if (AtavismUtils.isCastoran(mother))
+            {
+                XenotypeDef xenotypeA = ML_DefOf.Castoran;
+                if (AtavismUtils.isCastoran(mother))
+                {
+                    isBabyAtavism = false;
+                }
+
+                List<GeneDef> babyInheritedGenes = request.ForcedEndogenes;
+                List<GeneDef> babyCosmeticGenes = AtavismUtils.ClearNonCosmeticGeneBaby(babyInheritedGenes);
+                request.ForcedEndogenes.Clear();
+                request.ForcedEndogenes = babyCosmeticGenes;
+
+                request.ForcedXenotype = xenotypeA;//isBabyAtavism ? xenotypeB : xenotypeA;
+
+                if (isBabyAtavism)
+                {
+                    Atavism = true;
+                }
             }
             return;
         }

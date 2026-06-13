@@ -21,6 +21,11 @@ public class CompProperties_ExplodeOnLanding : CompProperties_AbilityEffect
     public bool radiusOnPawnSize = false;
     public bool damageOnPawnSize = false;
 
+    // Visual shockwave
+    public FleckDef shockwaveFleck = FleckDefOf.PsycastAreaEffect;
+    public float shockwaveScale = 2f;
+    public bool shockwaveScaleWithRadius = true;
+
     public CompProperties_ExplodeOnLanding()
     {
         compClass = typeof(CompAbilityEffect_ExplodeOnLanding);
@@ -66,6 +71,20 @@ public class CompAbilityEffect_ExplodeOnLanding : CompAbilityEffect
             chanceToStartFire: 0f,
             damageFalloff: Props.damageFalloff
         );
+
+        if (Props.shockwaveFleck != null)
+        {
+            float visualScale = Props.shockwaveScaleWithRadius
+                ? radius * Props.shockwaveScale
+                : Props.shockwaveScale;
+
+            FleckMaker.Static(
+                landing.ToVector3Shifted(),
+                pawn.Map,
+                Props.shockwaveFleck,
+                visualScale
+            );
+        }
     }
 
 }

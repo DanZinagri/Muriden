@@ -22,7 +22,7 @@ namespace MuridenLibraries
         public static void Prefix(Pawn geneticMother)
         {
             if (geneticMother == null) return;
-            if (AtavismUtils.HasActiveGene(geneticMother, ML_DefOf.Muriden_Resolve) || AtavismUtils.HasActiveGene(geneticMother, ML_DefOf.Choerites_Calm) || AtavismUtils.HasActiveGene(geneticMother, ML_DefOf.FeralMuriden_Resolve) || AtavismUtils.HasActiveGene(geneticMother, ML_DefOf.Artigasen_Might))
+            if (AtavismUtils.HasActiveGene(geneticMother, ML_DefOf.Muriden_Resolve) || AtavismUtils.HasActiveGene(geneticMother, ML_DefOf.Choerites_Calm) || AtavismUtils.HasActiveGene(geneticMother, ML_DefOf.FeralMuriden_Resolve) || AtavismUtils.HasActiveGene(geneticMother, ML_DefOf.Artigasen_Might) || AtavismUtils.HasActiveGene(geneticMother,ML_DefOf.Sciurus_Alacrity) || AtavismUtils.HasActiveGene(geneticMother, ML_DefOf.Castoran_Ingenuity))
             {
                 mother = geneticMother;
             }

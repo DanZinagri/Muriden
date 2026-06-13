@@ -32,7 +32,7 @@
 
     <AbilityDef>
         <defName>ChoeritesButtslam</defName>
-        <label>Buttslam</label>
+        <label>Quake Slam</label>
         <description>Jump at location causing a mild shockwave, scales with body size.</description>
         <iconPath>UI/Icons/Genes/Choerites_icon</iconPath>
         <displayOrder>100</displayOrder>
@@ -68,6 +68,9 @@
             <radiusOnPawnSize>true</radiusOnPawnSize>
             <damageOnPawnSize>true</damageOnPawnSize>
             <sound>Pawn_Melee_MechanoidSlash_HitPawn</sound>
+            <shockwaveFleck>PsycastAreaEffect</shockwaveFleck>
+            <shockwaveScale>1.5</shockwaveScale>
+            <shockwaveScaleWithRadius>true</shockwaveScaleWithRadius>
           </li>
         </comps>
       </AbilityDef>

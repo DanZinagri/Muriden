@@ -70,5 +70,15 @@ namespace MuridenLibraries
         {
             return pawn.genes.Xenotype == ML_DefOf.Artigasen;
         }
+
+        public static bool isSciurus(Pawn pawn)
+        {
+            return pawn.genes.Xenotype == ML_DefOf.Sciurus;
+        }
+
+        public static bool isCastoran(Pawn pawn)
+        {
+            return pawn.genes.Xenotype == ML_DefOf.Castoran;
+        }
     }
 }

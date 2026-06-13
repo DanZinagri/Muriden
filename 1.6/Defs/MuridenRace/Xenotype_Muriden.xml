@@ -43,7 +43,6 @@
 			<li>BS_GeneStabilizing_Moderate</li>
 		    <li>Sciurus_Alacrity</li>
             <li>AptitudeTerrible_Intellectual</li>
-            <li MayRequire="redmattis.bettergeneinheritance">BGI_PrimaryGenes</li>
 		</genes>
 	</XenotypeDef>
 	
@@ -72,7 +71,6 @@
 			<li>AptitudePoor_Animals</li>
 			<li>AptitudeTerrible_Intellectual</li>
 		    <li>Castoran_Ingenuity</li>
-            <li MayRequire="redmattis.bettergeneinheritance">BGI_PrimaryGenes</li>
 		</genes>
 	</XenotypeDef>
     

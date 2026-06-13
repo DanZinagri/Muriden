@@ -40,6 +40,28 @@ namespace MuridenLibraries
                     xenotype = ML_DefOf.Choerites;
                 }
                 __result = true;
+            }else if ((AtavismUtils.HasActiveGene(mother, ML_DefOf.Sciurus_Alacrity) && AtavismUtils.IsChoerites(mother)))
+            {
+                if (Patch_PawnGenerator_GeneratePawn.Atavism)
+                {
+                    xenotype = ML_DefOf.Sciurus;
+                }
+                else
+                {
+                    xenotype = ML_DefOf.Sciurus;
+                }
+                    __result = true;
+            }else if ((AtavismUtils.HasActiveGene(mother, ML_DefOf.Castoran_Ingenuity) && AtavismUtils.IsChoerites(mother)))
+            {
+                if (Patch_PawnGenerator_GeneratePawn.Atavism)
+                {
+                    xenotype = ML_DefOf.Castoran;
+                }
+                else
+                {
+                    xenotype = ML_DefOf.Castoran;
+                }
+                    __result = true;
             }
             return;
 
