@@ -20,7 +20,7 @@
     <combatPower>25</combatPower>
     <backstoryCategories>
       <li>Offworld</li>
-      <li>Pirare</li>
+      <li>Pirate</li>
     </backstoryCategories>
     <fixedGender>Female</fixedGender>
     <xenotypeSet Inherit="False">

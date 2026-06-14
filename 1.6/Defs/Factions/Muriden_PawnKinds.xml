@@ -219,7 +219,7 @@
 		<weaponTags>
 		  <li>Medieval</li>
 		</weaponTags>
-		<apparelAllowHeadgearChance>100</apparelAllowHeadgearChance>				
+		<apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
 		<skills>
 			<li>
 				<skill>Melee</skill>
@@ -236,7 +236,7 @@
 		<itemQuality>Good</itemQuality>
 		<gearHealthRange>
 			<min>0.7</min>
-			<max>1.2</max>
+			<max>1</max>
 		</gearHealthRange>
 		<apparelMoney>
 			<min>1000</min>
@@ -285,7 +285,7 @@
 		</apparelTags>
 		<gearHealthRange>
 			<min>0.7</min>
-			<max>1.2</max>
+			<max>1</max>
 		</gearHealthRange>
 		<weaponMoney>
 			<min>3000</min>
@@ -328,7 +328,7 @@
 		<minGenerationAge>24</minGenerationAge>
 		<gearHealthRange>
 			<min>0.7</min>
-			<max>2</max>
+			<max>1</max>
 		</gearHealthRange>
 		<apparelMoney>
 			<min>6500</min>
@@ -346,7 +346,7 @@
 		<weaponTags>
 		  <li>Medieval</li>
 		</weaponTags>
-		<apparelAllowHeadgearChance>100</apparelAllowHeadgearChance>
+		<apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
 		<skills>
 			<li>
 				<skill>Melee</skill>
@@ -364,7 +364,7 @@
 		<minGenerationAge>27</minGenerationAge>
 		<gearHealthRange>
 			<min>0.7</min>
-			<max>2</max>
+			<max>1</max>
 		</gearHealthRange>
 		<apparelMoney>
 			<min>6500</min>
@@ -401,7 +401,7 @@
 		<minGenerationAge>21</minGenerationAge>
 		<gearHealthRange>
 			<min>1</min>
-			<max>3</max>
+			<max>1</max>
 		</gearHealthRange>
 		<apparelMoney>
 			<min>6500</min>
@@ -438,7 +438,7 @@
 		<destroyGearOnDrop>true</destroyGearOnDrop>
 		<gearHealthRange>
 			<min>0.8</min>
-			<max>1.5</max>
+			<max>1</max>
 		</gearHealthRange>
 		<apparelMoney>
 			<min>4500</min>
