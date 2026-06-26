@@ -1,0 +1,4 @@
+E:\SteamLibrary\steamapps\common\RimWorld\Mods\Muriden\1.6\Assemblies\AtavismLibraries.dll
+E:\SteamLibrary\steamapps\common\RimWorld\Mods\Muriden\Source\AtavismLibraries\obj\Debug\AtavismLibraries.csproj.AssemblyReference.cache
+E:\SteamLibrary\steamapps\common\RimWorld\Mods\Muriden\Source\AtavismLibraries\obj\Debug\AtavismLibraries.csproj.CoreCompileInputs.cache
+E:\SteamLibrary\steamapps\common\RimWorld\Mods\Muriden\Source\AtavismLibraries\obj\Debug\AtavismLibraries.dll

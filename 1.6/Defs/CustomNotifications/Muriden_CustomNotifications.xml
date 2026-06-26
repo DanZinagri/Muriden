@@ -2,6 +2,6 @@
 <Defs>
     <LetterDef ParentName="PositiveEvent">
         <defName>ML_GeneticAtavism</defName>
-        <letterClass>MuridenLibraries.ChoiceLetter_GeneticAtavism</letterClass>
+        <letterClass>AtavismLibraries.ChoiceLetter_GeneticAtavism</letterClass>
     </LetterDef>
 </Defs>

@@ -6,5 +6,5 @@
     <Muriden.factionPatch>Patch Muriden Into Other Factions</Muriden.factionPatch>
     <Muriden.factionPatch.Desc>If enabled, Muriden are patched into various other factions (Requires Restart)</Muriden.factionPatch.Desc>
     <AtavismTitle>{0} born</AtavismTitle>
-    <AtavismLoc>{0_nameDef} has born a {1}</AtavismLoc>
+    <AtavismLoc>{0_nameDef} has given birth to a {1}</AtavismLoc>
 </LanguageData>
