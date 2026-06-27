@@ -39,7 +39,7 @@
 
               <AtavismLibraries.GeneticAtavismDef>
                 <defName>Artigasen_To_Choerites</defName>
-                <requiredGene>Choerites_Calm</requiredGene>
+                <requiredGene>Artigasen_Might</requiredGene>
                 <sourceXenotype>Artigasen</sourceXenotype>
                 <targetXenotype>Choerites</targetXenotype>
                 <chance>0.05</chance>
