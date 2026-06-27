@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-  <AtavismLibraries.GeneticAtavismDef>
+  <AtavismLibraries.GeneticAtavismDef mayrequire="DanZinagri.AtavismLibraries">
     <defName>Muriden_To_FeralMuriden</defName>
     <requiredGene>Muriden_Resolve</requiredGene>
     <sourceXenotype>Muriden</sourceXenotype>
@@ -10,7 +10,7 @@
     <InheritanceMode>none</InheritanceMode>
   </AtavismLibraries.GeneticAtavismDef>
 
-  <AtavismLibraries.GeneticAtavismDef>
+  <AtavismLibraries.GeneticAtavismDef mayrequire="DanZinagri.AtavismLibraries">
     <defName>FeralMuriden_To_Muriden</defName>
     <requiredGene>FeralMuriden_Resolve</requiredGene>
     <sourceXenotype>FeralMuriden</sourceXenotype>
@@ -19,7 +19,7 @@
     <InheritanceMode>none</InheritanceMode>
   </AtavismLibraries.GeneticAtavismDef>
 
-  <AtavismLibraries.GeneticAtavismDef>
+  <AtavismLibraries.GeneticAtavismDef mayrequire="DanZinagri.AtavismLibraries">
     <defName>Choerites_To_Artigasen</defName>
     <requiredGene>Choerites_Calm</requiredGene>
     <sourceXenotype>Choerites</sourceXenotype>
@@ -28,7 +28,7 @@
     <InheritanceMode>none</InheritanceMode>
   </AtavismLibraries.GeneticAtavismDef>
 
-  <AtavismLibraries.GeneticAtavismDef>
+  <AtavismLibraries.GeneticAtavismDef mayrequire="DanZinagri.AtavismLibraries">
       <defName>Artigasen_To_Choerites</defName>
       <requiredGene>Choerites_Calm</requiredGene>
       <sourceXenotype>Artigasen</sourceXenotype>
@@ -37,7 +37,7 @@
       <InheritanceMode>none</InheritanceMode>
   </AtavismLibraries.GeneticAtavismDef>
 
-  <AtavismLibraries.GeneticAtavismDef>
+  <AtavismLibraries.GeneticAtavismDef mayrequire="DanZinagri.AtavismLibraries">
       <defName>Sciurus_to_Sciurus</defName>
       <requiredGene>Sciurus_Alacrity</requiredGene>
       <sourceXenotype>Sciurus</sourceXenotype>
@@ -46,7 +46,7 @@
       <InheritanceMode>none</InheritanceMode>
   </AtavismLibraries.GeneticAtavismDef>
 
-  <AtavismLibraries.GeneticAtavismDef>
+  <AtavismLibraries.GeneticAtavismDef mayrequire="DanZinagri.AtavismLibraries">
       <defName>Castoran_to_Castoran</defName>
       <requiredGene>Castoran_Ingenuity</requiredGene>
       <sourceXenotype>Castoran</sourceXenotype>
