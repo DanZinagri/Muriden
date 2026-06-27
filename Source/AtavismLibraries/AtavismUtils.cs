@@ -53,18 +53,125 @@ namespace AtavismLibraries
             return false;
         }
 
-        public static List<GeneDef> ClearNonCosmeticGeneBaby(List<GeneDef> babyGenes)
+        public static List<GeneDef> GetExcessEndogenes(Pawn mother)
+        {
+            List<GeneDef> excessGenes = new();
+
+            if (mother?.genes == null || mother.genes.Xenotype == null)
+                return excessGenes;
+
+            // The genes that every pawn of this xenotype normally has.
+            HashSet<GeneDef> sourceGenes = new(
+                mother.genes.Xenotype.AllGenes
+            );
+
+            foreach (Gene gene in mother.genes.Endogenes)
+            {
+                // Skip genes that are part of the normal xenotype.
+                if (sourceGenes.Contains(gene.def))
+                    continue;
+
+                excessGenes.Add(gene.def);
+            }
+
+            return excessGenes;
+        }
+
+        public static List<GeneDef> GetCosmeticGeneBaby(List<GeneDef> babyGenes)
         {
             if (babyGenes == null) return new List<GeneDef>();
-            List<GeneDef> filteredGenes = new List<GeneDef>();
-            for (int i = 0; i < babyGenes.Count; i++)
+            List<GeneDef> filteredGenes = new();
+            foreach(GeneDef gene in babyGenes)
             {
-                if (babyGenes[i].endogeneCategory == EndogeneCategory.Melanin || babyGenes[i].endogeneCategory == EndogeneCategory.HairColor)
+                if (gene.endogeneCategory == EndogeneCategory.Melanin || gene.endogeneCategory == EndogeneCategory.HairColor)
                 {
-                    filteredGenes.Add(babyGenes[i]);
+                    filteredGenes.Add(gene);
                 }
             }
             return filteredGenes;
+        }
+
+        public static List<GeneDef> MergeEndogenes(Pawn mother, GeneticAtavismDef def)
+        {
+            List<GeneDef> genelist = new();
+
+            if (mother?.genes == null || mother.genes.Xenotype == null)
+                return genelist;
+
+            genelist = mother.genes.Xenotype.AllGenes.ToList();
+
+            if (def.targetXenotype == null)
+                return genelist;
+
+            foreach (GeneDef gene in def.targetXenotype.AllGenes)
+            {
+                if (gene != null)
+                {
+                    genelist.Add(gene);
+                }
+            }
+            return genelist;
+        }
+
+        public static List<GeneDef> GetMotherXenogenes(Pawn mother)
+        {
+            if (mother?.genes == null || mother.genes.Xenotype == null)
+                return new List<GeneDef>();
+
+            return mother.genes.Xenogenes.Select(gene => gene.def)
+        .ToList();
+        }
+
+
+        public class AtavismGeneInheritanceResult
+        {
+            public List<GeneDef> endogenes = new List<GeneDef>();
+            public List<GeneDef> xenogenes = new List<GeneDef>();
+        }
+
+        public static AtavismGeneInheritanceResult GetInheritedGenes(PawnGenerationRequest request, Pawn mother, GeneticAtavismDef def)
+        {
+            AtavismGeneInheritanceResult result = new AtavismGeneInheritanceResult();
+
+            if (def?.targetXenotype == null)
+                return result;
+
+            if (def.targetXenotype.inheritable == true)
+            {
+                result.endogenes.AddRange(def.targetXenotype.AllGenes);
+            }
+            else
+            {
+                result.xenogenes.AddRange(def.targetXenotype.AllGenes);
+            }
+                
+
+            switch (def.InheritanceMode)
+            {
+                case AtavismInheritanceMode.none: //original logic
+                    result.endogenes.AddRange(GetCosmeticGeneBaby(request.ForcedEndogenes));
+                    break;
+
+                case AtavismInheritanceMode.excess: //we can still pass SOMETHING on
+                    result.endogenes.AddRange(GetExcessEndogenes(mother));
+                    break;
+
+                case AtavismInheritanceMode.endo: //I'd say this was a vanilla birth, but you're gonna have a horrible abomination with BOTH SETS.
+                    result.endogenes.AddRange(MergeEndogenes(mother, def));
+                    break;
+
+                case AtavismInheritanceMode.xeno: //So we're gonna basically do like we did in none, but pass along any xenogenes.
+                    result.endogenes.AddRange(GetCosmeticGeneBaby(request.ForcedEndogenes));
+                    result.xenogenes.AddRange(GetMotherXenogenes(mother));
+                    break;
+
+                case AtavismInheritanceMode.all:
+                    result.endogenes.AddRange(request.ForcedEndogenes);
+                    result.xenogenes.AddRange(GetMotherXenogenes(mother));
+                    break;
+            }
+
+            return result;
         }
     }
 }

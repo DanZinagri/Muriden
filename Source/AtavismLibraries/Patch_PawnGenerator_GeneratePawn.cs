@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Verse;
+using static AtavismLibraries.AtavismUtils;
 
 namespace AtavismLibraries
 {
@@ -28,12 +29,20 @@ namespace AtavismLibraries
             GeneticAtavismDef atavismDef = AtavismUtils.TryPickAtavismDef(mother);
             if (atavismDef == null)
                 return;
+            AtavismGeneInheritanceResult genes = AtavismUtils.GetInheritedGenes(request, mother, atavismDef);
 
-            List<GeneDef> babyCosmeticGenes =
-                AtavismUtils.ClearNonCosmeticGeneBaby(request.ForcedEndogenes);
+            if (request.ForcedEndogenes == null)
+                request.ForcedEndogenes = new List<GeneDef>();
+
+            if (request.ForcedXenogenes == null)
+                request.ForcedXenogenes = new List<GeneDef>();
+
 
             request.ForcedEndogenes.Clear();
-            request.ForcedEndogenes.AddRange(babyCosmeticGenes);
+            request.ForcedXenogenes.Clear();
+
+            request.ForcedEndogenes.AddRange(genes.endogenes);
+            request.ForcedXenogenes.AddRange(genes.xenogenes);
 
             request.ForcedXenotype = atavismDef.targetXenotype;
             CurrentForcedXenotype = atavismDef.targetXenotype;

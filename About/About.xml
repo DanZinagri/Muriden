@@ -30,6 +30,9 @@
 	
 	I will continue to try and make improvements on the textures as well.
 	</description>
+	<incompatibleWith>
+		<li>DanZinagri.AtavismLibraries</li>
+	</incompatibleWith>
 	<loadAfter>
 		<li>Ludeon.RimWorld</li>
 		<li>Ludeon.RimWorld.Biotech</li>

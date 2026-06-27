@@ -3,20 +3,24 @@
   "WorkspaceRootPath": "E:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\Muriden\\Source\\AtavismLibraries\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{8722564C-CA62-4722-B0E4-4F7A3069BDB9}|AtavismLibraries.csproj|E:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\Muriden\\Source\\AtavismLibraries\\atavismutils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8722564C-CA62-4722-B0E4-4F7A3069BDB9}|AtavismLibraries.csproj|solutionrelative:atavismutils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{8722564C-CA62-4722-B0E4-4F7A3069BDB9}|AtavismLibraries.csproj|e:\\steamlibrary\\steamapps\\common\\rimworld\\mods\\muriden\\source\\atavismlibraries\\patch_pawngenerator_generatepawn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8722564C-CA62-4722-B0E4-4F7A3069BDB9}|AtavismLibraries.csproj|solutionrelative:patch_pawngenerator_generatepawn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8722564C-CA62-4722-B0E4-4F7A3069BDB9}|AtavismLibraries.csproj|e:\\steamlibrary\\steamapps\\common\\rimworld\\mods\\muriden\\source\\atavismlibraries\\atavismutils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8722564C-CA62-4722-B0E4-4F7A3069BDB9}|AtavismLibraries.csproj|solutionrelative:atavismutils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8722564C-CA62-4722-B0E4-4F7A3069BDB9}|AtavismLibraries.csproj|E:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\Muriden\\Source\\AtavismLibraries\\geneticatavismdef.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8722564C-CA62-4722-B0E4-4F7A3069BDB9}|AtavismLibraries.csproj|solutionrelative:geneticatavismdef.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8722564C-CA62-4722-B0E4-4F7A3069BDB9}|AtavismLibraries.csproj|e:\\steamlibrary\\steamapps\\common\\rimworld\\mods\\muriden\\source\\atavismlibraries\\patch_pregnancyutility_trygetinheritedxenotype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8722564C-CA62-4722-B0E4-4F7A3069BDB9}|AtavismLibraries.csproj|solutionrelative:patch_pregnancyutility_trygetinheritedxenotype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8722564C-CA62-4722-B0E4-4F7A3069BDB9}|AtavismLibraries.csproj|e:\\steamlibrary\\steamapps\\common\\rimworld\\mods\\muriden\\source\\atavismlibraries\\patch_pregnancyutility_applybirthoutcome.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8722564C-CA62-4722-B0E4-4F7A3069BDB9}|AtavismLibraries.csproj|E:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\Muriden\\Source\\AtavismLibraries\\patch_pregnancyutility_applybirthoutcome.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8722564C-CA62-4722-B0E4-4F7A3069BDB9}|AtavismLibraries.csproj|solutionrelative:patch_pregnancyutility_applybirthoutcome.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8722564C-CA62-4722-B0E4-4F7A3069BDB9}|AtavismLibraries.csproj|E:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\Muriden\\Source\\AtavismLibraries\\patch_pregnancyutility_trygetinheritedxenotype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8722564C-CA62-4722-B0E4-4F7A3069BDB9}|AtavismLibraries.csproj|solutionrelative:patch_pregnancyutility_trygetinheritedxenotype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,24 +30,36 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
+              "Title": "GeneticAtavismDef.cs",
+              "DocumentMoniker": "E:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\Muriden\\Source\\AtavismLibraries\\GeneticAtavismDef.cs",
+              "RelativeDocumentMoniker": "GeneticAtavismDef.cs",
+              "ToolTip": "E:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\Muriden\\Source\\AtavismLibraries\\GeneticAtavismDef.cs",
+              "RelativeToolTip": "GeneticAtavismDef.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-27T00:23:32.43Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Patch_PawnGenerator_GeneratePawn.cs",
               "DocumentMoniker": "E:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\Muriden\\Source\\AtavismLibraries\\Patch_PawnGenerator_GeneratePawn.cs",
               "RelativeDocumentMoniker": "Patch_PawnGenerator_GeneratePawn.cs",
               "ToolTip": "E:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\Muriden\\Source\\AtavismLibraries\\Patch_PawnGenerator_GeneratePawn.cs",
               "RelativeToolTip": "Patch_PawnGenerator_GeneratePawn.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAACcAAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAAACYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-06-26T23:28:41.791Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Patch_PregnancyUtility_TryGetInheritedXenotype.cs",
               "DocumentMoniker": "E:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\Muriden\\Source\\AtavismLibraries\\Patch_PregnancyUtility_TryGetInheritedXenotype.cs",
               "RelativeDocumentMoniker": "Patch_PregnancyUtility_TryGetInheritedXenotype.cs",
@@ -51,8 +67,7 @@
               "RelativeToolTip": "Patch_PregnancyUtility_TryGetInheritedXenotype.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-26T23:28:37.296Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-26T23:28:37.296Z"
             },
             {
               "$type": "Document",
@@ -62,20 +77,19 @@
               "RelativeDocumentMoniker": "Patch_PregnancyUtility_ApplyBirthOutcome.cs",
               "ToolTip": "E:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\Muriden\\Source\\AtavismLibraries\\Patch_PregnancyUtility_ApplyBirthOutcome.cs",
               "RelativeToolTip": "Patch_PregnancyUtility_ApplyBirthOutcome.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAADoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABQAAAAAAAAAAAAQwC0AAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-26T23:20:57.09Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-26T23:20:57.09Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "AtavismUtils.cs",
               "DocumentMoniker": "E:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\Muriden\\Source\\AtavismLibraries\\AtavismUtils.cs",
               "RelativeDocumentMoniker": "AtavismUtils.cs",
               "ToolTip": "E:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\Muriden\\Source\\AtavismLibraries\\AtavismUtils.cs",
               "RelativeToolTip": "AtavismUtils.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAADcAAAA8AAAAAAAAAA==",
+              "ViewState": "AgIAAFMAAAAAAAAAAAAqwGQAAAA/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-06-26T23:17:05.936Z",
               "EditorCaption": ""

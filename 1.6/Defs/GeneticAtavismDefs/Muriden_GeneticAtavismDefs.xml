@@ -7,6 +7,7 @@
     <sourceXenotype>Muriden</sourceXenotype>
     <targetXenotype>FeralMuriden</targetXenotype>
     <chance>0.05</chance>
+    <InheritanceMode>none</InheritanceMode>
   </AtavismLibraries.GeneticAtavismDef>
 
   <AtavismLibraries.GeneticAtavismDef>
@@ -15,6 +16,7 @@
     <sourceXenotype>FeralMuriden</sourceXenotype>
     <targetXenotype>Muriden</targetXenotype>
     <chance>0.05</chance>
+    <InheritanceMode>none</InheritanceMode>
   </AtavismLibraries.GeneticAtavismDef>
 
   <AtavismLibraries.GeneticAtavismDef>
@@ -23,6 +25,7 @@
     <sourceXenotype>Choerites</sourceXenotype>
     <targetXenotype>Artigasen</targetXenotype>
     <chance>0.05</chance>
+    <InheritanceMode>none</InheritanceMode>
   </AtavismLibraries.GeneticAtavismDef>
 
   <AtavismLibraries.GeneticAtavismDef>
@@ -31,6 +34,7 @@
       <sourceXenotype>Artigasen</sourceXenotype>
       <targetXenotype>Choerites</targetXenotype>
       <chance>0.05</chance>
+      <InheritanceMode>none</InheritanceMode>
   </AtavismLibraries.GeneticAtavismDef>
 
   <AtavismLibraries.GeneticAtavismDef>
@@ -39,6 +43,7 @@
       <sourceXenotype>Sciurus</sourceXenotype>
       <targetXenotype>Sciurus</targetXenotype>
       <chance>0.05</chance>
+      <InheritanceMode>none</InheritanceMode>
   </AtavismLibraries.GeneticAtavismDef>
 
   <AtavismLibraries.GeneticAtavismDef>
@@ -47,6 +52,7 @@
       <sourceXenotype>Castoran</sourceXenotype>
       <targetXenotype>Castoran</targetXenotype>
       <chance>0.05</chance>
+      <InheritanceMode>none</InheritanceMode>
   </AtavismLibraries.GeneticAtavismDef>
 
 </Defs>
