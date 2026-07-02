@@ -20,6 +20,17 @@
     <fixedAdultBackstories>
       <li>UnknownAdulthood</li>
     </fixedAdultBackstories>
+    <xenotypeSet>
+      <xenotypeChances>
+        <Kopidan>0.05</Kopidan>
+        <Artigasen>0.05</Artigasen>
+        <FeralMuriden>0.05</FeralMuriden>
+        <Muriden>0.45</Muriden>
+        <Sciurus>0.20</Sciurus>
+        <Castoran>0.10</Castoran>
+        <Choerites>0.10</Choerites>
+      <xenotypeChances>
+    </xenotypeSet>
   </CreepJoinerFormKindDef>
 
 

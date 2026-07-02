@@ -33,7 +33,7 @@
    <VEF.Abilities.AbilityDef>
         <defName>MuridenCharge</defName>
         <label>Bayonet Charge</label>
-        <description>Teleports to the target and executes a melee strike, weakened or augmented by the caster’s melee skill. If the target is killed, teleports to the next closest enemy at no cost and attacks again, until there is nothing left to kill.</description>
+        <description>Rushes to the target and executes a melee strike.</description>
         <iconPath>UI/Icons/Genes/Muriden_Icon</iconPath>
         <abilityClass>MuridenLibraries.BayonetCharge</abilityClass>
         <castTime>30</castTime>
@@ -69,6 +69,23 @@
         </rangeStatFactors>
         <minRange>2</minRange>
         <cooldownTime>1800</cooldownTime>
+    </VEF.Abilities.AbilityDef>
+
+    <VEF.Abilities.AbilityDef>
+      <defName>KopidanCharge</defName>
+      <label>Kopidan Charge</label>
+      <description>Drastically augments the caster’s legs to leap high into the air and dealing a diving strike to a target. Scales with melee skill.</description>
+      <iconPath>UI/Icons/Genes/Sciurus_Icon</iconPath>
+      <abilityClass>MuridenLibraries.DivingCharge</abilityClass>
+      <castTime>3</castTime>
+      <targetMode>Pawn</targetMode>
+      <range>7.5</range>
+      <needsTicking>true</needsTicking>
+      <rangeStatFactors>
+        <MeleeHitChance>3.0</MeleeHitChance>
+      </rangeStatFactors>
+      <minRange>2</minRange>
+      <cooldownTime>3000</cooldownTime>
     </VEF.Abilities.AbilityDef>
 
 </Defs>

@@ -215,4 +215,37 @@
 		</exclusionTags>
 	</GeneDef>
 
+	<GeneDef>
+		<defName>Kopidan_Tenacity</defName>
+		<label>Kopidan Tenacity</label>
+		<description>Atavism of the prehistoric sciurus</description>
+		<biostatCpx>2</biostatCpx>
+		<biostatMet>0</biostatMet>
+		<displayCategory>Miscellaneous</displayCategory>
+		<statOffsets>
+			<PainShockThreshold>0.15</PainShockThreshold>
+		</statOffsets>
+		<statFactors>
+			<MoveSpeed>1.10</MoveSpeed>
+		</statFactors>
+		<iconPath>UI/Icons/Genes/Sciurus_Icon</iconPath>
+		<displayOrderInCategory>103</displayOrderInCategory>
+		<geneClass>MuridenLibraries.Gene_GiveVEFAbilities</geneClass>
+		<modExtensions>
+			<li Class="MuridenLibraries.GeneExtension_VEFAbilities">
+				<abilityDefs>
+					<li>DivingCharge</li>
+				</abilityDefs>
+			</li>
+			<li Class="BigAndSmall.PawnExtension">
+				<canWalkOnCreep>true</canWalkOnCreep>
+				<renderCacheOff>true</renderCacheOff>
+				<thingDefSwap>Muriden_Race</thingDefSwap>
+			</li>
+		</modExtensions>
+		<exclusionTags>
+			<li>ML_Stats</li>
+		</exclusionTags>
+	</GeneDef>
+
 </Defs>

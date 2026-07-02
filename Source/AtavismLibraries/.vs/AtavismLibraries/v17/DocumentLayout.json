@@ -3,11 +3,11 @@
   "WorkspaceRootPath": "E:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\Muriden\\Source\\AtavismLibraries\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8722564C-CA62-4722-B0E4-4F7A3069BDB9}|AtavismLibraries.csproj|E:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\Muriden\\Source\\AtavismLibraries\\geneticatavismdef.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8722564C-CA62-4722-B0E4-4F7A3069BDB9}|AtavismLibraries.csproj|e:\\steamlibrary\\steamapps\\common\\rimworld\\mods\\muriden\\source\\atavismlibraries\\geneticatavismdef.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8722564C-CA62-4722-B0E4-4F7A3069BDB9}|AtavismLibraries.csproj|solutionrelative:geneticatavismdef.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8722564C-CA62-4722-B0E4-4F7A3069BDB9}|AtavismLibraries.csproj|e:\\steamlibrary\\steamapps\\common\\rimworld\\mods\\muriden\\source\\atavismlibraries\\atavismutils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8722564C-CA62-4722-B0E4-4F7A3069BDB9}|AtavismLibraries.csproj|E:\\SteamLibrary\\steamapps\\common\\RimWorld\\Mods\\Muriden\\Source\\AtavismLibraries\\atavismutils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8722564C-CA62-4722-B0E4-4F7A3069BDB9}|AtavismLibraries.csproj|solutionrelative:atavismutils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -55,8 +55,7 @@
               "RelativeToolTip": "Patch_PawnGenerator_GeneratePawn.cs",
               "ViewState": "AgIAABgAAAAAAAAAAAApwC8AAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-26T23:28:41.791Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-26T23:28:41.791Z"
             },
             {
               "$type": "Document",
@@ -68,8 +67,7 @@
               "RelativeToolTip": "Patch_PregnancyUtility_TryGetInheritedXenotype.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-26T23:28:37.296Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-26T23:28:37.296Z"
             },
             {
               "$type": "Document",
@@ -81,8 +79,7 @@
               "RelativeToolTip": "Patch_PregnancyUtility_ApplyBirthOutcome.cs",
               "ViewState": "AgIAABQAAAAAAAAAAAAQwC0AAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-26T23:20:57.09Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-26T23:20:57.09Z"
             },
             {
               "$type": "Document",
@@ -94,8 +91,7 @@
               "RelativeToolTip": "AtavismUtils.cs",
               "ViewState": "AgIAACgAAAAAAAAAAAD4vzYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-26T23:17:05.936Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-26T23:17:05.936Z"
             }
           ]
         }

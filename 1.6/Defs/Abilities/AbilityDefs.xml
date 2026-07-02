@@ -5,7 +5,7 @@
         <description>Stun your foes with a point-blank paralyzing glare that leaves them paralyzed in place for a long time.</description>
         <iconPath>UI/Icons/Genes/Castoran_icon</iconPath>
         <!-- <cooldownTicksRange>4000</cooldownTicksRange> -->
-        <cooldownTicksRange>2400</cooldownTicksRange>
+        <cooldownTicksRange>3000</cooldownTicksRange>
         <aiCanUse>true</aiCanUse>
         <displayOrder>101</displayOrder>
         <verbProperties>
@@ -22,7 +22,6 @@
         </verbProperties>
         <comps>
           <li Class="BigAndSmall.CompProperties_MeleeAttackAbility">
-            <!--How large the target can be compared to the lamia. 0.80 means max 80% of body size-->
             <damageDef>Stun</damageDef>
             <damageAmount>10</damageAmount>
             <asExplosion>false</asExplosion>
@@ -37,7 +36,7 @@
         <iconPath>UI/Icons/Genes/Choerites_icon</iconPath>
         <displayOrder>100</displayOrder>
         <hostile>true</hostile>
-        <cooldownTicksRange>1800</cooldownTicksRange>
+        <cooldownTicksRange>2000</cooldownTicksRange>
         <jobDef>CastJump</jobDef>
         <verbProperties>
           <verbClass>Verb_CastAbilityJump</verbClass>
@@ -82,7 +81,7 @@
         <description>Empowering themselves to make their final valiant stand, pushing themsleves to their limits.</description>
         <iconPath>UI/Icons/Genes/Muriden_Icon</iconPath>
         <warmupSound>PsycastCastLoop</warmupSound>
-        <cooldownTicksRange>720000</cooldownTicksRange>
+        <cooldownTicksRange>700000</cooldownTicksRange>
         <hostile>false</hostile>
         <groupAbility>true</groupAbility>
         <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
@@ -158,7 +157,7 @@
         <description>An insane boost in speed and agility for a short while.</description>
         <iconPath>UI/Icons/Genes/Muriden_Icon</iconPath>
         <warmupSound>PsycastCastLoop</warmupSound>
-        <cooldownTicksRange>720000</cooldownTicksRange>
+        <cooldownTicksRange>700000</cooldownTicksRange>
         <hostile>false</hostile>
         <groupAbility>true</groupAbility>
         <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>

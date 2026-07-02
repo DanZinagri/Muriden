@@ -164,10 +164,9 @@
         <xenotypeSet Inherit="False">
             <xenotypeChances>
                 <Muriden>0.35</Muriden>
-                <Dirtmole>0.15</Dirtmole>
                 <Sciurus>0.25</Sciurus>
-                <Castoran>0.15</Castoran>
-                <Choerites>0.10</Choerites>
+                <Castoran>0.20</Castoran>
+                <Choerites>0.20</Choerites>
             </xenotypeChances>
         </xenotypeSet>
 	</FactionDef>

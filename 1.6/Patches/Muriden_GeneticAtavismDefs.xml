@@ -47,9 +47,18 @@
               </AtavismLibraries.GeneticAtavismDef>
 
               <AtavismLibraries.GeneticAtavismDef>
-                <defName>Sciurus_to_Sciurus</defName>
+                <defName>Sciurus_to_Kopidan</defName>
                 <requiredGene>Sciurus_Alacrity</requiredGene>
                 <sourceXenotype>Sciurus</sourceXenotype>
+                <targetXenotype>Kopidan</targetXenotype>
+                <chance>0.05</chance>
+                <InheritanceMode>none</InheritanceMode>
+              </AtavismLibraries.GeneticAtavismDef>
+
+              <AtavismLibraries.GeneticAtavismDef>
+                <defName>Kopidan_to_Sciurus</defName>
+                <requiredGene>Kopidan_Tenacity</requiredGene>
+                <sourceXenotype>Kopidan</sourceXenotype>
                 <targetXenotype>Sciurus</targetXenotype>
                 <chance>0.05</chance>
                 <InheritanceMode>none</InheritanceMode>

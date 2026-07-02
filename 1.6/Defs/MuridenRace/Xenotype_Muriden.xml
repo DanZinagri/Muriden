@@ -123,7 +123,6 @@
             <li>Body_FemaleOnly</li>
             <li>Ears_Muriden</li>
             <li>Body_Thin</li>
-            <li>Muriden_Resolve</li>
             <li>BS_GeneStabilizing_Moderate</li>
             <li>Furskin</li>
             <li>Muriden_FeralNose</li>
@@ -161,6 +160,33 @@
 			<li>Furskin</li>
 			<li>Muriden_FeralNose</li>
 			<li>Artigasen_Might</li>
+		</genes>
+	</XenotypeDef>
+
+	<XenotypeDef>
+		<defName>Kopidan</defName>
+		<label>Kopidan</label>
+		<description>A quick atavism of the Sciurus with more focus on jumping than running.</description>
+		<descriptionShort>A larger varient of a prehistoric squirrel.</descriptionShort>
+		<iconPath>UI/Icons/Xenotypes/Sciurus_Icon</iconPath>
+		<inheritable>true</inheritable>
+		<genes>
+			<li>BS_SmallFrame</li>
+			<li>Muriden_Bite</li>
+			<li>Muriden_Claws</li>
+			<li>Tail_Sciurus</li>
+			<li>BS_FastAging</li>
+			<li>MoveSpeed_Quick</li>
+			<li>BS_TinyTough</li>
+			<li>Pain_Reduced</li>
+			<li>Body_FemaleOnly</li>
+			<li>Ears_Sciurus</li>
+			<li>Body_Standard</li>
+			<li>Kopidan_Tenacity</li>
+			<li>BS_GeneStabilizing_Moderate</li>
+			<li>Furskin</li>
+			<li>Muriden_FeralNose</li>
+			<li>AptitudeTerrible_Intellectual</li>
 		</genes>
 	</XenotypeDef>
 </Defs>
