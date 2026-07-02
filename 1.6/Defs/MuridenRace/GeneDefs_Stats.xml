@@ -151,11 +151,9 @@
 		</exclusionTags>
 	</GeneDef>
 
-
-
 	<GeneDef>
 		<defName>FeralMuriden_Resolve</defName>
-		<label>feral muriden resolve</label>
+		<label>Musmurden resolve</label>
 		<description>Carriers of this gene have improved dodge and work speed.</description>
 		<biostatCpx>2</biostatCpx>
 		<biostatMet>-1</biostatMet>
@@ -243,6 +241,34 @@
 				<thingDefSwap>Muriden_Race</thingDefSwap>
 			</li>
 		</modExtensions>
+		<exclusionTags>
+			<li>ML_Stats</li>
+		</exclusionTags>
+	</GeneDef>
+
+	<GeneDef>
+		<defName>Castoroid_Ingenuity</defName>
+		<label>Castoroid ingenuity</label>
+		<description>Carriers of this gene have improved construction speed and plant harvest yields</description>
+		<biostatCpx>2</biostatCpx>
+		<biostatMet>-2</biostatMet>
+		<displayCategory>Miscellaneous</displayCategory>
+		<statFactors>
+			<ConstructionSpeed>1.15</ConstructionSpeed>
+			<PlantHarvestYield>1.2</PlantHarvestYield>
+		</statFactors>
+		<iconPath>UI/Icons/Genes/Castoran_icon</iconPath>
+		<displayOrderInCategory>103</displayOrderInCategory>
+        <modExtensions>
+            <li Class="BigAndSmall.PawnExtension">
+                <canWalkOnCreep>true</canWalkOnCreep>
+                <renderCacheOff>true</renderCacheOff>
+                <thingDefSwap>Muriden_Race</thingDefSwap>
+            </li>
+        </modExtensions>
+		<abilities>
+			<li>CastoranTailSlapStun</li>
+		</abilities>
 		<exclusionTags>
 			<li>ML_Stats</li>
 		</exclusionTags>

@@ -119,18 +119,6 @@
 				<thingDef>MedicineHerbal</thingDef>
 				<countRange>10~40</countRange>
 			</li>
-			<li Class="StockGenerator_SingleDef">
-				<thingDef>Muriden_NobleSpear</thingDef>
-				<countRange>1~2</countRange>
-			</li>
-			<li Class="StockGenerator_SingleDef">
-				<thingDef>Muradin_NobleLongsword</thingDef>
-				<countRange>1~2</countRange>
-			</li>
-			<li Class="StockGenerator_SingleDef">
-				<thingDef>Muriden_GunLance</thingDef>
-				<countRange>1~2</countRange>
-			</li>
 			<li Class="StockGenerator_Animals">
 				<tradeTagsSell>
 					<li>AnimalFighter</li>

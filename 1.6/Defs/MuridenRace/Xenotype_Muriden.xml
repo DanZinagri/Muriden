@@ -104,7 +104,7 @@
     
     <XenotypeDef>
 		<defName>FeralMuriden</defName>
-		<label>feral muriden</label>
+		<label>Musmurden</label>
 		<description>A feral version of the muriden with more animalistic features</description>
 		<descriptionShort>A feral version of the muriden.</descriptionShort>
 		<iconPath>UI/Icons/Xenotypes/Muriden_Icon</iconPath>
@@ -186,6 +186,35 @@
 			<li>BS_GeneStabilizing_Moderate</li>
 			<li>Furskin</li>
 			<li>Muriden_FeralNose</li>
+			<li>AptitudeTerrible_Intellectual</li>
+		</genes>
+	</XenotypeDef>
+
+	<XenotypeDef>
+		<defName>Castoroid</defName>
+		<label>Castoroid</label>
+		<description>A large beaver-like atavism</description>
+		<descriptionShort>A large beaver-like atavism</descriptionShort>
+		<iconPath>UI/Icons/Xenotypes/Castoran_icon</iconPath>
+		<inheritable>true</inheritable>
+		<genes>
+			<li>BS_LargeFrame</li>
+			<li>Muriden_Bite</li>
+			<li>Tail_Castoran</li>
+			<li>PsychicAbility_Dull</li>
+			<li>WebbedPhalanges</li>
+			<li>Body_FemaleOnly</li>
+			<li>Ears_Muriden</li>
+			<li>Body_Standard</li>
+			<li>Castoroid_Ingenuity</li>
+			<li>BS_GeneStabilizing_Moderate</li>
+			<li>Furskin</li>
+			<li>Muriden_FeralNose</li>
+			<li>AptitudeTerrible_Shooting</li>
+			<li>AptitudeStrong_Construction</li>
+			<li>AptitudeStrong_Plants</li>
+			<li>AptitudePoor_Animals</li>
+			<li>AptitudeTerrible_Social</li>
 			<li>AptitudeTerrible_Intellectual</li>
 		</genes>
 	</XenotypeDef>

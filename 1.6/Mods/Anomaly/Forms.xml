@@ -28,7 +28,8 @@
         <Muriden>0.45</Muriden>
         <Sciurus>0.20</Sciurus>
         <Castoran>0.10</Castoran>
-        <Choerites>0.10</Choerites>
+        <Choerites>0.05</Choerites>
+        <Castoroid>0.05</Castoroid>
       <xenotypeChances>
     </xenotypeSet>
   </CreepJoinerFormKindDef>

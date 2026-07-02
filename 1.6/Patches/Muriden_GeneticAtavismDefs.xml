@@ -65,9 +65,18 @@
               </AtavismLibraries.GeneticAtavismDef>
 
               <AtavismLibraries.GeneticAtavismDef>
-                <defName>Castoran_to_Castoran</defName>
+                <defName>Castoran_to_Castoroid</defName>
                 <requiredGene>Castoran_Ingenuity</requiredGene>
                 <sourceXenotype>Castoran</sourceXenotype>
+                <targetXenotype>Castoroid</targetXenotype>
+                <chance>0.05</chance>
+                <InheritanceMode>none</InheritanceMode>
+              </AtavismLibraries.GeneticAtavismDef>
+
+              <AtavismLibraries.GeneticAtavismDef>
+                <defName>Castoroid_to_Castoran</defName>
+                <requiredGene>Castoroid_Ingenuity</requiredGene>
+                <sourceXenotype>Castoroid</sourceXenotype>
                 <targetXenotype>Castoran</targetXenotype>
                 <chance>0.05</chance>
                 <InheritanceMode>none</InheritanceMode>
