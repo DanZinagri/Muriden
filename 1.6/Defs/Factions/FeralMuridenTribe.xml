@@ -52,10 +52,10 @@
     </disallowedPrecepts>
     <xenotypeSet>
       <xenotypeChances>
-        <Artigasen>0.208</Artigasen>
-        <Castoroid>0.208</Castoroid>
-        <Kopidan>0.208</Kopidan>
-        <FeralMuriden>0.375</FeralMuriden>
+        <Artigasen>0.05</Artigasen>
+        <Castoroid>0.20</Castoroid>
+        <Kopidan>0.25</Kopidan>
+        <FeralMuriden>0.5</FeralMuriden>
       </xenotypeChances>
     </xenotypeSet>
     <backstoryFilters>
