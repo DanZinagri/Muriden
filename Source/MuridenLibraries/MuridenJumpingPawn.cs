@@ -1,4 +1,4 @@
-﻿using RimWorld;
+using RimWorld;
 using RimWorld.Planet;
 using UnityEngine;
 using VEF.Abilities;
@@ -10,9 +10,18 @@ namespace MuridenLibraries;
 //i don't want to make VPE a requirement so lifted some of the logic.
 public class MuridenJumpingPawn : AbilityPawnFlyer
 {
+    // The casting ability comes in through AbilityPawnFlyer.ability, which the base class
+    // already sets up, saves and cross-references for us. Don't shadow it with a second field.
+    public DivingCharge DiveAbility => ability as DivingCharge;
+
     // set by DivingCharge.Cast
-    public DivingCharge dive_ability;              
-    public GlobalTargetInfo landingTarget; 
+    public GlobalTargetInfo landingTarget;
+
+    public override void ExposeData()
+    {
+        base.ExposeData();
+        Scribe_TargetInfo.Look(ref landingTarget, nameof(landingTarget));
+    }
 
     public override void DynamicDrawPhaseAt(DrawPhase phase, Vector3 drawLoc, bool flip = false)
     {
@@ -28,12 +37,12 @@ public class MuridenJumpingPawn : AbilityPawnFlyer
         FleckMaker.ThrowSmoke(fp.DrawPos, fp.Map, 1f);
         FleckMaker.ThrowDustPuffThick(fp.DrawPos, fp.Map, 2f, new(1f, 1f, 1f, 2.5f));
 
-        // Now that we’ve landed, do the actual attack.
-        if (dive_ability != null && fp?.Spawned == true)
+        // Now that we've landed, do the actual attack.
+        if (DiveAbility != null && fp?.Spawned == true)
         {
             var map = fp.Map;
 
-            // Prefer a live pawn at/near the target cell. If the original moved, try who’s in the cell now.
+            // Prefer a live pawn at/near the target cell. If the original moved, try who's in the cell now.
             LocalTargetInfo lti = landingTarget.IsValid ? new LocalTargetInfo(landingTarget.Cell) : new LocalTargetInfo(fp.Position);
             Pawn maybe = landingTarget.Pawn ?? map.thingGrid.ThingAt<Pawn>(lti.Cell);
             if (maybe != null) lti = maybe;
@@ -54,10 +63,7 @@ public class MuridenJumpingPawn : AbilityPawnFlyer
         // Ensure attacker is free to swing.
         attacker.stances.SetStance(new Stance_Mobile());
 
-        VerbProperties_MundaneMeleeDamageAmount_Patch.multiplyMundaneByPawnMeleeSkill = true;
-        attacker.meleeVerbs.TryMeleeAttack(targetPawn, null, surpriseAttack: true);
-        attacker.meleeVerbs.TryMeleeAttack(targetPawn, null, surpriseAttack: true);
-        VerbProperties_MundaneMeleeDamageAmount_Patch.multiplyMundaneByPawnMeleeSkill = false;
+        ChargeStrike.DoStrikes(attacker, targetPawn, 2);
 
         // Optional impact VFX/SFX at the landing cell
         SoundDefOf.Pawn_Melee_Punch_HitBuilding_Generic.PlayOneShot(new TargetInfo(attacker.Position, map));
@@ -65,4 +71,3 @@ public class MuridenJumpingPawn : AbilityPawnFlyer
 
     // (rest of your class unchanged)
 }
-

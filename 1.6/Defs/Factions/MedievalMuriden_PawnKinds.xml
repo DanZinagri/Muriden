@@ -1,20 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs> 
-	<PawnKindDef Name="MuridenBasePawnKind" Abstract="True">
-		<combatPower>20</combatPower>
-		<canBeSapper>true</canBeSapper>
-		<race>Human</race>
-        <fixedGender>Female</fixedGender>
-		<minGenerationAge>13</minGenerationAge>
-		<maxGenerationAge>35</maxGenerationAge>
-		<defaultFactionType>Muridenia</defaultFactionType>
-		<invNutrition>2</invNutrition>
-		<apparelIgnoreSeasons>true</apparelIgnoreSeasons>
-		<backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
-		<initialResistanceRange>0~10</initialResistanceRange>
-		<initialWillRange>5~10</initialWillRange>
-	</PawnKindDef>	
-	
 	<PawnKindDef ParentName="MuridenBasePawnKind">
 		<defName>MuridenColonist</defName>
 		<label>muriden colonist</label>	

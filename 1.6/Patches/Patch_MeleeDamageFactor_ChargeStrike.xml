@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <!-- Lets charge abilities scale their strikes with the attacker's melee skill.
+         The StatPart only does anything while the Muriden_ChargeStrike hediff is on the pawn. -->
+    <Operation Class="PatchOperationAdd">
+        <xpath>/Defs/StatDef[defName="MeleeDamageFactor"]/parts</xpath>
+        <value>
+            <li Class="MuridenLibraries.StatPart_ChargeMeleeSkill">
+                <marker>Muriden_ChargeStrike</marker>
+                <divisor>10</divisor>
+            </li>
+        </value>
+    </Operation>
+</Patch>

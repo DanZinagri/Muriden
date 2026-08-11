@@ -7,9 +7,9 @@
 		<listOrderPriority>30</listOrderPriority>
 		<settlementGenerationWeight>1</settlementGenerationWeight>
 		<requiredCountAtGameStart>1</requiredCountAtGameStart>
-		<maxConfigurableAtWorldCreation>2</maxConfigurableAtWorldCreation>
+		<maxConfigurableAtWorldCreation>9999</maxConfigurableAtWorldCreation>
 		<canMakeRandomly>true</canMakeRandomly>
-		<leaderTitle>prime executor</leaderTitle>
+		<leaderTitle>Queen</leaderTitle>
 		<fixedName>Muriden Kingdom</fixedName>
 		<canSiege>true</canSiege>
 		<canStageAttacks>true</canStageAttacks>

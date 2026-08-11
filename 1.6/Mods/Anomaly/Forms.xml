@@ -30,7 +30,7 @@
         <Castoran>0.10</Castoran>
         <Choerites>0.05</Choerites>
         <Castoroid>0.05</Castoroid>
-      <xenotypeChances>
+      </xenotypeChances>
     </xenotypeSet>
   </CreepJoinerFormKindDef>
 

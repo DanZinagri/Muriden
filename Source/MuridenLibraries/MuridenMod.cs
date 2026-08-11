@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using HarmonyLib;
 using RimWorld;
 using UnityEngine;
 using Verse;
@@ -9,12 +8,10 @@ namespace MuridenLibraries;
 
 public class MuridenMod : Mod
 {
-    public static Harmony Harm;
     public static MuridenSettings Settings;
 
     public MuridenMod(ModContentPack content) : base(content)
     {
-        Harm = new("DanZinagri.Muriden");
         Settings = GetSettings<MuridenSettings>();
 
         LongEventHandler.ExecuteWhenFinished(ApplySettings);
@@ -52,7 +49,7 @@ public class MuridenSettings : ModSettings
     public override void ExposeData()
     {
         base.ExposeData();
-        Scribe_Values.Look(ref dirtmolePatch, nameof(dirtmolePatch), true);
-        Scribe_Values.Look(ref factionPatch, nameof(factionPatch), true);
+        Scribe_Values.Look(ref dirtmolePatch, nameof(dirtmolePatch), false);
+        Scribe_Values.Look(ref factionPatch, nameof(factionPatch), false);
     }
 }

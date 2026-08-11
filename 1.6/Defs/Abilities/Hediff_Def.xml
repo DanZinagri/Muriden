@@ -71,4 +71,24 @@
 			<li Class="HediffCompProperties_DisappearsOnDeath" />
 		</comps>
 	</HediffDef>
+
+	<!-- Marker only. Added and removed around a charge ability's strikes so
+	     StatPart_ChargeMeleeSkill knows to scale MeleeDamageFactor by melee skill.
+	     The disappear comp is a safety net in case the removal is ever missed. -->
+	<HediffDef>
+		<defName>Muriden_ChargeStrike</defName>
+		<label>charging</label>
+		<description>Mid-charge. The strike lands with force proportional to the attacker's melee skill.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<isBad>false</isBad>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<everCurableByItem>false</everCurableByItem>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks><min>2</min><max>2</max></disappearsAfterTicks>
+				<showRemainingTime>false</showRemainingTime>
+			</li>
+			<li Class="HediffCompProperties_DisappearsOnDeath" />
+		</comps>
+	</HediffDef>
 </Defs>

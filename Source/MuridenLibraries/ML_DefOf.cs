@@ -12,6 +12,7 @@ namespace MuridenLibraries;
 public static class ML_DefOf
 {
     public static ThingDef Muriden_JumpingPawn;
+    public static HediffDef Muriden_ChargeStrike;
 
     //base muriden
     public static XenotypeDef Muriden;

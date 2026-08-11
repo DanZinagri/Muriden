@@ -34,10 +34,6 @@
     <LangVersion>latest</LangVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="0Harmony">
-      <HintPath>E:\SteamLibrary\steamapps\workshop\content\294100\2009463077\Current\Assemblies\0Harmony.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Assembly-CSharp">
       <HintPath>E:\SteamLibrary\steamapps\common\RimWorld\RimWorldWin64_Data\Managed\Assembly-CSharp.dll</HintPath>
       <Private>False</Private>
@@ -74,11 +70,11 @@
   <ItemGroup>
     <Compile Include="DivingCharge.cs" />
     <Compile Include="BayonetCharge.cs" />
+    <Compile Include="ChargeStrike.cs" />
     <Compile Include="ExplodeOnLanding.cs" />
     <Compile Include="GeneAbilities.cs" />
-    <Compile Include="HarmonyPatches\HarmonyInit.cs" />
-    <Compile Include="HarmonyPatches\VerbProperties_AdjustedMeleeDamageAmount_Patch.cs" />
     <Compile Include="MuridenJumpingPawn.cs" />
+    <Compile Include="StatPart_ChargeMeleeSkill.cs" />
     <Compile Include="MuridenMod.cs" />
     <Compile Include="PatchOperationEnabled.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

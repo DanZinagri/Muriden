@@ -30,6 +30,18 @@
 	
 	I will continue to try and make improvements on the textures as well.
 	</description>
+	<modDependencies>
+		<li>
+			<packageId>RedMattis.BetterPrerequisites</packageId>
+			<displayName>Big and Small - Framework</displayName>
+			<steamWorkshopUrl>steam://url/CommunityFilePage/2925432336</steamWorkshopUrl>
+		</li>
+		<li>
+			<packageId>RedMattis.BigSmall.Core</packageId>
+			<displayName>Big and Small - Genes &amp; More</displayName>
+			<steamWorkshopUrl>steam://url/CommunityFilePage/2920751126</steamWorkshopUrl>
+		</li>
+	</modDependencies>
 	<loadAfter>
 		<li>Ludeon.RimWorld</li>
 		<li>Ludeon.RimWorld.Biotech</li>

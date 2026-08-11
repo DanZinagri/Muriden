@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <FactionDef ParentName="FactionBase">
+    <defName>FeralMuridenTribe</defName>
+    <label>Feral Muriden Tribe</label>
+    <fixedName>Feral Muriden Tribe</fixedName>
+    <description>A group of Feral Muriden who have fully regessed into a wild state. With no interest in advancing they only seek to survive at any cost.</description>
+    <categoryTag>Tribal</categoryTag>
+    <techLevel>Neolithic</techLevel>
+    <factionNameMaker>NamerFactionTribal</factionNameMaker>
+    <settlementNameMaker>NamerSettlementTribal</settlementNameMaker>
+    <pawnSingular>tribesman</pawnSingular>
+    <pawnsPlural>tribespeople</pawnsPlural>
+    <leaderTitle>chief</leaderTitle>
+    <requiredCountAtGameStart>1</requiredCountAtGameStart>
+    <startingCountAtWorldCreation>1</startingCountAtWorldCreation>
+    <maxConfigurableAtWorldCreation>9999</maxConfigurableAtWorldCreation>
+    <settlementGenerationWeight>1</settlementGenerationWeight>
+    <factionIconPath>UI/Icons/Factions/Muriden</factionIconPath>
+    <naturalEnemy>true</naturalEnemy>
+    <settlementTexturePath>World/WorldObjects/TribalSettlement</settlementTexturePath>
+    <colorSpectrum>
+      <li>(0.72, 0.291, 0)</li>
+    </colorSpectrum>
+    <basicMemberKind>FeralMuridenTribe_Melee</basicMemberKind>
+    <allowedCultures>
+      <li>Corunan</li>
+    </allowedCultures>
+    <disallowedMemes>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Structure_Ideological</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Transhumanist</li>
+      <li MayRequire="sarg.alphamemes">AM_GauranlenSupremacy</li>
+      <li MayRequire="vanillaexpanded.vmemese">VME_Structure_Corporate</li>
+      <li MayRequire="vanillaexpanded.vmemese">VME_Progressive</li>
+      <li MayRequire="vanillaexpanded.vmemese">VME_Republic</li>
+      <li MayRequire="vanillaexpanded.vmemese">VME_CityBuilders</li>
+      <li MayRequire="vanillaexpanded.vmemese">VME_HardcoreIndustrialism</li>
+      <li MayRequire="vanillaexpanded.vmemese">VME_Fleshcrafters</li>
+      <li MayRequire="vanillaexpanded.vmemese">VME_Aristocratic</li>
+      <li MayRequire="vanillaexpanded.vmemese">VME_MechanoidSupremacy</li>
+      <li MayRequire="vanillaexpanded.vmemese">VME_Nationalist</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Blindsight</li>
+      <li MayRequire="sarg.alphamemes">AM_NonViolence</li>
+      <li MayRequire="sarg.alphamemes">AM_Artist</li>
+      <li MayRequire="vanillaexpanded.vmemese">VME_Pacifist</li>
+      <li MayRequire="vanillaexpanded.vmemese">VME_Emancipation</li>
+      <li MayRequire="vanillaexpanded.vmemese">VME_Vegan</li>
+    </disallowedMemes>
+    <disallowedPrecepts>
+      <li>Nudity_Male_CoveringAnythingButGroinDisapproved</li>
+      <li>Nudity_Female_CoveringAnythingButGroinDisapproved</li>
+    </disallowedPrecepts>
+    <xenotypeSet>
+      <xenotypeChances>
+        <Artigasen>0.208</Artigasen>
+        <Castoroid>0.208</Castoroid>
+        <Kopidan>0.208</Kopidan>
+        <FeralMuriden>0.375</FeralMuriden>
+      </xenotypeChances>
+    </xenotypeSet>
+    <backstoryFilters>
+      <li>
+        <categoriesChildhood>
+          <li>Tribal</li>
+        </categoriesChildhood>
+        <categoriesAdulthood>
+          <li>Tribal</li>
+        </categoriesAdulthood>
+      </li>
+    </backstoryFilters>
+    <baseTraderKinds>
+      <li>Base_Neolithic_Standard</li>
+    </baseTraderKinds>
+    <caravanTraderKinds>
+      <li>Caravan_Neolithic_BulkGoods</li>
+      <li>Caravan_Neolithic_WarMerchant</li>
+      <li>Caravan_Neolithic_Slaver</li>
+      <li>Caravan_Neolithic_ShamanMerchant</li>
+    </caravanTraderKinds>
+    <visitorTraderKinds>
+      <li>Visitor_Neolithic_Standard</li>
+    </visitorTraderKinds>
+    <maxPawnCostPerTotalPointsCurve>
+      <points>
+        <li>(0, 10000)</li>
+        <li>(100000, 10000)</li>
+      </points>
+    </maxPawnCostPerTotalPointsCurve>
+    <pawnGroupMakers>
+      <li>
+        <kindDef>Combat</kindDef>
+        <commonality>100</commonality>
+        <maxTotalPoints>9999999</maxTotalPoints>
+        <options>
+          <FeralMuridenTribe_Leader>2</FeralMuridenTribe_Leader>
+          <FeralMuridenTribe_Melee>1</FeralMuridenTribe_Melee>
+          <FeralMuridenTribe_Archer>1</FeralMuridenTribe_Archer>
+        </options>
+      </li>
+      <li>
+        <kindDef>Peaceful</kindDef>
+        <commonality>100</commonality>
+        <maxTotalPoints>9999999</maxTotalPoints>
+        <options>
+          <FeralMuridenTribe_Leader>2</FeralMuridenTribe_Leader>
+          <FeralMuridenTribe_Melee>1</FeralMuridenTribe_Melee>
+          <FeralMuridenTribe_Archer>1</FeralMuridenTribe_Archer>
+        </options>
+      </li>
+      <li>
+        <kindDef>Trader</kindDef>
+        <commonality>100</commonality>
+        <traders>
+          <FeralMuridenTribe_Trader>1</FeralMuridenTribe_Trader>
+        </traders>
+        <carriers>
+          <Muffalo>6</Muffalo>
+          <Dromedary>5</Dromedary>
+          <Alpaca>2.5</Alpaca>
+          <Elephant>2</Elephant>
+          <Horse>1</Horse>
+        </carriers>
+        <guards>
+          <FeralMuridenTribe_Leader>2</FeralMuridenTribe_Leader>
+          <FeralMuridenTribe_Melee>1</FeralMuridenTribe_Melee>
+          <FeralMuridenTribe_Archer>1</FeralMuridenTribe_Archer>
+        </guards>
+      </li>
+      <li>
+        <kindDef>Settlement</kindDef>
+        <commonality>100</commonality>
+        <maxTotalPoints>9999999</maxTotalPoints>
+        <options>
+          <FeralMuridenTribe_Leader>2</FeralMuridenTribe_Leader>
+          <FeralMuridenTribe_Melee>1</FeralMuridenTribe_Melee>
+          <FeralMuridenTribe_Archer>1</FeralMuridenTribe_Archer>
+        </options>
+      </li>
+    </pawnGroupMakers>
+  </FactionDef>
+</Defs>
