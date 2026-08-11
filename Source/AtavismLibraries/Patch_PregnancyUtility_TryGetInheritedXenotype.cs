@@ -1,29 +1,25 @@
-﻿using HarmonyLib;
+using HarmonyLib;
 using RimWorld;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Verse;
 
 namespace AtavismLibraries
 {
-    //By default, the game will think that a parent will birth a "Hybrid"; so we're using a special case in this method
+    //By default the game decides the parents will produce a "Hybrid", which would
+    //override the xenotype we forced. The context stays open for the whole birth,
+    //so this covers the call whether it comes from ApplyBirthOutcome directly or
+    //from inside the baby's own generation.
     [HarmonyPatch(typeof(PregnancyUtility), "TryGetInheritedXenotype")]
     public static class Patch_PregnancyUtility_TryGetInheritedXenotype
     {
-
         [HarmonyPostfix]
-        public static void PostFix(Pawn mother, ref XenotypeDef xenotype, ref bool __result)
+        public static void Postfix(ref XenotypeDef xenotype, ref bool __result)
         {
-            if (mother?.genes == null) return;
+            XenotypeDef target = AtavismContext.TargetXenotype;
+            if (target == null)
+                return;
 
-            if (Patch_PawnGenerator_GeneratePawn.CurrentForcedXenotype != null)
-            {
-                xenotype = Patch_PawnGenerator_GeneratePawn.CurrentForcedXenotype;
-                __result = true;
-            }
+            xenotype = target;
+            __result = true;
         }
     }
 }

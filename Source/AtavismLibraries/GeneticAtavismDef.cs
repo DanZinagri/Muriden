@@ -1,10 +1,5 @@
-﻿using RimWorld;
-using System;
+using RimWorld;
 using System.Collections.Generic;
-using System.Linq;
-using System.Security.Cryptography;
-using System.Text;
-using System.Threading.Tasks;
 using Verse;
 
 namespace AtavismLibraries
@@ -16,6 +11,15 @@ namespace AtavismLibraries
         public XenotypeDef targetXenotype;
         public AtavismInheritanceMode InheritanceMode = AtavismInheritanceMode.none;
         public float chance = 1f;
+
+        // Defs are rolled lowest order first, and the first one that passes its
+        // chance wins. Defs sharing an order keep their XML order, so a
+        // guaranteed fallback only needs to be listed last with chance 1.
+        public int order = 0;
+
+        // Position in DefDatabase, stamped once so equal-order defs roll in a
+        // stable sequence instead of whatever the database happens to hand back.
+        internal int loadIndex;
 
         public bool Matches(Pawn pawn)
         {
@@ -34,6 +38,33 @@ namespace AtavismLibraries
                                    pawn.genes.Xenotype == sourceXenotype;
 
             return geneMatches && xenotypeMatches;
+        }
+
+        public override IEnumerable<string> ConfigErrors()
+        {
+            foreach (string error in base.ConfigErrors())
+            {
+                yield return error;
+            }
+
+            if (targetXenotype == null)
+            {
+                yield return "targetXenotype is null; this def can never fire.";
+            }
+
+            if (requiredGene == null && sourceXenotype == null)
+            {
+                yield return "neither requiredGene nor sourceXenotype was set; this def can never fire.";
+            }
+
+            if (chance <= 0f)
+            {
+                yield return $"chance is {chance}; this def can never fire.";
+            }
+            else if (chance > 1f)
+            {
+                yield return $"chance is {chance}, which is above 1. Use 1 for a guaranteed fallback.";
+            }
         }
     }
 

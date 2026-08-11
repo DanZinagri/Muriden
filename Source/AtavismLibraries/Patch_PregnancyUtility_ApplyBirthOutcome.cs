@@ -1,58 +1,80 @@
-﻿using HarmonyLib;
-using AtavismLibraries;
+using HarmonyLib;
 using RimWorld;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Verse;
 
 namespace AtavismLibraries
 {
-    //The purpose of this patch is to save the current birthing mother if she has the right gene
-    //The field will be used to determine in the other patch if the baby has a mother with this specific gene or not
-    //The reason is because the mother pawn is not a present parameter/field in the other method
+    //This is where an atavism birth is decided. The mother is not a parameter of
+    //PawnGenerator.GeneratePawn, so everything we need is worked out here and
+    //parked in AtavismContext for the rest of the birth to pick up.
     [HarmonyPatch(typeof(PregnancyUtility), "ApplyBirthOutcome")]
     public static class Patch_PregnancyUtility_ApplyBirthOutcome
     {
-        public static Pawn mother;
-
         [HarmonyPrefix]
-        public static void Prefix(Pawn geneticMother)
+        public static void Prefix(Pawn geneticMother, Pawn father)
         {
-            mother = null;
+            AtavismContext.Close();
 
-            if (geneticMother == null) return;
+            if (geneticMother?.genes == null)
+                return;
 
-            if (AtavismUtils.GetMatchingAtavismDefs(geneticMother) != null)
-            {
-                mother = geneticMother;
-            }
+            GeneticAtavismDef def = AtavismUtils.TryPickAtavismDef(geneticMother);
+            if (def == null)
+                return;
 
+            // Only the decision is made here. The gene lists are built later, in
+            // the GeneratePawn prefix, because the list this birth will actually
+            // use is not resolved until part way through the original method - the
+            // genes argument is usually null at this point.
+            AtavismContext.Open(geneticMother, father, def);
         }
 
+        //Runs after Better Gene Inheritance's own ApplyBirthOutcome postfix, which
+        //sits at Priority.Low and reassigns the baby's xenotype to whichever parent
+        //scores highest against its gene list. For an atavism birth the target
+        //xenotype is the entire point, so re-assert it and only then announce it.
+        //Harmless when BGI is absent - it just restates what we already forced.
         [HarmonyPostfix]
-        public static void Postfix(Thing __result)
+        [HarmonyPriority(Priority.VeryLow)]
+        [HarmonyAfter(BGICompat.HarmonyId)]
+        public static void Postfix(Thing __result, bool preventLetter)
         {
-            if (__result == null)
-            {
-                if (mother != null) mother = null;
+            if (!AtavismContext.Applied)
                 return;
-            }
-            if (Patch_PawnGenerator_GeneratePawn.Atavism)
-            {
-                Pawn baby = __result as Pawn;
-                Patch_PawnGenerator_GeneratePawn.Atavism = false;
-                ChoiceLetter_GeneticAtavism choiceLetter_baby = (ChoiceLetter_GeneticAtavism)LetterMaker.MakeLetter("AtavismTitle".Translate(baby.genes.Xenotype.label), "AtavismLoc".Translate(mother, baby.genes.Xenotype.label), Atavism_DefOf.GetAtavismLetter(), baby);
-                choiceLetter_baby.Start();
-                Find.LetterStack.ReceiveLetter(choiceLetter_baby);
-            }
-            if (mother != null)
-            {
-                mother = null;
-            }
-            return;
+
+            XenotypeDef target = AtavismContext.TargetXenotype;
+            Pawn mother = AtavismContext.Mother;
+
+            if (target == null || mother == null || __result is not Pawn baby || baby.genes == null)
+                return;
+
+            baby.genes.SetXenotypeDirect(target);
+            baby.genes.xenotypeName = null;
+            baby.genes.iconDef = null;
+            baby.genes.hybrid = false;
+
+            // The faction check mirrors ChoiceLetter_GeneticAtavism.CanShowInLetterStack.
+            // Without it, every enemy or visitor birth still built a letter that
+            // could never be shown and went straight to the archive.
+            if (preventLetter || baby.Faction?.IsPlayer != true)
+                return;
+
+            ChoiceLetter_GeneticAtavism letter = (ChoiceLetter_GeneticAtavism)LetterMaker.MakeLetter(
+                "AtavismTitle".Translate(target.label),
+                "AtavismLoc".Translate(mother, target.label),
+                Atavism_DefOf.GetAtavismLetter(),
+                baby);
+            letter.Start();
+            Find.LetterStack.ReceiveLetter(letter);
+        }
+
+        //A finalizer runs even when the birth throws, which a postfix does not.
+        //Without it a failed generation would leave the mother parked in the
+        //context and the next pawn generated anywhere would inherit her atavism.
+        [HarmonyFinalizer]
+        public static void Finalizer()
+        {
+            AtavismContext.Close();
         }
     }
 }

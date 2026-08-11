@@ -1,7 +1,6 @@
-﻿using AtavismLibraries;
 using Verse;
 
-namespace MuridenLibraries.HarmonyPatches;
+namespace AtavismLibraries;
 
 [StaticConstructorOnStartup]
 public static class HarmonyInit

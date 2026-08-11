@@ -18,7 +18,7 @@
     <DebugSymbols>false</DebugSymbols>
     <DebugType>none</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\..\1.6\Assemblies\</OutputPath>
+    <OutputPath>..\..\..\AtavismLibraries\1.6\Assemblies\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -72,14 +72,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AtavismContext.cs" />
     <Compile Include="AtavismMod.cs" />
+    <Compile Include="AtavismSettings.cs" />
     <Compile Include="AtavismUtils.cs" />
+    <Compile Include="BGICompat.cs" />
     <Compile Include="Atavism_DefOf.cs" />
     <Compile Include="ChoiceLetter_GeneticAtavism.cs" />
     <Compile Include="GeneticAtavismDef.cs" />
     <Compile Include="HarmonyInit.cs" />
     <Compile Include="Patch_PawnGenerator_GeneratePawn.cs" />
     <Compile Include="Patch_PregnancyUtility_ApplyBirthOutcome.cs" />
+    <Compile Include="Patch_PregnancyUtility_GetInheritedGenes.cs" />
     <Compile Include="Patch_PregnancyUtility_TryGetInheritedXenotype.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
