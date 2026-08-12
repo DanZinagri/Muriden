@@ -35,18 +35,12 @@
 			<displayName>Big and Small - Framework</displayName>
 			<steamWorkshopUrl>steam://url/CommunityFilePage/2925432336</steamWorkshopUrl>
 		</li>
-		<li>
-			<packageId>RedMattis.BigSmall.Core</packageId>
-			<displayName>Big and Small - Genes &amp; More</displayName>
-			<steamWorkshopUrl>steam://url/CommunityFilePage/2920751126</steamWorkshopUrl>
-		</li>
 	</modDependencies>
 	<loadAfter>
 		<li>Ludeon.RimWorld</li>
 		<li>Ludeon.RimWorld.Biotech</li>
 		<li>oskarpotocki.vanillafactionsexpanded.core</li>
 		<li>redmattis.betterprerequisites</li>
-		<li>redmattis.bigsmall.core</li>
 		<li>oskarpotocki.vfe.tribals</li>
 	</loadAfter>
 </ModMetaData>

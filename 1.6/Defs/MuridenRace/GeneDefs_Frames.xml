@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <GeneCategoryDef>
+        <defName>Muriden_Frames</defName>
+        <label>Muriden Frames</label>
+        <displayPriorityInXenotype>704</displayPriorityInXenotype>
+    </GeneCategoryDef>
+
+    <GeneCategoryDef>
+        <defName>Muriden_InnateAttacks</defName>
+        <label>Innate Attacks</label>
+        <displayPriorityInXenotype>703</displayPriorityInXenotype>
+    </GeneCategoryDef>
+
+    <GeneDef Name="Muriden_FrameBase" Abstract="True">
+        <displayCategory>Muriden_Frames</displayCategory>
+        <exclusionTags>
+            <li>BodySize</li>
+            <li>Body_Size_Multiplier</li>
+        </exclusionTags>
+        <selectionWeight>0</selectionWeight>
+        <canGenerateInGeneSet>false</canGenerateInGeneSet>
+        <marketValueFactor>1.0</marketValueFactor>
+    </GeneDef>
+
+    <GeneDef ParentName="Muriden_FrameBase">
+        <defName>Muriden_Frame</defName>
+        <label>muriden frame</label>
+        <description>Muriden of this gene are barely taller than a human child, and built light with it.</description>
+        <iconPath>UI/Icons/Genes/Muriden_Icon</iconPath>
+        <displayOrderInCategory>1050</displayOrderInCategory>
+        <biostatCpx>6</biostatCpx>
+        <biostatMet>10</biostatMet>
+        <statFactors>
+            <SM_BodySizeMultiplier>0.80</SM_BodySizeMultiplier>
+            <MiningSpeed>0.7125</MiningSpeed>
+            <ConstructionSpeed>0.7125</ConstructionSpeed>
+            <DeepDrillingSpeed>0.95</DeepDrillingSpeed>
+            <MoveSpeed>0.93</MoveSpeed>
+            <SM_RaidWealthMultiplier>0.6</SM_RaidWealthMultiplier>
+        </statFactors>
+        <statOffsets>
+            <SM_BodySizeOffset>-0.35</SM_BodySizeOffset>
+            <SM_RaidWealthOffset>-1000</SM_RaidWealthOffset>
+            <MeleeHitChance>1</MeleeHitChance>
+        </statOffsets>
+    </GeneDef>
+
+    <GeneDef ParentName="Muriden_FrameBase">
+        <defName>Muriden_FrameLithe</defName>
+        <label>lithe muriden frame</label>
+        <description>Carriers of this gene are still smaller in size but not quite as small as other muriden..</description>
+        <iconPath>UI/Icons/Genes/Sciurus_Icon</iconPath>
+        <displayOrderInCategory>1051</displayOrderInCategory>
+        <biostatCpx>5</biostatCpx>
+        <biostatMet>7</biostatMet>
+        <statFactors>
+            <MiningSpeed>0.75</MiningSpeed>
+            <ConstructionSpeed>0.75</ConstructionSpeed>
+            <SM_RaidWealthMultiplier>0.6</SM_RaidWealthMultiplier>
+        </statFactors>
+        <statOffsets>
+            <SM_BodySizeOffset>-0.35</SM_BodySizeOffset>
+            <SM_RaidWealthOffset>-1000</SM_RaidWealthOffset>
+            <MeleeHitChance>1</MeleeHitChance>
+        </statOffsets>
+    </GeneDef>
+
+    <GeneDef ParentName="Muriden_FrameBase">
+        <defName>Muriden_FrameLarge</defName>
+        <label>large muriden frame</label>
+        <description>Larger than the average baseliner.</description>
+        <iconPath>UI/Icons/Genes/Castoran_icon</iconPath>
+        <displayOrderInCategory>1100</displayOrderInCategory>
+        <biostatCpx>6</biostatCpx>
+        <biostatMet>0</biostatMet>
+        <statFactors>
+            <MiningSpeed>1.35</MiningSpeed>
+            <ConstructionSpeed>1.2</ConstructionSpeed>
+            <DeepDrillingSpeed>1.2</DeepDrillingSpeed>
+            <MoveSpeed>1.1</MoveSpeed>
+            <CarryingCapacity>1.3</CarryingCapacity>
+            <VEF_MassCarryCapacity MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">1.3</VEF_MassCarryCapacity>
+            <SM_RaidWealthMultiplier>1.2</SM_RaidWealthMultiplier>
+        </statFactors>
+        <statOffsets>
+            <SM_BodySizeOffset>0.4</SM_BodySizeOffset>
+            <SM_RaidWealthOffset>750</SM_RaidWealthOffset>
+        </statOffsets>
+    </GeneDef>
+
+    <GeneDef ParentName="Muriden_FrameBase">
+        <defName>Muriden_FrameTitan</defName>
+        <label>titan muriden frame</label>
+        <description>Muriden of tiatnic proportions.</description>
+        <iconPath>UI/Icons/Genes/Choerites_icon</iconPath>
+        <displayOrderInCategory>950</displayOrderInCategory>
+        <biostatCpx>13</biostatCpx>
+        <biostatMet>-4</biostatMet>
+        <statFactors>
+            <SM_BodySizeMultiplier>1.30</SM_BodySizeMultiplier>
+            <MiningSpeed>2.0</MiningSpeed>
+            <DeepDrillingSpeed>1.6</DeepDrillingSpeed>
+            <ConstructionSpeed>1.485</ConstructionSpeed>
+            <MoveSpeed>0.9</MoveSpeed>
+            <LifespanFactor>0.8</LifespanFactor>
+            <CarryingCapacity>3</CarryingCapacity>
+            <VEF_MassCarryCapacity MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">2.5</VEF_MassCarryCapacity>
+            <SM_RaidWealthMultiplier>2</SM_RaidWealthMultiplier>
+        </statFactors>
+        <statOffsets>
+            <SM_BodySizeOffset>1.5</SM_BodySizeOffset>
+            <SM_RaidWealthOffset>2500</SM_RaidWealthOffset>
+        </statOffsets>
+    </GeneDef>
+</Defs>

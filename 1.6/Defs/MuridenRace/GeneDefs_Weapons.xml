@@ -4,12 +4,12 @@
 		<defName>Muriden_Claws</defName>
 		<label>claws</label>
 		<description>Carriers of this gene possess dangerous claws.</description>
-		<iconPath>GeneIcons/BS_Claws</iconPath>
+		<iconPath>UI/Icons/Genes/Muriden_Icon</iconPath>
 		<displayOrderInCategory>775</displayOrderInCategory>
 		<biostatCpx>1</biostatCpx>
 		<biostatMet>-1</biostatMet>
 		
-		<displayCategory>BS_InnateAttacks</displayCategory>
+		<displayCategory>Muriden_InnateAttacks</displayCategory>
 		<selectionWeight>0.5</selectionWeight>
 		<modExtensions>
 			<li Class="BigAndSmall.PawnExtension">
@@ -72,12 +72,12 @@
 		<defName>Muriden_Bite</defName>
 		<label>bite</label>
 		<description>Will attack as a feral beast, biting with surprising penetrating ability.</description>
-		<iconPath>GeneIcons/BS_FeedingFrenzy</iconPath>
+		<iconPath>UI/Icons/Genes/Muriden_Icon</iconPath>
 		<displayOrderInCategory>775</displayOrderInCategory>
 		<biostatCpx>1</biostatCpx>
 		<biostatMet>-1</biostatMet>
 		
-		<displayCategory>BS_InnateAttacks</displayCategory>
+		<displayCategory>Muriden_InnateAttacks</displayCategory>
 		<selectionWeight>0.5</selectionWeight>
 		<statFactors>
       <EatingSpeed>4</EatingSpeed>

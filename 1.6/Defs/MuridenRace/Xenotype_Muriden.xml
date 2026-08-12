@@ -8,16 +8,13 @@
 		<iconPath>UI/Icons/Xenotypes/Muriden_Icon</iconPath>
 		<inheritable>true</inheritable>
 		<genes>
-			<li>BS_SmallFrame</li>
-			<li>Small</li>
-			<li>BS_FastAging</li>
+			<li>Muriden_Frame</li>
 			<li>MoveSpeed_Quick</li>
-			<li>BS_TinyTough</li>
+			<li>Muriden_SmallToughness</li>
 			<li>Body_FemaleOnly</li>
 			<li>Ears_Muriden</li>
 			<li>Tail_Muriden</li>
 			<li>Body_Thin</li>
-			<li>BS_GeneStabilizing_Moderate</li>
 		    <li>Muriden_Resolve</li>
             <li>AptitudePoor_Cooking</li>
 		</genes>
@@ -31,16 +28,13 @@
 		<iconPath>UI/Icons/Xenotypes/Sciurus_Icon</iconPath>
 		<inheritable>true</inheritable>
 		<genes>
-			<li>BS_SmallFrame</li>
-			<li>Small</li>
-			<li>BS_FastAging</li>
+			<li>Muriden_Frame</li>
 			<li>MoveSpeed_Quick</li>
-			<li>BS_TinyTough</li>
+			<li>Muriden_SmallToughness</li>
 			<li>Body_FemaleOnly</li>
 			<li>Ears_Sciurus</li>
 			<li>Tail_Sciurus</li>
 			<li>Body_Thin</li>
-			<li>BS_GeneStabilizing_Moderate</li>
 		    <li>Sciurus_Alacrity</li>
             <li>AptitudeTerrible_Intellectual</li>
 		</genes>
@@ -54,9 +48,8 @@
 		<iconPath>UI/Icons/Xenotypes/Castoran_icon</iconPath>
 		<inheritable>true</inheritable>
 		<genes>
-			<li>DwarfFrame</li>
-			<li>BS_ToughSkin</li>
-			<li>BS_FastAging</li>
+			<li>Muriden_FrameLithe</li>
+			<li>Muriden_ToughHide</li>
 			<li>PsychicAbility_Dull</li>
 			<li>MinTemp_SmallDecrease</li>
 			<li>MaxTemp_SmallDecrease</li>
@@ -64,7 +57,6 @@
 			<li>Body_FemaleOnly</li>
 			<li>Ears_Muriden</li>
 			<li>Body_Standard</li>
-			<li>BS_GeneStabilizing_Moderate</li>
 			<li>Tail_Castoran</li>
 			<li>AptitudeRemarkable_Construction</li>
 			<li>AptitudeStrong_Plants</li>
@@ -82,8 +74,6 @@
 		<iconPath>UI/Icons/Xenotypes/Choerites_icon</iconPath>
 		<inheritable>true</inheritable>
 		<genes>
-			<li>BS_NaturalArmor</li>
-			<li>BS_FastAging</li>
 			<li>PsychicAbility_Deaf</li>
 			<li>MoveSpeed_Quick</li>
 			<li>WebbedPhalanges</li>
@@ -92,7 +82,6 @@
 			<li>Body_FemaleOnly</li>
 			<li>Ears_Muriden</li>
 			<li>Body_Standard</li>
-			<li>BS_GeneStabilizing_Great</li>
 			<li>Unstoppable</li>
 			<li>AptitudeTerrible_Shooting</li>
 			<li>AptitudePoor_Melee</li>
@@ -110,20 +99,17 @@
 		<iconPath>UI/Icons/Xenotypes/Muriden_Icon</iconPath>
 		<inheritable>true</inheritable>
 		<genes>
-			<li>BS_SmallFrame</li>
-            <li>Small</li>
+			<li>Muriden_Frame</li>
             <li>Muriden_Bite</li>
             <li>Muriden_Claws</li>
-            <li>BS_FastAging</li>
             <li>FeralMuriden_Resolve</li>
             <li>MoveSpeed_Quick</li>
             <li>Aggression_Aggressive</li>
             <li>MeleeDamage_Strong</li>
-            <li>BS_TinyTough</li>
+            <li>Muriden_SmallToughness</li>
             <li>Body_FemaleOnly</li>
             <li>Ears_Muriden</li>
             <li>Body_Thin</li>
-            <li>BS_GeneStabilizing_Moderate</li>
             <li>Furskin</li>
             <li>Muriden_FeralNose</li>
             <li>Tail_Muriden</li>
@@ -142,10 +128,7 @@
 		<iconPath>UI/Icons/Xenotypes/Choerites_icon</iconPath>
 		<inheritable>true</inheritable>
 		<genes>
-			<li>JotunFrame</li>
-			<li>Gigantism</li>
-			<li>BS_NaturalArmor</li>
-			<li>BS_FastAging</li>
+			<li>Muriden_FrameTitan</li>
 			<li>PsychicAbility_Deaf</li>
 			<li>WebbedPhalanges</li>
 			<li>Aggression_Aggressive</li>
@@ -153,7 +136,6 @@
 			<li>Body_FemaleOnly</li>
 			<li>Ears_Muriden</li>
 			<li>Body_Standard</li>
-			<li>BS_GeneStabilizing_Great</li>
 			<li>Unstoppable</li>
 			<li>AptitudeTerrible_Shooting</li>
 			<li>AptitudeStrong_Social</li>
@@ -171,19 +153,17 @@
 		<iconPath>UI/Icons/Xenotypes/Sciurus_Icon</iconPath>
 		<inheritable>true</inheritable>
 		<genes>
-			<li>BS_SmallFrame</li>
+			<li>Muriden_FrameLithe</li>
 			<li>Muriden_Bite</li>
 			<li>Muriden_Claws</li>
 			<li>Tail_Sciurus</li>
-			<li>BS_FastAging</li>
 			<li>MoveSpeed_Quick</li>
-			<li>BS_TinyTough</li>
+			<li>Muriden_SmallToughness</li>
 			<li>Pain_Reduced</li>
 			<li>Body_FemaleOnly</li>
 			<li>Ears_Sciurus</li>
 			<li>Body_Standard</li>
 			<li>Kopidan_Tenacity</li>
-			<li>BS_GeneStabilizing_Moderate</li>
 			<li>Furskin</li>
 			<li>Muriden_FeralNose</li>
 			<li>AptitudeTerrible_Intellectual</li>
@@ -198,7 +178,7 @@
 		<iconPath>UI/Icons/Xenotypes/Castoran_icon</iconPath>
 		<inheritable>true</inheritable>
 		<genes>
-			<li>BS_LargeFrame</li>
+			<li>Muriden_FrameLarge</li>
 			<li>Muriden_Bite</li>
 			<li>Tail_Castoran</li>
 			<li>PsychicAbility_Dull</li>
@@ -207,7 +187,6 @@
 			<li>Ears_Muriden</li>
 			<li>Body_Standard</li>
 			<li>Castoroid_Ingenuity</li>
-			<li>BS_GeneStabilizing_Moderate</li>
 			<li>Furskin</li>
 			<li>Muriden_FeralNose</li>
 			<li>AptitudeTerrible_Shooting</li>

@@ -7,10 +7,8 @@
                 <li Class="PatchOperationAdd">
                     <xpath>/Defs/XenotypeDef[defName="Dirtmole"]/genes</xpath>
                     <value>
-                        <li>BS_SmallFrame</li>
-                        <li>Small</li>
-                        <li>BS_FastAging</li>
-                        <li>BS_TinyTough</li>
+                        <li>Muriden_Frame</li>
+                        <li>Muriden_SmallToughness</li>
                         <li>Body_FemaleOnly</li>
                         <li>Ears_Muriden</li>
                         <li>Tail_Muriden</li>

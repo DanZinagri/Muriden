@@ -127,8 +127,11 @@
 		<defName>Choerites_Calm</defName>
 		<label>choerites calm</label>
 		<description>Unharmed, Unbothered, Doin their thing.</description>
-		<biostatCpx>2</biostatCpx>
-		<biostatMet>-1</biostatMet>
+		<!-- Choerites is the one xenotype with no frame gene, so the metabolic ballast
+		     that used to come from BS_GeneStabilizing_Great (cpx 9 / met 4) is carried
+		     here instead. Base values were cpx 2 / met -1. -->
+		<biostatCpx>11</biostatCpx>
+		<biostatMet>3</biostatMet>
 		<displayCategory>Miscellaneous</displayCategory>
 		<statOffsets>
 			<PainShockThreshold>0.1</PainShockThreshold>
