@@ -82,10 +82,18 @@ namespace MuridenLibraries
             if (comp != null && comp.LearnedAbilities != null)
             {
                 // Remove only what this weapon granted
-                foreach (var def in granted)
+                if (granted.Count == 1)
                 {
-                    if (def == null) continue;
-                    comp.LearnedAbilities.RemoveAll(ab => ab.def == def);
+                    AbilityDef toRemove = granted[0];
+                    if (toRemove != null)
+                    {
+                        comp.LearnedAbilities.RemoveAll(ab => ab.def == toRemove);
+                    }
+                }
+                else
+                {
+                    HashSet<AbilityDef> toRemoveSet = new HashSet<AbilityDef>(granted);
+                    comp.LearnedAbilities.RemoveAll(ab => ab.def != null && toRemoveSet.Contains(ab.def));
                 }
             }
 
@@ -104,7 +112,14 @@ namespace MuridenLibraries
 
                 if (Props.abilityDefs != null && Props.abilityDefs.Count > 0)
                 {
-                    abilities.AddRange(Props.abilityDefs.Where(a => a != null));
+                    for (int i = 0; i < Props.abilityDefs.Count; i++)
+                    {
+                        AbilityDef abilityDef = Props.abilityDefs[i];
+                        if (abilityDef != null)
+                        {
+                            abilities.Add(abilityDef);
+                        }
+                    }
                 }
                 else if (Props.abilityDef != null) // Legacy XML support
                 {
