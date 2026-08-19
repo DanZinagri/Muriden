@@ -41,9 +41,17 @@ namespace AtavismLibraries
             if (pawn?.genes == null)
                 return new List<GeneticAtavismDef>();
 
-            return OrderedDefs
-                .Where(def => def.Matches(pawn))
-                .ToList();
+            List<GeneticAtavismDef> defs = OrderedDefs;
+            List<GeneticAtavismDef> result = new List<GeneticAtavismDef>(defs.Count);
+            for (int i = 0; i < defs.Count; i++)
+            {
+                GeneticAtavismDef def = defs[i];
+                if (def.Matches(pawn))
+                {
+                    result.Add(def);
+                }
+            }
+            return result;
         }
         // Rolls each matching def in <see cref="OrderedDefs"/> order and returns
         // the first one that passes its own chance, so a Muriden with both a
@@ -84,23 +92,29 @@ namespace AtavismLibraries
         // switching xenotype entirely.
         public static List<GeneDef> GetExcessEndogenes(Pawn mother)
         {
-            List<GeneDef> excessGenes = new();
-
             if (mother?.genes == null)
-                return excessGenes;
+                return new List<GeneDef>();
 
-            // The genes that every pawn of this xenotype normally has. A pawn with
-            // no xenotype has no baseline, so everything she carries counts.
-            HashSet<GeneDef> sourceGenes = mother.genes.Xenotype != null
-                ? new HashSet<GeneDef>(mother.genes.Xenotype.AllGenes)
-                : new HashSet<GeneDef>();
+            List<Gene> endogenes = mother.genes.Endogenes;
+            List<GeneDef> excessGenes = new List<GeneDef>(endogenes.Count);
 
-            foreach (Gene gene in mother.genes.Endogenes)
+            if (mother.genes.Xenotype == null)
             {
-                if (sourceGenes.Contains(gene.def))
-                    continue;
+                for (int i = 0; i < endogenes.Count; i++)
+                {
+                    excessGenes.Add(endogenes[i].def);
+                }
+                return excessGenes;
+            }
 
-                excessGenes.Add(gene.def);
+            HashSet<GeneDef> sourceGenes = new HashSet<GeneDef>(mother.genes.Xenotype.AllGenes);
+            for (int i = 0; i < endogenes.Count; i++)
+            {
+                Gene gene = endogenes[i];
+                if (!sourceGenes.Contains(gene.def))
+                {
+                    excessGenes.Add(gene.def);
+                }
             }
 
             return excessGenes;
@@ -109,12 +123,13 @@ namespace AtavismLibraries
         // Skin and hair colour only, so the baby still looks related.
         public static List<GeneDef> GetCosmeticGenes(List<GeneDef> genes)
         {
-            List<GeneDef> filteredGenes = new();
             if (genes == null)
-                return filteredGenes;
+                return new List<GeneDef>();
 
-            foreach (GeneDef gene in genes)
+            List<GeneDef> filteredGenes = new List<GeneDef>(genes.Count);
+            for (int i = 0; i < genes.Count; i++)
             {
+                GeneDef gene = genes[i];
                 if (gene == null)
                     continue;
 
@@ -131,7 +146,13 @@ namespace AtavismLibraries
             if (mother?.genes == null)
                 return new List<GeneDef>();
 
-            return mother.genes.Xenogenes.Select(gene => gene.def).ToList();
+            List<Gene> xenogenes = mother.genes.Xenogenes;
+            List<GeneDef> result = new List<GeneDef>(xenogenes.Count);
+            for (int i = 0; i < xenogenes.Count; i++)
+            {
+                result.Add(xenogenes[i].def);
+            }
+            return result;
         }
 
 
@@ -208,17 +229,29 @@ namespace AtavismLibraries
         // overlap the norm rather than the exception.
         private static void Deduplicate(AtavismGeneInheritanceResult result)
         {
-            result.endogenes = result.endogenes
-                .Where(gene => gene != null)
-                .Distinct()
-                .ToList();
+            HashSet<GeneDef> endogeneSet = new HashSet<GeneDef>();
+            List<GeneDef> uniqueEndogenes = new List<GeneDef>(result.endogenes.Count);
+            for (int i = 0; i < result.endogenes.Count; i++)
+            {
+                GeneDef gene = result.endogenes[i];
+                if (gene != null && endogeneSet.Add(gene))
+                {
+                    uniqueEndogenes.Add(gene);
+                }
+            }
+            result.endogenes = uniqueEndogenes;
 
-            HashSet<GeneDef> endogeneSet = new(result.endogenes);
-
-            result.xenogenes = result.xenogenes
-                .Where(gene => gene != null && !endogeneSet.Contains(gene))
-                .Distinct()
-                .ToList();
+            HashSet<GeneDef> xenogeneSet = new HashSet<GeneDef>();
+            List<GeneDef> uniqueXenogenes = new List<GeneDef>(result.xenogenes.Count);
+            for (int i = 0; i < result.xenogenes.Count; i++)
+            {
+                GeneDef gene = result.xenogenes[i];
+                if (gene != null && !endogeneSet.Contains(gene) && xenogeneSet.Add(gene))
+                {
+                    uniqueXenogenes.Add(gene);
+                }
+            }
+            result.xenogenes = uniqueXenogenes;
         }
     }
 }
