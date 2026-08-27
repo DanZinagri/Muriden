@@ -24,20 +24,19 @@
 					<defaultData>
 						<layer>70</layer>
 					</defaultData>
-				</drawData>
-				<parentTagDef>Head</parentTagDef>
-			</li>
-            <li>
-				<nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
-				<workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
-				<texPath>Things/Pawn/Humanlike/HeadAttachments/MuridenEars/MuridenEars_inner</texPath>
-				<useSkinShader>true</useSkinShader>
-				<colorType>Skin</colorType>
-				<drawData>
-					<scaleOffsetByBodySize>true</scaleOffsetByBodySize>
-					<defaultData>
-						<layer>71</layer>
-					</defaultData>
+					<dataSouth>
+						<offset>(0.0, 0.0, 0.05)</offset>
+					</dataSouth>
+					<dataNorth>
+						<offset>(0.0, 0.0, 0.05)</offset>
+						<layer>60</layer>
+					</dataNorth>
+					<dataEast>
+						<offset>(0.0, 0.0, 0.05)</offset>
+					</dataEast>
+					<dataWest>
+						<offset>(0.0, 0.0, 0.05)</offset>
+					</dataWest>
 				</drawData>
 				<parentTagDef>Head</parentTagDef>
 			</li>
@@ -55,46 +54,58 @@
 			<MoveSpeed>0.05</MoveSpeed>
 		</statOffsets>
 		<biostatCpx>1</biostatCpx>
-		<renderNodeProperties>
-            <li Class="BigAndSmall.PawnRenderingProps_Ultimate">
-                <nodeClass>BigAndSmall.PawnRenderNode_Ultimate</nodeClass>
-                <!-- <workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass> -->
-                <parentTagDef>Body</parentTagDef>
-                <rotDrawMode>Fresh, Rotting</rotDrawMode>
-                <colorType>Hair</colorType>
-                <shader>Cutout</shader>
-                <conditionalGraphics>
-                <texturePaths><li>Things/Pawn/Humanlike/BodyAttachments/MuridenTails/MuridenTails</li></texturePaths>
-                <colorA>
-                <replaceFlagsAndInactive><TailedColorA/></replaceFlagsAndInactive>
-                <hairColor>true</hairColor>
-                </colorA>
-                <colorB>
-                <replaceFlagsAndInactive><TailedColorB/></replaceFlagsAndInactive>
-                <hairColor>true</hairColor>
-                <brightness>1.2</brightness>
-                <saturation>0.8</saturation>
-                </colorB>
-                <alts>
-                    <li>
-                        <!-- Poor cat lost its tail. -->
-                        <triggerBodyPart>
-                        <li>
-                            <bodyPartDef>Tail</bodyPartDef>
-                            <partMissing>true</partMissing>
-                        </li>
-                        </triggerBodyPart>
-                        <texturePaths><default>BS_Blank</default></texturePaths>
-                    </li>
-                </alts>
-                </conditionalGraphics>
-                <drawData>
+				<renderNodeProperties>
+
+			<!-- ========= 1. Male / Female / Child / Baby / modded body types ========= -->
+			<li Class="BigAndSmall.PawnRenderingProps_Ultimate">
+				<nodeClass>BigAndSmall.PawnRenderNode_Ultimate</nodeClass>
+				<parentTagDef>Body</parentTagDef>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<colorType>Hair</colorType>
+				<shader>Cutout</shader>
+				<conditionalGraphics>
+					<texturePaths>
+						<li>Things/Pawn/Humanlike/BodyAttachments/MuridenTails/MuridenTails</li>
+						<MaleBody_Hulk>BS_Blank</MaleBody_Hulk>
+						<FemaleBody_Hulk>BS_Blank</FemaleBody_Hulk>
+						<NoneBody_Hulk>BS_Blank</NoneBody_Hulk>
+						<MaleBody_Thin>BS_Blank</MaleBody_Thin>
+						<FemaleBody_Thin>BS_Blank</FemaleBody_Thin>
+						<NoneBody_Thin>BS_Blank</NoneBody_Thin>
+						<MaleBody_Fat>BS_Blank</MaleBody_Fat>
+						<FemaleBody_Fat>BS_Blank</FemaleBody_Fat>
+						<NoneBody_Fat>BS_Blank</NoneBody_Fat>
+					</texturePaths>
+					<colorA>
+						<replaceFlagsAndInactive><TailedColorA/></replaceFlagsAndInactive>
+						<hairColor>true</hairColor>
+					</colorA>
+					<colorB>
+						<replaceFlagsAndInactive><TailedColorB/></replaceFlagsAndInactive>
+						<hairColor>true</hairColor>
+						<brightness>1.2</brightness>
+						<saturation>0.8</saturation>
+					</colorB>
+					<alts>
+						<li>
+							<!-- Poor cat lost its tail. -->
+							<triggerBodyPart>
+								<li>
+									<bodyPartDef>Tail</bodyPartDef>
+									<partMissing>true</partMissing>
+								</li>
+							</triggerBodyPart>
+							<texturePaths><default>BS_Blank</default></texturePaths>
+						</li>
+					</alts>
+				</conditionalGraphics>
+				<drawData>
 					<scaleOffsetByBodySize>true</scaleOffsetByBodySize>
 					<defaultData>
 						<layer>-2</layer>
 					</defaultData>
 					<dataNorth>
-						<offset>(0, 0.2, -0.25)</offset>
+						<offset>(0, 0.2, -0.1)</offset>
 						<layer>90</layer>
 					</dataNorth>
 					<dataSouth>
@@ -107,7 +118,179 @@
 						<offset>(0.58, -0.1, -0.15)</offset>
 					</dataWest>
 				</drawData>
-            </li>
+			</li>
+
+			<!-- ============================ 2. Fat ============================ -->
+			<li Class="BigAndSmall.PawnRenderingProps_Ultimate">
+				<nodeClass>BigAndSmall.PawnRenderNode_Ultimate</nodeClass>
+				<parentTagDef>Body</parentTagDef>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<colorType>Hair</colorType>
+				<shader>Cutout</shader>
+				<conditionalGraphics>
+					<texturePaths>
+						<MaleBody_Fat>Things/Pawn/Humanlike/BodyAttachments/MuridenTails/MuridenTails</MaleBody_Fat>
+						<FemaleBody_Fat>Things/Pawn/Humanlike/BodyAttachments/MuridenTails/MuridenTails</FemaleBody_Fat>
+						<NoneBody_Fat>Things/Pawn/Humanlike/BodyAttachments/MuridenTails/MuridenTails</NoneBody_Fat>
+						<default>BS_Blank</default>
+					</texturePaths>
+					<colorA>
+						<replaceFlagsAndInactive><TailedColorA/></replaceFlagsAndInactive>
+						<hairColor>true</hairColor>
+					</colorA>
+					<colorB>
+						<replaceFlagsAndInactive><TailedColorB/></replaceFlagsAndInactive>
+						<hairColor>true</hairColor>
+						<brightness>1.2</brightness>
+						<saturation>0.8</saturation>
+					</colorB>
+					<alts>
+						<li>
+							<triggerBodyPart>
+								<li>
+									<bodyPartDef>Tail</bodyPartDef>
+									<partMissing>true</partMissing>
+								</li>
+							</triggerBodyPart>
+							<texturePaths><default>BS_Blank</default></texturePaths>
+						</li>
+					</alts>
+				</conditionalGraphics>
+				<drawData>
+					<scaleOffsetByBodySize>false</scaleOffsetByBodySize>
+					<defaultData>
+						<layer>-2</layer>
+					</defaultData>
+					<dataNorth>
+						<offset>(0, 0.2, -0.1)</offset>
+						<layer>90</layer>
+					</dataNorth>
+					<dataSouth>
+						<offset>(0.15, -0.1, -0.25)</offset>
+					</dataSouth>
+					<dataEast>
+						<offset>(-0.58, -0.1, -0.15)</offset>
+					</dataEast>
+					<dataWest>
+						<offset>(0.58, -0.1, -0.15)</offset>
+					</dataWest>
+				</drawData>
+			</li>
+
+			<!-- ============================ 3. Hulk ============================ -->
+			<li Class="BigAndSmall.PawnRenderingProps_Ultimate">
+				<nodeClass>BigAndSmall.PawnRenderNode_Ultimate</nodeClass>
+				<parentTagDef>Body</parentTagDef>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<colorType>Hair</colorType>
+				<shader>Cutout</shader>
+				<conditionalGraphics>
+					<texturePaths>
+						<MaleBody_Hulk>Things/Pawn/Humanlike/BodyAttachments/MuridenTails/MuridenTails</MaleBody_Hulk>
+						<FemaleBody_Hulk>Things/Pawn/Humanlike/BodyAttachments/MuridenTails/MuridenTails</FemaleBody_Hulk>
+						<NoneBody_Hulk>Things/Pawn/Humanlike/BodyAttachments/MuridenTails/MuridenTails</NoneBody_Hulk>
+						<default>BS_Blank</default>
+					</texturePaths>
+					<colorA>
+						<replaceFlagsAndInactive><TailedColorA/></replaceFlagsAndInactive>
+						<hairColor>true</hairColor>
+					</colorA>
+					<colorB>
+						<replaceFlagsAndInactive><TailedColorB/></replaceFlagsAndInactive>
+						<hairColor>true</hairColor>
+						<brightness>1.2</brightness>
+						<saturation>0.8</saturation>
+					</colorB>
+					<alts>
+						<li>
+							<triggerBodyPart>
+								<li>
+									<bodyPartDef>Tail</bodyPartDef>
+									<partMissing>true</partMissing>
+								</li>
+							</triggerBodyPart>
+							<texturePaths><default>BS_Blank</default></texturePaths>
+						</li>
+					</alts>
+				</conditionalGraphics>
+				<drawData>
+					<scaleOffsetByBodySize>false</scaleOffsetByBodySize>
+					<defaultData>
+						<layer>-2</layer>
+					</defaultData>
+					<dataNorth>
+						<offset>(0, 0.2, -0.25)</offset>
+						<layer>90</layer>
+					</dataNorth>
+					<dataSouth>
+						<offset>(0.15, -0.1, -0.45)</offset>
+					</dataSouth>
+					<dataEast>
+						<offset>(-0.58, -0.1, -0.15)</offset>
+					</dataEast>
+					<dataWest>
+						<offset>(0.58, -0.1, -0.15)</offset>
+					</dataWest>
+				</drawData>
+			</li>
+
+			<!-- ============================ 4. Thin ============================ -->
+			<li Class="BigAndSmall.PawnRenderingProps_Ultimate">
+				<nodeClass>BigAndSmall.PawnRenderNode_Ultimate</nodeClass>
+				<parentTagDef>Body</parentTagDef>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<colorType>Hair</colorType>
+				<shader>Cutout</shader>
+				<conditionalGraphics>
+					<texturePaths>
+						<MaleBody_Thin>Things/Pawn/Humanlike/BodyAttachments/MuridenTails/MuridenTails</MaleBody_Thin>
+						<FemaleBody_Thin>Things/Pawn/Humanlike/BodyAttachments/MuridenTails/MuridenTails</FemaleBody_Thin>
+						<NoneBody_Thin>Things/Pawn/Humanlike/BodyAttachments/MuridenTails/MuridenTails</NoneBody_Thin>
+						<default>BS_Blank</default>
+					</texturePaths>
+					<colorA>
+						<replaceFlagsAndInactive><TailedColorA/></replaceFlagsAndInactive>
+						<hairColor>true</hairColor>
+					</colorA>
+					<colorB>
+						<replaceFlagsAndInactive><TailedColorB/></replaceFlagsAndInactive>
+						<hairColor>true</hairColor>
+						<brightness>1.2</brightness>
+						<saturation>0.8</saturation>
+					</colorB>
+					<alts>
+						<li>
+							<triggerBodyPart>
+								<li>
+									<bodyPartDef>Tail</bodyPartDef>
+									<partMissing>true</partMissing>
+								</li>
+							</triggerBodyPart>
+							<texturePaths><default>BS_Blank</default></texturePaths>
+						</li>
+					</alts>
+				</conditionalGraphics>
+				<drawData>
+					<scaleOffsetByBodySize>false</scaleOffsetByBodySize>
+					<defaultData>
+						<layer>-2</layer>
+					</defaultData>
+					<dataNorth>
+						<offset>(0, 0.2, -0.1)</offset>
+						<layer>90</layer>
+					</dataNorth>
+					<dataSouth>
+						<offset>(0.15, -0.1, -0.25)</offset>
+					</dataSouth>
+					<dataEast>
+						<offset>(-0.58, -0.1, -0.15)</offset>
+					</dataEast>
+					<dataWest>
+						<offset>(0.58, -0.1, -0.15)</offset>
+					</dataWest>
+				</drawData>
+			</li>
+
 		</renderNodeProperties>
 	</GeneDef>
 	
@@ -135,6 +318,19 @@
 					<defaultData>
 						<layer>70</layer>
 					</defaultData>
+					<dataSouth>
+						<offset>(0.0, 0.0, 0.05)</offset>
+					</dataSouth>
+					<dataNorth>
+						<offset>(0.0, 0.0, 0.05)</offset>
+						<layer>60</layer>
+					</dataNorth>
+					<dataEast>
+						<offset>(0.0, 0.0, 0.05)</offset>
+					</dataEast>
+					<dataWest>
+						<offset>(0.0, 0.0, 0.05)</offset>
+					</dataWest>
 				</drawData>
 				<parentTagDef>Head</parentTagDef>
 			</li>
@@ -149,63 +345,194 @@
 		<iconColor>(0.75, 0.75, 0.75)</iconColor>
 		<displayOrderInCategory>1000.1</displayOrderInCategory>
 		<statOffsets>
-			<MoveSpeed>0.05</MoveSpeed>
-			<MeleeDodgeChance>1.05</MeleeDodgeChance>
+			<MoveSpeed>0.10</MoveSpeed>
+			<MeleeDodgeChance>0.10</MeleeDodgeChance>
 		</statOffsets>
 		<biostatCpx>1</biostatCpx>
 		<renderNodeProperties>
-            <li Class="BigAndSmall.PawnRenderingProps_Ultimate">
-                <nodeClass>BigAndSmall.PawnRenderNode_Ultimate</nodeClass>
-                <!-- <workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass> -->
-                <parentTagDef>Body</parentTagDef>
-                <rotDrawMode>Fresh, Rotting</rotDrawMode>
-                <colorType>Hair</colorType>
-                <shader>Cutout</shader>
-                <conditionalGraphics>
-                <texturePaths><li>Things/Pawn/Humanlike/BodyAttachments/SciurusTails/SciurusTails</li></texturePaths>
-                <colorA>
-                <replaceFlagsAndInactive><TailedColorA/></replaceFlagsAndInactive>
-                <hairColor>true</hairColor>
-                </colorA>
-                <colorB>
-                <replaceFlagsAndInactive><TailedColorB/></replaceFlagsAndInactive>
-                <hairColor>true</hairColor>
-                <brightness>1.2</brightness>
-                <saturation>0.8</saturation>
-                </colorB>
-                <alts>
-                    <li>
-                        <!-- Poor cat lost its tail. -->
-                        <triggerBodyPart>
-                        <li>
-                            <bodyPartDef>Tail</bodyPartDef>
-                            <partMissing>true</partMissing>
-                        </li>
-                        </triggerBodyPart>
-                        <texturePaths><default>BS_Blank</default></texturePaths>
-                    </li>
-                </alts>
-                </conditionalGraphics>
-                <drawData>
+
+			<!-- ========= 1. Male / Female / Fat / Child / Baby / modded body types ========= -->
+			<li Class="BigAndSmall.PawnRenderingProps_Ultimate">
+				<nodeClass>BigAndSmall.PawnRenderNode_Ultimate</nodeClass>
+				<parentTagDef>Body</parentTagDef>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<colorType>Hair</colorType>
+				<shader>Cutout</shader>
+				<conditionalGraphics>
+					<texturePaths>
+						<li>Things/Pawn/Humanlike/BodyAttachments/SciurusTails/SciurusTails</li>
+						<MaleBody_Hulk>BS_Blank</MaleBody_Hulk>
+						<FemaleBody_Hulk>BS_Blank</FemaleBody_Hulk>
+						<NoneBody_Hulk>BS_Blank</NoneBody_Hulk>
+						<MaleBody_Thin>BS_Blank</MaleBody_Thin>
+						<FemaleBody_Thin>BS_Blank</FemaleBody_Thin>
+						<NoneBody_Thin>BS_Blank</NoneBody_Thin>
+					</texturePaths>
+					<colorA>
+						<replaceFlagsAndInactive><TailedColorA/></replaceFlagsAndInactive>
+						<hairColor>true</hairColor>
+					</colorA>
+					<colorB>
+						<replaceFlagsAndInactive><TailedColorB/></replaceFlagsAndInactive>
+						<hairColor>true</hairColor>
+						<brightness>1.2</brightness>
+						<saturation>0.8</saturation>
+					</colorB>
+					<alts>
+						<li>
+							<!-- Poor cat lost its tail. -->
+							<triggerBodyPart>
+								<li>
+									<bodyPartDef>Tail</bodyPartDef>
+									<partMissing>true</partMissing>
+								</li>
+							</triggerBodyPart>
+							<texturePaths><default>BS_Blank</default></texturePaths>
+						</li>
+					</alts>
+				</conditionalGraphics>
+				<drawData>
 					<scaleOffsetByBodySize>true</scaleOffsetByBodySize>
 					<defaultData>
 						<layer>-2</layer>
 					</defaultData>
 					<dataNorth>
-						<offset>(-0.10, 0.2, -0.25)</offset>
+						<offset>(-0.10, 0.2, 0.1)</offset>
 						<layer>90</layer>
 					</dataNorth>
 					<dataSouth>
-						<offset>(0.10, -0.1, -0.20)</offset>
+						<offset>(0.10, -0.1, 0.1)</offset>
 					</dataSouth>
 					<dataEast>
-						<offset>(-0.5, -0.1, -0.10)</offset>
+						<offset>(-0.55, -0.1, -0.10)</offset>
 					</dataEast>
 					<dataWest>
-						<offset>(0.5, -0.1, -0.10)</offset>
+						<offset>(0.55, -0.1, -0.10)</offset>
 					</dataWest>
 				</drawData>
-            </li>
+			</li>
+
+			<!-- ============================ 2. Hulk ============================ -->
+			<li Class="BigAndSmall.PawnRenderingProps_Ultimate">
+				<nodeClass>BigAndSmall.PawnRenderNode_Ultimate</nodeClass>
+				<parentTagDef>Body</parentTagDef>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<colorType>Hair</colorType>
+				<shader>Cutout</shader>
+				<conditionalGraphics>
+					<texturePaths>
+						<MaleBody_Hulk>Things/Pawn/Humanlike/BodyAttachments/SciurusTails/SciurusTails</MaleBody_Hulk>
+						<FemaleBody_Hulk>Things/Pawn/Humanlike/BodyAttachments/SciurusTails/SciurusTails</FemaleBody_Hulk>
+						<NoneBody_Hulk>Things/Pawn/Humanlike/BodyAttachments/SciurusTails/SciurusTails</NoneBody_Hulk>
+						<default>BS_Blank</default>
+					</texturePaths>
+					<colorA>
+						<replaceFlagsAndInactive><TailedColorA/></replaceFlagsAndInactive>
+						<hairColor>true</hairColor>
+					</colorA>
+					<colorB>
+						<replaceFlagsAndInactive><TailedColorB/></replaceFlagsAndInactive>
+						<hairColor>true</hairColor>
+						<brightness>1.2</brightness>
+						<saturation>0.8</saturation>
+					</colorB>
+					<alts>
+						<li>
+							<triggerBodyPart>
+								<li>
+									<bodyPartDef>Tail</bodyPartDef>
+									<partMissing>true</partMissing>
+								</li>
+							</triggerBodyPart>
+							<texturePaths><default>BS_Blank</default></texturePaths>
+						</li>
+					</alts>
+				</conditionalGraphics>
+				<drawData>
+					<!-- Absolute offsets: the shared numbers x 1.125, which is where Hulk sits today.
+						Hulk is tall (bodyGraphicScale 1, 1.25) but no wider than Male, so the x values
+						were being pushed out 12.5% too far. Pull them in from here. -->
+					<scaleOffsetByBodySize>false</scaleOffsetByBodySize>
+					<defaultData>
+						<layer>-2</layer>
+					</defaultData>
+					<dataNorth>
+						<offset>(-0.113, 0.225, -0.1)</offset>
+						<layer>90</layer>
+					</dataNorth>
+					<dataSouth>
+						<offset>(0.113, -0.113, -0.1)</offset>
+					</dataSouth>
+					<dataEast>
+						<offset>(-0.7, -0.113, -0.2)</offset>
+					</dataEast>
+					<dataWest>
+						<offset>(0.7, -0.113, -0.2)</offset>
+					</dataWest>
+				</drawData>
+			</li>
+
+			<!-- ============================ 3. Thin ============================ -->
+			<li Class="BigAndSmall.PawnRenderingProps_Ultimate">
+				<nodeClass>BigAndSmall.PawnRenderNode_Ultimate</nodeClass>
+				<parentTagDef>Body</parentTagDef>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<colorType>Hair</colorType>
+				<shader>Cutout</shader>
+				<conditionalGraphics>
+					<texturePaths>
+						<MaleBody_Thin>Things/Pawn/Humanlike/BodyAttachments/SciurusTails/SciurusTails</MaleBody_Thin>
+						<FemaleBody_Thin>Things/Pawn/Humanlike/BodyAttachments/SciurusTails/SciurusTails</FemaleBody_Thin>
+						<NoneBody_Thin>Things/Pawn/Humanlike/BodyAttachments/SciurusTails/SciurusTails</NoneBody_Thin>
+						<default>BS_Blank</default>
+					</texturePaths>
+					<colorA>
+						<replaceFlagsAndInactive><TailedColorA/></replaceFlagsAndInactive>
+						<hairColor>true</hairColor>
+					</colorA>
+					<colorB>
+						<replaceFlagsAndInactive><TailedColorB/></replaceFlagsAndInactive>
+						<hairColor>true</hairColor>
+						<brightness>1.2</brightness>
+						<saturation>0.8</saturation>
+					</colorB>
+					<alts>
+						<li>
+							<triggerBodyPart>
+								<li>
+									<bodyPartDef>Tail</bodyPartDef>
+									<partMissing>true</partMissing>
+								</li>
+							</triggerBodyPart>
+							<texturePaths><default>BS_Blank</default></texturePaths>
+						</li>
+					</alts>
+				</conditionalGraphics>
+				<drawData>
+					<!-- Absolute offsets: the shared numbers x 0.8, which is where Thin sits today.
+						Thin is narrow (bodyGraphicScale 0.6, 1) but full height, yet the vertical
+						values were being shrunk by that same 0.8 - raising the z values back toward
+						the shared numbers is likely the fix. -->
+					<scaleOffsetByBodySize>false</scaleOffsetByBodySize>
+					<defaultData>
+						<layer>-2</layer>
+					</defaultData>
+					<dataNorth>
+						<offset>(-0.08, 0.16, 0.08)</offset>
+						<layer>90</layer>
+					</dataNorth>
+					<dataSouth>
+						<offset>(0.08, -0.08, 0.08)</offset>
+					</dataSouth>
+					<dataEast>
+						<offset>(-0.55, -0.08, -0.08)</offset>
+					</dataEast>
+					<dataWest>
+						<offset>(0.55, -0.08, -0.08)</offset>
+					</dataWest>
+				</drawData>
+			</li>
+
 		</renderNodeProperties>
 	</GeneDef>
 	
@@ -223,58 +550,246 @@
 		</statOffsets>
 		<biostatCpx>1</biostatCpx>
 		<renderNodeProperties>
-            <li Class="BigAndSmall.PawnRenderingProps_Ultimate">
-                <nodeClass>BigAndSmall.PawnRenderNode_Ultimate</nodeClass>
-                <!-- <workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass> -->
-                <parentTagDef>Body</parentTagDef>
-                <rotDrawMode>Fresh, Rotting</rotDrawMode>
-                <colorType>Hair</colorType>
-                <shader>Cutout</shader>
-                <conditionalGraphics>
-                <texturePaths><li>Things/Pawn/Humanlike/BodyAttachments/CastoranTails/CastoranTails</li></texturePaths>
-                <colorA>
-                <replaceFlagsAndInactive><TailedColorA/></replaceFlagsAndInactive>
-                <hairColor>true</hairColor>
-                </colorA>
-                <colorB>
-                <replaceFlagsAndInactive><TailedColorB/></replaceFlagsAndInactive>
-                <hairColor>true</hairColor>
-                <brightness>1.2</brightness>
-                <saturation>0.8</saturation>
-                </colorB>
-                <alts>
-                    <li>
-                        <!-- Poor cat lost its tail. -->
-                        <triggerBodyPart>
-                        <li>
-                            <bodyPartDef>Tail</bodyPartDef>
-                            <partMissing>true</partMissing>
-                        </li>
-                        </triggerBodyPart>
-                        <texturePaths><default>BS_Blank</default></texturePaths>
-                    </li>
-                </alts>
-                </conditionalGraphics>
-                <drawData>
+
+			<!-- ========= 1. Male / Female / Fat / Child / Baby / modded body types ========= -->
+			<li Class="BigAndSmall.PawnRenderingProps_Ultimate">
+				<nodeClass>BigAndSmall.PawnRenderNode_Ultimate</nodeClass>
+				<parentTagDef>Body</parentTagDef>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<shader>Cutout</shader>
+				<conditionalGraphics>
+					<texturePaths>
+						<li>Things/Pawn/Humanlike/BodyAttachments/CastoranTails/CastoranTails</li>
+						<MaleBody_Hulk>BS_Blank</MaleBody_Hulk>
+						<FemaleBody_Hulk>BS_Blank</FemaleBody_Hulk>
+						<NoneBody_Hulk>BS_Blank</NoneBody_Hulk>
+						<MaleBody_Thin>BS_Blank</MaleBody_Thin>
+						<FemaleBody_Thin>BS_Blank</FemaleBody_Thin>
+						<NoneBody_Thin>BS_Blank</NoneBody_Thin>
+						<MaleBody_Fat>BS_Blank</MaleBody_Fat>
+						<FemaleBody_Fat>BS_Blank</FemaleBody_Fat>
+						<NoneBody_Fat>BS_Blank</NoneBody_Fat>
+					</texturePaths>
+					<colorA>
+						<replaceFlagsAndInactive><TailedColorA/></replaceFlagsAndInactive>
+						<color>(0.11, 0.08, 0.055)</color>
+					</colorA>
+					<colorB>
+						<replaceFlagsAndInactive><TailedColorB/></replaceFlagsAndInactive>
+						<hairColor>true</hairColor>
+						<brightness>1.2</brightness>
+						<saturation>0.8</saturation>
+					</colorB>
+					<alts>
+						<li>
+							<!-- Poor cat lost its tail. -->
+							<triggerBodyPart>
+								<li>
+									<bodyPartDef>Tail</bodyPartDef>
+									<partMissing>true</partMissing>
+								</li>
+							</triggerBodyPart>
+							<texturePaths><default>BS_Blank</default></texturePaths>
+						</li>
+					</alts>
+				</conditionalGraphics>
+				<drawData>
 					<scaleOffsetByBodySize>true</scaleOffsetByBodySize>
 					<defaultData>
 						<layer>-2</layer>
 					</defaultData>
 					<dataNorth>
-						<offset>(0.02, 0.2, -0.4)</offset>
+						<offset>(0.03, 0.2, -0.3)</offset>
 						<layer>90</layer>
 					</dataNorth>
 					<dataSouth>
 						<offset>(0.45, -0.1, 0.35)</offset>
 					</dataSouth>
 					<dataEast>
-						<offset>(-0.7, -0.1, -0.25)</offset>
+						<offset>(-0.8, -0.1, -0.35)</offset>
 					</dataEast>
 					<dataWest>
-						<offset>(0.7, -0.1, -0.25)</offset>
+						<offset>(0.8, -0.1, -0.35)</offset>
 					</dataWest>
 				</drawData>
-            </li>
+			</li>
+
+					<!-- ========= 1.2 Fat ========= -->
+			<li Class="BigAndSmall.PawnRenderingProps_Ultimate">
+				<nodeClass>BigAndSmall.PawnRenderNode_Ultimate</nodeClass>
+				<parentTagDef>Body</parentTagDef>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<shader>Cutout</shader>
+				<conditionalGraphics>
+					<texturePaths>
+						<MaleBody_Fat>Things/Pawn/Humanlike/BodyAttachments/CastoranTails/CastoranTails</MaleBody_Fat>
+						<FemaleBody_Fat>Things/Pawn/Humanlike/BodyAttachments/CastoranTails/CastoranTails</FemaleBody_Fat>
+						<NoneBody_Fat>Things/Pawn/Humanlike/BodyAttachments/CastoranTails/CastoranTails</NoneBody_Fat>
+						<default>BS_Blank</default>
+					</texturePaths>
+					<colorA>
+						<replaceFlagsAndInactive><TailedColorA/></replaceFlagsAndInactive>
+						<color>(0.11, 0.08, 0.055)</color>
+					</colorA>
+					<colorB>
+						<replaceFlagsAndInactive><TailedColorB/></replaceFlagsAndInactive>
+						<hairColor>true</hairColor>
+						<brightness>1.2</brightness>
+						<saturation>0.8</saturation>
+					</colorB>
+					<alts>
+						<li>
+							<!-- Poor cat lost its tail. -->
+							<triggerBodyPart>
+								<li>
+									<bodyPartDef>Tail</bodyPartDef>
+									<partMissing>true</partMissing>
+								</li>
+							</triggerBodyPart>
+							<texturePaths><default>BS_Blank</default></texturePaths>
+						</li>
+					</alts>
+				</conditionalGraphics>
+				<drawData>
+					<scaleOffsetByBodySize>false</scaleOffsetByBodySize>
+					<defaultData>
+						<layer>-2</layer>
+					</defaultData>
+					<dataNorth>
+						<offset>(0.025, 0.2, -0.22)</offset>
+						<layer>90</layer>
+					</dataNorth>
+					<dataSouth>
+						<offset>(0.45, -0.1, 0.35)</offset>
+					</dataSouth>
+					<dataEast>
+						<offset>(-0.7, -0.1, -0.2)</offset>
+					</dataEast>
+					<dataWest>
+						<offset>(0.7, -0.1, -0.2)</offset>
+					</dataWest>
+				</drawData>
+			</li>
+
+			<!-- ============================ 2. Hulk ============================ -->
+			<li Class="BigAndSmall.PawnRenderingProps_Ultimate">
+				<nodeClass>BigAndSmall.PawnRenderNode_Ultimate</nodeClass>
+				<parentTagDef>Body</parentTagDef>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<shader>Cutout</shader>
+				<conditionalGraphics>
+					<texturePaths>
+						<MaleBody_Hulk>Things/Pawn/Humanlike/BodyAttachments/CastoranTails/CastoranTails</MaleBody_Hulk>
+						<FemaleBody_Hulk>Things/Pawn/Humanlike/BodyAttachments/CastoranTails/CastoranTails</FemaleBody_Hulk>
+						<NoneBody_Hulk>Things/Pawn/Humanlike/BodyAttachments/CastoranTails/CastoranTails</NoneBody_Hulk>
+						<default>BS_Blank</default>
+					</texturePaths>
+					<colorA>
+						<replaceFlagsAndInactive><TailedColorA/></replaceFlagsAndInactive>
+						<color>(0.11, 0.08, 0.055)</color>
+					</colorA>
+					<colorB>
+						<replaceFlagsAndInactive><TailedColorB/></replaceFlagsAndInactive>
+						<hairColor>true</hairColor>
+						<brightness>1.2</brightness>
+						<saturation>0.8</saturation>
+					</colorB>
+					<alts>
+						<li>
+							<triggerBodyPart>
+								<li>
+									<bodyPartDef>Tail</bodyPartDef>
+									<partMissing>true</partMissing>
+								</li>
+							</triggerBodyPart>
+							<texturePaths><default>BS_Blank</default></texturePaths>
+						</li>
+					</alts>
+				</conditionalGraphics>
+				<drawData>
+					<!-- Absolute offsets: the shared numbers x 1.125, which is where Hulk sits today.
+						Hulk is tall (bodyGraphicScale 1, 1.25) but no wider than Male, so the x values
+						were being pushed out 12.5% too far. Pull them in from here. -->
+					<scaleOffsetByBodySize>false</scaleOffsetByBodySize>
+					<defaultData>
+						<layer>-2</layer>
+					</defaultData>
+					<dataNorth>
+						<offset>(0.03, 0.225, -0.45)</offset>
+						<layer>90</layer>
+					</dataNorth>
+					<dataSouth>
+						<offset>(0.4506, -0.113, -0.1)</offset>
+					</dataSouth>
+					<dataEast>
+						<offset>(-0.8, -0.113, -0.29)</offset>
+					</dataEast>
+					<dataWest>
+						<offset>(0.8, -0.113, -0.29)</offset>
+					</dataWest>
+				</drawData>
+			</li>
+
+			<!-- ============================ 3. Thin ============================ -->
+			<li Class="BigAndSmall.PawnRenderingProps_Ultimate">
+				<nodeClass>BigAndSmall.PawnRenderNode_Ultimate</nodeClass>
+				<parentTagDef>Body</parentTagDef>
+				<rotDrawMode>Fresh, Rotting</rotDrawMode>
+				<shader>Cutout</shader>
+				<conditionalGraphics>
+					<texturePaths>
+						<MaleBody_Thin>Things/Pawn/Humanlike/BodyAttachments/CastoranTails/CastoranTails</MaleBody_Thin>
+						<FemaleBody_Thin>Things/Pawn/Humanlike/BodyAttachments/CastoranTails/CastoranTails</FemaleBody_Thin>
+						<NoneBody_Thin>Things/Pawn/Humanlike/BodyAttachments/CastoranTails/CastoranTails</NoneBody_Thin>
+						<default>BS_Blank</default>
+					</texturePaths>
+					<colorA>
+						<replaceFlagsAndInactive><TailedColorA/></replaceFlagsAndInactive>
+						<color>(0.11, 0.08, 0.055)</color>
+					</colorA>
+					<colorB>
+						<replaceFlagsAndInactive><TailedColorB/></replaceFlagsAndInactive>
+						<hairColor>true</hairColor>
+						<brightness>1.2</brightness>
+						<saturation>0.8</saturation>
+					</colorB>
+					<alts>
+						<li>
+							<triggerBodyPart>
+								<li>
+									<bodyPartDef>Tail</bodyPartDef>
+									<partMissing>true</partMissing>
+								</li>
+							</triggerBodyPart>
+							<texturePaths><default>BS_Blank</default></texturePaths>
+						</li>
+					</alts>
+				</conditionalGraphics>
+				<drawData>
+					<!-- Absolute offsets: the shared numbers x 0.8, which is where Thin sits today.
+						Thin is narrow (bodyGraphicScale 0.6, 1) but full height, yet the vertical
+						values were being shrunk by that same 0.8 - raising the z values back toward
+						the shared numbers is likely the fix. -->
+					<scaleOffsetByBodySize>false</scaleOffsetByBodySize>
+					<defaultData>
+						<layer>-2</layer>
+					</defaultData>
+					<dataNorth>
+						<offset>(0.03, 0.16, -0.24)</offset>
+						<layer>90</layer>
+					</dataNorth>
+					<dataSouth>
+						<offset>(0.5, -0.08, 0.28)</offset>
+					</dataSouth>
+					<dataEast>
+						<offset>(-0.68, -0.08, -0.24)</offset>
+					</dataEast>
+					<dataWest>
+						<offset>(0.68, -0.08, -0.24)</offset>
+					</dataWest>
+				</drawData>
+			</li>
+
 		</renderNodeProperties>
 	</GeneDef>
     
