@@ -5,13 +5,8 @@
     <defName>Muriden_DragonSlayerArmor</defName>
     <label>Muriden Dragon Slayer Armor</label>
     <description>Plate armor modified with aditional layers of protection against powerful beasts.</description>
-    <recipeMaker>
-      <unfinishedThingDef>UnfinishedMetallicTechArmor</unfinishedThingDef>
-      <researchPrerequisite>PlateArmor</researchPrerequisite>
-      <skillRequirements>
-        <Crafting>10</Crafting>
-      </skillRequirements>
-    </recipeMaker>
+    <recipeMaker Inherit="False" IsNull="True" />
+    <tradeability>Sellable</tradeability>
     <graphicData>
       <texPath>Things/Pawn/Humanlike/Apparel/DragonSlayerArmor/DragonSlayerArmor</texPath>
       <graphicClass>Graphic_Single</graphicClass>

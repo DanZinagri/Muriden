@@ -14,10 +14,8 @@
     </graphicData>
     <uiIconScale>1</uiIconScale>
     <techLevel>Medieval</techLevel>
-    <weaponTags>
-      <li>MedievalMeleeDecent</li>
-	  <li>MuridenMelee</li>
-    </weaponTags>
+    <!-- Pulled from pawn generation for now; was: MedievalMeleeDecent, MuridenMelee -->
+    <weaponTags Inherit="False" />
     <costStuffCount>75</costStuffCount>
 	<costList>
 		<Gold>2</Gold>
@@ -71,13 +69,8 @@
         <cooldownTime>4.2</cooldownTime>
       </li>
     </tools>
-    <recipeMaker>
-      <researchPrerequisite>LongBlades</researchPrerequisite>
-      <skillRequirements>
-        <Crafting>10</Crafting>
-      </skillRequirements>
-      <displayPriority>332</displayPriority>
-    </recipeMaker>
+    <recipeMaker Inherit="False" IsNull="True" />
+    <tradeability>Sellable</tradeability>
     <modExtensions>
       <li Class="VEF.Things.ThingDefExtension">
         <usableWithShields>false</usableWithShields>
@@ -128,10 +121,8 @@
       <li>RewardStandardQualitySuper</li>
       <li>RewardSpecial</li>
     </thingSetMakerTags>
-    <weaponTags>
-      <li>MedievalMeleeDecent</li>
-	  <li>MuridenMelee</li>
-    </weaponTags>
+    <!-- Pulled from pawn generation for now; was: MedievalMeleeDecent, MuridenMelee -->
+    <weaponTags Inherit="False" />
     <statBases>
         <MarketValue>3500</MarketValue>
         <WorkToMake>15000</WorkToMake>
@@ -176,13 +167,8 @@
         <armorPenetration>0.28</armorPenetration>
       </li>
     </tools>
-    <recipeMaker>
-      <researchPrerequisite>LongBlades</researchPrerequisite>
-      <skillRequirements>
-        <Crafting>6</Crafting>
-      </skillRequirements>
-      <displayPriority>411</displayPriority>
-    </recipeMaker>
+    <recipeMaker Inherit="False" IsNull="True" />
+    <tradeability>Sellable</tradeability>
     <modExtensions>
       <li Class="VEF.Things.ThingDefExtension">
         <usableWithShields>true</usableWithShields>
@@ -270,14 +256,8 @@
       <li>RewardStandardQualitySuper</li>
       <li>RewardSpecial</li>
     </thingSetMakerTags>
-    <recipeMaker>
-        <researchPrerequisite>Gunsmithing</researchPrerequisite>
-        <researchPrerequisite>LongBlades</researchPrerequisite>
-        <skillRequirements>
-            <Crafting>8</Crafting>
-        </skillRequirements>
-        <displayPriority>411</displayPriority>
-    </recipeMaker> 
+    <recipeMaker Inherit="False" IsNull="True" />
+    <tradeability>Sellable</tradeability>
     <tools>
       <li>
         <label>handle</label>

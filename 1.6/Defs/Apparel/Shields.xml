@@ -75,23 +75,12 @@
 			<MeleeHitChance>-0.2</MeleeHitChance>
 			<MoveSpeed>-0.5</MoveSpeed>
 		</equippedStatOffsets>
-		<recipeMaker>
-			<unfinishedThingDef>UnfinishedMetallicTechArmor</unfinishedThingDef>
-			<researchPrerequisite>PlateArmor</researchPrerequisite>
-            <recipeUsers>
-                <li>ElectricSmithy</li>
-                <li>FueledSmithy</li>
-            </recipeUsers>
-			<skillRequirements>
-				<Crafting>10</Crafting>
-			</skillRequirements>
-		</recipeMaker>
+		<recipeMaker Inherit="False" IsNull="True" />
+		<tradeability>Sellable</tradeability>
         <comps>
             <li Class="VEF.Apparels.CompProperties_Shield">
-                <shieldTags>
-                    <li>MedievalDecent</li>
-					<li>MuridenShield</li>
-                </shieldTags>
+                <!-- Pulled from VEF shield generation for now; was: MedievalDecent, MuridenShield -->
+                <shieldTags />
                 <useDeflectMetalEffect>true</useDeflectMetalEffect>
                 <coveredBodyPartGroups>
                     <li>Torso</li>

@@ -9,6 +9,7 @@
 		<inheritable>true</inheritable>
 		<genes>
 			<li>Muriden_Frame</li>
+			<li>MuridenEarless</li>
 			<li>MoveSpeed_Quick</li>
 			<li>Muriden_SmallToughness</li>
 			<li>Body_FemaleOnly</li>
@@ -29,6 +30,7 @@
 		<inheritable>true</inheritable>
 		<genes>
 			<li>Muriden_Frame</li>
+			<li>MuridenEarless</li>
 			<li>MoveSpeed_Quick</li>
 			<li>Muriden_SmallToughness</li>
 			<li>Body_FemaleOnly</li>
@@ -49,6 +51,7 @@
 		<inheritable>true</inheritable>
 		<genes>
 			<li>Muriden_FrameLithe</li>
+			<li>MuridenEarless</li>
 			<li>Muriden_ToughHide</li>
 			<li>PsychicAbility_Dull</li>
 			<li>MinTemp_SmallDecrease</li>
@@ -75,6 +78,7 @@
 		<inheritable>true</inheritable>
 		<genes>
 			<li>PsychicAbility_Deaf</li>
+			<li>MuridenEarless</li>
 			<li>MoveSpeed_Quick</li>
 			<li>WebbedPhalanges</li>
 			<li>Aggression_DeadCalm</li>

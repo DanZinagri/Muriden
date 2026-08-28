@@ -117,6 +117,7 @@
 		</weaponMoney>
 		<weaponTags>
 		  <li>Medieval</li>
+		  <li>MedievalMeleeDecent</li>
 		</weaponTags>
 		<trader>true</trader>
 	</PawnKindDef>	
@@ -145,6 +146,7 @@
 		</weaponMoney>
 		<weaponTags>
 		  <li>Medieval</li>
+		  <li>MedievalMeleeDecent</li>
 		</weaponTags>
 		<apparelAllowHeadgearChance>0.1</apparelAllowHeadgearChance>
 	</PawnKindDef>	
@@ -174,6 +176,7 @@
 		</weaponMoney>
 		<weaponTags>
 		  <li>Medieval</li>
+		  <li>MedievalMeleeDecent</li>
 		</weaponTags>
 		<apparelAllowHeadgearChance>0.5</apparelAllowHeadgearChance>
 	</PawnKindDef>
@@ -203,6 +206,7 @@
 		</weaponMoney>
 		<weaponTags>
 		  <li>Medieval</li>
+		  <li>MedievalMeleeDecent</li>
 		</weaponTags>
 		<apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
 		<skills>
@@ -238,6 +242,7 @@
 		</weaponMoney>
 		<weaponTags>
 		  <li>Medieval</li>
+		  <li>MedievalMeleeDecent</li>
 		</weaponTags>
 		<apparelAllowHeadgearChance>0.8</apparelAllowHeadgearChance>
 		<skills>
@@ -278,6 +283,7 @@
 		</weaponMoney>
 		<weaponTags>
 		  <li>Medieval</li>
+		  <li>MedievalMeleeDecent</li>
 		</weaponTags>
 		<apparelAllowHeadgearChance>0.0</apparelAllowHeadgearChance>		
 		<inventoryOptions>
@@ -330,6 +336,7 @@
 		</weaponMoney>
 		<weaponTags>
 		  <li>Medieval</li>
+		  <li>MedievalMeleeDecent</li>
 		</weaponTags>
 		<apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
 		<skills>
@@ -366,6 +373,7 @@
 		</weaponMoney>
 		<weaponTags>
 		  <li>Medieval</li>
+		  <li>MedievalMeleeDecent</li>
 		</weaponTags>
 		<apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>		
 		<skills>
@@ -403,6 +411,7 @@
 		</weaponMoney>
 		<weaponTags>
 		  <li>Medieval</li>
+		  <li>MedievalMeleeDecent</li>
 		</weaponTags>
 		<apparelAllowHeadgearChance>0.5</apparelAllowHeadgearChance>
 		<apparelColor>(254,254,254)</apparelColor>
@@ -440,6 +449,7 @@
 		</weaponMoney>
 		<weaponTags>
 		  <li>Medieval</li>
+		  <li>MedievalMeleeDecent</li>
 		</weaponTags>
 		<apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
 		<skills>
@@ -474,6 +484,7 @@
 		</weaponMoney>
 		<weaponTags>
 		  <li>Medieval</li>
+		  <li>MedievalMeleeDecent</li>
 		</weaponTags>
 	</PawnKindDef>
 	
@@ -510,6 +521,7 @@
 		</weaponMoney>
 		<weaponTags>
 		  <li>Medieval</li>
+		  <li>MedievalMeleeDecent</li>
 		</weaponTags>
 	</PawnKindDef>
 </Defs>

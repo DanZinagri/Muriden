@@ -6,16 +6,8 @@
     <label>Muriden Tyrant Crown</label>
     <description>A bulky medieval helmet adorned with an intimidating spiked crown.</description>
     <techLevel>Medieval</techLevel>
-    <recipeMaker>
-      <researchPrerequisite>PlateArmor</researchPrerequisite>
-      <recipeUsers>
-        <li>ElectricSmithy</li>
-        <li>FueledSmithy</li>
-      </recipeUsers>
-      <skillRequirements>
-        <Crafting>10</Crafting>
-      </skillRequirements>
-    </recipeMaker>
+    <recipeMaker Inherit="False" IsNull="True" />
+    <tradeability>Sellable</tradeability>
     <graphicData>
       <texPath>Things/Pawn/Humanlike/Apparel/TyrantCrown/MuridenTyrantCrown</texPath>
       <graphicClass>Graphic_Single</graphicClass>

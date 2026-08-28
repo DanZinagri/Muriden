@@ -121,7 +121,6 @@
     </backstoryFiltersOverride>
     <weaponTags Inherit="False">
       <li>NeolithicMeleeDecent</li>
-      <li>MedievalMeleeDecent</li>
     </weaponTags>
     <apparelTags Inherit="False">
       <li>Neolithic</li>

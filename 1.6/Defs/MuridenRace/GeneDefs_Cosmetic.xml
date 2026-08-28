@@ -812,4 +812,23 @@
             <li>Muriden_FeralNose</li>
         </targetGeneDefs>
     </FacialAnimation.HeadTypeDef>
+	 <GeneDef ParentName="GeneNoseBase">
+		<defName>MuridenEarless</defName>
+		<label>Muriden Head</label>
+		<description>Carriers of this genes lack ears in the normal human place.</description>
+		<iconPath>UI/Icons/Genes/Muriden_Icon</iconPath>
+		<biostatCpx>1</biostatCpx>
+		<displayCategory>Miscellaneous</displayCategory>
+		<displayOrderInCategory>410.1</displayOrderInCategory>
+	</GeneDef>
+	<FacialAnimation.HeadTypeDef MayRequire="nals.facialanimation">
+        <defName>MuridenEarless</defName>
+        <texPath>Things/Pawn/Humanlike/HeadAttachments/MuridenEarless</texPath>
+        <probability>1</probability>
+        <shader>Map/CutoutSkin</shader>
+        <shaderColorOverride>Map/CutoutSkinOverride</shaderColorOverride>
+        <targetGeneDefs>
+            <li>MuridenEarless</li>
+        </targetGeneDefs>
+    </FacialAnimation.HeadTypeDef>
 </Defs>

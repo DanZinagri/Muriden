@@ -71,18 +71,6 @@
 				<maxTechLevelGenerate>Medieval</maxTechLevelGenerate>
 				<countRange>3~3</countRange>
 			</li>
-			<li Class="StockGenerator_SingleDef">
-				<thingDef>Muriden_HeavyShield</thingDef>
-				<countRange>1~2</countRange>
-			</li>
-			<li Class="StockGenerator_SingleDef">
-				<thingDef>Muriden_TyrantCrown</thingDef>
-				<countRange>1~2</countRange>
-			</li>
-			<li Class="StockGenerator_SingleDef">
-				<thingDef>Muriden_DragonSlayerArmor</thingDef>
-				<countRange>1~2</countRange>
-			</li>
 
 			<!-- Apparel -->
 			<li Class="StockGenerator_MarketValue">
