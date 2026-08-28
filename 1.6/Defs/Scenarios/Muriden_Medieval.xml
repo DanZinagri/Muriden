@@ -11,24 +11,14 @@
             </playerFaction>
             <parts>
                 <!-- Config pages -->
-                <li Class="ScenPart_ConfigPage_ConfigureStartingPawns_Xenotypes">
+                <!-- Starting pawns roll from MuridenMedievalPlayerColony's xenotypeSet
+                     (Muriden / Sciurus / Castoran / Choerites), so any muriden type can
+                     show up and rerolls can swap between them. No forced counts, and no
+                     hard xenotype requirement blocking the start button. -->
+                <li Class="ScenPart_ConfigPage_ConfigureStartingPawns">
                     <def>ConfigPage_ConfigureStartingPawns</def>
+                    <pawnCount>5</pawnCount>
                     <pawnChoiceCount>5</pawnChoiceCount>
-                    <xenotypeCounts>
-                        <li>
-                            <xenotype>Muriden</xenotype>
-                            <count>3</count>
-                            <description>Muriden</description>
-                            <requiredAtStart>true</requiredAtStart>
-                            <!--<allowedDevelopmentalStages>Adult, Child</allowedDevelopmentalStages>-->
-                        </li>
-                        <li>
-                            <xenotype>Sciurus</xenotype>
-                            <count>2</count>
-                            <description>Sciurus</description>
-                            <requiredAtStart>true</requiredAtStart>
-                        </li>
-                    </xenotypeCounts>
                 </li>
                 <li Class="ScenPart_PlayerPawnsArriveMethod">
                     <def>PlayerPawnsArriveMethod</def>
@@ -63,26 +53,20 @@
 
                 <li Class="ScenPart_StartingThing_Defined">
                     <def>StartingThing_Defined</def>
-                    <thingDef>Muriden_DragonSlayerArmor</thingDef>
+                    <thingDef>MealSurvivalPack</thingDef>
+                    <count>30</count>
+                </li>
+
+                <li Class="ScenPart_StartingThing_Defined">
+                    <def>StartingThing_Defined</def>
+                    <thingDef>Apparel_PlateArmor</thingDef>
                     <stuff>Steel</stuff>
                 </li>
 
                 <li Class="ScenPart_StartingThing_Defined">
                     <def>StartingThing_Defined</def>
-                    <thingDef>Muriden_HeavyShield</thingDef>
+                    <thingDef>MeleeWeapon_LongSword</thingDef>
                     <stuff>Steel</stuff>
-                </li>
-
-                <li Class="ScenPart_StartingThing_Defined">
-                    <def>StartingThing_Defined</def>
-                    <thingDef>Muriden_TyrantCrown</thingDef>
-                    <stuff>Steel</stuff>
-                </li>
-
-                <li Class="ScenPart_StartingThing_Defined">
-                    <def>StartingThing_Defined</def>
-                    <thingDef>Muradin_NobleLongsword</thingDef>
-                    <stuff>Plasteel</stuff>
                 </li>
 
                 <!-- Scatter some things near player start -->
@@ -109,7 +93,7 @@
                 <!-- Game start dialog -->
                 <li Class="ScenPart_GameStartDialog">
                     <def>GameStartDialog</def>
-                    <text>With the help of your colleagues you managed to save a set of Muriden Knight armor, along with a sword that has been passed through the clan for generations. The sword is of a strange material rumored to have been forged from a strange meteorite.</text>
+                    <text>With the help of your colleagues you managed to save a suit of plate armor and a longsword from the armoury, along with what rations you could carry. It is not much of an inheritance, but it is what is left of the clan.</text>
                     <closeSound>GameStartSting</closeSound>
                 </li>
             </parts>

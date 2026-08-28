@@ -15,19 +15,30 @@
             <li Class="ScenPart_ConfigPage_ConfigureStartingPawns_Xenotypes">
                 <def>ConfigPage_ConfigureStartingPawns</def>
                 <pawnChoiceCount>5</pawnChoiceCount>
+                <!-- The feral/atavistic set. requiredAtStart is false on every entry, so
+                     nothing gates the start button and the player is free to reroll or
+                     re-edit these pawns however they like. Each entry also accepts an
+                     optional allowedDevelopmentalStages element (e.g. Adult, Child). -->
                 <xenotypeCounts>
                     <li>
                         <xenotype>FeralMuriden</xenotype>
-                        <count>3</count>
-                        <description>FeralMuriden</description>
-                        <requiredAtStart>true</requiredAtStart>
-                        <!--<allowedDevelopmentalStages>Adult, Child</allowedDevelopmentalStages>-->
+                        <count>1</count>
+                        <requiredAtStart>false</requiredAtStart>
+                    </li>
+                    <li>
+                        <xenotype>Kopidan</xenotype>
+                        <count>1</count>
+                        <requiredAtStart>false</requiredAtStart>
                     </li>
                     <li>
                         <xenotype>Artigasen</xenotype>
                         <count>1</count>
-                        <description>Artigasen</description>
-                        <requiredAtStart>true</requiredAtStart>
+                        <requiredAtStart>false</requiredAtStart>
+                    </li>
+                    <li>
+                        <xenotype>Castoroid</xenotype>
+                        <count>1</count>
+                        <requiredAtStart>false</requiredAtStart>
                     </li>
                 </xenotypeCounts>
             </li>
@@ -69,19 +80,29 @@
                   <li Class="ScenPart_ConfigPage_ConfigureStartingPawns_Xenotypes">
                       <def>ConfigPage_ConfigureStartingPawns</def>
                       <pawnChoiceCount>5</pawnChoiceCount>
+                      <!-- The non-feral set, matching MuridenMedievalPlayerColony's
+                           xenotypeSet. requiredAtStart is false on every entry, so nothing
+                           gates the start button. -->
                       <xenotypeCounts>
                           <li>
                               <xenotype>Muriden</xenotype>
-                              <count>3</count>
-                              <description>Muriden</description>
-                              <requiredAtStart>true</requiredAtStart>
-                              <!--<allowedDevelopmentalStages>Adult, Child</allowedDevelopmentalStages>-->
+                              <count>1</count>
+                              <requiredAtStart>false</requiredAtStart>
                           </li>
                           <li>
                               <xenotype>Sciurus</xenotype>
                               <count>1</count>
-                              <description>Sciurus</description>
-                              <requiredAtStart>true</requiredAtStart>
+                              <requiredAtStart>false</requiredAtStart>
+                          </li>
+                          <li>
+                              <xenotype>Castoran</xenotype>
+                              <count>1</count>
+                              <requiredAtStart>false</requiredAtStart>
+                          </li>
+                          <li>
+                              <xenotype>Choerites</xenotype>
+                              <count>1</count>
+                              <requiredAtStart>false</requiredAtStart>
                           </li>
                       </xenotypeCounts>
                   </li>
