@@ -152,6 +152,44 @@
 	</PawnKindDef>	
 	
 	<PawnKindDef ParentName="MuridenCombatantBase">
+		<defName>MuridenRanger</defName>
+		<label>muriden ranger</label>
+		<combatPower>65</combatPower>
+		<isFighter>true</isFighter>
+		<!-- Brawlers refuse ranged weapons, so they would fall back to melee and break the role. -->
+		<disallowedTraits>
+			<li>Brawler</li>
+		</disallowedTraits>
+		<gearHealthRange>
+			<min>0.3</min>
+			<max>0.9</max>
+		</gearHealthRange>
+		<apparelMoney>
+			<min>800</min>
+			<max>2000</max>
+		</apparelMoney>
+		<apparelTags>
+		  <li>Neolithic</li>        <!-- Core fallback -->
+		  <li>MedievalMilitary</li>
+		  <li>IndustrialBasic</li>
+		</apparelTags>
+		<weaponMoney>
+			<min>1200</min>
+			<max>2000</max>
+		</weaponMoney>
+		<!--
+		  Vanilla has no medieval ranged tier - bows carry the Neolithic tags.
+		  Decent = recurve bow, Heavy = greatbow. The Medieval Overhaul and VFE Medieval 2
+		  patches add their own bows and crossbows on top when those mods are active.
+		-->
+		<weaponTags>
+		  <li>NeolithicRangedDecent</li>
+		  <li>NeolithicRangedHeavy</li>
+		</weaponTags>
+		<apparelAllowHeadgearChance>0.25</apparelAllowHeadgearChance>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="MuridenCombatantBase">
 		<defName>MuridenVanguard</defName>
 		<label>muriden vanguard</label>
 		<combatPower>70</combatPower>

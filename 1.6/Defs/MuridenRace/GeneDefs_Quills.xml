@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!--
+  Porcupine quills: one gene granting three attacks, all of which embed a quill.
+
+    1. Quill burst  - self-centred AoE, radius 2
+    2. Quill throw  - single thrown quill, range 5
+    3. Quill        - natural melee weapon, used alongside fists/claws
+
+  The embed reuses vanilla's Odyssey PorcupineQuill hediff: tendable=false, so it must be cut
+  out with the RemovePorcupineQuill surgery, which vanilla already attaches to Human (and so to
+  Muriden_Race by inheritance) and to the animal base. That means no new hediff or recipe is
+  needed here, and any victim of any race can already have them removed.
+
+  The <li MayRequire="Ludeon.RimWorld.Odyssey"> guards mean that without Odyssey the entry is
+  simply dropped: the attacks still work and still wound, they just don't leave a quill behind.
+  Nothing errors.
+-->
+
+<Defs>
+
+  <!-- ==================== Damage ==================== -->
+
+  <!--
+    Vanilla's Stab has no Name attribute, so it cannot be used as a ParentName. Its fields are
+    reproduced here verbatim, with the quill embed added on top.
+  -->
+  <DamageDef>
+    <defName>Muriden_QuillStab</defName>
+    <label>quill</label>
+    <workerClass>DamageWorker_Stab</workerClass>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0} has been pincushioned to death.</deathMessage>
+    <hediff>Stab</hediff>
+    <hediffSolid>Crack</hediffSolid>
+    <impactSoundType>Slice</impactSoundType>
+    <armorCategory>Sharp</armorCategory>
+    <stabChanceOfForcedInternal>0.6</stabChanceOfForcedInternal>
+    <overkillPctToDestroyPart>0.4~1.0</overkillPctToDestroyPart>
+    <additionalHediffsThisPart>
+      <li MayRequire="Ludeon.RimWorld.Odyssey">PorcupineQuill</li>
+    </additionalHediffsThisPart>
+    <!-- Otherwise a hunter's shot would never leave quills in the prey. -->
+    <applyAdditionalHediffsIfHuntingForFood>true</applyAdditionalHediffsIfHuntingForFood>
+  </DamageDef>
+
+  <!-- ==================== Thrown quill ==================== -->
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Muriden_Quill_Projectile</defName>
+    <label>thrown quill</label>
+    <graphicData>
+      <texPath>Things/Projectile/Arrow_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <flyOverhead>false</flyOverhead>
+      <damageDef>Muriden_QuillStab</damageDef>
+      <damageAmountBase>8</damageAmountBase>
+      <speed>55</speed>
+    </projectile>
+  </ThingDef>
+
+  <!-- ==================== Ability 1: burst ==================== -->
+
+  <AbilityDef>
+    <defName>Muriden_QuillBurst</defName>
+    <label>quill burst</label>
+    <description>Snap the body's muscles taut and fling a ring of quills outward in every direction. Anything caught nearby is left with barbs buried in the flesh that only surgery will get out.</description>
+    <iconPath>UI/Icons/Genes/Muriden_Icon</iconPath>
+    <cooldownTicksRange>1800</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <targetRequired>False</targetRequired>
+    <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+    <writeCombatLog>True</writeCombatLog>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>2.4</range>
+      <drawAimPie>false</drawAimPie>
+      <warmupTime>0.5</warmupTime>
+      <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="CompProperties_AbilityExplosion">
+        <damageDef>Muriden_QuillStab</damageDef>
+        <damageAmount>8</damageAmount>
+        <explosionRadius>2.4</explosionRadius>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <!-- ==================== Ability 2: throw ==================== -->
+
+  <AbilityDef>
+    <defName>Muriden_QuillThrow</defName>
+    <label>quill throw</label>
+    <description>Whip a single quill at a target with enough force to bury the barb. It has to be cut back out.</description>
+    <iconPath>UI/Icons/Genes/Muriden_Icon</iconPath>
+    <cooldownTicksRange>600</cooldownTicksRange>
+    <aiCanUse>true</aiCanUse>
+    <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
+    <writeCombatLog>True</writeCombatLog>
+    <verbProperties>
+      <verbClass>Verb_AbilityShoot</verbClass>
+      <defaultProjectile>Muriden_Quill_Projectile</defaultProjectile>
+      <accuracyTouch>0.9</accuracyTouch>
+      <accuracyShort>0.85</accuracyShort>
+      <accuracyMedium>0.8</accuracyMedium>
+      <accuracyLong>0.75</accuracyLong>
+      <range>5</range>
+      <minRange>0</minRange>
+      <muzzleFlashScale>0</muzzleFlashScale>
+      <warmupTime>0.8</warmupTime>
+      <!-- One quill per throw: each one embedded is another surgery for the victim. -->
+      <burstShotCount>1</burstShotCount>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+      </targetParams>
+      <ai_IsWeapon>false</ai_IsWeapon>
+    </verbProperties>
+  </AbilityDef>
+
+  <!-- ==================== Natural melee weapon ==================== -->
+
+  <HediffDef>
+    <defName>Muriden_Quills</defName>
+    <label>porcupine quills</label>
+    <description>A dense coat of barbed quills. They catch on anything that comes close.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_VerbGiver">
+        <tools>
+          <li>
+            <label>quill</label>
+            <capacities>
+              <li>Stab</li>
+            </capacities>
+            <power>9</power>
+            <!-- Weighting against the pawn's other unarmed tools; 1 is parity with a fist. -->
+            <chanceFactor>1.5</chanceFactor>
+            <cooldownTime>2.0</cooldownTime>
+            <armorPenetration>0.15</armorPenetration>
+            <extraMeleeDamages>
+              <li>
+                <def>Muriden_QuillStab</def>
+                <amount>1</amount>
+              </li>
+            </extraMeleeDamages>
+          </li>
+        </tools>
+      </li>
+    </comps>
+    <addedPartProps>
+      <betterThanNatural>false</betterThanNatural>
+    </addedPartProps>
+  </HediffDef>
+
+  <!-- ==================== The gene ==================== -->
+
+  <GeneDef>
+    <defName>Muriden_PorcupineQuills</defName>
+    <label>porcupine quills</label>
+    <description>Carriers of this gene grow a coat of barbed quills. They can be thrown at a distance, flung outward in a burst, or simply driven into whatever is unwise enough to come within arm's reach. The barbs are shaped so that they will not pull back out; they have to be cut free.</description>
+    <iconPath>UI/Icons/Genes/Muriden_Icon</iconPath>
+    <displayOrderInCategory>776</displayOrderInCategory>
+    <biostatCpx>2</biostatCpx>
+    <biostatMet>-2</biostatMet>
+    <displayCategory>Muriden_InnateAttacks</displayCategory>
+    <selectionWeight>0.5</selectionWeight>
+    <abilities>
+      <li>Muriden_QuillBurst</li>
+      <li>Muriden_QuillThrow</li>
+    </abilities>
+    <modExtensions>
+      <li Class="BigAndSmall.PawnExtension">
+        <applyBodyHediff>
+          <li>
+            <hediff>Muriden_Quills</hediff>
+          </li>
+        </applyBodyHediff>
+      </li>
+    </modExtensions>
+  </GeneDef>
+
+</Defs>

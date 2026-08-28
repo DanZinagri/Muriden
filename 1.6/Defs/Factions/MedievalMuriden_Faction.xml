@@ -23,7 +23,6 @@
 			<li>Muriden_Caravan_Medieval_BulkGoodsMerchant</li>
 		    <li>Muriden_Caravan_Medieval_Armorsmith</li>
 		    <li>Muriden_Caravan_Medieval_Weaponsmith</li>
-			<li>Muriden_Caravan_Medieval_Weaponsmith</li>
 		</caravanTraderKinds>
 		<visitorTraderKinds>
 			<li>Muriden_Visitor_Medieval_Standard</li>
@@ -63,6 +62,7 @@
 				<maxTotalPoints>1000</maxTotalPoints>
 				<options>
 					<MuridenCombatant>20</MuridenCombatant>
+					<MuridenRanger>8</MuridenRanger>
 					<MuridenSoldier>5</MuridenSoldier>
 				</options>
 			</li>
@@ -74,6 +74,7 @@
 					<MuridenDefender>5</MuridenDefender>
 					<MuridenVanguard>10</MuridenVanguard>
 					<MuridenCombatant>15</MuridenCombatant>
+					<MuridenRanger>10</MuridenRanger>
 				</options>
 			</li>
 			<li>
@@ -84,6 +85,7 @@
 					<MuridenEliteSoldier>5</MuridenEliteSoldier>
 					<MuridenDefender>15</MuridenDefender>
 					<MuridenEliteGuardener>15</MuridenEliteGuardener>
+					<MuridenRanger>10</MuridenRanger>
 				</options>
 			</li>
 			<li>
@@ -138,6 +140,7 @@
 					<MuridenSoldier>10</MuridenSoldier>
 					<MuridenEliteGuardener>10</MuridenEliteGuardener>
 					<MuridenDefender>10</MuridenDefender>
+					<MuridenRanger>8</MuridenRanger>
 				</guards>
 			</li>
 			<li>
@@ -147,6 +150,7 @@
 					<MuridenColonist>6</MuridenColonist>
 					<MuridenServant>8</MuridenServant>
 					<MuridenCombatant>5</MuridenCombatant>
+					<MuridenRanger>4</MuridenRanger>
 					<MuridenEliteGuardener>8</MuridenEliteGuardener>
 					<MuridenPriest>3</MuridenPriest>
 				</options>

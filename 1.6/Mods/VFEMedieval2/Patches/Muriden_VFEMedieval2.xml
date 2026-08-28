@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!--
+  Vanilla Factions Expanded - Medieval 2 parity for the Muriden Kingdom.
+
+  Only loaded when OskarPotocki.VFE.Medieval2 is active (see LoadFolders.xml), so no MayRequire
+  guards are needed - every def referenced here is guaranteed present.
+
+  VFEM2 leans on the vanilla Medieval* tag tiers far more than Medieval Overhaul does, so this
+  patch is mostly about its named weapons, its noble/levy apparel lines, and its caravan types.
+
+  If Medieval Overhaul is ALSO active, both patches load and a few shared vanilla tags
+  (MedievalMeleeAdvanced) get added twice. Duplicates in a pawnkind tag list are harmless -
+  matching is a Contains() check, so a repeat just matches twice.
+-->
+
+<Patch>
+
+  <!-- ==================== Apparel ==================== -->
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/PawnKindDef[defName="MuridenColonist" or defName="MuridenServant"]/apparelTags</xpath>
+    <value>
+      <li>MedievalWorker</li>
+      <li>VFEM2_Medieval</li>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/PawnKindDef[defName="MuridenNoble" or defName="MuridenPriest"]/apparelTags</xpath>
+    <value>
+      <li>MedievalApparelNoble</li>
+      <li>Aristocrat</li>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/PawnKindDef[defName="MuridenMerchant"]/apparelTags</xpath>
+    <value>
+      <li>VFEM2_Trader</li>
+      <li>VFEM2_Medieval</li>
+    </value>
+  </Operation>
+
+  <!-- Light troops draw on the levy line. -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/PawnKindDef[defName="MuridenMercenaryLight" or defName="MuridenMercenary" or defName="MuridenCombatant"]/apparelTags</xpath>
+    <value>
+      <li>MedievalLevy</li>
+      <li>VFEM2_Tabard</li>
+    </value>
+  </Operation>
+
+  <!-- Mid tier. -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/PawnKindDef[defName="MuridenVanguard" or defName="MuridenDefender" or defName="MuridenSoldier" or defName="MuridenEliteGuardener"]/apparelTags</xpath>
+    <value>
+      <li>MedievalMilitary</li>
+      <li>VFEM2_Tabard</li>
+    </value>
+  </Operation>
+
+  <!-- Elites get the elite armour line. -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/PawnKindDef[defName="MuridenKnight" or defName="MuridenEliteSoldier" or defName="MuridenEliteDefender" or defName="MuridenKnightCommander"]/apparelTags</xpath>
+    <value>
+      <li>MedievalArmorElite</li>
+      <li>VFEM2_Tabard</li>
+    </value>
+  </Operation>
+
+  <!-- Rangers: ranged by design, so these are not part of the optional block below. -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/PawnKindDef[defName="MuridenRanger"]/apparelTags</xpath>
+    <value>
+      <li>MedievalLevy</li>
+      <li>VFEM2_Tabard</li>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/PawnKindDef[defName="MuridenRanger"]/weaponTags</xpath>
+    <value>
+      <li>VFEM2_Warbow</li>
+      <li>VFEM2_Arbalest</li>
+    </value>
+  </Operation>
+
+  <!-- ==================== Weapons ==================== -->
+
+  <!-- Polearm troops get the pike and halberd. -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/PawnKindDef[defName="MuridenVanguard" or defName="MuridenDefender"]/weaponTags</xpath>
+    <value>
+      <li>VFEM2_Pike</li>
+      <li>VFEM2_Halberd</li>
+    </value>
+  </Operation>
+
+  <!-- Elites get the advanced tier plus VFEM2's named heavy weapons. -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/PawnKindDef[defName="MuridenSoldier" or defName="MuridenEliteGuardener" or defName="MuridenKnight" or defName="MuridenEliteSoldier" or defName="MuridenEliteDefender" or defName="MuridenKnightCommander"]/weaponTags</xpath>
+    <value>
+      <li>MedievalMeleeAdvanced</li>
+      <li>VFEM2_Claymore</li>
+      <li>VFEM2_Halberd</li>
+    </value>
+  </Operation>
+
+  <!-- Commanders carry the banner. -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/PawnKindDef[defName="MuridenKnightCommander"]/weaponTags</xpath>
+    <value>
+      <li>VFEM2_Standard</li>
+    </value>
+  </Operation>
+
+  <!--
+    OPTIONAL - delete this one Operation to keep the Kingdom purely melee.
+    Same caveat as the Medieval Overhaul patch: this lets the weapon generator roll a bow
+    INSTEAD of a melee weapon for these kinds.
+  -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/PawnKindDef[defName="MuridenCombatant" or defName="MuridenSoldier" or defName="MuridenEliteSoldier"]/weaponTags</xpath>
+    <value>
+      <li>VFEM2_Warbow</li>
+      <li>VFEM2_Arbalest</li>
+    </value>
+  </Operation>
+
+  <!-- ==================== Traders ==================== -->
+
+  <!--
+    VFEM2's caravan types. Trader kinds live on the abstract parent FactionDef; patches run on
+    raw XML before inheritance resolves, so this reaches every faction built from it.
+  -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/FactionDef[@Name="MuridenFactionBase"]/caravanTraderKinds</xpath>
+    <value>
+      <li>VFEM2_Caravan_Medieval_Farmer</li>
+      <li>VFEM2_Caravan_Medieval_WineMerchant</li>
+      <li>VFEM2_Caravan_Medieval_ArtPatron</li>
+      <li>VFEM2_Caravan_Medieval_Armourer</li>
+      <li>VFEM2_Caravan_Medieval_Weaponsmith</li>
+      <!-- VFEM2_Caravan_Medieval_Sellswords and VFEM2_Caravan_Looter are commented out in
+           VFE Medieval 2 itself, so they are deliberately not referenced here. -->
+    </value>
+  </Operation>
+
+</Patch>

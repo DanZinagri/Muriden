@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!--
+  Medieval Overhaul traders for the Muriden Kingdom.
+
+  Two halves:
+    1. MO's own caravan types are added to the Kingdom, so its trade caravans include the
+       Alchemist / Scholar / ArtPatron / RuinsMerchant varieties that the mod's own factions get.
+    2. The Kingdom's own trader kinds pick up MO's distinctive goods (books, schematics,
+       treatises, tales, loot) using the same stock generators MO's Scholar uses.
+
+  Trader kinds are declared on the ABSTRACT parent FactionDef (MuridenFactionBase). Patches run
+  on raw XML before inheritance is resolved, so patching the abstract def is correct and reaches
+  every faction built from it.
+-->
+
+<Patch>
+
+  <!-- ==================== MO caravan types ==================== -->
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/FactionDef[@Name="MuridenFactionBase"]/caravanTraderKinds</xpath>
+    <value>
+      <li>DankPyon_Caravan_Medieval_Alchemist</li>
+      <li>DankPyon_Caravan_Medieval_Scholar</li>
+      <li>DankPyon_Caravan_Medieval_ArtPatron</li>
+      <li>DankPyon_Caravan_Medieval_RuinsMerchant</li>
+      <li>DankPyon_Caravan_Medieval_Armorsmith</li>
+      <li>DankPyon_Caravan_Medieval_Weaponsmith</li>
+    </value>
+  </Operation>
+
+  <!-- ==================== MO goods in Muriden traders ==================== -->
+
+  <!-- Settlement trader: general MO loot and reading matter. -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/TraderKindDef[defName="Muriden_Base_Medieval_Standard"]/stockGenerators</xpath>
+    <value>
+      <li Class="StockGenerator_MarketValue">
+        <tradeTag>DankPyon_Book</tradeTag>
+        <countRange>1~3</countRange>
+      </li>
+      <li Class="StockGenerator_MarketValue">
+        <tradeTag>DankPyon_Tale</tradeTag>
+        <countRange>1~4</countRange>
+      </li>
+      <li Class="StockGenerator_MarketValue">
+        <tradeTag>DankPyon_Loot</tradeTag>
+        <countRange>1~4</countRange>
+      </li>
+      <li Class="StockGenerator_BuyTradeTag"><tag>DankPyon_Book</tag></li>
+      <li Class="StockGenerator_BuyTradeTag"><tag>DankPyon_Tale</tag></li>
+      <li Class="StockGenerator_BuyTradeTag"><tag>DankPyon_Loot</tag></li>
+      <li Class="StockGenerator_BuyTradeTag"><tag>DankPyon_RuinLoot</tag></li>
+    </value>
+  </Operation>
+
+  <!-- Bulk goods caravan: alchemy stock and salvage. -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/TraderKindDef[defName="Muriden_Caravan_Medieval_BulkGoodsMerchant"]/stockGenerators</xpath>
+    <value>
+      <li Class="StockGenerator_MarketValue">
+        <tradeTag>DankPyon_AlchemyIngredients</tradeTag>
+        <countRange>2~6</countRange>
+      </li>
+      <li Class="StockGenerator_MarketValue">
+        <tradeTag>DankPyon_Loot</tradeTag>
+        <countRange>1~4</countRange>
+      </li>
+      <li Class="StockGenerator_BuyTradeTag"><tag>DankPyon_AlchemyIngredients</tag></li>
+      <li Class="StockGenerator_BuyTradeTag"><tag>DankPyon_Loot</tag></li>
+    </value>
+  </Operation>
+
+  <!-- Smiths deal in the plans, not just the product. -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/TraderKindDef[defName="Muriden_Caravan_Medieval_Armorsmith" or defName="Muriden_Caravan_Medieval_Weaponsmith"]/stockGenerators</xpath>
+    <value>
+      <li Class="StockGenerator_MarketValue">
+        <tradeTag>DankPyon_Schematic</tradeTag>
+        <countRange>1~4</countRange>
+      </li>
+      <li Class="StockGenerator_BuyTradeTag"><tag>DankPyon_Schematic</tag></li>
+    </value>
+  </Operation>
+
+  <!-- Visitors carry a little scholarly material. -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/TraderKindDef[defName="Muriden_Visitor_Medieval_Standard"]/stockGenerators</xpath>
+    <value>
+      <li Class="StockGenerator_MarketValue">
+        <tradeTag>DankPyon_Treatise</tradeTag>
+        <countRange>1~3</countRange>
+      </li>
+      <li Class="StockGenerator_BuyTradeTag"><tag>DankPyon_Treatise</tag></li>
+    </value>
+  </Operation>
+
+</Patch>

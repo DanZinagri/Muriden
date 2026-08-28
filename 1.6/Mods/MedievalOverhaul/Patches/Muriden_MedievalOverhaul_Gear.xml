@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!--
+  Medieval Overhaul gear for the Muriden Kingdom.
+
+  Only loaded when DankPyon.Medieval.Overhaul is active (see LoadFolders.xml), so no MayRequire
+  guards are needed inside - every def referenced here is guaranteed present.
+
+  Tags are ADDED to the existing lists, never replaced, so the vanilla fallbacks stay in place.
+  Pawn generation matches tags by exact string, so a tag that duplicates one added by the
+  VFE Medieval 2 patch is harmless - it just matches twice.
+-->
+
+<Patch>
+
+  <!-- ==================== Civilians ==================== -->
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/PawnKindDef[defName="MuridenColonist" or defName="MuridenServant"]/apparelTags</xpath>
+    <value>
+      <li>MedievalBasic</li>
+      <li>DankPyon_Peasant</li>
+      <li>DankPyon_PeasantHelmet</li>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/PawnKindDef[defName="MuridenNoble"]/apparelTags</xpath>
+    <value>
+      <li>MedievalAdvanced</li>
+      <li>DankPyon_Lord</li>
+      <li>DankPyon_LordHelmet</li>
+      <li>Royal</li>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/PawnKindDef[defName="MuridenPriest"]/apparelTags</xpath>
+    <value>
+      <li>MedievalAdvanced</li>
+      <li>DankPyon_Peasant</li>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/PawnKindDef[defName="MuridenMerchant"]/apparelTags</xpath>
+    <value>
+      <li>MedievalBasic</li>
+      <li>DankPyon_Peasant</li>
+    </value>
+  </Operation>
+
+  <!-- ==================== Line troops ==================== -->
+
+  <!-- Mercenaries: cp 35 / 45 -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/PawnKindDef[defName="MuridenMercenaryLight"]/apparelTags</xpath>
+    <value>
+      <li>MedievalMilitaryBasic</li>
+      <li>DankPyon_Mercenary</li>
+      <li>DankPyon_MercenaryHelmet</li>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/PawnKindDef[defName="MuridenMercenary"]/apparelTags</xpath>
+    <value>
+      <li>MedievalMilitaryDecent</li>
+      <li>DankPyon_MercenaryHeavy</li>
+      <li>DankPyon_MercenaryHeavyHelmet</li>
+    </value>
+  </Operation>
+
+  <!-- Footmen: cp 60 -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/PawnKindDef[defName="MuridenCombatant"]/apparelTags</xpath>
+    <value>
+      <li>MedievalMilitaryBasic</li>
+      <li>DankPyon_Footman</li>
+      <li>DankPyon_FootmanHelmet</li>
+    </value>
+  </Operation>
+
+  <!-- Polearms: cp 70 -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/PawnKindDef[defName="MuridenVanguard"]/apparelTags</xpath>
+    <value>
+      <li>MedievalMilitaryDecent</li>
+      <li>DankPyon_Billman</li>
+      <li>DankPyon_BillmanHelmet</li>
+    </value>
+  </Operation>
+
+  <!-- Heavy footmen: cp 85 -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/PawnKindDef[defName="MuridenDefender"]/apparelTags</xpath>
+    <value>
+      <li>MedievalMilitaryDecent</li>
+      <li>DankPyon_Footman</li>
+      <li>DankPyon_FootmanHelmet</li>
+    </value>
+  </Operation>
+
+  <!-- ==================== Rangers ==================== -->
+
+  <!--
+    The ranger is ranged by design, so unlike the optional block at the bottom of this file these
+    bow tags are not optional - they are the whole point of the kind. Its vanilla fallback is the
+    recurve bow and greatbow; these add MO's own bows and crossbows on top.
+  -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/PawnKindDef[defName="MuridenRanger"]/apparelTags</xpath>
+    <value>
+      <li>MedievalMilitaryDecent</li>
+      <li>DankPyon_Archer</li>
+      <li>DankPyon_ArbalesterHelmet</li>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/PawnKindDef[defName="MuridenRanger"]/weaponTags</xpath>
+    <value>
+      <li>DankPyon_HuntingBow</li>
+      <li>DankPyon_Warbow</li>
+      <li>DankPyon_Crossbow</li>
+      <li>DankPyon_Arbelest</li>
+    </value>
+  </Operation>
+
+  <!-- ==================== Elites ==================== -->
+
+  <!-- Hedge knights: cp 90 -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/PawnKindDef[defName="MuridenSoldier" or defName="MuridenEliteGuardener"]/apparelTags</xpath>
+    <value>
+      <li>MedievalMilitaryAdvanced</li>
+      <li>DankPyon_HedgeKnight</li>
+      <li>DankPyon_HedgeKnightHelmet</li>
+    </value>
+  </Operation>
+
+  <!-- Knights: cp 100 -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/PawnKindDef[defName="MuridenKnight" or defName="MuridenEliteSoldier"]/apparelTags</xpath>
+    <value>
+      <li>MedievalMilitaryAdvanced</li>
+      <li>DankPyon_Knight</li>
+      <li>DankPyon_KnightHelmet</li>
+    </value>
+  </Operation>
+
+  <!-- Champions: cp 180 / 200 -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/PawnKindDef[defName="MuridenEliteDefender" or defName="MuridenKnightCommander"]/apparelTags</xpath>
+    <value>
+      <li>MedievalPrestigeCombatGear</li>
+      <li>DankPyon_Knight</li>
+      <li>DankPyon_KnightHelmet</li>
+      <li>DankPyon_Champion</li>
+    </value>
+  </Operation>
+
+  <!-- ==================== Melee weapons ==================== -->
+
+  <!--
+    MedievalMeleeDecent is already on every combat kind and reaches 18 MO weapons on its own.
+    This opens the advanced tier (11 more) to the elites only.
+  -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/PawnKindDef[defName="MuridenSoldier" or defName="MuridenEliteGuardener" or defName="MuridenKnight" or defName="MuridenEliteSoldier" or defName="MuridenEliteDefender" or defName="MuridenKnightCommander"]/weaponTags</xpath>
+    <value>
+      <li>MedievalMeleeAdvanced</li>
+    </value>
+  </Operation>
+
+  <!-- ==================== Ranged weapons ==================== -->
+
+  <!--
+    OPTIONAL - delete this one Operation to keep the Kingdom purely melee.
+
+    The faction has no archer pawnkind, so today every fighter rolls a melee weapon. Adding bow
+    tags lets the weapon generator pick a bow INSTEAD of a melee weapon for these kinds, which
+    turns a share of them into archers. That is how vanilla mixed factions behave and it stops
+    the Kingdom being trivially kited, but it does change their character.
+  -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/PawnKindDef[defName="MuridenCombatant" or defName="MuridenVanguard"]/weaponTags</xpath>
+    <value>
+      <li>DankPyon_HuntingBow</li>
+      <li>DankPyon_Warbow</li>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/PawnKindDef[defName="MuridenSoldier" or defName="MuridenEliteSoldier"]/weaponTags</xpath>
+    <value>
+      <li>DankPyon_Warbow</li>
+      <li>DankPyon_Crossbow</li>
+      <li>DankPyon_Arbelest</li>
+    </value>
+  </Operation>
+
+</Patch>
