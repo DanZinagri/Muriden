@@ -4,13 +4,13 @@
     <GeneCategoryDef>
         <defName>Muriden_Frames</defName>
         <label>Muriden Frames</label>
-        <displayPriorityInXenotype>704</displayPriorityInXenotype>
+        <displayPriorityInXenotype>706</displayPriorityInXenotype>
     </GeneCategoryDef>
 
     <GeneCategoryDef>
         <defName>Muriden_InnateAttacks</defName>
         <label>Innate Attacks</label>
-        <displayPriorityInXenotype>703</displayPriorityInXenotype>
+        <displayPriorityInXenotype>705</displayPriorityInXenotype>
     </GeneCategoryDef>
 
     <GeneDef Name="Muriden_FrameBase" Abstract="True">
