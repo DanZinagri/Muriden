@@ -31,13 +31,13 @@ namespace AtavismLibraries
             if (requiredGene == null && sourceXenotype == null)
                 return false;
 
-            bool geneMatches = requiredGene == null ||
-                       AtavismUtils.HasActiveGene(pawn, requiredGene);
+            if (sourceXenotype != null && pawn.genes.Xenotype != sourceXenotype)
+                return false;
 
-            bool xenotypeMatches = sourceXenotype == null ||
-                                   pawn.genes.Xenotype == sourceXenotype;
+            if (requiredGene != null && !AtavismUtils.HasActiveGene(pawn, requiredGene))
+                return false;
 
-            return geneMatches && xenotypeMatches;
+            return true;
         }
 
         public override IEnumerable<string> ConfigErrors()
