@@ -13,6 +13,7 @@
                         <li>Ears_Muriden</li>
                         <li>Tail_Muriden</li>
                         <li>Body_Thin</li>
+                        <li>Body_Standard</li>
                         <li>Dirtmole_Resilience</li>
                         <li MayRequire="redmattis.bettergeneinheritance">BGI_PrimaryGenes</li>
                     </value>

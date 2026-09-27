@@ -16,6 +16,7 @@
 			<li>Ears_Muriden</li>
 			<li>Tail_Muriden</li>
 			<li>Body_Thin</li>
+			<li>Body_Standard</li>
 		    <li>Muriden_Resolve</li>
             <li>AptitudePoor_Cooking</li>
 		</genes>
@@ -37,6 +38,7 @@
 			<li>Ears_Sciurus</li>
 			<li>Tail_Sciurus</li>
 			<li>Body_Thin</li>
+			<li>Body_Standard</li>
 		    <li>Sciurus_Alacrity</li>
             <li>AptitudeTerrible_Intellectual</li>
 		</genes>
@@ -114,6 +116,7 @@
             <li>Body_FemaleOnly</li>
             <li>Ears_Muriden</li>
             <li>Body_Thin</li>
+			<li>Body_Standard</li>
             <li>Furskin</li>
             <li>Muriden_FeralNose</li>
             <li>Tail_Muriden</li>
