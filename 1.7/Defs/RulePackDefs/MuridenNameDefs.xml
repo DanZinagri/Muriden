@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <RulePackDef>
+    <defName>NamerSettlementMuriden</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name->[ColorBadass] [Geography] [fortname]</li>
+        <li>r_name->[ColorBadass] [fortname]</li>
+        
+        <li>fortname->Citadel</li>
+        <li>fortname->Fortress</li>
+        <li>fortname->Fort</li>
+        <li>fortname->Castle</li>
+        <li>fortname->Stronghold</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+  <RulePackDef>
+    <defName>NamerFactionMuriden</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name->The [ColorBadass] [muridenknight]</li>
+        <li>r_name->[muridenknight] of [muridenepithet]</li>
+        <li>r_name->[muridenepithet]'s [muridenknight]</li>
+
+        <li>muridenknight->Justiciars</li>
+        <li>muridenknight->Inquisitors</li>
+        <li>muridenknight->Templars</li>
+        <li>muridenknight->Empire</li>
+        <li>muridenknight->Hierarchy</li>
+
+        <li>muridenepithet->the Mighty Oak</li>
+        <li>muridenepithet->the Moon</li>
+        <li>muridenepithet->the Burrowmaster</li>
+        <li>muridenepithet->the the Mighty</li>
+        <li>muridenepithet->the Dangerously Cheesy</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+</Defs>

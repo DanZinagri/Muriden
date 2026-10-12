@@ -13,7 +13,7 @@ namespace AtavismLibraries
     {
         private Pawn pawn;
 
-        public override bool CanShowInLetterStack => pawn.Faction?.IsPlayer ?? false;
+        public override bool CanShowInLetterStack => pawn?.Faction?.IsPlayer ?? false;
 
         public override IEnumerable<DiaOption> Choices
         {

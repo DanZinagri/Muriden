@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>   
+	<HediffDef>
+		<defName>MuridenCourageHD</defName>
+		<label>muriden courage</label>
+		<description>Enhance one's courageness and resilience, albeit at the expense of exhaustion.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<everCurableByItem>false</everCurableByItem>
+		<stages>
+			<li>
+				<painFactor>0</painFactor>
+                <hungerRateFactor>5</hungerRateFactor>
+				<statOffsets>
+				  <MentalBreakThreshold>-0.30</MentalBreakThreshold>
+				</statOffsets>
+				<capMods>
+				  <li>
+					<capacity>Consciousness</capacity>
+					<offset>0.10</offset>
+				  </li>
+				  <li>
+					<capacity>Moving</capacity>
+					<offset>0.20</offset>
+				  </li>
+				</capMods>
+				<statFactors>
+                    <MeleeDamageFactor>1.25</MeleeDamageFactor>
+					<RestFallRateFactor>5</RestFallRateFactor>
+                    <MeleeDodgeChance>1.2</MeleeDodgeChance>
+				</statFactors>
+			</li>
+		</stages>
+		<abilities>
+			<li>Disable_MuridenCourage</li>
+		</abilities>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<showRemainingTime>true</showRemainingTime>
+			</li>
+			<li Class="HediffCompProperties_DisappearsOnDeath" />
+		</comps>
+	</HediffDef>
+    
+    <HediffDef>
+		<defName>SciurusSprintHD</defName>
+		<label>Sciurus Sprint</label>
+		<description>Pushing the limits of speed and agility for a short while.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<everCurableByItem>false</everCurableByItem>
+		<stages>
+			<li>
+                <hungerRateFactor>10</hungerRateFactor>
+				<capMods>
+				  <li>
+					<capacity>Moving</capacity>
+					<offset>0.10</offset>
+				  </li>
+				</capMods>
+				<statFactors>
+                    <MeleeCooldownFactor>1.2</MeleeCooldownFactor>
+					<RestFallRateFactor>5</RestFallRateFactor>
+                    <MeleeDodgeChance>1.4</MeleeDodgeChance>
+                    <MoveSpeed>4</MoveSpeed>
+				</statFactors>
+			</li>
+		</stages>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<showRemainingTime>true</showRemainingTime>
+			</li>
+			<li Class="HediffCompProperties_DisappearsOnDeath" />
+		</comps>
+	</HediffDef>
+
+	<!-- Marker only. Added and removed around a charge ability's strikes so
+	     StatPart_ChargeMeleeSkill knows to scale MeleeDamageFactor by melee skill.
+	     The disappear comp is a safety net in case the removal is ever missed. -->
+	<HediffDef>
+		<defName>Muriden_ChargeStrike</defName>
+		<label>charging</label>
+		<description>Mid-charge. The strike lands with force proportional to the attacker's melee skill.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<isBad>false</isBad>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<everCurableByItem>false</everCurableByItem>
+		<comps>
+			<li Class="HediffCompProperties_Disappears">
+				<disappearsAfterTicks><min>2</min><max>2</max></disappearsAfterTicks>
+				<showRemainingTime>false</showRemainingTime>
+			</li>
+			<li Class="HediffCompProperties_DisappearsOnDeath" />
+		</comps>
+	</HediffDef>
+</Defs>

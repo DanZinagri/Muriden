@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <ScenarioDef ParentName="ScenarioBase">
+        <defName>Muriden_Scenario_Refugees</defName>
+        <label>Muriden Refugees</label>
+        <description>One night, your clan was abruptly destroyed by an unknown force. You and your two companions are the only ones who made it out alive.\nYour group managed to pack a few supplies and wandered the rimworld for a few quadrums, trying to lose your assailants and settle on a peaceful land before your supplies run out completely.</description>
+        <scenario>
+            <summary>Four Muriden Refugees attempt to create a new settlement after losing everything.</summary>
+            <playerFaction>
+                <factionDef>MuridenMedievalPlayerColony</factionDef>
+            </playerFaction>
+            <parts>
+                <!-- Config pages -->
+                <!-- Starting pawns roll from MuridenMedievalPlayerColony's xenotypeSet
+                     (Muriden / Sciurus / Castoran / Choerites), so any muriden type can
+                     show up and rerolls can swap between them. No forced counts, and no
+                     hard xenotype requirement blocking the start button. -->
+                <li Class="ScenPart_ConfigPage_ConfigureStartingPawns">
+                    <def>ConfigPage_ConfigureStartingPawns</def>
+                    <pawnCount>5</pawnCount>
+                    <pawnChoiceCount>5</pawnChoiceCount>
+                </li>
+                <li Class="ScenPart_PlayerPawnsArriveMethod">
+                    <def>PlayerPawnsArriveMethod</def>
+                    <method>Standing</method>
+                    <visible>false</visible>
+                </li>
+
+                <!-- Starting research -->
+                <li Class="ScenPart_StartingResearch">
+                    <def>StartingResearch</def>
+                    <project>Stonecutting</project>
+                </li>
+
+                <!--Player starting things-->
+                <li Class="ScenPart_StartingThing_Defined">
+                    <def>StartingThing_Defined</def>
+                    <thingDef>Silver</thingDef>
+                    <count>500</count>
+                </li>
+
+                <li Class="ScenPart_StartingThing_Defined">
+                    <def>StartingThing_Defined</def>
+                    <thingDef>Pemmican</thingDef>
+                    <count>500</count>
+                </li>
+
+                <li Class="ScenPart_StartingThing_Defined">
+                    <def>StartingThing_Defined</def>
+                    <thingDef>MedicineHerbal</thingDef>
+                    <count>20</count>
+                </li>
+
+                <li Class="ScenPart_StartingThing_Defined">
+                    <def>StartingThing_Defined</def>
+                    <thingDef>MealSurvivalPack</thingDef>
+                    <count>30</count>
+                </li>
+
+                <li Class="ScenPart_StartingThing_Defined">
+                    <def>StartingThing_Defined</def>
+                    <thingDef>Apparel_PlateArmor</thingDef>
+                    <stuff>Steel</stuff>
+                </li>
+
+                <li Class="ScenPart_StartingThing_Defined">
+                    <def>StartingThing_Defined</def>
+                    <thingDef>MeleeWeapon_LongSword</thingDef>
+                    <stuff>Steel</stuff>
+                </li>
+
+                <!-- Scatter some things near player start -->
+                <li Class="ScenPart_ScatterThingsNearPlayerStart">
+                    <def>ScatterThingsNearPlayerStart</def>
+                    <thingDef>Steel</thingDef>
+                    <count>400</count>
+                </li>
+                <li Class="ScenPart_ScatterThingsNearPlayerStart">
+                    <def>ScatterThingsNearPlayerStart</def>
+                    <thingDef>WoodLog</thingDef>
+                    <count>300</count>
+                </li>
+                <li MayRequire="OskarPotocki.VanillaFactionsExpanded.Core" Class="VEF.Factions.ScenPart_ForcedFactionGoodwill">
+                    <factionDef>Muridenia</factionDef>
+                    <affectHiddenFactions>False</affectHiddenFactions>
+                    <affectStartingGoodwill>True</affectStartingGoodwill>
+                    <startingGoodwillRange>25~75</startingGoodwillRange>
+                    <affectNaturalGoodwill>True</affectNaturalGoodwill>
+                    <naturalGoodwillRange>25~75</naturalGoodwillRange>
+                    <def>VFEC_ForcedFactionGoodwill</def>
+                </li>
+
+                <!-- Game start dialog -->
+                <li Class="ScenPart_GameStartDialog">
+                    <def>GameStartDialog</def>
+                    <text>With the help of your colleagues you managed to save a suit of plate armor and a longsword from the armoury, along with what rations you could carry. It is not much of an inheritance, but it is what is left of the clan.</text>
+                    <closeSound>GameStartSting</closeSound>
+                </li>
+            </parts>
+        </scenario>
+    </ScenarioDef>
+</Defs>

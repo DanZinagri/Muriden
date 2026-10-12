@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <GeneDef>
+        <defName>Muriden_ToughHide</defName>
+        <label>muriden hide</label>
+        <labelShortAdj>thick-hided</labelShortAdj>
+        <description>Carriers of this gene grow a coarse thick fur. It turns a glancing blade and takes the sting out of a blow.</description>
+        <iconPath>UI/Icons/Genes/Castoran_icon</iconPath>
+        <displayCategory>Miscellaneous</displayCategory>
+        <displayOrderInCategory>20</displayOrderInCategory>
+        <biostatCpx>1</biostatCpx>
+        <biostatMet>-1</biostatMet>
+        <exclusionTags>
+            <li>Muriden_Hide</li>
+        </exclusionTags>
+        <statOffsets>
+            <ArmorRating_Blunt>0.15</ArmorRating_Blunt>
+            <ArmorRating_Sharp>0.25</ArmorRating_Sharp>
+            <SM_RaidWealthOffset>250</SM_RaidWealthOffset>
+        </statOffsets>
+        <symbolPack>
+            <prefixSymbols>
+                <li><symbol>thick-hided</symbol></li>
+            </prefixSymbols>
+        </symbolPack>
+    </GeneDef>
+
+    <GeneDef>
+        <defName>Muriden_SmallToughness</defName>
+        <label>muriden-frame toughness</label>
+        <labelShortAdj>hardy</labelShortAdj>
+        <description>Carriers of this gene are hard to put down for their size.</description>
+        <iconPath>UI/Icons/Genes/Muriden_Icon</iconPath>
+        <displayCategory>Pain</displayCategory>
+        <displayOrderInCategory>-6</displayOrderInCategory>
+        <biostatCpx>3</biostatCpx>
+        <biostatMet>-4</biostatMet>
+        <exclusionTags>
+            <li>Toughness</li>
+        </exclusionTags>
+        <statFactors>
+            <IncomingDamageFactor>0.4</IncomingDamageFactor>
+            <CarryingCapacity>1.5</CarryingCapacity>
+            <VEF_MassCarryCapacity MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">1.5</VEF_MassCarryCapacity>
+        </statFactors>
+        <modExtensions>
+            <!-- Only meaningful when a player assembles a xenogerm by hand; genes handed
+                 out by a XenotypeDef bypass prerequisite checks. -->
+            <li Class="BigAndSmall.GenePrerequisites">
+                <prerequisiteSets>
+                    <li>
+                        <type>AnyOf</type>
+                        <prerequisites>
+                            <li>Muriden_Frame</li>
+                            <li>Muriden_FrameLithe</li>
+                        </prerequisites>
+                    </li>
+                </prerequisiteSets>
+            </li>
+        </modExtensions>
+    </GeneDef>
+</Defs>
