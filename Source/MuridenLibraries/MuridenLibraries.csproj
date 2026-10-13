@@ -22,9 +22,8 @@
       <HintPath>E:\SteamLibrary\steamapps\common\RimWorld\UnityStubs.dll</HintPath>
       <Private>false</Private>
     </Reference>
-    <!-- VEF has no 1.7 build yet; its 1.6 assembly loads through the game's compatibility layer. -->
     <Reference Include="VEF">
-      <HintPath>E:\SteamLibrary\steamapps\workshop\content\294100\2023507013\1.6\Assemblies\VEF.dll</HintPath>
+      <HintPath>E:\SteamLibrary\steamapps\workshop\content\294100\2023507013\1.7\Assemblies\VEF.dll</HintPath>
       <Private>false</Private>
     </Reference>
   </ItemGroup>
