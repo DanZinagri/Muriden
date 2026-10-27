@@ -109,6 +109,11 @@
             <VEF_MassCarryCapacity MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">2.5</VEF_MassCarryCapacity>
             <SM_RaidWealthMultiplier>2</SM_RaidWealthMultiplier>
         </statFactors>
+        <forcedTraits>
+            <li>
+                <def>BS_Giant</def>
+            </li>
+        </forcedTraits>
         <statOffsets>
             <SM_BodySizeOffset>1.5</SM_BodySizeOffset>
             <SM_RaidWealthOffset>2500</SM_RaidWealthOffset>
