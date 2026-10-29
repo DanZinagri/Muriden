@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Combat Extended only (loadFolders). CE treats any melee tool that is not a ToolCE as unsupported: its stat
+     workers log "no support for Combat Extended", and its melee verb throws a NullReferenceException on every sharp hit
+     (DamageInfosToApply reads ToolCE.capacities without a null check). Each tool keeps its vanilla fields and only
+     gets the ToolCE class plus CE's two penetration values: sharp in mm RHA, blunt in MPa. -->
+<Patch>
+
+	<!-- Gene attacks -->
+	<Operation Class="PatchOperationSequence">
+		<operations>
+			<li Class="PatchOperationAttributeSet">
+				<xpath>Defs/HediffDef[defName="Muriden_Bite"]/comps/li[@Class="HediffCompProperties_VerbGiver"]/tools/li[label="bite"]</xpath>
+				<attribute>Class</attribute>
+				<value>CombatExtended.ToolCE</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/HediffDef[defName="Muriden_Bite"]/comps/li[@Class="HediffCompProperties_VerbGiver"]/tools/li[label="bite"]</xpath>
+				<value>
+				<armorPenetrationSharp>0.5</armorPenetrationSharp>
+				<armorPenetrationBlunt>2.0</armorPenetrationBlunt>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+	<Operation Class="PatchOperationSequence">
+		<operations>
+			<li Class="PatchOperationAttributeSet">
+				<xpath>Defs/HediffDef[defName="Muriden_Claws"]/comps/li[@Class="HediffCompProperties_VerbGiver"]/tools/li[label="talons"]</xpath>
+				<attribute>Class</attribute>
+				<value>CombatExtended.ToolCE</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/HediffDef[defName="Muriden_Claws"]/comps/li[@Class="HediffCompProperties_VerbGiver"]/tools/li[label="talons"]</xpath>
+				<value>
+				<armorPenetrationSharp>0.3</armorPenetrationSharp>
+				<armorPenetrationBlunt>1.5</armorPenetrationBlunt>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+	<Operation Class="PatchOperationSequence">
+		<operations>
+			<li Class="PatchOperationAttributeSet">
+				<xpath>Defs/HediffDef[defName="Muriden_Quills"]/comps/li[@Class="HediffCompProperties_VerbGiver"]/tools/li[label="quill"]</xpath>
+				<attribute>Class</attribute>
+				<value>CombatExtended.ToolCE</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/HediffDef[defName="Muriden_Quills"]/comps/li[@Class="HediffCompProperties_VerbGiver"]/tools/li[label="quill"]</xpath>
+				<value>
+				<armorPenetrationSharp>0.25</armorPenetrationSharp>
+				<armorPenetrationBlunt>0.5</armorPenetrationBlunt>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+
+	<!-- Melee weapons (sharp values get the stuff's MeleePenetrationFactor on top) -->
+	<Operation Class="PatchOperationSequence">
+		<operations>
+			<li Class="PatchOperationAttributeSet">
+				<xpath>Defs/ThingDef[defName="Muriden_NobleSpear"]/tools/li[label="shaft"]</xpath>
+				<attribute>Class</attribute>
+				<value>CombatExtended.ToolCE</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="Muriden_NobleSpear"]/tools/li[label="shaft"]</xpath>
+				<value>
+				<armorPenetrationBlunt>2.0</armorPenetrationBlunt>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+	<Operation Class="PatchOperationSequence">
+		<operations>
+			<li Class="PatchOperationAttributeSet">
+				<xpath>Defs/ThingDef[defName="Muriden_NobleSpear"]/tools/li[label="point"]</xpath>
+				<attribute>Class</attribute>
+				<value>CombatExtended.ToolCE</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="Muriden_NobleSpear"]/tools/li[label="point"]</xpath>
+				<value>
+				<armorPenetrationSharp>0.5</armorPenetrationSharp>
+				<armorPenetrationBlunt>0.425</armorPenetrationBlunt>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+	<Operation Class="PatchOperationSequence">
+		<operations>
+			<li Class="PatchOperationAttributeSet">
+				<xpath>Defs/ThingDef[defName="Muradin_NobleLongsword"]/tools/li[label="handle"]</xpath>
+				<attribute>Class</attribute>
+				<value>CombatExtended.ToolCE</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="Muradin_NobleLongsword"]/tools/li[label="handle"]</xpath>
+				<value>
+				<armorPenetrationBlunt>1.0</armorPenetrationBlunt>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+	<Operation Class="PatchOperationSequence">
+		<operations>
+			<li Class="PatchOperationAttributeSet">
+				<xpath>Defs/ThingDef[defName="Muradin_NobleLongsword"]/tools/li[label="point"]</xpath>
+				<attribute>Class</attribute>
+				<value>CombatExtended.ToolCE</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="Muradin_NobleLongsword"]/tools/li[label="point"]</xpath>
+				<value>
+				<armorPenetrationSharp>0.42</armorPenetrationSharp>
+				<armorPenetrationBlunt>0.5</armorPenetrationBlunt>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+	<Operation Class="PatchOperationSequence">
+		<operations>
+			<li Class="PatchOperationAttributeSet">
+				<xpath>Defs/ThingDef[defName="Muradin_NobleLongsword"]/tools/li[label="edge"]</xpath>
+				<attribute>Class</attribute>
+				<value>CombatExtended.ToolCE</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="Muradin_NobleLongsword"]/tools/li[label="edge"]</xpath>
+				<value>
+				<armorPenetrationSharp>0.43</armorPenetrationSharp>
+				<armorPenetrationBlunt>0.95</armorPenetrationBlunt>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+	<Operation Class="PatchOperationSequence">
+		<operations>
+			<li Class="PatchOperationAttributeSet">
+				<xpath>Defs/ThingDef[defName="Muriden_GunLance"]/tools/li[label="handle"]</xpath>
+				<attribute>Class</attribute>
+				<value>CombatExtended.ToolCE</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="Muriden_GunLance"]/tools/li[label="handle"]</xpath>
+				<value>
+				<armorPenetrationBlunt>1.0</armorPenetrationBlunt>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+	<Operation Class="PatchOperationSequence">
+		<operations>
+			<li Class="PatchOperationAttributeSet">
+				<xpath>Defs/ThingDef[defName="Muriden_GunLance"]/tools/li[label="point"]</xpath>
+				<attribute>Class</attribute>
+				<value>CombatExtended.ToolCE</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="Muriden_GunLance"]/tools/li[label="point"]</xpath>
+				<value>
+				<armorPenetrationSharp>0.46</armorPenetrationSharp>
+				<armorPenetrationBlunt>0.55</armorPenetrationBlunt>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+	<Operation Class="PatchOperationSequence">
+		<operations>
+			<li Class="PatchOperationAttributeSet">
+				<xpath>Defs/ThingDef[defName="Muriden_GunLance"]/tools/li[label="edge"]</xpath>
+				<attribute>Class</attribute>
+				<value>CombatExtended.ToolCE</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="Muriden_GunLance"]/tools/li[label="edge"]</xpath>
+				<value>
+				<armorPenetrationSharp>0.43</armorPenetrationSharp>
+				<armorPenetrationBlunt>0.95</armorPenetrationBlunt>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+
+	<!-- Bayonet rifle -->
+	<Operation Class="PatchOperationSequence">
+		<operations>
+			<li Class="PatchOperationAttributeSet">
+				<xpath>Defs/ThingDef[defName="MuridenBayonetRifle"]/tools/li[label="stock"]</xpath>
+				<attribute>Class</attribute>
+				<value>CombatExtended.ToolCE</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="MuridenBayonetRifle"]/tools/li[label="stock"]</xpath>
+				<value>
+				<armorPenetrationBlunt>1.6</armorPenetrationBlunt>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+	<Operation Class="PatchOperationSequence">
+		<operations>
+			<li Class="PatchOperationAttributeSet">
+				<xpath>Defs/ThingDef[defName="MuridenBayonetRifle"]/tools/li[label="barrel"]</xpath>
+				<attribute>Class</attribute>
+				<value>CombatExtended.ToolCE</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[defName="MuridenBayonetRifle"]/tools/li[label="barrel"]</xpath>
+				<value>
+				<armorPenetrationSharp>0.5</armorPenetrationSharp>
+				<armorPenetrationBlunt>0.9</armorPenetrationBlunt>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+
+	<!-- Shields -->
+	<Operation Class="PatchOperationSequence">
+		<operations>
+			<li Class="PatchOperationAttributeSet">
+				<xpath>Defs/ThingDef[@Name="Muriden_BaseShield"]/tools/li[label="base"]</xpath>
+				<attribute>Class</attribute>
+				<value>CombatExtended.ToolCE</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[@Name="Muriden_BaseShield"]/tools/li[label="base"]</xpath>
+				<value>
+				<armorPenetrationBlunt>1.5</armorPenetrationBlunt>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+	<Operation Class="PatchOperationSequence">
+		<operations>
+			<li Class="PatchOperationAttributeSet">
+				<xpath>Defs/ThingDef[@Name="Muriden_BaseShield"]/tools/li[label="centre"]</xpath>
+				<attribute>Class</attribute>
+				<value>CombatExtended.ToolCE</value>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/ThingDef[@Name="Muriden_BaseShield"]/tools/li[label="centre"]</xpath>
+				<value>
+				<armorPenetrationBlunt>1.5</armorPenetrationBlunt>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+
+</Patch>

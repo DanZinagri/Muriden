@@ -1,30 +1,47 @@
 <Project Sdk="Microsoft.NET.Sdk">
+  <!-- One project, two builds:
+       net48   -> 1.6/Assemblies, compiled against the 1.6 reference assemblies (Krafs copy).
+       net10.0 -> 1.7/Assemblies, compiled against the 1.7 game root (Waylith / UnityStubs). -->
   <PropertyGroup>
-    <TargetFramework>net10.0</TargetFramework>
+    <TargetFrameworks>net48;net10.0</TargetFrameworks>
     <AssemblyName>MuridenLibraries</AssemblyName>
     <RootNamespace>MuridenLibraries</RootNamespace>
     <LangVersion>latest</LangVersion>
-    <OutputPath>..\..\1.7\Assemblies\</OutputPath>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <!-- AppendTargetFrameworkToOutputPath=false also flattens obj\, so give each target its own
+         intermediate folder or the parallel net48/net10 builds overwrite each other. -->
+    <IntermediateOutputPath>obj\$(Configuration)\$(TargetFramework)\</IntermediateOutputPath>
     <GenerateDependencyFile>false</GenerateDependencyFile>
     <DebugType>none</DebugType>
     <ProduceReferenceAssembly>false</ProduceReferenceAssembly>
     <CopyLocalLockFileAssemblies>false</CopyLocalLockFileAssemblies>
     <!-- Properties\AssemblyInfo.cs carries the assembly attributes. -->
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <RimWorld16Ref>C:\Users\DanZinagri\Documents\RimWorldModding\RimWorld-1.6-Ref</RimWorld16Ref>
+    <RimWorld17Root>E:\SteamLibrary\steamapps\common\RimWorld</RimWorld17Root>
+    <VEFRoot>E:\SteamLibrary\steamapps\workshop\content\294100\2023507013</VEFRoot>
   </PropertyGroup>
-  <ItemGroup>
-    <Reference Include="Assembly-CSharp">
-      <HintPath>E:\SteamLibrary\steamapps\common\RimWorld\Assembly-CSharp.dll</HintPath>
-      <Private>false</Private>
-    </Reference>
-    <Reference Include="UnityStubs">
-      <HintPath>E:\SteamLibrary\steamapps\common\RimWorld\UnityStubs.dll</HintPath>
-      <Private>false</Private>
-    </Reference>
-    <Reference Include="VEF">
-      <HintPath>E:\SteamLibrary\steamapps\workshop\content\294100\2023507013\1.7\Assemblies\VEF.dll</HintPath>
-      <Private>false</Private>
-    </Reference>
+
+  <PropertyGroup Condition="'$(TargetFramework)' == 'net48'">
+    <OutputPath>..\..\1.6\Assemblies\</OutputPath>
+    <FrameworkPathOverride>$(RimWorld16Ref)</FrameworkPathOverride>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(TargetFramework)' == 'net10.0'">
+    <OutputPath>..\..\1.7\Assemblies\</OutputPath>
+  </PropertyGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'net48'">
+    <Reference Include="Assembly-CSharp"><HintPath>$(RimWorld16Ref)\Assembly-CSharp.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine.CoreModule"><HintPath>$(RimWorld16Ref)\UnityEngine.CoreModule.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine.IMGUIModule"><HintPath>$(RimWorld16Ref)\UnityEngine.IMGUIModule.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine.TextRenderingModule"><HintPath>$(RimWorld16Ref)\UnityEngine.TextRenderingModule.dll</HintPath><Private>false</Private></Reference>
+    <!-- Unity's CoreModule is built against netstandard 2.1; needed as soon as Unity types (Vector3, Rect) are used. -->
+    <Reference Include="netstandard"><HintPath>$(RimWorld16Ref)\netstandard.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="VEF"><HintPath>$(VEFRoot)\1.6\Assemblies\VEF.dll</HintPath><Private>false</Private></Reference>
+  </ItemGroup>
+  <ItemGroup Condition="'$(TargetFramework)' == 'net10.0'">
+    <Reference Include="Assembly-CSharp"><HintPath>$(RimWorld17Root)\Assembly-CSharp.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityStubs"><HintPath>$(RimWorld17Root)\UnityStubs.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="VEF"><HintPath>$(VEFRoot)\1.7\Assemblies\VEF.dll</HintPath><Private>false</Private></Reference>
   </ItemGroup>
 </Project>

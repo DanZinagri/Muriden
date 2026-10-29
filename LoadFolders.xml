@@ -5,6 +5,7 @@
 		<li IfModActive="Ludeon.RimWorld.Anomaly">1.6/Mods/Anomaly</li>
 		<li IfModActive="DankPyon.Medieval.Overhaul">1.6/Mods/MedievalOverhaul</li>
 		<li IfModActive="OskarPotocki.VFE.Medieval2">1.6/Mods/VFEMedieval2</li>
+		<li IfModActive="CETeam.CombatExtended">1.6/Mods/CombatExtended</li>
 	</v1.6>
 	<v1.7>
 		<li>/</li>
@@ -12,5 +13,6 @@
 		<li IfModActive="Ludeon.RimWorld.Anomaly">1.7/Mods/Anomaly</li>
 		<li IfModActive="DankPyon.Medieval.Overhaul">1.7/Mods/MedievalOverhaul</li>
 		<li IfModActive="OskarPotocki.VFE.Medieval2">1.7/Mods/VFEMedieval2</li>
+		<li IfModActive="CETeam.CombatExtended">1.7/Mods/CombatExtended</li>
 	</v1.7>
 </loadFolders>

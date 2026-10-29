@@ -23,9 +23,23 @@ public class MuridenJumpingPawn : AbilityPawnFlyer
         Scribe_TargetInfo.Look(ref landingTarget, nameof(landingTarget));
     }
 
+    // An empty flyer has nothing to land and nothing to draw. Vanilla's own position code throws on one too, so
+    // remove it. This also cleans up flyers already left empty in saves by the landing bug below.
+    protected override void TickInterval(int delta)
+    {
+        if (FlyingThing == null)
+        {
+            Destroy();
+            return;
+        }
+        base.TickInterval(delta);
+    }
+
     public override void DynamicDrawPhaseAt(DrawPhase phase, Vector3 drawLoc, bool flip = false)
     {
-        FlyingPawn.Drawer.renderer.DynamicDrawPhaseAt(phase, drawLoc, Rotation, true);
+        // Must never throw: the draw manager runs this outside any try/catch, so one exception here stops every
+        // pawn on the map from being drawn, every frame.
+        FlyingPawn?.Drawer.renderer.DynamicDrawPhaseAt(phase, drawLoc, Rotation, true);
     }
 
     protected override void RespawnPawn()
@@ -33,12 +47,14 @@ public class MuridenJumpingPawn : AbilityPawnFlyer
         var fp = FlyingPawn;          // cached before base to use for flecks etc.
         base.RespawnPawn();           // pawn is now on the map at the landing cell
 
+        if (fp?.Spawned != true) return;
+
         // VFX on touchdown
         FleckMaker.ThrowSmoke(fp.DrawPos, fp.Map, 1f);
         FleckMaker.ThrowDustPuffThick(fp.DrawPos, fp.Map, 2f, new(1f, 1f, 1f, 2.5f));
 
         // Now that we've landed, do the actual attack.
-        if (DiveAbility != null && fp?.Spawned == true)
+        if (DiveAbility != null)
         {
             var map = fp.Map;
 
@@ -47,7 +63,17 @@ public class MuridenJumpingPawn : AbilityPawnFlyer
             Pawn maybe = landingTarget.Pawn ?? map.thingGrid.ThingAt<Pawn>(lti.Cell);
             if (maybe != null) lti = maybe;
 
-            AttackTarget(fp, lti, map);
+            // The strike goes through the melee verb, which combat mods rewrite heavily (Combat Extended's verb plus
+            // other mods' patches threw here). An exception escaping RespawnPawn skips PawnFlyer's Destroy(), leaving
+            // an empty flyer on the map, so lose the strike rather than the flyer.
+            try
+            {
+                AttackTarget(fp, lti, map);
+            }
+            catch (System.Exception e)
+            {
+                Log.ErrorOnce($"[Muriden] Diving charge landing strike failed, probably a melee-verb mod conflict. The jump still completed. {e}", 0x4D52444E);
+            }
         }
     }
 
