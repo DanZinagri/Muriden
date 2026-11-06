@@ -1,6 +1,8 @@
 <loadFolders>
 	<v1.6>
 		<li>/</li>
+		<li IfModActive="RedMattis.BigSmall.Core">1.6/Mods/GenesAndMore</li>
+		<li IfModNotActive="RedMattis.BigSmall.Core">1.6/Without/GenesAndMore</li>
 		<li>1.6</li>
 		<li IfModActive="Ludeon.RimWorld.Anomaly">1.6/Mods/Anomaly</li>
 		<li IfModActive="DankPyon.Medieval.Overhaul">1.6/Mods/MedievalOverhaul</li>
@@ -9,6 +11,8 @@
 	</v1.6>
 	<v1.7>
 		<li>/</li>
+		<li IfModActive="RedMattis.BigSmall.Core">1.7/Mods/GenesAndMore</li>
+		<li IfModNotActive="RedMattis.BigSmall.Core">1.7/Without/GenesAndMore</li>
 		<li>1.7</li>
 		<li IfModActive="Ludeon.RimWorld.Anomaly">1.7/Mods/Anomaly</li>
 		<li IfModActive="DankPyon.Medieval.Overhaul">1.7/Mods/MedievalOverhaul</li>

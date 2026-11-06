@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+    <!-- Loads only when Big and Small - Genes & More is active (LoadFolders.xml: IfModActive). In that case the
+         Muriden-only frame and toughness genes (Without/GenesAndMore) are not loaded at all, and every xenotype
+         gets the Genes & More genes they were copied from instead. Complexity and metabolism match exactly:
+
+           Muriden_Frame          (6/10)  = BS_SmallFrame + Small + BS_GeneStabilizing_Moderate
+           Muriden_FrameLithe     (5/7)   = BS_SmallFrame + BS_GeneStabilizing_Moderate
+           Muriden_FrameLarge     (6/0)   = BS_LargeFrame + BS_GeneStabilizing_Moderate
+           Muriden_FrameTitan     (13/-4) = JotunFrame + Gigantism + BS_GeneStabilizing_Great
+                                            (JotunFrame forces BS_Giant itself, so warcasket weapons still work)
+           Muriden_ToughHide      (1/-1)  = BS_ToughSkin
+           Muriden_SmallToughness (3/-4)  = BS_TinyTough
+           Choerites_Calm ballast (9/4)   = BS_GeneStabilizing_Great on the Choerites xenotype
+
+         Ordering: this folder is listed BEFORE the version folder in LoadFolders.xml. RimWorld applies the patches of
+         the last-listed folder first, so these run after Patches/Patch_DirtmoleMuriden.xml has added Muriden_Frame
+         and Muriden_SmallToughness to the Dirtmole, and the xpaths below convert those too.
+
+         Many Many Many Mods Modularized: none of these genes are retired by its Cherry Picker lists (it retires
+         BS_NaturalArmor and BS_FastAging, which Muriden does not use), and the frames are what its Convergence
+         patches swap other mods' size genes into. Its Rebalances - Traits does reshape the Small and Gigantism
+         traits these scale genes force, which applies to Muriden like everyone else. -->
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/XenotypeDef/genes/li[text()="Muriden_Frame"]</xpath>
+        <value>
+            <li>BS_SmallFrame</li>
+            <li>Small</li>
+            <li>BS_GeneStabilizing_Moderate</li>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/XenotypeDef/genes/li[text()="Muriden_FrameLithe"]</xpath>
+        <value>
+            <li>BS_SmallFrame</li>
+            <li>BS_GeneStabilizing_Moderate</li>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/XenotypeDef/genes/li[text()="Muriden_FrameLarge"]</xpath>
+        <value>
+            <li>BS_LargeFrame</li>
+            <li>BS_GeneStabilizing_Moderate</li>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/XenotypeDef/genes/li[text()="Muriden_FrameTitan"]</xpath>
+        <value>
+            <li>JotunFrame</li>
+            <li>Gigantism</li>
+            <li>BS_GeneStabilizing_Great</li>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/XenotypeDef/genes/li[text()="Muriden_ToughHide"]</xpath>
+        <value>
+            <li>BS_ToughSkin</li>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/XenotypeDef/genes/li[text()="Muriden_SmallToughness"]</xpath>
+        <value>
+            <li>BS_TinyTough</li>
+        </value>
+    </Operation>
+
+    <!-- Choerites has no frame, so its stabilizer ballast sits on Choerites_Calm. Hand it back to the real gene. -->
+    <Operation Class="PatchOperationSequence">
+        <operations>
+            <li Class="PatchOperationAdd">
+                <xpath>Defs/XenotypeDef[defName="Choerites"]/genes</xpath>
+                <value>
+                    <li>BS_GeneStabilizing_Great</li>
+                </value>
+            </li>
+            <li Class="PatchOperationReplace">
+                <xpath>Defs/GeneDef[defName="Choerites_Calm"]/biostatCpx</xpath>
+                <value>
+                    <biostatCpx>2</biostatCpx>
+                </value>
+            </li>
+            <li Class="PatchOperationReplace">
+                <xpath>Defs/GeneDef[defName="Choerites_Calm"]/biostatMet</xpath>
+                <value>
+                    <biostatMet>-1</biostatMet>
+                </value>
+            </li>
+        </operations>
+    </Operation>
+
+    <!-- One "Innate Attacks" group in the gene menus instead of two. -->
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/GeneDef/displayCategory[text()="Muriden_InnateAttacks"]</xpath>
+        <value>
+            <displayCategory>BS_InnateAttacks</displayCategory>
+        </value>
+    </Operation>
+</Patch>

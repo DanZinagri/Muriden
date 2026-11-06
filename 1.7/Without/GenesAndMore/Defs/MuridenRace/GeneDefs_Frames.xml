@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
+    <!-- Loads only when Big and Small - Genes & More is NOT active (LoadFolders.xml: IfModNotActive).
+         With Genes & More, Mods/GenesAndMore/Patches/Muriden_GenesAndMore.xml swaps each frame for the
+         B&S genes it was built from (frame + scale gene + gene stabilizer), so none of these load.
+         Muriden_InnateAttacks lives here too: with Genes & More the innate attack genes use BS_InnateAttacks. -->
 
     <GeneCategoryDef>
         <defName>Muriden_Frames</defName>

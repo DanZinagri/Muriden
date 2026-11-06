@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
+    <!-- Loads only when Big and Small - Genes & More is NOT active (LoadFolders.xml: IfModNotActive).
+         These copy BS_ToughSkin and BS_TinyTough exactly; with Genes & More the xenotypes use those instead
+         (Mods/GenesAndMore/Patches/Muriden_GenesAndMore.xml). -->
 
     <GeneDef>
         <defName>Muriden_ToughHide</defName>
