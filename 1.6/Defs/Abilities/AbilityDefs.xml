@@ -78,7 +78,7 @@
     <AbilityDef>
         <defName>MuridenCourage</defName>
         <label>Muriden Courage</label>
-        <description>Empowering themselves to make their final valiant stand, pushing themsleves to their limits.</description>
+        <description>Empowering themselves to make their final valiant stand, pushing themselves to their limits.</description>
         <iconPath>UI/Icons/Genes/Muriden_Icon</iconPath>
         <warmupSound>PsycastCastLoop</warmupSound>
         <cooldownTicksRange>700000</cooldownTicksRange>
@@ -97,13 +97,13 @@
             <drawAimPie>false</drawAimPie>
             <requireLineOfSight>false</requireLineOfSight>
             <nonInterruptingSelfCast>true</nonInterruptingSelfCast>
-            <soundCast>EnergyShield_Reset</soundCast>
+            <soundCast>Pawn_Furskin_Call</soundCast>
             <targetable>false</targetable>
             <targetParams>
                 <canTargetSelf>true</canTargetSelf>
             </targetParams>
             <violent>false</violent>
-            <warmupTime>3</warmupTime>
+            <warmupTime>1</warmupTime>
         </verbProperties>
         <comps>
           <li Class="CompProperties_AbilityGiveHediff">

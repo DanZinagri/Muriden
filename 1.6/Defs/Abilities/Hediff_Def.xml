@@ -3,7 +3,7 @@
 	<HediffDef>
 		<defName>MuridenCourageHD</defName>
 		<label>muriden courage</label>
-		<description>Enhance one's courageness and resilience, albeit at the expense of exhaustion.</description>
+		<description>Enhance one's courage and resilience, albeit at the expense of exhaustion.</description>
 		<hediffClass>HediffWithComps</hediffClass>
 		<everCurableByItem>false</everCurableByItem>
 		<stages>
@@ -16,7 +16,7 @@
 				<capMods>
 				  <li>
 					<capacity>Consciousness</capacity>
-					<offset>0.10</offset>
+					<offset>0.20</offset>
 				  </li>
 				  <li>
 					<capacity>Moving</capacity>
