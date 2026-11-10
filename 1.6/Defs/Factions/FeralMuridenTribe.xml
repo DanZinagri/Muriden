@@ -40,7 +40,7 @@
       <li MayRequire="vanillaexpanded.vmemese">VME_MechanoidSupremacy</li>
       <li MayRequire="vanillaexpanded.vmemese">VME_Nationalist</li>
       <li MayRequire="Ludeon.RimWorld.Ideology">Blindsight</li>
-      <li MayRequire="sarg.alphamemes">AM_NonViolence</li>
+      <li MayRequire="sarg.alphamemes,vanillaexpanded.vmemese">AM_NonViolence</li>
       <li MayRequire="sarg.alphamemes">AM_Artist</li>
       <li MayRequire="vanillaexpanded.vmemese">VME_Pacifist</li>
       <li MayRequire="vanillaexpanded.vmemese">VME_Emancipation</li>
