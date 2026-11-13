@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Patch>
+    <!-- Split from 1.6/Patches/Patch_FactionXenotypePatches.xml: the Royalty faction. Loaded only with Royalty (see LoadFolders.xml). -->
+    <Operation Class="MuridenLibraries.PatchOp_factionPatch">
+        <match Class="PatchOperationConditional">
+            <xpath>/Defs/FactionDef[defName="Empire"]/xenotypeSet</xpath>
+            <nomatch Class="PatchOperationAdd">
+                <xpath>/Defs/FactionDef[defName="Empire"]</xpath>
+                <value>
+                    <xenotypeSet />
+                </value>
+            </nomatch>
+        </match>
+    </Operation>
+    <Operation Class="MuridenLibraries.PatchOp_factionPatch">
+        <match Class="PatchOperationConditional">
+            <xpath>/Defs/FactionDef[defName="Empire"]/xenotypeSet/xenotypeChances</xpath>
+            <nomatch Class="PatchOperationAdd">
+                <xpath>/Defs/FactionDef[defName="Empire"]/xenotypeSet</xpath>
+                <value>
+                    <xenotypeChances />
+                </value>
+            </nomatch>
+        </match>
+    </Operation>
+    <Operation Class="MuridenLibraries.PatchOp_factionPatch">
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/FactionDef[defName="Empire"]/xenotypeSet/xenotypeChances</xpath>
+            <value>
+                <Muriden>0.05</Muriden>
+            </value>
+        </match>
+    </Operation>
+</Patch>

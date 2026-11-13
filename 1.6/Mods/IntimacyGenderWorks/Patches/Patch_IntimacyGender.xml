@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	<!-- Loaded only with Intimacy - Gender Works (see LoadFolders.xml). -->
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/BodyDef[defName="Muriden_Body"]/corePart/parts/li[def="Pelvis"]</xpath>
+		<value>
+			<parts>
+				<li>
+					<def>SEX_Reproduction</def>
+					<coverage>0.01</coverage>
+					<depth>Outside</depth>
+					<groups>
+						<li>SEX_Reproduction</li>
+					</groups>
+				</li>
+			</parts>
+		</value>
+	</Operation>
+</Patch>

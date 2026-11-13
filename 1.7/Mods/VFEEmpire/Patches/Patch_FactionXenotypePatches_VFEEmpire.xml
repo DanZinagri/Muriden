@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Patch>
+    <!-- Split from 1.7/Patches/Patch_FactionXenotypePatches.xml: the Vanilla Factions Expanded - Empire faction. Loaded only with Vanilla Factions Expanded - Empire (see LoadFolders.xml). -->
+    <Operation Class="MuridenLibraries.PatchOp_factionPatch">
+        <match Class="PatchOperationConditional">
+            <xpath>/Defs/FactionDef[defName="VFEE_Deserters"]/xenotypeSet</xpath>
+            <nomatch Class="PatchOperationAdd">
+                <xpath>/Defs/FactionDef[defName="VFEE_Deserters"]</xpath>
+                <value>
+                    <xenotypeSet />
+                </value>
+            </nomatch>
+        </match>
+    </Operation>
+    <Operation Class="MuridenLibraries.PatchOp_factionPatch">
+        <match Class="PatchOperationConditional">
+            <xpath>/Defs/FactionDef[defName="VFEE_Deserters"]/xenotypeSet/xenotypeChances</xpath>
+            <nomatch Class="PatchOperationAdd">
+                <xpath>/Defs/FactionDef[defName="VFEE_Deserters"]/xenotypeSet</xpath>
+                <value>
+                    <xenotypeChances />
+                </value>
+            </nomatch>
+        </match>
+    </Operation>
+    <Operation Class="MuridenLibraries.PatchOp_factionPatch">
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/FactionDef[defName="VFEE_Deserters"]/xenotypeSet/xenotypeChances</xpath>
+            <value>
+                <Muriden>0.05</Muriden>
+            </value>
+        </match>
+    </Operation>
+</Patch>

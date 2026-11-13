@@ -71,27 +71,23 @@
     </Operation>
 
     <!-- Choerites has no frame, so its stabilizer ballast sits on Choerites_Calm. Hand it back to the real gene. -->
-    <Operation Class="PatchOperationSequence">
-        <operations>
-            <li Class="PatchOperationAdd">
-                <xpath>Defs/XenotypeDef[defName="Choerites"]/genes</xpath>
-                <value>
-                    <li>BS_GeneStabilizing_Great</li>
-                </value>
-            </li>
-            <li Class="PatchOperationReplace">
-                <xpath>Defs/GeneDef[defName="Choerites_Calm"]/biostatCpx</xpath>
-                <value>
-                    <biostatCpx>2</biostatCpx>
-                </value>
-            </li>
-            <li Class="PatchOperationReplace">
-                <xpath>Defs/GeneDef[defName="Choerites_Calm"]/biostatMet</xpath>
-                <value>
-                    <biostatMet>-1</biostatMet>
-                </value>
-            </li>
-        </operations>
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/XenotypeDef[defName="Choerites"]/genes</xpath>
+        <value>
+            <li>BS_GeneStabilizing_Great</li>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/GeneDef[defName="Choerites_Calm"]/biostatCpx</xpath>
+        <value>
+            <biostatCpx>2</biostatCpx>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/GeneDef[defName="Choerites_Calm"]/biostatMet</xpath>
+        <value>
+            <biostatMet>-1</biostatMet>
+        </value>
     </Operation>
 
     <!-- One "Innate Attacks" group in the gene menus instead of two. -->

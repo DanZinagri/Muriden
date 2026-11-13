@@ -3,6 +3,11 @@
 		<li>/</li>
 		<li IfModActive="RedMattis.BigSmall.Core">1.6/Mods/GenesAndMore</li>
 		<li IfModNotActive="RedMattis.BigSmall.Core">1.6/Without/GenesAndMore</li>
+		<!-- Split from 1.6/Patches (FindMods there). Patches apply last-listed first, so these run right after it. -->
+		<li IfModActive="Ludeon.RimWorld.Royalty">1.6/Mods/Royalty</li>
+		<li IfModActive="OskarPotocki.VFE.Empire">1.6/Mods/VFEEmpire</li>
+		<li IfModActive="DanZinagri.AtavismLibraries">1.6/Mods/AtavismLibraries</li>
+		<li IfModActive="LovelyDovey.Sex.WithRosaline">1.6/Mods/IntimacyGenderWorks</li>
 		<li>1.6</li>
 		<li IfModActive="Ludeon.RimWorld.Anomaly">1.6/Mods/Anomaly</li>
 		<li IfModActive="DankPyon.Medieval.Overhaul">1.6/Mods/MedievalOverhaul</li>
@@ -13,6 +18,11 @@
 		<li>/</li>
 		<li IfModActive="RedMattis.BigSmall.Core">1.7/Mods/GenesAndMore</li>
 		<li IfModNotActive="RedMattis.BigSmall.Core">1.7/Without/GenesAndMore</li>
+		<!-- Split from 1.7/Patches (FindMods there). Patches apply last-listed first, so these run right after it. -->
+		<li IfModActive="Ludeon.RimWorld.Royalty">1.7/Mods/Royalty</li>
+		<li IfModActive="OskarPotocki.VFE.Empire">1.7/Mods/VFEEmpire</li>
+		<li IfModActive="DanZinagri.AtavismLibraries">1.7/Mods/AtavismLibraries</li>
+		<li IfModActive="LovelyDovey.Sex.WithRosaline">1.7/Mods/IntimacyGenderWorks</li>
 		<li>1.7</li>
 		<li IfModActive="Ludeon.RimWorld.Anomaly">1.7/Mods/Anomaly</li>
 		<li IfModActive="DankPyon.Medieval.Overhaul">1.7/Mods/MedievalOverhaul</li>
